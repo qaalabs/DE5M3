@@ -1,0 +1,3 @@
+## **Proposed Day 1: ETL Foundations in Python (Replace current Python basics)**
+**Suggestion**: Replace the current trivial Python exercises with a comprehensive ETL foundation day. Learners would build a complete Extract-Transform-Load pipeline using realistic customer data that requires cleaning and validation. Starting with messy CSV data, they apply data quality rules and transformations, extract additional information from APIs, then load processed data into SQL Server. This establishes both Python skills and ETL thinking from hour one, with three difficulty levels to accommodate different experience. The outcome would be every learner having built a working ETL pipeline that solves a real business problem, rather than simple pandas exercises.
+
