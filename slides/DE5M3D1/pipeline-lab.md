@@ -1,15 +1,13 @@
-## Session 3: Load Focus
+## Session 4: Full ETL Pipeline
 
-### Lab Introduction
-
-*Your customer service team needs this enriched data in their CRM system for better customer support.*
+**We have completed:**
 
 - Step 0: Import Python packages
 - Step 1: Database Setup and Connection
 - Step 2: Create Data Warehouse Tables
 - Step 3: Load Sample Enriched Data
 
-**After the break**
+### Now lets tackle
 
 - Step 4: Implement Robust Database Loading
 - Step 5: Data Validation and Quality Checks
