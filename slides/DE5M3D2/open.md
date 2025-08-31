@@ -1,2 +1,3 @@
-## **Proposed Day 2: Visual ETL Design (Replace SSIS modules M1-M3)**
-**Suggestion**: Instead of deep SSIS technical training, rebuild Day 1's Python pipeline using Azure Data Factory's visual interface. This demonstrates that ETL concepts transcend specific tools - the same Extract-Transform-Load logic applies whether coded or designed visually. Through hands-on ADF development, learners gain visual pipeline design and enterprise deployment skills whilst reinforcing core concepts. Structured discussions compare coded vs visual approaches, helping them understand when each is appropriate. This maintains ETL focus whilst teaching practical enterprise tools, rather than getting lost in SSIS configuration details.
+## Day 3
+
+https://qaalabs.github.io/DE5M3/trainer

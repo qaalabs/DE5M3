@@ -1,2 +1,3 @@
-## **Proposed Day 4: Advanced ETL & Modern Architecture (Replace standalone Azure labs)**
-**Suggestion**: Replace disconnected Azure labs with integrated advanced ETL patterns. Position ETL within modern data architecture through real-time vs batch processing using Azure Stream Analytics simulations. Include complex transformation challenges involving multiple data sources and architectural design exercises where teams solve different business scenarios. Career-focused discussions connect ETL skills to broader data strategy and emerging trends. This creates coherent progression whilst setting up Module 4 (Planning) through architectural thinking development, rather than random lab completion.
+## Day 4
+
+https://qaalabs.github.io/DE5M3/trainer

@@ -1,3 +1,3 @@
-## **Proposed Day 3: Production ETL Patterns (Replace SSIS modules M4-M7)**
-**Suggestion**: Transform learners from ETL builders to ETL professionals by adding production-ready capabilities to their existing pipelines. Implement comprehensive error handling, monitoring, and logging using both Python and Azure approaches. Focus the afternoon on scalability - converting full-load processes to incremental loading using SQL Server CDC and performance optimization. Through realistic failure scenarios and troubleshooting exercises, develop the operational mindset needed for production systems. This directly prepares learners for Module 6 (Data Operations) whilst maintaining practical ETL focus.
+## Day 3
 
+https://qaalabs.github.io/DE5M3/trainer
