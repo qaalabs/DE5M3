@@ -241,9 +241,17 @@ In this exercise, you implemented a data ingestion solution that uses a pipeline
 
 ---
 
-## Don't delete the workspace
+## Clean up resources
 
-!!! danger "Do not delete the workspace as you will need it in the next acticity."
+If you've finished exploring your lakehouse, you can delete the workspace you created for this exercise.
+
+1. Navigate to Microsoft Fabric in your browser.
+
+2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
+
+3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
+
+4. Select **Delete** to delete the workspace.
 
 ---
 <small><b>Source:
