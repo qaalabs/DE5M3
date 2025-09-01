@@ -5,7 +5,7 @@
 ### Session 1
 
 - [ETL: Focus on Transform ~ Setup](day1/transform-setup.md)
-- [🧪 ETL Lab: Focus on Transform](day1/transform-lab.md)
+- [ETL Lab: Focus on Transform](day1/transform-lab.md)
 
 ### Session 2
 

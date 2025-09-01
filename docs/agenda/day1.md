@@ -5,7 +5,7 @@
 - `09:30` Welcome to: DE5 Module 3 ~ Day 1 (10 mins)
 - `09:40` VM Setup (20 mins)
 - `10:00` ETL: Focus on Transform ~ Setup (10 mins)
-- `10:10` [🧪 ETL Lab: Focus on Transform](../day1/transform-lab.md) (40 mins)
+- `10:10` [ETL Lab: Focus on Transform](../day1/transform-lab.md) (40 mins)
 
 ## ☕ Morning Break
 
