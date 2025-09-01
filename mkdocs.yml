@@ -8,10 +8,18 @@ nav:
 
   - Agenda:
     - Day 1: agenda/day1.md
+    - Day 2: agenda/day2.md
 
   - "Day 1 - Complete ELT Pipeline in Python":
     - "🧪 ETL Lab: Focus on Transform": day1/transform-lab.md
     - "🧪 ETL Lab: Focus on Extract": day1/extract-lab.md
+
+  - "Day 2 - Microsoft Fabric":
+    - "Lab 2.1 ~ 01 Create Fabric Lakehouse": labs/01-lakehouse.md
+    - "Lab 2.2 ~ 05 Dataflows Gen2": labs/05-dataflows-gen2.md
+    - "Lab 2.3 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
+    - "ETL Product Investigation": day2/etl-ptoduct.md
+    - "ETL Investigation ~ Report back": day2/etl-product-report-back.md
 
   - Resources: resources.md
 

@@ -30,15 +30,24 @@
 
 ### Session 1
 
+- Introduction to Microsoft Fabric
+- **Practice**: [Lab 2.1 ~ 01 Create Fabric Lakehouse](labs/01-lakehouse.md)
+- **Discussion**: Debrief about the lab
 
 ### Session 2
 
+- **Practice**: [Lab 2.2 ~ 05 Dataflows Gen2](labs/05-dataflows-gen2.md)
+- **Discussion**: Debrief about the lab
 
 ### Session 3
 
+- **Practice**: [Lab 2.3 ~ 04 Ingest Pipeline](labs/04-ingest-pipeline.md)
+- **Discussion**: Debrief about the lab
 
 ### Session 4
 
+- **Investigation**: [ETL Product Investigation](day2/etl-ptoduct.md)
+- **Report-Back**: [ETL Investigation ~ Report back](day2/etl-product-report-back.md)
 
 ---
 
