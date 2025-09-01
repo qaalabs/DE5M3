@@ -12,7 +12,7 @@ nav:
 
   - "Day 1 - Complete ELT Pipeline in Python":
     - "🧪 ETL Lab: Focus on Transform": day1/transform-lab.md
-    - "🧪 ETL Lab: Focus on Extract": day1/extract-lab.md
+    - "ETL Lab: Focus on Extract": day1/extract-lab.md
 
   - "Day 2 - Microsoft Fabric":
     - "Lab 2.1 ~ 01 Create Fabric Lakehouse": labs/01-lakehouse.md

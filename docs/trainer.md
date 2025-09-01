@@ -11,17 +11,17 @@
 
 - **Discussion**: Automation in the workplace
 - [ETL: Focus on Extract ~ Setup](day1/extract-setup.md)
-- [🧪 ETL Lab: Focus on Extract](day1/extract-lab.md)
+- [ETL Lab: Focus on Extract](day1/extract-lab.md)
 
 ### Session 3
 
 - **Discussion**: Introductions
 - ETL: Focus on Load ~ Setup
-- 🧪 ETL Lab: Focus on Load
+- ETL Lab: Focus on Load
 
 ### Session 4
 
-- 🧪 ETL Lab: Full ETL Pipeline
+- ETL Lab: Full ETL Pipeline
 - **Discussion**: End of day reflections
 
 ---
