@@ -26,7 +26,7 @@
 
 ## Session 4
 
-- `15:00` **Investigation**: [ETL Product Investigation](../day2/etl-ptoduct.md) (30 mins)
-- `15:30` **Report-Back**: [ETL Investigation ~ Report back](../day2/etl-product-report-back.md) (10 mins)
+- `15:00` **Investigation**: ETL Product Investigation (30 mins)
+- `15:30` **Report-Back**: ETL Investigation ~ Report back (10 mins)
 - `15:50` WRAP (10 mins)
 

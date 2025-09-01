@@ -18,8 +18,6 @@ nav:
     - "Lab 2.1 ~ 01 Create Fabric Lakehouse": labs/01-lakehouse.md
     - "Lab 2.2 ~ 05 Dataflows Gen2": labs/05-dataflows-gen2.md
     - "Lab 2.3 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
-    - "ETL Product Investigation": day2/etl-ptoduct.md
-    - "ETL Investigation ~ Report back": day2/etl-product-report-back.md
 
   - Resources: resources.md
 
@@ -28,6 +26,8 @@ not_in_nav: |
   trainer.md
   day1/transform-setup.md
   day1/extract-setup.md
+   day2/etl-product.md
+  day2/etl-product-report-back.md
 
 
 # Theme
