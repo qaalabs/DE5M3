@@ -16,6 +16,7 @@ nav:
     - "Lab 2.3 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
 
   - "Day 3 - Microsoft Fabric":
+    - "Medallion Architecture Investigation": day3/medallion/group-scenarios.md
     - "Lab 3.1 - Create Medallion Architecture": day3/03b-medallion-architecture.md
 
   - Resources: resources.md

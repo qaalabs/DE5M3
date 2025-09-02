@@ -59,7 +59,7 @@
 
 - Theory: Medallion Architecture
 - Medallion Architecture ~ Setup
-- Medallion Architecture Investigation
+- [Medallion Architecture Investigation](day3/medallion/group-scenarios.md)
 
 ### Session 2
 

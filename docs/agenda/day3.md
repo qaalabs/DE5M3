@@ -5,7 +5,7 @@
 - `09:30` **Welcome**: Welcome to: DE5 Module 3 ~ Day 3 (10 mins)
 - `09:40` Theory: Medallion Architecture (20 mins)
 - `10:00` Medallion Architecture ~ Setup (10 mins)
-- `10:10` Medallion Architecture Investigation (30 mins)
+- `10:10` [Medallion Architecture Investigation](../day3/medallion/group-scenarios.md) (30 mins)
 
 ## ☕ Morning Break
 
