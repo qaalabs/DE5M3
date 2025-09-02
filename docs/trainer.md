@@ -57,9 +57,14 @@
 
 ### Session 1
 
+- Theory: Medallion Architecture
+- Medallion Architecture ~ Setup
+- Medallion Architecture Investigation
 
 ### Session 2
 
+- **Discussion**: Medallion Architecture ~ Report Back
+- [Lab 3.1 - Create Medallion Architecture](day3/03b-medallion-architecture.md)
 
 ### Session 3
 
