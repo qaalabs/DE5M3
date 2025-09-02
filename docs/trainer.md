@@ -36,6 +36,8 @@
 
 ### Session 2
 
+- **Investigation**: Architecture Investigation
+- **Investigation**: Architecture ~ Report Back
 - **Practice**: [Lab 2.2 ~ 05 Dataflows Gen2](labs/05-dataflows-gen2.md)
 - **Discussion**: Debrief about the lab
 
