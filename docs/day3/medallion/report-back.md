@@ -14,15 +14,9 @@
 - Present your medallion design
 - Class questions/feedback
 
-## Facilitation Tips
-
-- What's your biggest Bronze→Silver cleaning challenge?
-- How does your Gold layer serve different business users?
-- What happens when source data structure changes?
-
 ## Synthesis & Bridge
 
-### Key Pattern Recognition:
+### Key Pattern Recognition
 
 - Notice: every industry has the same pattern - raw → trusted → business-ready
 - The layers are consistent, but the business rules change

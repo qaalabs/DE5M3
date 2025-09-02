@@ -27,6 +27,7 @@
 ---
 
 ## **This Makes the Connection Clear:**
+
 ✅ Medallion = **data organization structure**
 ✅ Streaming = **data flow speed through that structure**  
 ✅ Both serve business needs but solve different problems
