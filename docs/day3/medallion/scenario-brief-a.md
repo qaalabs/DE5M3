@@ -13,23 +13,21 @@ You work for "TechStyle" - an online retailer selling electronics and fashion. 5
 
 ## Your Data Sources
 
-### WEBSITE DATABASE
+### Website Database
 
-- customer_profiles: ID, name, email, registration_date, preferences
-- orders: order_id, customer_id, total_amount, order_date, status
-- order_items: order_id, product_id, quantity, unit_price
+- **customer_profiles**: ID, name, email, registration_date, preferences
+- **orders**: order_id, customer_id, total_amount, order_date, status
+- **order_items**: order_id, product_id, quantity, unit_price
 
-### RETURNS SYSTEM (separate)
+### Returns System (separate)
 
-- returns: return_id, order_id, reason, return_date, refund_status
-- return_items: return_id, product_id, condition, refund_amount
+- **returns**: return_id, order_id, reason, return_date, refund_status
+- **return_items**: return_id, product_id, condition, refund_amount
 
-### EXTERNAL APIs
+### External APIs
 
-- Payment gateway: transaction details, payment methods
-- Shipping provider: delivery status, tracking
-
----
+- **Payment gateway**: transaction details, payment methods
+- **Shipping provider**: delivery status, tracking
 
 ## Business Questions to Answer
 
@@ -38,9 +36,9 @@ You work for "TechStyle" - an online retailer selling electronics and fashion. 5
 - Real-time order status for customer service (Silver layer)
 - Daily sales dashboard for management (Gold layer)
 
-> Use the worksheet to design Bronze → Silver → Gold data layers for TechStyle.
-
 ---
+
+> Use the worksheet below to help design Bronze → Silver → Gold data layers for TechStyle.
 
 ## Question worksheet
 

@@ -14,25 +14,23 @@ You work for "Yorkshire Community Bank" - 50 branches, 150,000 customers, focusi
 
 ## Your Data Sources
 
-### CORE BANKING SYSTEM:
+### Core Banking Systems
 
-- customers: customer_id, name, address, risk_profile, relationship_manager
-- accounts: account_id, customer_id, account_type, balance, opening_date
-- transactions: transaction_id, account_id, amount, transaction_type, timestamp
+- **customers**: customer_id, name, address, risk_profile, relationship_manager
+- **accounts**: account_id, customer_id, account_type, balance, opening_date
+- **transactions**: transaction_id, account_id, amount, transaction_type, timestamp
 
-### LENDING SYSTEM (separate):
+### Lending System (separate)
 
-- loans: loan_id, customer_id, amount, interest_rate, term, status
-- loan_payments: payment_id, loan_id, amount, due_date, paid_date
-- credit_assessments: assessment_id, customer_id, credit_score, assessment_date
+- **loans**: loan_id, customer_id, amount, interest_rate, term, status
+- **loan_payments**: payment_id, loan_id, amount, due_date, paid_date
+- **credit_assessments**: assessment_id, customer_id, credit_score, assessment_date
 
-### EXTERNAL SYSTEMS:
+### External Systems
 
-- Credit reference agencies: credit scores, payment history
-- Open banking APIs: external account data (with consent)
-- Fraud detection service: risk scores, alert flags
-
----
+- **Credit reference agencies**: credit scores, payment history
+- **Open banking APIs**: external account data (with consent)
+- **Fraud detection service**: risk scores, alert flags
 
 ## Business Questions to Answer
 
@@ -49,9 +47,9 @@ You work for "Yorkshire Community Bank" - 50 branches, 150,000 customers, focusi
 - Open banking consent management
 - Anti-money laundering (AML) monitoring
 
-> Use the worksheet to design Bronze → Silver → Gold data layers for Yorkshire Community Bank.
-
 ---
+
+> Use the worksheet to design Bronze → Silver → Gold data layers for Yorkshire Community Bank.
 
 ## Question worksheet
 

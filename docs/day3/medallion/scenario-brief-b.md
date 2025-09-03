@@ -14,25 +14,23 @@ You work for "WellCare Medical Centre" - a multi-specialty clinic with 15 doctor
 
 ## Your Data Sources
 
-### PATIENT MANAGEMENT SYSTEM
+### Patient Management System
 
-- patients: patient_id, name, DOB, NHS_number, address, GP_practice
-- appointments: appointment_id, patient_id, doctor_id, datetime, location, status
-- consultations: consultation_id, appointment_id, diagnosis_codes, treatment_notes
+- **patients**: patient_id, name, DOB, NHS_number, address, GP_practice
+- **appointments**: appointment_id, patient_id, doctor_id, datetime, location, status
+- **consultations**: consultation_id, appointment_id, diagnosis_codes, treatment_notes
 
-### CLINICAL RECORDS (separate system)
+### Clinical Records (separate system)
 
-- prescriptions: prescription_id, patient_id, medication, dosage, prescribed_date
-- test_results: test_id, patient_id, test_type, results, lab_date
-- referrals: referral_id, patient_id, from_doctor, to_specialist, reason
+- **prescriptions**: prescription_id, patient_id, medication, dosage, prescribed_date
+- **test_results**: test_id, patient_id, test_type, results, lab_date
+- **referrals**: referral_id, patient_id, from_doctor, to_specialist, reason
 
-### EXTERNAL SYSTEMS
+### External Systems
 
-- NHS patient registry: demographics, GP details
-- Insurance system: coverage details, claim status
-- Pharmacy network: prescription fulfillment
-
----
+- **NHS patient registry**: demographics, GP details
+- **Insurance system**: coverage details, claim status
+- **Pharmacy network**: prescription fulfillment
 
 ## Business Questions to Answer
 
@@ -48,9 +46,9 @@ You work for "WellCare Medical Centre" - a multi-specialty clinic with 15 doctor
 - NHS data sharing protocols
 - Clinical governance standards
 
-> Use the worksheet to design Bronze → Silver → Gold data layers for WellCare Medical Centre.
-
 ---
+
+> Use the worksheet to design Bronze → Silver → Gold data layers for WellCare Medical Centre.
 
 ## Question worksheet
 

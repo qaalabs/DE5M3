@@ -6,7 +6,7 @@
 - Marketing segmentation, customer service efficiency, refund reporting
 - Customer 360 view, product performance analytics
 
-## [Group B: Healthcare Clinic](scenario-brief-a.md)
+## [Group B: Healthcare Clinic](scenario-brief-b.md)
 
 - Patient management system + appointment booking + treatment records
 - Privacy compliance (GDPR), appointment scheduling conflicts

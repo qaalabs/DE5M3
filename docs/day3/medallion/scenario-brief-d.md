@@ -14,27 +14,27 @@ You work for "Northern Steel Manufacturing" - automotive parts production, 3 pro
 
 ## Your Data Sources
 
-### IoT SENSOR NETWORK
+### IoT Sensor Network
 
-- machine_sensors: sensor_id, machine_id, temperature, pressure, vibration, timestamp
-- production_line: line_id, production_rate, downtime_minutes, shift_datetime
-- quality_sensors: sensor_id, part_id, dimensions, weight, defect_flags
+- **machine_sensors**: sensor_id, machine_id, temperature, pressure, vibration, timestamp
+- **production_line**: line_id, production_rate, downtime_minutes, shift_datetime
+- **quality_sensors**: sensor_id, part_id, dimensions, weight, defect_flags
 
-### MAINTENANCE SYSTEM (separate)
+### Maintenance System (separate)
 
-- work_orders: order_id, machine_id, issue_type, scheduled_date, completion_date
-- spare_parts: part_id, machine_id, stock_level, cost, supplier
-- maintenance_history: history_id, machine_id, maintenance_type, technician, notes
+- **work_orders**: order_id, machine_id, issue_type, scheduled_date, completion_date
+- **spare_parts**: part_id, machine_id, stock_level, cost, supplier
+- **maintenance_history**: history_id, machine_id, maintenance_type, technician, notes
 
-### EXTERNAL SYSTEMS
+### External Systems
 
-- Energy supplier: usage data, tariff rates, demand charges
-- Supplier systems: raw material delivery schedules, quality certificates
-- Customer orders: order_id, part_specifications, delivery_requirements
+- **Energy supplier**: usage data, tariff rates, demand charges
+- **Supplier systems**: raw material delivery schedules, quality certificates
+- **Customer orders**: order_id, part_specifications, delivery_requirements
 
 ---
 
-## Business Questions to Answer:
+## Business Questions to Answer
 
 - Which machines need predictive maintenance? (Gold layer)
 - Real-time production line efficiency (Silver layer)
@@ -49,9 +49,9 @@ You work for "Northern Steel Manufacturing" - automotive parts production, 3 pro
 - Safety-critical systems requiring immediate alerts
 - Integration with production planning systems
 
-> Use the worksheet to design Bronze → Silver → Gold data layers for Northern Steel Manufacturing.
-
 ---
+
+> Use the worksheet to design Bronze → Silver → Gold data layers for Northern Steel Manufacturing.
 
 ## Question worksheet
 
