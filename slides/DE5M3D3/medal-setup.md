@@ -2,39 +2,17 @@
 
 <a href="http://192.168.1.227:3000/s/de5m3-medallion" target="_blank">📒 Click here for text to paste into the chat</a>
 
-### Group allocations
+### Your Day 1 customer data - would you trust it for CEO reporting?
 
-- Group A: E-commerce Retailer
-- Group B: Healthcare Clinic
-- Group C: Regional Bank
-- Group D: Manufacturing Plant
+- What about for sending marketing emails
+- Different uses need different trust levels.
 
----
+`Raw: "jane DOE", "JANE@EMAIL.COM", "invalid phone"`
 
-### Group A: E-commerce Retailer
+`Cleaned: "Jane Doe", "jane@email.com", "phone_invalid_flag"`
 
-- Customer profiles + order management + returns processing
-- Marketing segmentation, customer service efficiency, refund reporting
-- Customer 360 view, product performance analytics
+`Enriched: "Jane Doe", "jane@email.com", "+44 123 456 7890", "Premium Customer"`
 
-### Group B: Healthcare Clinic
+### Learning Outcome
 
-- Patient management system + appointment booking + treatment records
-- Privacy compliance (GDPR), appointment scheduling conflicts
-- Clinical reporting, patient care coordination
-
-🔽
-
----
-
-### Group C: Regional Bank
-
-- Account management + transaction processing + compliance reporting
-- Fraud detection, regulatory reporting, customer 360 view
-- Real-time alerts vs batch reporting
-
-### Group D: Manufacturing Plant
-
-- IoT sensors + maintenance schedules + quality control
-- Predictive maintenance, quality dashboards, compliance tracking
-- High-frequency sensor data vs periodic inspections
+- By the end, you'll design a medallion architecture for real business data.
