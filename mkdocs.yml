@@ -11,9 +11,9 @@ nav:
     - Day 3: agenda/day3.md
 
   - "Day 2 - Microsoft Fabric":
-    - "Lab 2.1 ~ 01 Create Fabric Lakehouse": labs/01-lakehouse.md
-    - "Lab 2.2 ~ 05 Dataflows Gen2": labs/05-dataflows-gen2.md
-    - "Lab 2.3 ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
+    - "Lab 2.1 ~ 01 Create Fabric Lakehouse": day2/01-lakehouse.md
+    - "Lab 2.2 ~ 05 Dataflows Gen2": day2/05-dataflows-gen2.md
+    - "Lab 2.3 ~ 04 Ingest Pipeline": day2/04-ingest-pipeline.md
 
   - "Day 3 - Microsoft Fabric":
     - "Medallion Architecture Investigation": day3/medallion/group-scenarios.md
