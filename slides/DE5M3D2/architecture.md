@@ -8,3 +8,10 @@
 - Data Lake
 - Data Lakehouse
 - Data Mart
+
+### Investigation
+
+- Technical explanation
+- What problem does it solve?
+- Key strength vs other approaches?
+- When would you use it?
