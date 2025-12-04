@@ -12,7 +12,7 @@
 ## Session 2
 
 - `11:10` **Discussion**: Medallion Architecture ~ Report Back (20 mins)
-- `11:30` [Lab 3.1 - Create Medallion Architecture](../day3/03b-medallion-architecture.md) (40 mins)
+- `11:30` [Lab 3.1 - Create Medallion Architecture](../labs/03b-medallion-architecture.md) (40 mins)
 
 ## 🥪🥤 Lunch Break
 

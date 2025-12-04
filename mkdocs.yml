@@ -18,7 +18,7 @@ nav:
 
   - "Day 3 - Microsoft Fabric":
     - "Medallion Architecture Investigation": day3/medallion/group-scenarios.md
-    - "Lab 3.1 - Create Medallion Architecture": day3/03b-medallion-architecture.md
+    - "Lab 3.1 - Create Medallion Architecture": labs/03b-medallion-architecture.md
 
   - Resources: resources.md
 
@@ -29,7 +29,7 @@ not_in_nav: |
   day1/transform-lab.md
   day1/extract-setup.md
   day1/extract-lab.md
-   day2/etl-product.md
+  day2/etl-product.md
   day2/etl-product-report-back.md
 
 

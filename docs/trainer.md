@@ -48,7 +48,7 @@
 
 ### Session 4
 
-- **Investigation**: [ETL Product Investigation]( day2/etl-product.md)
+- **Investigation**: [ETL Product Investigation](day2/etl-product.md)
 - **Report-Back**: [ETL Investigation ~ Report back](day2/etl-product-report-back.md)
 
 ---
@@ -64,7 +64,7 @@
 ### Session 2
 
 - **Discussion**: Medallion Architecture ~ Report Back
-- [Lab 3.1 - Create Medallion Architecture](day3/03b-medallion-architecture.md)
+- [Lab 3.1 - Create Medallion Architecture](labs/03b-medallion-architecture.md)
 
 ### Session 3
 
