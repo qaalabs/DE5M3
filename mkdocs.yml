@@ -12,6 +12,7 @@ nav:
 
   - "Day 2 - Microsoft Fabric":
     - "Lab ~ 01 Create Fabric Lakehouse": labs/01-lakehouse.md
+    - "Architecture Investigation": day2/architecture-investigation.md
     - "Lab ~ 05 Dataflows Gen2": labs/05-dataflows-gen2.md
     - "Lab ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
 

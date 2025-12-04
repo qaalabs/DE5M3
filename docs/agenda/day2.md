@@ -12,8 +12,8 @@
 
 ## Session 2
 
-- `11:00` **Investigation**: Architecture Investigation (20 mins)
-- `11:20` **Investigation**: Architecture ~ Report Back (10 mins)
+- `11:00` **Investigation**: [Architecture Investigation](../day2/architecture-investigation.md) (20 mins)
+- `11:20` **Report-Back**: Architecture ~ report back (10 mins)
 - `11:30` **Practice**: [Lab ~ 05 Dataflows Gen2](../labs/05-dataflows-gen2.md) (40 mins)
 - `12:10` **Discussion**: Debrief about the lab (10 mins)
 
