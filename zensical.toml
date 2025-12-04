@@ -1,22 +1,40 @@
 [project]
 site_name = "Module 3 - Data Processing, Transformation & ETL"
+dev_addr = "0.0.0.0:8000"
 
 nav = [
   {"Overview" = "index.md"},
   {"Agenda" = [
     "Day 2" = "agenda/day2.md",
     "Day 3" = "agenda/day3.md",
-  ]}
+  ]},
   {"Day 2 - Microsoft Fabric" = [
     "Lab ~ 01 Create Fabric Lakehouse" = "labs/01-lakehouse.md",
     "Architecture Investigation" = "day2/architecture-investigation.md",
     "Lab ~ 05 Dataflows Gen2" = "labs/05-dataflows-gen2.md",
     "Lab ~ 04 Ingest Pipeline" = "labs/04-ingest-pipeline.md",
-  ]}
+  ]},
   {"Day 3 - Microsoft Fabric" = [
     "Medallion Architecture Investigation" = "day3/medallion/group-scenarios.md",
     "Lab 3.1 - Create Medallion Architecture" = "day3/03b-medallion-architecture.md",
-  ]}
-  {"Resources" = "resources.md"}
+  ]},
+  {"Resources" = "resources.md"},
 ]
-  
+
+
+[project.theme]
+features = [
+  "navigation.sections",
+  "navigation.expand",
+]
+    
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+    
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+    
