@@ -9,14 +9,14 @@ nav = [
     {"Day 3" = "agenda/day3.md"},
   ]},
   {"Day 2 - Microsoft Fabric" = [
-    "Lab ~ 01 Create Fabric Lakehouse" = "labs/01-lakehouse.md",
-    "Architecture Investigation" = "day2/architecture-investigation.md",
-    "Lab ~ 05 Dataflows Gen2" = "labs/05-dataflows-gen2.md",
-    "Lab ~ 04 Ingest Pipeline" = "labs/04-ingest-pipeline.md",
+    {"Lab ~ 01 Create Fabric Lakehouse" = "labs/01-lakehouse.md"},
+    {"Architecture Investigation" = "day2/architecture-investigation.md"},
+    {"Lab ~ 05 Dataflows Gen2" = "labs/05-dataflows-gen2.md"},
+    {"Lab ~ 04 Ingest Pipeline" = "labs/04-ingest-pipeline.md"},
   ]},
   {"Day 3 - Microsoft Fabric" = [
-    "Medallion Architecture Investigation" = "day3/medallion/group-scenarios.md",
-    "Lab 3.1 - Create Medallion Architecture" = "day3/03b-medallion-architecture.md",
+    {"Medallion Architecture Investigation" = "day3/medallion/group-scenarios.md"},
+    {"Lab 3.1 - Create Medallion Architecture" = "day3/03b-medallion-architecture.md"},
   ]},
   {"Resources" = "resources.md"},
 ]
