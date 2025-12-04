@@ -115,11 +115,11 @@ WHERE last_modified >= '2025-10-06'
 
 **The Trade-offs**:
 
-| Approach | Pros | Cons |
-|----------|------|------|
-| Full Load | Simple, reliable | Slow, expensive at scale |
+| Approach  | Pros               | Cons                             |
+|-----------|--------------------|----------------------------------|
+| Full Load | Simple, reliable   | Slow, expensive at scale         |
 | Timestamp | Fast, simple logic | Misses deletes, needs timestamps |
-| CDC | Complete tracking | Complex setup, database overhead |
+| CDC       | Complete tracking  | Complex setup, database overhead |
 
 ---
 

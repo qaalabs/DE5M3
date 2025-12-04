@@ -10,6 +10,7 @@
 **Hook**: "Session 1 was about WHAT data to load. Now: WHEN should data arrive?"
 
 **Scenario**: 
+
 - Customer changes address at 2pm Monday
 - When does your sales team see the new address?
   - Tonight at midnight? (Batch)
@@ -17,6 +18,7 @@
   - Instantly? (Real-time streaming)
 
 **Learning objectives**:
+
 - Understand the spectrum from batch to real-time
 - Recognise business requirements that drive timing decisions
 - Introduction to streaming concepts (K18)
@@ -36,30 +38,35 @@ Daily/Hourly    Every 15 mins       Seconds           Milliseconds
 **Examples at Each Point**:
 
 **Batch (Daily/Hourly)**:
+
 - Day 1 customer pipeline (run overnight)
 - Monthly sales reports
 - Annual tax calculations
 - Data warehouse refreshes
 
 **Near Real-Time (Minutes)**:
+
 - Inventory updates (every 15 mins)
 - Website analytics dashboards
 - Email campaign metrics
 - Customer support ticket updates
 
 **Real-Time (Seconds)**:
+
 - Fraud detection (payment processing)
 - Stock trading systems
 - Traffic monitoring
 - Online bidding systems
 
 **Streaming (Continuous)**:
+
 - IoT sensor data (temperature, pressure)
 - Website clickstream analysis
 - Social media sentiment monitoring
 - Network security monitoring
 
 **Discussion Questions** (5 mins):
+
 - "What's the fastest data processing in your organisation?"
 - "What happens if that data arrives late?"
 - "Are there systems that should be faster?"
@@ -69,11 +76,13 @@ Daily/Hourly    Every 15 mins       Seconds           Milliseconds
 ### Part 2: Batch Processing Deep Dive (15 mins)
 
 **What is Batch Processing?**:
+
 - Process data in scheduled chunks
 - Typically overnight or hourly
 - Day 1 Python pipeline was batch processing
 
 **Characteristics**:
+
 - **High latency**: Hours between data creation and availability
 - **High throughput**: Can process millions of records
 - **Predictable**: Runs on schedule
@@ -88,6 +97,7 @@ Daily/Hourly    Every 15 mins       Seconds           Milliseconds
 ```
 
 **When Batch Works Well**:
+
 - Historical reporting and analysis
 - Data warehouse loading
 - Complex transformations (aggregations, joins)
@@ -103,12 +113,14 @@ df_clean.to_sql('customers', ...)  # Load
 ```
 
 **Scheduled with**:
+
 - Cron jobs (Linux)
 - Windows Task Scheduler
 - Azure Data Factory triggers
 - Airflow/other orchestrators
 
 **Discussion Questions** (3 mins):
+
 - "How are your ETL jobs scheduled?"
 - "What happens if batch jobs fail?"
 - "Who gets notified?"
@@ -120,12 +132,14 @@ df_clean.to_sql('customers', ...)  # Load
 **The Business Case for Speed**:
 
 **Example 1: Fraud Detection**
+
 - Customer uses card in London at 2pm
 - Same card used in New York at 2:05pm
 - **Batch**: Detected tomorrow morning (too late)
 - **Real-time**: Detected in seconds, transaction blocked
 
 **Example 2: Inventory Management**
+
 - Last item sold online
 - **Batch**: Overnight update, overselling happens
 - **Real-time**: Immediate update, prevents overselling
@@ -139,22 +153,26 @@ Real-Time: Source → Stream → Process → Destination (continuous)
 ```
 
 **Technology Shift**:
+
 - **Batch**: Files, scheduled jobs, SQL queries
 - **Real-Time**: Message queues, event streams, in-memory processing
 
 **Key Concepts**:
 
 **Event Streams**:
+
 - Data flows continuously
 - Each record processed individually
 - Think: river of data, not lake
 
 **Message Queues** (K18):
+
 - Kafka, Azure Event Hubs, AWS Kinesis
 - Buffer between source and processing
 - Handle spikes in data volume
 
 **Stream Processing**:
+
 - Process data as it arrives
 - Windowing: "last 5 minutes of transactions"
 - Aggregations on moving data
@@ -181,16 +199,17 @@ For each transaction (as it arrives):
 
 **The Trade-offs**:
 
-| Aspect | Batch | Real-Time |
-|--------|-------|-----------|
-| Latency | Hours | Seconds |
-| Complexity | Low | High |
-| Cost | Lower | Higher |
-| Debugging | Easier | Harder |
-| Data Volume | High | Can be high |
-| Use Cases | Reports, Analytics | Monitoring, Alerts |
+| Aspect      | Batch              | Real-Time          |
+|-------------|--------------------|--------------------|
+| Latency     | Hours              | Seconds            |
+| Complexity  | Low                | High               |
+| Cost        | Lower              | Higher             |
+| Debugging   | Easier             | Harder             |
+| Data Volume | High               | Can be high        |
+| Use Cases   | Reports, Analytics | Monitoring, Alerts |
 
 **Discussion Questions** (5 mins):
+
 - "What data in your organisation needs to be faster?"
 - "What's stopping real-time implementation?"
 - "Is the business willing to pay for real-time processing?"
@@ -202,6 +221,7 @@ For each transaction (as it arrives):
 **The Compromise**: Not pure streaming, not overnight batch
 
 **What is Micro-Batching?**:
+
 - Process small batches frequently
 - Every 5 minutes, every 15 minutes
 - Easier than streaming, faster than batch
@@ -218,12 +238,14 @@ while True:
 ```
 
 **When Micro-Batching Works**:
+
 - Business needs "near real-time" (not instant)
 - Existing batch code can be reused
 - Lower complexity than true streaming
 - Good transition step from batch to real-time
 
 **Examples**:
+
 - Website analytics (update every 10 mins)
 - Inventory checks (refresh every 15 mins)
 - Social media monitoring (every 5 mins)
@@ -281,20 +303,23 @@ Present 3 scenarios, discuss which approach:
 - Start with batch, move to real-time only when business justifies it
 
 **Bridge to Lunch**:
-"Session 1: WHAT data to load (full vs incremental)  
-Session 2: WHEN to load data (batch vs real-time)  
-Session 3 (after lunch): WHERE data comes from (multiple sources, unstructured data)"
+
+- Session 1: WHAT data to load (full vs incremental)  
+- Session 2: WHEN to load data (batch vs real-time)  
+- Session 3 (after lunch): WHERE data comes from (multiple sources, unstructured data)
 
 ---
 
 ## Teaching Notes
 
 **Learner Actions**:
+
 - Observe streaming concepts (not building streaming pipelines)
 - Discuss timing requirements in their organisations
 - Understand trade-offs, not implementation details
 
 **Materials Needed**:
+
 - Processing spectrum visual
 - Batch window timeline diagram
 - Trade-offs comparison table
@@ -302,12 +327,13 @@ Session 3 (after lunch): WHERE data comes from (multiple sources, unstructured d
 - (Optional) Azure Stream Analytics or Fabric EventStream demo
 
 **Facilitation Tips**:
+
 - Emphasise: most orgs use batch successfully
 - Real-time is not "better", just different
 - Connect back to Day 1 pipeline (was batch, could be other approaches)
 - Avoid deep technical streaming details (that's Day 4 if needed)
 
 **Connection to KSBs**:
+
 - K18: Streaming, batching, on-demand services ✅
 - S15: Optimise data ingestion frameworks ✅
-

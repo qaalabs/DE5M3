@@ -8,6 +8,7 @@
 ## Opening (5 mins)
 
 **Recap the Journey**:
+
 - Session 1: WHAT to load (full vs incremental, CDC)
 - Session 2: WHEN to load (batch vs real-time)
 - Session 3: WHERE from (multi-source, unstructured data)
@@ -295,6 +296,3 @@ Gold Layer (Business)
 - Part 2 (cross-cutting concerns) could expand if good discussion
 - Part 5 (group discussion) could contract if running late
 - Medallion intro (Part 3) is critical for Day 4 setup
-
----
-
