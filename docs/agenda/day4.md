@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- `09:30` **Welcome**: Welcome to: DE5 Module 3 ~ Day 4 (10 mins)
+- `09:30` Welcome to Day 4 of DE5 Module 3 (10 mins)
 
 ## ☕ Morning Break
 

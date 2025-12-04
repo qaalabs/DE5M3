@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- `09:30` **Welcome**: Welcome to: DE5 Module 3 ~ Day 2 (10 mins)
+- `09:30` Welcome to Day 2 of DE5 Module 3 (10 mins)
 - `09:40` VM Setup (10 mins)
 - `09:50` Introduction to Microsoft Fabric (10 mins)
 - `10:00` **Practice**: [Lab ~ 01 Create Fabric Lakehouse](../labs/01-lakehouse.md) (30 mins)
