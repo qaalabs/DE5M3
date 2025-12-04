@@ -60,5 +60,5 @@ toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
     
 [project.theme.icon]
-logo = material/database
+logo = "material/database"
     
