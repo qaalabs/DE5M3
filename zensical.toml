@@ -5,8 +5,8 @@ dev_addr = "0.0.0.0:8000"
 nav = [
   {"Overview" = "index.md"},
   {"Agenda" = [
-    "{Day 2" = "agenda/day2.md"},
-    "{Day 3" = "agenda/day3.md"},
+    {"Day 2" = "agenda/day2.md"},
+    {"Day 3" = "agenda/day3.md"},
   ]},
   {"Day 2 - Microsoft Fabric" = [
     "Lab ~ 01 Create Fabric Lakehouse" = "labs/01-lakehouse.md",
