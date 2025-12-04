@@ -1,6 +1,5 @@
 [project]
 site_name = "Module 3 - Data Processing, Transformation & ETL"
-dev_addr = "0.0.0.0:8000"
 
 nav = [
   {"Overview" = "index.md"},
@@ -20,21 +19,4 @@ nav = [
   ]}
   {"Resources" = "resources.md"}
 ]
-
-
-[project.theme]
-features = [
-  "navigation.sections",
-  "navigation.expand",
-]
-    
-[[project.theme.palette]]
-scheme = "default"
-toggle.icon = "lucide/sun"
-toggle.name = "Switch to dark mode"
-    
-[[project.theme.palette]]
-scheme = "slate"
-toggle.icon = "lucide/moon"
-toggle.name = "Switch to light mode"
-    
+  
