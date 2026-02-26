@@ -29,5 +29,5 @@
 
 - `14:50` ETL Lab: Full ETL Pipeline (50 mins)
 - `15:40` **Discussion**: End of day reflections (10 mins)
-- `15:50` Wrap up (10 mins)
+- `15:50` 🎁 Wrap (10 mins)
 

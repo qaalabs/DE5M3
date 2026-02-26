@@ -48,7 +48,7 @@
 
 ### Session 4
 
-- **Investigation**: [ETL Product Investigation](day2/etl-product.md)
+- **Investigation**: [ETL Product Investigation](day2/etl-products.md)
 - **Report-Back**: [ETL Investigation ~ Report back](day2/etl-product-report-back.md)
 
 ---

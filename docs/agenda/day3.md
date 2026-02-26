@@ -23,5 +23,5 @@
 
 ## Session 4
 
-- `15:50` WRAP (10 mins)
+- `15:50` 🎁 Wrap (10 mins)
 

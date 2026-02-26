@@ -30,5 +30,5 @@
 
 - `15:00` **Investigation**: ETL Product Investigation (30 mins)
 - `15:30` **Report-Back**: ETL Investigation ~ Report back (20 mins)
-- `15:50` WRAP (10 mins)
+- `15:50` 🎁 Wrap (10 mins)
 
