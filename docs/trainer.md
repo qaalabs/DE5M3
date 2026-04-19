@@ -43,6 +43,8 @@
 
 ### Session 3
 
+- Data Ingestion Approaches
+- **Discussion**: Data Approaches in the Workplace
 - **Practice**: [Lab ~ 04 Ingest Pipeline](labs/04-ingest-pipeline.md)
 - **Discussion**: Debrief about the lab
 
@@ -53,7 +55,7 @@
 
 ---
 
-## Day 3 - Microsoft Fabric
+## Day 3 - Medallion Architecture
 
 ### Session 1
 
@@ -71,6 +73,7 @@
 
 ### Session 4
 
+- **Activity**: Lab: ETL Job in AWS Glue Studio
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- `09:30` Welcome to Day 1 of DE5 Module 3 (10 mins)
+- `09:30` 🌅 Welcome to Day 1 of DE5 Module 3 (10 mins)
 - `09:40` VM Setup (20 mins)
 - `10:00` ETL: Focus on Transform ~ Setup (10 mins)
 - `10:10` ETL Lab: Focus on Transform (40 mins)
@@ -29,5 +29,6 @@
 
 - `14:50` ETL Lab: Full ETL Pipeline (50 mins)
 - `15:40` **Discussion**: End of day reflections (10 mins)
-- `15:50` 🎁 Wrap (10 mins)
+
+## 🎁 Wrap
 
