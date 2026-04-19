@@ -21,6 +21,7 @@
 
 ## Session 3
 
+- `13:20`  (40 mins)
 - `14:00` **Practice**: [Lab ~ 04 Ingest Pipeline](../labs/04-ingest-pipeline.md) (30 mins)
 - `14:30` **Discussion**: Debrief about the lab (10 mins)
 

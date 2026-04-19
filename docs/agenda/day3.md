@@ -13,15 +13,18 @@
 
 - `11:10` **Discussion**: Medallion Architecture ~ Report Back (20 mins)
 - `11:30` [Lab 3.1 - Create Medallion Architecture](../labs/03b-medallion-architecture.md) (40 mins)
+- `12:10`  (10 mins)
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
+- `13:20`  (70 mins)
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
+- `14:50`  (60 mins)
 - `15:50` 🎁 Wrap (10 mins)
 

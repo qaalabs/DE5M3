@@ -1,4 +1,4 @@
-# Day 1 - Complete ELT Pipeline in Python
+# Day 1 - Complete ELT Pipeline
 
 ## Session 1
 
