@@ -30,7 +30,7 @@
 
 ## Session 4
 
-- `15:00` **Investigation**: ETL Product Investigation (30 mins)
+- `15:00` **Investigation**: [ETL Product Investigation](../day2/etl-products.md) (30 mins)
 - `15:30` **Report-Back**: ETL Investigation ~ Report back (20 mins)
 
 ## 🎁 Wrap

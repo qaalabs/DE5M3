@@ -13,6 +13,7 @@ nav = [
     {"Architecture Investigation" = "day2/architecture-investigation.md"},
     {"Lab ~ 05 Dataflows Gen2" = "labs/05-dataflows-gen2.md"},
     {"Lab ~ 04 Ingest Pipeline" = "labs/04-ingest-pipeline.md"},
+    {"ETL Product Investigation" = "day2/etl-products.md"},
   ]},
   {"Day 3 - Medallion Architecture" = [
     {"Medallion Architecture Investigation" = "day3/medallion/group-scenarios.md"},
