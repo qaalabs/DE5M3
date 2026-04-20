@@ -9,7 +9,6 @@ nav:
   - Agenda:
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
-    - Day 3: agenda/day3.md
 
   - "Day 1 - Complete ELT Pipeline":
     - "ETL Lab: Focus on Transform": day1/transform-notebook.md
@@ -24,10 +23,6 @@ nav:
     - "Lab ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
     - "ETL Product Investigation": day2/etl-products.md
 
-  - "Day 3 - Medallion Architecture":
-    - "Medallion Architecture Investigation": day3/medallion/group-scenarios.md
-    - "Lab 3.1 - Create Medallion Architecture": labs/03b-medallion-architecture.md
-
   - Resources: resources.md
 
 not_in_nav: |
@@ -36,6 +31,8 @@ not_in_nav: |
   day1/transform-setup.md
   day1/extract-setup.md
   day1/load-setup.md
+  day3/medallion/group-scenarios.md
+  labs/03b-medallion-architecture.md
 
 
 # Theme
