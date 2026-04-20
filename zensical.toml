@@ -5,8 +5,15 @@ dev_addr = "0.0.0.0:8000"
 nav = [
   {"Overview" = "index.md"},
   {"Agenda" = [
+    {"Day 1" = "agenda/day1.md"},
     {"Day 2" = "agenda/day2.md"},
     {"Day 3" = "agenda/day3.md"},
+  ]},
+  {"Day 1 - Complete ELT Pipeline" = [
+    {"ETL Lab: Focus on Transform" = "day1/transform-notebook.md"},
+    {"ETL Lab: Focus on Extract" = "day1/extract-notebook.md"},
+    {"ETL Lab: Focus on Load" = "day1/load-notebook.md"},
+    {"ETL Lab: Full ETL Pipeline" = "day1/load-notebook.md"},
   ]},
   {"Day 2 - Microsoft Fabric" = [
     {"Lab ~ 01 Create Fabric Lakehouse" = "labs/01-lakehouse.md"},

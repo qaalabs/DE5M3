@@ -5,23 +5,23 @@
 ### Session 1
 
 - [ETL: Focus on Transform ~ Setup](day1/transform-setup.md)
-- [ETL Lab: Focus on Transform](day1/transform-lab.md)
+- **Practice**: [ETL Lab: Focus on Transform](day1/transform-notebook.md)
 
 ### Session 2
 
 - **Discussion**: Automation in the workplace
 - [ETL: Focus on Extract ~ Setup](day1/extract-setup.md)
-- [ETL Lab: Focus on Extract](day1/extract-lab.md)
+- **Practice**: [ETL Lab: Focus on Extract](day1/extract-notebook.md)
 
 ### Session 3
 
 - **Discussion**: Introductions
-- ETL: Focus on Load ~ Setup
-- ETL Lab: Focus on Load
+- [ETL: Focus on Load ~ Setup](day1/load-setup.md)
+- **Practice**: [ETL Lab: Focus on Load](day1/load-notebook.md)
 
 ### Session 4
 
-- ETL Lab: Full ETL Pipeline
+- **Practice**: [ETL Lab: Full ETL Pipeline](day1/load-notebook.md)
 - **Discussion**: End of day reflections
 
 ---
