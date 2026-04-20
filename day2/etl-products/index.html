@@ -6,21 +6,25 @@
       
       
       
+        <link rel="prev" href="../../labs/04-ingest-pipeline/">
+      
+      
+        <link rel="next" href="../../day3/medallion/group-scenarios/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Group 3: Regional Bank - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>ETL Product Investigation - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -39,13 +43,13 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#group-3-regional-bank" class="md-skip">
+        <a href="#etl-data-integration-products-investigation-framework" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Module 3 - Data Processing, Transformation &amp; ETL" class="md-header__button md-logo" aria-label="Module 3 - Data Processing, Transformation &amp; ETL" data-md-component="logo">
+    <a href="../.." title="Module 3 - Data Processing, Transformation &amp; ETL" class="md-header__button md-logo" aria-label="Module 3 - Data Processing, Transformation &amp; ETL" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Group 3: Regional Bank
+              ETL Product Investigation
             
           </span>
         </div>
@@ -183,7 +187,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Module 3 - Data Processing, Transformation &amp; ETL" class="md-nav__button md-logo" aria-label="Module 3 - Data Processing, Transformation &amp; ETL" data-md-component="logo">
+    <a href="../.." title="Module 3 - Data Processing, Transformation &amp; ETL" class="md-nav__button md-logo" aria-label="Module 3 - Data Processing, Transformation &amp; ETL" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
@@ -201,7 +205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -275,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../agenda/day2/" class="md-nav__link">
+      <a href="../../agenda/day2/" class="md-nav__link">
         
   
   
@@ -303,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../agenda/day3/" class="md-nav__link">
+      <a href="../../agenda/day3/" class="md-nav__link">
         
   
   
@@ -335,18 +339,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -367,7 +373,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -385,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../labs/01-lakehouse/" class="md-nav__link">
+      <a href="../../labs/01-lakehouse/" class="md-nav__link">
         
   
   
@@ -413,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../day2/architecture-investigation/" class="md-nav__link">
+      <a href="../architecture-investigation/" class="md-nav__link">
         
   
   
@@ -441,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../labs/05-dataflows-gen2/" class="md-nav__link">
+      <a href="../../labs/05-dataflows-gen2/" class="md-nav__link">
         
   
   
@@ -469,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../labs/04-ingest-pipeline/" class="md-nav__link">
+      <a href="../../labs/04-ingest-pipeline/" class="md-nav__link">
         
   
   
@@ -494,10 +500,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../day2/etl-products/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETL Product Investigation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -513,6 +546,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#a-enterprise-commercial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Enterprise Commercial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Back
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -579,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../group-scenarios/" class="md-nav__link">
+      <a href="../../day3/medallion/group-scenarios/" class="md-nav__link">
         
   
   
@@ -607,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../labs/03b-medallion-architecture/" class="md-nav__link">
+      <a href="../../labs/03b-medallion-architecture/" class="md-nav__link">
         
   
   
@@ -642,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   
@@ -679,80 +754,89 @@
 
 
 
-<h1 id="group-3-regional-bank">Group 3: Regional Bank</h1>
-<h2 id="business-context">Business Context</h2>
-<p>You work for "Yorkshire Community Bank" - 50 branches, 150,000 customers, focusing on personal and small business banking.</p>
-<h2 id="current-data-challenges">Current Data Challenges</h2>
+<h1 id="etl-data-integration-products-investigation-framework">ETL / Data Integration Products – Investigation Framework</h1>
+<p>Each group investigates one category, looking at:</p>
 <ul>
-<li>Fraud alerts arrive too late to prevent losses</li>
-<li>Customer service can't see complete relationship (savings + loans + credit cards)</li>
-<li>Regulatory reports are manual and time-consuming</li>
-<li>Cross-selling opportunities are missed</li>
-<li>Risk assessment relies on outdated information</li>
-</ul>
-<h2 id="your-data-sources">Your Data Sources</h2>
-<h3 id="core-banking-systems">Core Banking Systems</h3>
-<ul>
-<li><strong>customers</strong>: customer_id, name, address, risk_profile, relationship_manager</li>
-<li><strong>accounts</strong>: account_id, customer_id, account_type, balance, opening_date</li>
-<li><strong>transactions</strong>: transaction_id, account_id, amount, transaction_type, timestamp</li>
-</ul>
-<h3 id="lending-system-separate">Lending System (separate)</h3>
-<ul>
-<li><strong>loans</strong>: loan_id, customer_id, amount, interest_rate, term, status</li>
-<li><strong>loan_payments</strong>: payment_id, loan_id, amount, due_date, paid_date</li>
-<li><strong>credit_assessments</strong>: assessment_id, customer_id, credit_score, assessment_date</li>
-</ul>
-<h3 id="external-systems">External Systems</h3>
-<ul>
-<li><strong>Credit reference agencies</strong>: credit scores, payment history</li>
-<li><strong>Open banking APIs</strong>: external account data (with consent)</li>
-<li><strong>Fraud detection service</strong>: risk scores, alert flags</li>
-</ul>
-<h2 id="business-questions-to-answer">Business Questions to Answer</h2>
-<ul>
-<li>Who are high-value customers eligible for premium services? (Gold layer)</li>
-<li>Real-time fraud risk assessment (Silver layer)</li>
-<li>Regulatory capital adequacy reporting (Gold layer)</li>
-<li>Customer lifetime value and churn prediction (Gold layer)</li>
-<li>Branch performance and profitability analysis (Gold layer)</li>
-</ul>
-<h3 id="compliance-considerations">Compliance Considerations</h3>
-<ul>
-<li>FCA regulatory reporting requirements</li>
-<li>PCI DSS payment card security</li>
-<li>Open banking consent management</li>
-<li>Anti-money laundering (AML) monitoring</li>
+<li><strong>Target audience</strong> (enterprise IT, analysts, developers, etc.)</li>
+<li><strong>Strengths &amp; weaknesses</strong></li>
+<li><strong>Cost/licensing</strong> (commercial, SaaS, open-source)</li>
+<li><strong>Example use cases / industries</strong></li>
+<li><strong>How it fits into modern data architectures</strong></li>
 </ul>
 <hr>
-<blockquote>
-<p>Use the worksheet to design Bronze → Silver → Gold data layers for Yorkshire Community Bank.</p>
-</blockquote>
-<h2 id="question-worksheet">Question worksheet</h2>
-<div class="highlight"><pre><span></span><code>BRONZE Layer (Raw)
-
-- What data arrives? (format, frequency, quality)
-- Who owns this data?
-- Any compliance/privacy concerns?
-
-SILVER Layer (Cleaned)
-
-- What cleaning rules apply?
-- How do you handle quality issues?
-- What validation checks are needed?
-
-GOLD Layer (Business Ready)
-
-- What business questions does this answer?
-- Who are your end users?
-- What aggregations/metrics do you create?
-</code></pre></div>
-<hr>
-<h2 id="report-back">Report back</h2>
+<h2 id="a-enterprise-commercial">A. Enterprise Commercial</h2>
+<p>Large, licensed, traditional ETL suites used in corporate data centres.</p>
 <ul>
-<li>Describe your scenario</li>
-<li>Present your medallion design</li>
-<li>Class questions/feedback</li>
+<li>Informatica PowerCenter</li>
+<li>IBM DataStage</li>
+<li>SAS Data Management</li>
+<li>Oracle Data Integrator (ODI)</li>
+<li>Microsoft SSIS (SQL Server Integration Services)</li>
+<li>SAP Data Services (BODS)</li>
+<li>Talend Data Fabric (commercial edition)</li>
+<li>Ab Initio</li>
+<li>CloverDX (enterprise edition)</li>
+<li>Pentaho Data Integration (commercial edition)</li>
+</ul>
+<hr>
+<h3 id="b-cloud-native">B. Cloud Native</h3>
+<p>Fully managed, scalable services provided by cloud vendors (ETL/ELT in the cloud).</p>
+<ul>
+<li>AWS Glue Studio</li>
+<li>AWS Data Pipeline</li>
+<li>Google Cloud Dataflow</li>
+<li>Google Cloud Dataprep (by Trifacta → Alteryx)</li>
+<li>Azure Synapse Pipelines</li>
+<li>Azure Data Factory (ADF)</li>
+<li>Snowflake Snowpipe / Snowpark</li>
+<li>Databricks Workflows &amp; Delta Live Tables</li>
+<li>Fivetran (SaaS, cloud-native connectors)</li>
+<li>Matillion (cloud-focused ETL/ELT tool)</li>
+<li>Stitch (Talend Cloud)</li>
+<li>Hevo Data / Airbyte Cloud</li>
+</ul>
+<hr>
+<h3 id="c-self-service-citizen-developer">C. Self-Service / Citizen Developer</h3>
+<p>Drag-and-drop or visual tools aimed at analysts and non-IT specialists.</p>
+<ul>
+<li>Alteryx Designer</li>
+<li>Tableau Prep</li>
+<li>Microsoft Power BI Dataflows (Gen1 &amp; Gen2)</li>
+<li>Qlik Data Integration (Compose &amp; Replicate)</li>
+<li>Excel Power Query (Get &amp; Transform)</li>
+<li>SAP Data Intelligence Cloud</li>
+<li>Knime Analytics Platform</li>
+<li>RapidMiner</li>
+<li>Zoho DataPrep</li>
+<li>Trifacta Wrangler (historic, now Alteryx)</li>
+</ul>
+<hr>
+<h3 id="d-open-source-hybrid">D. Open Source / Hybrid</h3>
+<p>Community-driven tools, often extensible, sometimes with hybrid SaaS offerings.</p>
+<ul>
+<li>Apache NiFi</li>
+<li>Talend Open Studio (community edition)</li>
+<li>dbt (data build tool)</li>
+<li>Apache Airflow</li>
+<li>Pentaho Kettle (PDI Community Edition)</li>
+<li>Singer (taps &amp; targets)</li>
+<li>Meltano</li>
+<li>Luigi (Spotify)</li>
+<li>Dagster</li>
+<li>Prefect</li>
+<li>Kafka Connect</li>
+<li>StreamSets Data Collector (community edition)</li>
+</ul>
+<hr>
+<h2 id="report-back">Report Back</h2>
+<p><em>Each person in the group reports back:</em></p>
+<ul>
+<li>What is it? Brief description and primary purpose</li>
+<li>How does it work? Visual interface, code-based, or hybrid?</li>
+<li>Strengths vs Fabric - what does it do better/differently?</li>
+<li>Typical use cases - when would companies choose this?</li>
+<li>Learning curve - given Python Day 1 and Fabric Day 2 experience?</li>
+<li>Cost consideration - what's the real cost?</li>
 </ul>
 
 
@@ -803,10 +887,10 @@ GOLD Layer (Business Ready)
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   

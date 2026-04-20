@@ -16,7 +16,7 @@
     
     
       
-        <title>Load lab - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Lab 3.2 - Apache NiFi: Your First Data Pipeline - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#lab-32-apache-nifi-your-first-data-pipeline" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Load lab
+              Lab 3.2 - Apache NiFi: Your First Data Pipeline
             
           </span>
         </div>
@@ -574,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/medallion/group-scenarios/" class="md-nav__link">
+      <a href="../medallion/group-scenarios/" class="md-nav__link">
         
   
   
@@ -674,9 +679,252 @@
 
 
 
-  <h1>Load lab</h1>
-
-
+<h1 id="lab-32-apache-nifi-your-first-data-pipeline">Lab 3.2 - Apache NiFi: Your First Data Pipeline</h1>
+<h2 id="overview">Overview</h2>
+<p>Apache NiFi is an open-source data flow tool used to move and route data 
+between systems. It is used across industries for data ingestion, routing, 
+and basic transformation.</p>
+<p>In this lab you will build a simple pipeline that reads a CSV file, 
+processes it through NiFi, and writes it to an output directory. You will 
+watch data move through the pipeline in real time.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Understand how NiFi fits into the data engineering tool landscape</li>
+<li>Build a simple Extract → Load pipeline using a visual canvas</li>
+<li>Observe real-time data flow monitoring</li>
+</ul>
+<h2 id="before-you-start">Before You Start</h2>
+<p>Make sure NiFi is running. Open a terminal and check:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
+</code></pre></div>
+<p>You should see the NiFi container listed. Then open your browser and go to:</p>
+<p><a href="https://localhost:8443/nifi">https://localhost:8443/nifi</a></p>
+<p>Accept the certificate warning and log in:</p>
+<ul>
+<li><strong>Username</strong>: admin</li>
+<li><strong>Password</strong>: admin123456789</li>
+</ul>
+<h2 id="step-1-prepare-your-data">Step 1 - Prepare Your Data</h2>
+<p>Open a terminal and run the following commands to create your working
+directories and sample data file:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/nifi-input<span class="w"> </span>/tmp/nifi-output
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>&gt;<span class="w"> </span>/tmp/nifi-input/customers.csv<span class="w"> </span><span class="s">&lt;&lt; 'EOF'</span>
+<span class="s">customer_id,first_name,last_name,email,status</span>
+<span class="s">1001,John,Smith,john@email.com,active</span>
+<span class="s">1002,Jane,Doe,jane@email.com,active</span>
+<span class="s">1003,Mike,Johnson,mike@email.com,inactive</span>
+<span class="s">1004,Sarah,Wilson,sarah@email.com,active</span>
+<span class="s">1005,Bob,Brown,bob@email.com,suspended</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<p>Verify the file is there:</p>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>/tmp/nifi-input/customers.csv
+</code></pre></div>
+<h2 id="step-2-add-the-getfile-processor">Step 2 - Add the GetFile Processor</h2>
+<p>The <strong>GetFile</strong> processor is the Extract step - it reads files from a
+directory on the local file system.</p>
+<ol>
+<li>In the NiFi toolbar at the top of the screen, drag the <strong>Processor</strong>
+icon onto the canvas</li>
+<li>In the search box type <code>GetFile</code></li>
+<li>Select <strong>GetFile</strong> and click <strong>Add</strong></li>
+<li>You will see the processor appear on the canvas with a yellow warning
+triangle - this is normal until it is configured</li>
+</ol>
+<p><strong>Configure GetFile:</strong></p>
+<ol>
+<li>Double-click the GetFile processor to open the configuration panel</li>
+<li>Click the <strong>Properties</strong> tab</li>
+<li>Set the following properties:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input Directory</td>
+<td><code>/tmp/nifi-input</code></td>
+</tr>
+<tr>
+<td>Keep Source File</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Click <strong>Apply</strong></li>
+</ol>
+<blockquote>
+<p>Setting <strong>Keep Source File</strong> to <code>true</code> means NiFi will not delete your
+input file after processing. Useful for testing.</p>
+</blockquote>
+<h2 id="step-3-add-the-logattribute-processor">Step 3 - Add the LogAttribute Processor</h2>
+<p>The <strong>LogAttribute</strong> processor logs information about each file that passes
+through it. This lets you see the pipeline working in real time.</p>
+<ol>
+<li>Drag another <strong>Processor</strong> onto the canvas</li>
+<li>Search for <code>LogAttribute</code></li>
+<li>Select <strong>LogAttribute</strong> and click <strong>Add</strong></li>
+<li>Double-click to configure it</li>
+<li>No properties need changing - click <strong>Apply</strong></li>
+</ol>
+<h2 id="step-4-add-the-putfile-processor">Step 4 - Add the PutFile Processor</h2>
+<p>The <strong>PutFile</strong> processor is the Load step - it writes files to a directory
+on the local file system.</p>
+<ol>
+<li>Drag another <strong>Processor</strong> onto the canvas</li>
+<li>Search for <code>PutFile</code></li>
+<li>Select <strong>PutFile</strong> and click <strong>Add</strong></li>
+<li>Double-click to configure it</li>
+<li>Click the <strong>Properties</strong> tab</li>
+<li>Set the following properties:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Directory</td>
+<td><code>/tmp/nifi-output</code></td>
+</tr>
+<tr>
+<td>Conflict Resolution Strategy</td>
+<td><code>replace</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Click <strong>Apply</strong></li>
+</ol>
+<h2 id="step-5-connect-the-processors">Step 5 - Connect the Processors</h2>
+<p>Now connect the three processors to create the pipeline flow.</p>
+<ol>
+<li>Hover over the <strong>GetFile</strong> processor until you see a grey arrow appear
+in the centre</li>
+<li>Drag the arrow to the <strong>LogAttribute</strong> processor</li>
+<li>A connection dialog will appear - select <strong>success</strong> and click <strong>Add</strong></li>
+<li>Repeat - hover over <strong>LogAttribute</strong>, drag to <strong>PutFile</strong></li>
+<li>Select <strong>success</strong> and click <strong>Add</strong></li>
+</ol>
+<p>You should now have three processors connected in a line:</p>
+<p>GetFile → LogAttribute → PutFile</p>
+<p><strong>Handle the unmatched relationship on LogAttribute:</strong></p>
+<p>LogAttribute has a <code>success</code> output that you have connected. But it also
+has other outputs that need to be handled. Right-click <strong>LogAttribute</strong> and
+select <strong>Configure</strong>. Under the <strong>Relationships</strong> tab, tick
+<strong>Automatically Terminate</strong> for any unconnected relationships.</p>
+<p>Do the same for <strong>PutFile</strong>.</p>
+<h2 id="step-6-start-the-pipeline">Step 6 - Start the Pipeline</h2>
+<ol>
+<li>Click on an empty area of the canvas to deselect everything</li>
+<li>Right-click the canvas and select <strong>Start</strong></li>
+<li>All three processors will turn green</li>
+</ol>
+<p>Watch the <strong>connections between processors</strong> - you will see numbers appear
+showing how many files are queued between each step.</p>
+<h2 id="step-7-verify-the-output">Step 7 - Verify the Output</h2>
+<p>Open a terminal and check the output directory:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>/tmp/nifi-output/
+cat<span class="w"> </span>/tmp/nifi-output/*
+</code></pre></div>
+<p>You should see your customers.csv file has been processed and written to
+the output directory.</p>
+<h2 id="step-8-stop-the-pipeline">Step 8 - Stop the Pipeline</h2>
+<p>Right-click the canvas and select <strong>Stop</strong>.</p>
+<blockquote>
+<p>Always stop your pipeline when you are done. A running GetFile processor
+will keep polling the input directory continuously.</p>
+</blockquote>
+<h2 id="step-9-export-your-flow-definition">Step 9 - Export Your Flow Definition</h2>
+<p>NiFi saves your pipeline as a JSON file called a <strong>flow definition</strong>. This
+is how flows are moved between environments in production - from development
+to test to production.</p>
+<ol>
+<li>Right-click on the canvas</li>
+<li>Select <strong>Download flow definition</strong></li>
+<li>Open the downloaded JSON file in a text editor</li>
+</ol>
+<p>You will see your pipeline described in JSON - every processor, every
+property, every connection is captured in this file.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"formatVersion"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"flowContents"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"processors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GetFile"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"org.apache.nifi.processors.standard.GetFile"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"Input Directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/tmp/nifi-input"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"Keep Source File"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This file can be:</p>
+<ul>
+<li>Stored in <strong>version control</strong> (Git) alongside your other pipeline code</li>
+<li>Imported into another NiFi instance using <strong>Upload template</strong></li>
+<li>Deployed to a production NiFi cluster by your infrastructure team</li>
+</ul>
+<blockquote>
+<p>In production, NiFi flows are version controlled in <strong>NiFi Registry</strong> -
+a separate service that works like Git specifically for NiFi flow
+definitions. What you have just exported is the development version of
+what would be promoted through dev → test → production environments.</p>
+</blockquote>
+<h2 id="what-this-means-in-practice">What This Means in Practice</h2>
+<p>The visual pipeline you built today is not just a learning exercise. The
+same flow definition file could be deployed to a cluster of NiFi nodes
+running in production, processing millions of records per day.</p>
+<p>This is the bridge between development and production - and it connects
+directly to <strong>K8</strong> in your KSBs: deployment approaches for new data
+pipelines.</p>
+<hr>
+<h2 id="what-you-have-built">What You Have Built</h2>
+<div class="highlight"><pre><span></span><code>/tmp/nifi-input/customers.csv
+↓
+[ GetFile ]        ← Extract
+↓
+[ LogAttribute ]     ← Monitor
+↓
+[ PutFile ]        ← Load
+↓
+/tmp/nifi-output/customers.csv
+</code></pre></div>
+<p>This is a complete Extract → Load pipeline built entirely visually with no
+code written.</p>
+<h2 id="reflection-questions">Reflection Questions</h2>
+<p>Think about these before the debrief discussion:</p>
+<ol>
+<li>How does building this pipeline in NiFi compare to writing Python code
+on Day 1?</li>
+<li>What does NiFi show you that Python could not?</li>
+<li>NiFi is open source and runs anywhere. Fabric runs in Microsoft's cloud.
+What are the implications of that difference for a business?</li>
+<li>Where in your organisation could a tool like NiFi be useful?</li>
+</ol>
+<h2 id="extension-l3-and-l4-learners">Extension - L3 and L4 Learners</h2>
+<p>If you have finished early, explore the following:</p>
+<ul>
+<li>Add a second <strong>PutFile</strong> processor and route the flow so the file is
+written to two different output directories simultaneously</li>
+<li>Look at the <strong>Provenance</strong> view (top right menu) - this shows the complete
+history of every file that has passed through NiFi. This is <strong>data lineage</strong></li>
+<li>a record of where data has been and what happened to it</li>
+<li>Search for the <strong>FetchHTTP</strong> processor - what do you think this does?
+How could it replace the API calls from Day 1?</li>
+</ul>
 
 
 
