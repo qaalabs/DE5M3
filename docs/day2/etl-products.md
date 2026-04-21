@@ -8,8 +8,6 @@ Each group investigates one category, looking at:
 - **Example use cases / industries**
 - **How it fits into modern data architectures**
 
----
-
 ## A. Enterprise Commercial
 
 Large, licensed, traditional ETL suites used in corporate data centres.
@@ -25,9 +23,8 @@ Large, licensed, traditional ETL suites used in corporate data centres.
 - CloverDX (enterprise edition)
 - Pentaho Data Integration (commercial edition)
 
----
 
-### B. Cloud Native
+## B. Cloud Native
 
 Fully managed, scalable services provided by cloud vendors (ETL/ELT in the cloud).
 
@@ -44,9 +41,8 @@ Fully managed, scalable services provided by cloud vendors (ETL/ELT in the cloud
 - Stitch (Talend Cloud)
 - Hevo Data / Airbyte Cloud
 
----
 
-### C. Self-Service / Citizen Developer
+## C. Self-Service / Citizen Developer
 
 Drag-and-drop or visual tools aimed at analysts and non-IT specialists.
 
@@ -61,9 +57,8 @@ Drag-and-drop or visual tools aimed at analysts and non-IT specialists.
 - Zoho DataPrep
 - Trifacta Wrangler (historic, now Alteryx)
 
----
 
-### D. Open Source / Hybrid
+## D. Open Source / Hybrid
 
 Community-driven tools, often extensible, sometimes with hybrid SaaS offerings.
 

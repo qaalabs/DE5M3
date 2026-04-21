@@ -1,7 +1,5 @@
 ## Brief introduction to MS Fabric ~ PowerPoint
 
-<mark>Get them to start the **MS Fabric Playground** from the VM ~ [link](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/)</mark>
-
 ### Previous experience
 
 - Ask if anyone has used Microsoft Fabric
