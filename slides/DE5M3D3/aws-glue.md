@@ -17,3 +17,4 @@ Upon completion of this beginner-level lab, you will be able to:
 - Generate an AWS Glue job script
 - Query an AWS Glue Data Catalog table using Amazon Athena
 
+https://app.qa.com/lab/using-aws-glue-for-etl-workloads

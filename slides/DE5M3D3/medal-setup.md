@@ -1,18 +1,18 @@
-## <mark>Breakout groups to investigate medallion architecture</mark>
+## <mark>Breakout groups to design medallion architecture</mark>
 
 <a href="http://192.168.1.227:3000/s/de5m3-medallion" target="_blank">📒 Click here for text to paste into the chat</a>
 
-### Your Day 1 customer data - would you trust it for CEO reporting?
+**Challenge:** Design your medallion layers - what goes in Bronze, Silver, Gold?
 
-- What about for sending marketing emails
-- Different uses need different trust levels.
+- E-commerce Retailer
+- Healthcare Clinic
+- Regional Bank
+- Manufacturing Plant
 
-`Raw: "jane DOE", "JANE@EMAIL.COM", "invalid phone"`
+### Links to scenarios
 
-`Cleaned: "Jane Doe", "jane@email.com", "phone_invalid_flag"`
+https://qaalabs.github.io/DE5M3/day3/medallion/scenario-brief-a/
+https://qaalabs.github.io/DE5M3/day3/medallion/scenario-brief-b/
+https://qaalabs.github.io/DE5M3/day3/medallion/scenario-brief-c/
+https://qaalabs.github.io/DE5M3/day3/medallion/scenario-brief-d/
 
-`Enriched: "Jane Doe", "jane@email.com", "+44 123 456 7890", "Premium Customer"`
-
-### Learning Outcome
-
-- By the end, you'll design a medallion architecture for real business data.
