@@ -31,6 +31,7 @@ not_in_nav: |
   day1/transform-setup.md
   day1/extract-setup.md
   day1/load-setup.md
+  docs/day2/architecture-notes.md
   day3/medallion/group-scenarios.md
   labs/03b-medallion-architecture.md
 
