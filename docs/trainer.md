@@ -37,7 +37,7 @@
 ### Session 2
 
 - **Investigation**: [Architecture Investigation](day2/architecture-investigation.md)
-- **Report-Back**: [Architecture ~ report back](docs/day2/architecture-notes.md)
+- **Report-Back**: [Architecture ~ report back](day2/architecture-notes.md)
 - **Practice**: [Lab ~ 05 Dataflows Gen2](labs/05-dataflows-gen2.md)
 - **Discussion**: Debrief about the lab
 
