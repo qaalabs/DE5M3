@@ -7,11 +7,9 @@
 - Data Warehouse
 - Data Lake
 - Data Lakehouse
-- Data Mart
 
-### Investigation
+**These are the big platform choices:**
 
-- Technical explanation
-- What problem does it solve?
-- Key strength vs other approaches?
-- When would you use it?
+- Warehouse → structured, reporting-first
+- Lake → raw, flexible, data-first
+- Lakehouse → hybrid, modern approach

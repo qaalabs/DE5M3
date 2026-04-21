@@ -4,5 +4,4 @@
 
 - Group A: Data Warehouse
 - Group B: Data Lake
-- Group C: Data Mart
-- Group D: Data Lakehouse
+- Group C: Data Lakehouse
