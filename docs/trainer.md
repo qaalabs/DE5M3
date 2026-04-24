@@ -55,7 +55,7 @@
 
 ---
 
-## Day 3 - Medallion Architecture
+## Day 3 - ETL Tools & Architecture
 
 ### Session 1
 
@@ -66,10 +66,16 @@
 ### Session 2
 
 - **Discussion**: Medallion Architecture ~ Report Back
+- **Activity**: Start MS Fabric Playground
 - [Lab 3.1 - Create Medallion Architecture](labs/03b-medallion-architecture.md)
+- **Activity**: Pull Apache NiFi Docker Image
 
 ### Session 3
 
+- ETL Tools Landscape
+- Introduction to Apache NiFi
+- Apache NiFi ~ Guided Flow
+- NiFi Debrief
 
 ### Session 4
 
