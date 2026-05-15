@@ -1,36 +1,35 @@
-# Day 3 - ETL Tools & Architecture
+# Day 3 - Robust & Well-Architectured
 
 ## Session 1
 
-- `09:30` 🌅 Welcome to Day 3 of DE5 Module 3 (10 mins)
-- `09:40` Theory: Medallion Architecture (20 mins)
-- `10:00` Medallion Architecture ~ Setup (10 mins)
-- `10:10` [Medallion Architecture Investigation](../day3/medallion/group-scenarios.md) (30 mins)
+- 🌅 Welcome to Day 3 of DE5 Module 3
+- Show the Day 2 pipeline as it stands — frame the design review with concrete prompts
+- **Breakout**: Pairs surface weaknesses: where is raw/cleaned mixed? what is hardest to debug or reuse?
+- **Report-Back**: Build a visible list of design debts
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- `11:00` **Discussion**: Medallion Architecture ~ Report Back (20 mins)
-- `11:20` **Activity**: Start MS Fabric Playground (10 mins)
-- `11:30` Lab 3.1 - Create Medallion Architecture (40 mins)
-- `12:10` **Activity**: Pull Apache NiFi Docker Image (10 mins)
+- [Introduce bronze/silver/gold as the direct response to the weaknesses just listed — anchor each layer to the HomeSphere pipeline](../day3/medallion/group-scenarios.md)
+- **Practice**: Map the Day 2 pipeline onto B/S/G: what already exists, what is missing, what should move
+- **Discussion**: What needs to move? What is misplaced?
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- `13:20` ETL Tools Landscape (10 mins)
-- `13:30` Introduction to Apache NiFi (10 mins)
-- `13:40` Apache NiFi ~ Guided Flow (40 mins)
-- `14:20` NiFi Debrief (10 mins)
+- **Practice**: Restructure Day 2 setup into explicit layers — raw untouched, silver Sales, silver Product, gold output explicit, lightweight validation checks
+- **Discussion**: What is actually better now? Why does this design matter? What is easier to debug?
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- `14:50`  (30 mins)
-- `15:20` **Activity**: Lab: ETL Job in AWS Glue Studio (30 mins)
+- Introduce Inventory or Support as the extension source — frame the group design task
+- **Breakout**: Groups design B/S/G for their source: bronze, silver, validation, where it feeds gold
+- **Report-Back**: Groups share — surface where choices differed and why — not every source fits neatly
+- **Discussion**: Pipeline still answers the same question — design is clearer — tomorrow: trust, explanation, and handover
 
 ## 🎁 Wrap
 

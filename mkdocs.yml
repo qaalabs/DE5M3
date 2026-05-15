@@ -8,35 +8,19 @@ nav:
 
   - Agenda:
     - Day 1: agenda/day1.md
-    - Day 2: agenda/day2.md
     - Day 3: agenda/day3.md
 
-  - "Day 1 - Complete ELT Pipeline":
-    - "ETL Lab: Focus on Transform": day1/transform-notebook.md
-    - "ETL Lab: Focus on Extract": day1/extract-notebook.md
-    - "ETL Lab: Focus on Load": day1/load-notebook.md
-    - "ETL Lab: Full ETL Pipeline": day1/load-notebook.md
+  - "Day 1 - ETL Locally":
+    - "Introduce HomeSphere scenario, show both raw sources, explain Day 1 finish line": day1/homesphere.md
 
-  - "Day 2 - Microsoft Fabric":
-    - "Lab ~ 01 Create Fabric Lakehouse": labs/01-lakehouse.md
-    - "Architecture Investigation": day2/architecture-investigation.md
-    - "Lab ~ 05 Dataflows Gen2": labs/05-dataflows-gen2.md
-    - "Lab ~ 04 Ingest Pipeline": labs/04-ingest-pipeline.md
-    - "ETL Product Investigation": day2/etl-products.md
-
-  - "Day 3 - ETL Tools & Architecture":
-    - "Medallion Architecture Investigation": day3/medallion/group-scenarios.md
+  - "Day 3 - Robust & Well-Architectured":
+    - "Introduce bronze/silver/gold as the direct response to the weaknesses just listed — anchor each layer to the HomeSphere pipeline": day3/medallion/group-scenarios.md
 
   - Resources: resources.md
 
 not_in_nav: |
   404.md
   trainer.md
-  day1/transform-setup.md
-  day1/extract-setup.md
-  day1/load-setup.md
-  day2/architecture-notes.md
-  labs/03b-medallion-architecture.md
 
 
 # Theme

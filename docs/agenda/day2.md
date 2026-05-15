@@ -1,37 +1,35 @@
-# Day 2 - Microsoft Fabric
+# Day 2 - ETL in the Cloud
 
 ## Session 1
 
-- `09:30` 🌅 Welcome to Day 2 of DE5 Module 3 (10 mins)
-- `09:40` VM Setup (10 mins)
-- `09:50` Introduction to Microsoft Fabric (10 mins)
-- `10:00` **Practice**: [Lab ~ 01 Create Fabric Lakehouse](../labs/01-lakehouse.md) (30 mins)
-- `10:30` **Discussion**: Debrief about the lab (10 mins)
+- 🌅 Welcome to Day 2 of DE5 Module 3
+- What Fabric is in this module — lakehouse, OneLake, anchored to where Day 1 steps now sit
+- **Investigation**: Explore the Fabric environment — find where raw files, cleaned tables, and joined output live
+- **Discussion**: What stays the same from Day 1? What is new?
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- `11:00` **Investigation**: [Architecture Investigation](../day2/architecture-investigation.md) (20 mins)
-- `11:20` **Report-Back**: Architecture ~ report back (10 mins)
-- `11:30` **Practice**: [Lab ~ 05 Dataflows Gen2](../labs/05-dataflows-gen2.md) (40 mins)
-- `12:10` **Discussion**: Debrief about the lab (10 mins)
+- Demo: landing raw files in the lakehouse, reusing transformation logic in a notebook
+- **Practice**: Upload Sales and Product, recreate cleaning and flatten steps in a Fabric notebook
+- **Discussion**: What felt familiar? What felt different?
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- `13:20` Data Ingestion Approaches (20 mins)
-- `13:40` **Discussion**: Data Approaches in the Workplace (20 mins)
-- `14:00` **Practice**: [Lab ~ 04 Ingest Pipeline](../labs/04-ingest-pipeline.md) (30 mins)
-- `14:30` **Discussion**: Debrief about the lab (10 mins)
+- **Practice**: Store cleaned tables, join, query in Fabric — answer the same business question as Day 1
+- **Discussion**: What is better now? What is still fragile?
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- `15:00` **Investigation**: [ETL Product Investigation](../day2/etl-products.md) (30 mins)
-- `15:30` **Report-Back**: ETL Investigation ~ Report back (20 mins)
+- K13 lens: security, scalability, governance, cost
+- **Breakout**: Groups compare Day 1 local pipeline vs Day 2 Fabric pipeline
+- **Report-Back**: Share back findings from the comparison
+- **Discussion**: Why cloud does not equal well-architected — what needs fixing — bridge to Day 3
 
 ## 🎁 Wrap
 
