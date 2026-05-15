@@ -1,4 +1,4 @@
-# Facilitator Notes — End of Day Reflection
+# Facilitator Notes - End of Day Reflection
 
 *Trainer-only. ~10 minutes to close the day.*
 
@@ -14,7 +14,7 @@ The answer you are looking for:
 
 > Two raw, messy source files → a clean joined dataset → a business answer.
 
-That is a complete pipeline. It ran locally, by hand, in a notebook. Hold that thought — it matters tomorrow.
+That is a complete pipeline. It ran locally, by hand, in a notebook. Hold that thought - it matters tomorrow.
 
 ---
 
@@ -40,6 +40,6 @@ That is a complete pipeline. It ran locally, by hand, in a notebook. Hold that t
 
 ## Close
 
-> "Tomorrow we take the same data and the same question — and run it in Microsoft Fabric. Same pipeline, different environment. You will see what changes and what stays exactly the same."
+> "Tomorrow we take the same data and the same question - and run it in Microsoft Fabric. Same pipeline, different environment. You will see what changes and what stays exactly the same."
 
 Keep it brief. End on the continuity into Day 2.

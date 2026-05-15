@@ -16,7 +16,7 @@ Run each cell in turn and pay attention to what pandas tells you:
 - What are the column names and data types?
 - Which columns have missing values, and how many?
 - Are there any duplicate rows?
-- Look at the unique values in `status`, `unit_price`, `quantity`, and `order_date` — do they look consistent?
+- Look at the unique values in `status`, `unit_price`, `quantity`, and `order_date` - do they look consistent?
 
 **Do not fix anything yet.** Just observe and make notes in the Discussion cell.
 

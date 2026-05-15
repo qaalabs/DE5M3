@@ -11,40 +11,40 @@ Open the notebook: **`day1_join.ipynb`** and work through all parts.
 
 ---
 
-## Part 1 — Flatten the Product data
+## Part 1 - Flatten the Product data
 
 The Product JSON cannot be joined directly because the fields you need (`category`, `name`) are mixed with nested `specs` data.
 
-`pd.json_normalize` flattens the nested structure into a flat table. It creates columns named with dot notation — `specs.rrp`, `specs.warranty_years` — which you then rename.
+`pd.json_normalize` flattens the nested structure into a flat table. It creates columns named with dot notation - `specs.rrp`, `specs.warranty_years` - which you then rename.
 
 Once flattened, select only the three columns you actually need for the join: `product_id`, `name`, `category`. Keeping unused columns out of the joined table avoids confusion later.
 
 ---
 
-## Part 2 — Load cleaned Sales
+## Part 2 - Load cleaned Sales
 
 Load the `cleaned_sales.csv` you saved in the previous session.
 Use `parse_dates=['order_date']` so the date column comes in correctly typed.
 
 ---
 
-## Part 3 — Join
+## Part 3 - Join
 
 Merge Sales to Products on `product_id` using a **left join**.
 
 A left join keeps every Sales row, and adds the matching product columns where they exist. If a Sales row has a `product_id` that does not appear in Products, the product columns will be `NaN`.
 
-Check the missing values after the join — any `NaN` in `category` means that Sales row could not be matched to a product.
+Check the missing values after the join - any `NaN` in `category` means that Sales row could not be matched to a product.
 
 ---
 
-## Part 4 — Calculate line value
+## Part 4 - Calculate line value
 
 Revenue for each order line is `quantity × unit_price`. Add a `line_value` column.
 
 ---
 
-## Part 5 — Answer the question
+## Part 5 - Answer the question
 
 Group by `category`, sum `line_value`, and sort highest to lowest.
 
