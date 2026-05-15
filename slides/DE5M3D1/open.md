@@ -1,5 +1,6 @@
-## *ETL in Python - The Modern Approach*
+## How do we take messy source data and turn it into something usable?
 
-**Today we're doing ETL the modern way - in Python. Yes, corporations use tools like SSIS, Azure Data Factory, Informatica... but Python ETL is increasingly popular because it's flexible, testable, and version-controllable.**
-
-https://qaalabs.github.io/DE5M3/trainer
+We have raw Sales and Product data from HomeSphere.
+It is messy and inconsistent.
+By the end of the day we will have extracted, cleaned, and joined it into a first trusted dataset.
+And use it to answer a simple business question.
