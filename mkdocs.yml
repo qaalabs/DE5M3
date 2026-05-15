@@ -10,6 +10,7 @@ nav:
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
     - Day 3: agenda/day3.md
+    - Day 4: agenda/day4.md
 
   - "Day 1 - ETL Locally":
     - "Introducing HomeSphere": day1/homesphere.md
@@ -22,9 +23,21 @@ nav:
     - "Landing Raw Data": day2/land-data.md
     - "Clean and Flatten in Fabric": day2/cloud-clean.md
     - "Build the Trusted Output": day2/cloud-output.md
+    - "Local vs Cloud": day2/compare.md
 
   - "Day 3 - Robust & Well-Architectured":
-    - "Bronze, Silver, Gold": day3/medallion/group-scenarios.md
+    - "Where Are the Weaknesses?": day3/fragile.md
+    - "Bronze, Silver, Gold": day3/medallion-lab.md
+    - "Map the Pipeline": day3/med-map.md
+    - "Design B/S/G for Your Source": day3/ext-design.md
+
+  - "Day 4 - Supportable & Explainable":
+    - "Silent Failures": day4/silent-fail.md
+    - "Which Checks Matter?": day4/checks-design.md
+    - "Add Validation Checks": day4/checks-build.md
+    - "Create a Handover Artefact": day4/mvd-build.md
+    - "Review Each Other's Artefact": day4/mvd-review.md
+    - "Prepare Your Explanation": day4/pitch-prep.md
 
   - Resources: resources.md
 
@@ -38,6 +51,16 @@ not_in_nav: |
   day1/reflection.md
   day2/cloud-debrief.md
   day2/output-debrief.md
+  day2/reflection.md
+  day3/review.md
+  day3/med-debrief.md
+  day3/debrief.md
+  day3/bridge.md
+  day4/mvd-intro.md
+  day4/stakeholder.md
+  day4/pitch-debrief.md
+  day4/maturity.md
+  day4/retro.md
 
 
 # Theme

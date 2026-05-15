@@ -27,7 +27,7 @@
 ## Session 4
 
 - Security, Scalability, Governance, Cost
-- **Breakout**: Local vs Cloud
+- **Breakout**: [Local vs Cloud](../day2/compare.md)
 - **Report-Back**: Share Your Comparison
 - **Discussion**: Cloud Is Not Well-Architected
 
