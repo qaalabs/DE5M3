@@ -1,2 +1,8 @@
+## Inspect Sales
 
-Open Sales data — inspect columns, types, missing values, duplicates
+Open Sales data and inspect:
+
+- columns
+- types
+- missing values
+- duplicates
