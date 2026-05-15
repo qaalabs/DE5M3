@@ -1,0 +1,234 @@
+Day 4 should feel narrower and calmer than Day 3.
+
+Day 3 is the redesign day.
+Day 4 is the **make it usable by other people** day.
+
+So I would frame it as:
+
+## Day 4 - Supportable and Explainable
+
+**Holding question**
+What would it take for someone who did not build this pipeline to run it, trust it, and explain it to a stakeholder?
+
+That question gives you a very clean final-day shape.
+
+---
+
+## Suggested Day 4 structure
+
+### 1. Reconnect to Day 3 - 15 to 20 mins
+
+**Focus**
+Remind learners what changed yesterday.
+
+**Topics**
+
+* the pipeline still produces the same business output
+* what changed was its structure
+* today is about making it trustworthy, understandable, and usable beyond the people who built it
+
+**Why this matters**
+It makes Day 4 feel like the next logical step rather than a loose ending.
+
+---
+
+### 2. Validation and trust - 35 to 45 mins
+
+**Focus**
+How do we know the pipeline is still working?
+
+**Topics**
+
+* what kinds of silent failures can happen
+* where checks should sit
+* simple validation before data moves from one layer to the next
+
+**Examples**
+
+* row count sanity checks
+* null checks on required fields
+* duplicate checks
+* valid product IDs before join
+* non-negative quantities or values
+
+**Activity**
+Learners review the current pipeline and decide:
+
+* what should be checked at bronze to silver?
+* what should be checked at silver to gold?
+* which checks are essential and which are nice to have?
+
+Then add or sketch a few checks in practice.
+
+**Output**
+A small set of practical validation checks tied to the layered pipeline.
+
+---
+
+### 3. Documentation and dependencies - 35 to 45 mins
+
+**Focus**
+How does someone else understand the pipeline?
+
+**Topics**
+
+* minimum viable documentation
+* sources, layers, outputs
+* what depends on what
+* what another engineer would need to know to orientate themselves
+
+**Activity**
+Learners produce a lightweight handover view, for example:
+
+* source -> silver -> gold flow
+* what each layer contains
+* what runs first
+* what the final output is for
+
+This could be:
+
+* a simple table
+* a diagram
+* a short structured note
+
+**Prompts**
+
+* what would a new engineer need to know first?
+* what would confuse them if undocumented?
+* what assumptions have we made that are currently only in our heads?
+
+**Output**
+A minimum viable pipeline handover artefact.
+
+---
+
+### 4. Stakeholder explanation - 30 to 40 mins
+
+**Focus**
+How do we explain the value without drowning people in engineering detail?
+
+**Topics**
+
+* technical view vs stakeholder view
+* how to explain what the output is for
+* how to explain trust and limitations in plain language
+
+**Activity**
+Pairs or small groups prepare a short explanation of:
+
+* what the trusted output is
+* what business question it helps answer
+* why it can be trusted more than the raw sources
+* what caveats still remain
+
+You could frame it as:
+“Explain orders_with_detail to a manager who does not care about bronze, silver, or notebooks.”
+
+**Prompts**
+
+* what would they care about?
+* what would make them trust it?
+* what would make them sceptical?
+
+**Output**
+A short business-facing explanation or mini pitch.
+
+---
+
+### 5. Next maturity steps - 20 to 30 mins
+
+**Focus**
+Where would the pipeline go next if the team had more time?
+
+**Topics**
+
+* IoT as a richer event source
+* Marketing as a richer customer-facing source
+* what a more mature data team might add next
+* why these were not core to this module
+
+**Activity**
+Whole-class discussion or small-group thought exercise:
+
+* what would we add next?
+* which source would add the most value?
+* which would add the most complexity?
+* what would need to change in the architecture?
+
+**Output**
+A realistic sense of scope, boundaries, and future development.
+
+---
+
+### 6. Module retrospective and close - 15 to 20 mins
+
+**Focus**
+Make the journey visible.
+
+**Prompts**
+
+* what is different now compared with Day 1?
+* what would you do differently if you rebuilt the pipeline?
+* what have you learned about ETL beyond just moving data?
+* where does this sit in the wider programme lifecycle?
+
+**Good closing message**
+We started by making data work.
+We then moved it into the cloud, structured it better, and made it easier to trust and explain.
+That is the middle of the data engineering lifecycle in action.
+
+---
+
+## A possible schedule in your style
+
+### Day 4 - Supportable & Explainable
+
+* reconnect to Day 3 and set the holding question
+* validation and trust: what should we check, and where?
+* documentation and dependencies: what would another engineer need?
+* stakeholder explanation: how do we explain the result simply?
+* next maturity steps: IoT and Marketing as realistic extensions
+* module retrospective and close
+
+---
+
+## Suggested WebEx use
+
+Day 4 is well suited to:
+
+* **whole-class discussion** for validation ideas
+* **pairs or breakout rooms** for documentation and stakeholder explanation
+* **report-back** for comparing what different groups thought was most important
+
+I would especially use breakout rooms for:
+
+* minimum viable documentation task
+* stakeholder explanation task
+
+Those are both good because they have a clear output and compare well in plenary.
+
+---
+
+## What Day 4 should leave learners with
+
+By the end of Day 4, learners should be able to say:
+
+* I know what checks make this pipeline more trustworthy
+* I can explain the flow and dependencies to another engineer
+* I can explain the business value of the output to a stakeholder
+* I can see how the pipeline could mature beyond this module
+* I understand how this module fits into the wider lifecycle
+
+---
+
+## The main thing to avoid
+
+Do not let Day 4 become:
+
+* a grab-bag of leftover topics
+  or
+* a mini Module 6
+
+It should stay focused on:
+**trust, handover, explanation, and next-step maturity**
+
