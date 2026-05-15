@@ -1,0 +1,2 @@
+
+What a new engineer needs — sources, layers, dependencies, what the gold output is for
