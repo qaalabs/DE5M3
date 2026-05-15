@@ -1,0 +1,317 @@
+Yes - and I think your instinct is right.
+
+**Day 3 is the value-add day.**
+Day 1 and Day 2 can easily become “do the ETL locally” and “do the ETL in Fabric”. Day 3 is where learners stop just reproducing steps and start thinking like data engineers.
+
+So the day should feel less like:
+
+* another lab
+  and more like:
+* **we have built something - now let’s judge it, improve it, and justify the design**
+
+That is probably the right mindset.
+
+## The core purpose of Day 3
+
+I would make Day 3 about this shift:
+
+**from a working pipeline to a deliberately designed pipeline**
+
+That is the value you can add as a trainer.
+
+## The key danger
+
+The reason Day 3 is hard is that it can drift into one of two weak versions:
+
+### Weak version 1
+
+A lecture on medallion architecture
+
+That sounds important, but learners can end up just memorising:
+
+* bronze is raw
+* silver is cleaned
+* gold is business-ready
+
+without really seeing why it matters.
+
+### Weak version 2
+
+A random “advanced topics” day
+
+Patterns, architecture, orchestration, lineage, batch vs streaming, etc.
+All interesting, but disconnected.
+
+So the trick is:
+**one problem, one redesign, one set of better choices**
+
+## The best shape for Day 3
+
+I would make the day feel like a design studio.
+
+The learners already have a pipeline.
+Now they need to answer:
+
+* what is brittle about it?
+* what would confuse another engineer?
+* where is the trust boundary?
+* how should raw, cleaned, and business-ready data be separated?
+* what needs to be reusable?
+* where would we investigate if something went wrong?
+
+That is rich thinking, but still grounded in what they built.
+
+# Suggested Day 3 plan
+
+## Day 3 - Make it more robust and well-architected
+
+**Holding question**
+How do we move from a working pipeline to one that other people can trust, reuse, and maintain?
+
+---
+
+## Welcome
+
+**Purpose**
+Reposition the day clearly.
+
+**What you say**
+
+* Day 1 proved the logic
+* Day 2 proved it in the cloud
+* Today we ask whether that is enough
+* Today is not mainly about building something new
+* Today is about improving what we already built
+
+**Key message**
+A pipeline can work and still be badly designed.
+
+---
+
+## Session 1 - What is fragile about what we built?
+
+**Purpose**
+Get learners to surface the need for architecture before you name the solution.
+
+**Good format**
+This should feel like a structured design review, not a vague discussion.
+
+**You could do it like this**
+
+* show the current pipeline as it exists after Day 2
+* ask learners to annotate or discuss where the weaknesses are
+* keep the questions very concrete
+
+**Questions to use**
+
+* Where are raw and cleaned data mixed together?
+* Which step would be hardest to debug?
+* Which output would be hardest to reproduce next week?
+* If a new source arrived tomorrow, where would it fit?
+* If the final dataset looked wrong, where would you investigate first?
+* Which part could another team reuse, and which part is too tangled?
+
+**Why this matters**
+This is where the learners do the thinking that justifies the architecture.
+
+**Output**
+A visible list of weaknesses or “design debts”.
+
+---
+
+## Session 2 - Introduce bronze / silver / gold as the response
+
+**Purpose**
+Teach the architecture only after the problem is visible.
+
+**How to position it**
+Not:
+“today’s new concept is medallion architecture”
+
+But:
+“the issues you’ve just identified are why teams separate raw, cleaned, and business-ready data”
+
+**What to cover**
+
+* Bronze - landed as received
+* Silver - cleaned, standardised, validated
+* Gold - business-facing outputs
+
+**But always tie it back**
+
+* Why keep bronze?
+* Why not query raw files directly?
+* Why create silver datasets?
+* Why make gold explicit?
+
+**Activity**
+Map the current Day 2 pipeline onto bronze / silver / gold:
+
+* what already exists?
+* what is missing?
+* what is misplaced?
+* what should move?
+
+**Output**
+A first architectural map of the existing pipeline.
+
+---
+
+## Session 3 - Refactor the pipeline
+
+**Purpose**
+Turn the architecture into a real redesign.
+
+This is the most important session of the day.
+
+**What learners do**
+Take the Day 2 Fabric setup and restructure it so:
+
+* raw files stay in a raw zone
+* cleaned Sales becomes an explicit silver dataset
+* flattened Product becomes an explicit silver dataset
+* orders_with_detail becomes an explicit gold output
+
+**Add lightweight validation**
+This is where the day becomes more than just “moving things around”.
+
+For example:
+
+* row count checks
+* null checks on key fields
+* valid product ID check before the join
+* basic category completeness
+* simple check on quantity or line value
+
+**Add traceability thinking**
+Ask:
+
+* if gold looks wrong, what silver tables feed it?
+* if silver looks wrong, what bronze source fed that?
+
+**Key trainer move**
+Keep asking not just “can you do it?”
+but “why is this a better design?”
+
+**Output**
+The same pipeline, but layered and more explainable.
+
+---
+
+## Session 4 - Apply the same logic to a tougher source
+
+**Purpose**
+Make learners use the architecture as a thinking tool, not just a recipe.
+
+Use one extension source:
+
+* Inventory
+  or
+* Support
+
+I would probably choose one as the main one for the whole class, and let groups vary the details.
+
+**What groups do**
+For their assigned source, decide:
+
+* what does bronze look like?
+* what should silver contain?
+* what should be cleaned or standardised?
+* what makes this source awkward?
+* where could it feed gold?
+* what validation would matter?
+
+**Good discussion questions**
+
+* Is this source easy to fit into the architecture, or awkward?
+* What assumptions would we need to make?
+* What would we standardise, and what would we leave alone?
+* Which gold output would benefit from this source?
+
+**Why this is valuable**
+This is where learners move from:
+“I understand bronze / silver / gold”
+to
+“I can use it to make design decisions”
+
+**Output**
+A group-level source design and rationale.
+
+---
+
+## Wrap-up
+
+**Purpose**
+Make the redesign visible.
+
+**Summarise**
+
+* the pipeline still answers the same business question
+* what changed is the structure
+* the design is now clearer, more reusable, and easier to reason about
+* tomorrow we focus on trust, explanation, and handover
+
+**Good closing line**
+The pipeline did not change what it produces - it changed how reliably and legibly it produces it.
+
+# How to make Day 3 feel valuable
+
+Because you said this is where you really want to add value, I would lean into three trainer roles here:
+
+## 1. You are modelling judgement
+
+Not just commands or platform clicks.
+You are showing how an engineer thinks when something “works but feels wrong”.
+
+## 2. You are slowing down to interpret
+
+Day 1 and Day 2 are more build-heavy.
+Day 3 should have more pauses where you ask:
+
+* why this design?
+* why this layer?
+* why this check?
+* what risk does this reduce?
+
+## 3. You are making design visible
+
+Use diagrams.
+Use before/after views.
+Use small architecture sketches.
+This is a day where good visuals really help.
+
+# A practical way to keep it from becoming too abstract
+
+Use this repeated pattern during Day 3:
+
+* here is a weakness
+* here is the architectural response
+* here is the practical change
+* here is why that change matters
+
+For example:
+
+**Weakness** - raw and cleaned data are mixed together
+**Response** - separate bronze and silver
+**Practical change** - keep source files untouched, write cleaned tables separately
+**Why it matters** - easier debugging, clearer reuse, less accidental corruption
+
+That pattern will keep the day anchored.
+
+# If you want a slightly more provocative version of the day
+
+You could even frame the start of Day 3 like this:
+
+**Yesterday we built a pipeline. Today we review it as if we were inheriting it from someone else. Would we trust it? Would we understand it? Would we want to maintain it?**
+
+That usually sharpens the thinking immediately.
+
+# My short recommendation
+
+For Day 3, do not try to “cover architecture”.
+Instead, run the day as:
+
+**diagnose fragility -> introduce layering -> refactor the real pipeline -> apply the same thinking to a new source**
+
+That is probably the strongest way to make the day intellectually rich without losing the practical thread.
+

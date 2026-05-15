@@ -1,0 +1,34 @@
+
+1.	Discover stage introduction
+2.	Introduction to data preparation and transformation
+3.	Knowledge Check: Introduction to data preparation and transformation
+4.	Python for data processing and transformation
+5.	Knowledge Check: Python Classes
+6.	Working with Python
+7.	Knowledge Check: Statistics and NumPy
+8.	Working with Pandas
+9.	SciPy and ScikitLearn
+10.	Python visualisation tools
+11.	Data Visualization with Python using Matplotlib
+12.	LAB: Machine Learning with scikit-learn
+13.	LAB: Python Development Playground
+14.	Knowledge Check: Python for data processing and transformation
+15.	Data quality and data profiling
+16.	Data cleansing techniques
+17.	Knowledge Check: Data quality and cleansing techniques
+18.	Data Wrangling with Pandas
+19.	Data cleansing with Python
+20.	Using Python to Cleanse and Rationalize Data Challenge
+21.	Knowledge Check: Data cleansing with Python
+22.	Data integration with Python
+23.	Introduction to Financial Data Manipulation with Python
+24.	Knowledge Check: Data integration
+25.	SQL ETL
+26.	Big data technologies
+27.	Knowledge Check: Big data technologies
+28.	What Is Cloud Computing?
+29.	Cloud computing platforms
+30.	Overview of Google Cloud Platform
+31.	End of Course and next steps
+
+

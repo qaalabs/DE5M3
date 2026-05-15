@@ -1,0 +1,93 @@
+Yes - this is good.
+
+It reads as a genuine Day 2, and it keeps the continuity with Day 1. The flow is clear:
+
+orientate -> do the cloud move -> rebuild the output -> compare and critique.
+
+That is exactly what Day 2 needs.
+
+## What is working well
+
+A few things stand out as strong.
+
+The early part is well judged:
+
+* explain Fabric only in relation to the Day 1 pipeline
+* let learners investigate the environment
+* then discuss what is the same and what is new
+
+That should help stop the platform from feeling abstract.
+
+The middle is also good:
+
+* demo first
+* then learners recreate the flow
+* then pause and discuss familiarity vs difference
+
+That is a sensible teaching rhythm.
+
+The end of the day is probably the strongest part:
+
+* you have a K13 lens
+* a local vs cloud comparison
+* a clear statement that cloud does not automatically mean good architecture
+* a bridge to Day 3
+
+That makes the day do real conceptual work, not just technical repetition.
+
+## My main suggestion
+
+The only part I would watch is the jump from:
+
+**14:50 - K13 lens**
+to
+**15:00 - groups compare**
+
+That is fine, but I would make sure the K13 lens is not just a mini lecture. It will probably work best if it is introduced as the structure for the comparison itself.
+
+So rather than:
+
+* 10 minutes on K13
+* then groups compare
+
+I would think:
+
+* briefly introduce the four lenses
+* then groups compare using those lenses
+
+In other words, K13 becomes the framework for the breakout, not a separate content block.
+
+## Why that matters
+
+Because then the flow becomes:
+
+* what changed technically?
+* what changed operationally?
+* what changed in security / scale / governance / cost terms?
+* what still is not solved?
+
+That is a much stronger Day 2 reflection.
+
+## A slight refinement
+
+If you wanted to tighten it a little, the last part could conceptually be:
+
+* **14:50** Introduce the comparison lenses: security, scalability, governance, cost
+* **15:00** Groups compare Day 1 local vs Day 2 Fabric
+* **15:20** Share back
+* **15:30** Whole-class synthesis: cloud improves some things, but architecture is still fragile
+
+That would make the ending feel even cleaner.
+
+## My verdict
+
+As a Day 2 plan, this is strong.
+It feels:
+
+* coherent
+* teachable
+* properly sequenced
+* connected to the wider 4-day arc
+
+So I would say Day 2 is now solid enough to move on rather than keep polishing.
+

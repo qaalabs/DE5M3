@@ -1,0 +1,23 @@
+# Ideal day structure
+
+9:30-9:40 ~ Welcome (10 mins)
+- Day overview and learning objectives
+
+9:40-10:40 ~ Session 1 (60 mins)
+
+10:40-11:00 ~ Break (20 mins)
+
+11:00-12:10 ~ Session 2 (70 mins)
+
+12:10-13:20 ~ Lunch (70 mins)
+
+13:20-14:30 ~ Session 3 (70 mins)
+
+14:30-14:50 ~ Break (20 mins)
+
+14:50-15:50 ~ Session 4 (60 mins)
+
+15:50-16:00 ~ Wrap-up (10 mins)
+- Daily wrap
+
+

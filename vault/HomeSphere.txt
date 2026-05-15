@@ -1,0 +1,88 @@
+Start **light**.
+
+At this stage, HomeSphere does not need a rich fictional history. It needs just enough detail to make the data feel believable and the pipeline feel purposeful.
+
+## What you need now
+
+You only really need four things:
+
+### 1. What kind of company is it?
+
+One sentence.
+
+For example:
+**HomeSphere is a UK company that designs, sells, and supports smart home devices such as thermostats, sensors, cameras, and smart plugs.**
+
+That is enough to justify:
+
+* sales data
+* product data
+* support data
+* IoT data
+* app usage data
+
+### 2. What problem are we solving in Module 3?
+
+One short paragraph.
+
+For example:
+**HomeSphere has data coming from several systems, but it is inconsistent and difficult to reuse. The data team needs to ingest, clean, combine, and structure that data so it can support reporting and future data products.**
+
+That gives Module 3 its purpose.
+
+### 3. What are the main source systems?
+
+Just name them at a high level:
+
+* Sales / Orders
+* Product catalogue
+* Inventory / Supply
+* Customer support
+* IoT events
+* Marketing / App usage
+
+No need for deep back-story yet.
+
+### 4. What is the first useful output?
+
+For Day 1:
+**a trusted order-level dataset with product detail**
+
+That is enough to begin designing teaching.
+
+## What you do not need yet
+
+You do not need:
+
+* a founder story
+* company values
+* office locations
+* org chart
+* long descriptions of every division
+* detailed strategy documents
+* an entire fictional world
+
+Those things often feel productive, but they can delay the real design work.
+
+## A good rule
+
+The back-story only needs to be detailed enough to answer:
+
+* why does this company have these data sources?
+* why does it need this pipeline?
+* why would learners believe this is a real data problem?
+
+If it does that, it is detailed enough for now.
+
+## My recommendation
+
+For now, make HomeSphere as a **one-page scenario brief** with:
+
+* one-sentence company description
+* one-paragraph data problem
+* short bullet list of data sources
+* short bullet list of possible outputs
+
+That will be enough to bed the arc down without overbuilding the fiction.
+
+

@@ -1,0 +1,234 @@
+keep Day 2 very clearly as:
+
+**same data, same business output, new environment**
+
+That is what stops it feeling like a disconnected Fabric day.
+
+## Day 2 - Make it work in the cloud
+
+**Holding question**
+How does the same pipeline change when it runs in a cloud environment?
+
+**Main sources**
+
+* Sales
+* Product
+
+**Main outcome**
+The trusted Day 1 dataset recreated in Microsoft Fabric as a cloud-based workflow.
+
+**Big message**
+The logic does not change as much as the environment, storage, and structure.
+
+---
+
+## Welcome
+
+**Purpose**
+Reconnect Day 2 tightly to Day 1.
+
+**What you do**
+
+* recap what was built on Day 1
+* show the trusted order-level dataset again
+* explain that today the business problem stays the same
+* explain that what changes is:
+
+  * where raw data lands
+  * where cleaned data lives
+  * how the steps are separated
+  * how others might reuse the output
+
+**Key message**
+Yesterday we proved the logic. Today we prove it in the cloud.
+
+---
+
+## Session 1 - Orientate learners to Fabric
+
+**Purpose**
+Give just enough cloud context for the practical work to make sense.
+
+**Content**
+
+* what Fabric is in this module
+* lakehouse as a concept
+* what OneLake is
+* where raw files might live
+* where cleaned tables might live
+* where the final output might live
+
+Keep it very anchored to yesterday’s pipeline:
+
+* where would raw Sales sit?
+* where would raw Product sit?
+* where would cleaned Sales sit?
+* where would the joined output sit?
+
+**Learner activity**
+
+* look at the Fabric environment
+* identify the places where yesterday’s pipeline steps would now sit
+
+**Debrief questions**
+
+* what stays the same from Day 1?
+* what is new?
+* why might a team choose this environment instead of keeping everything local?
+
+**Output from the session**
+
+* a mental map of the Fabric workflow
+
+---
+
+## Session 2 - Land the raw data and recreate the first steps
+
+**Purpose**
+Move the same Day 1 flow into the cloud.
+
+**Content**
+
+* landing raw data in the lakehouse
+* reusing transformation logic in a notebook
+* same cleaning decisions, different environment
+
+**Learner activity**
+
+* upload or access the same Sales and Product raw sources in Fabric
+* recreate the early transformation logic in a Fabric notebook
+* begin cleaning Sales again
+* flatten Product again
+
+**Your role**
+
+* demo the first key steps
+* emphasise what is unchanged from Day 1
+* point out any Fabric-specific differences without turning it into a platform tour
+
+**Debrief questions**
+
+* what part felt familiar?
+* what part felt different?
+* what has the cloud changed so far - and what has it not changed?
+
+**Output from the session**
+
+* raw sources available in Fabric
+* transformation logic underway in the cloud
+
+---
+
+## Session 3 - Build the trusted output in Fabric
+
+**Purpose**
+Show that the pipeline now produces the same business value in a cloud setup.
+
+**Content**
+
+* storing cleaned outputs more explicitly
+* separating raw files from cleaned tables
+* producing a reusable joined dataset
+
+**Learner activity**
+
+* store cleaned Sales as a proper table
+* store flattened Product as a proper table
+* join them to produce the trusted order-level dataset
+* query the result in Fabric
+* answer the same business question from Day 1:
+
+  * which product categories generate the most revenue?
+
+**Debrief questions**
+
+* what is better about this version compared with Day 1?
+* what feels more shareable or repeatable?
+* what is still fragile?
+
+**Output from the session**
+
+* trusted cloud-based order dataset
+* the same business-facing result, but now in Fabric
+
+---
+
+## Session 4 - Compare local and cloud
+
+**Purpose**
+Make the learning explicit and create the bridge to Day 3.
+
+**Content**
+Structured comparison of:
+
+* local vs cloud
+* convenience vs complexity
+* manual flow vs more structured flow
+
+Also a good place to bring in a little K13 thinking:
+
+* security
+* scalability
+* governance
+* cost / complexity
+
+**Learner activity**
+
+* compare the Day 1 local pipeline with the Day 2 Fabric pipeline
+* discuss:
+
+  * what became easier?
+  * what became harder?
+  * what is still too manual?
+  * where are raw and cleaned data still not clearly separated?
+  * what would be hard for another engineer to debug?
+
+**Debrief questions**
+
+* why is “working in the cloud” still not the same as “well-architected”?
+* what should we improve next?
+
+**Output from the session**
+
+* a shared list of remaining weaknesses
+* a clear demand for Day 3 architecture work
+
+---
+
+## Wrap-up
+
+**Purpose**
+Close the day and point to Day 3.
+
+**Summarise**
+
+* we used the same data and same business output
+* we moved the workflow into Fabric
+* we made the storage and execution environment more realistic
+* we also discovered that the design is still fragile
+
+**Bridge to Day 3**
+Tomorrow we ask how the pipeline should be structured so other people can trust, reuse, and maintain it.
+
+---
+
+## What learners should leave with
+
+By the end of Day 2, learners should be able to say:
+
+* I can explain how the same ETL logic runs in a cloud environment
+* I can land raw data and transform it in Fabric
+* I can store cleaned data and produce a reusable output
+* I can compare local and cloud approaches
+* I can explain why cloud alone does not automatically make a pipeline robust
+
+## What you need prepared
+
+To run this day, I would prepare:
+
+* the same Sales and Product files from Day 1
+* a Fabric workspace and lakehouse
+* a notebook scaffold if needed
+* a simple visual of raw -> cleaned -> output in Fabric
+* a comparison prompt for local vs cloud
+

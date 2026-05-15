@@ -1,0 +1,44 @@
+Yes - this is taking shape well.
+
+It now feels like a **real delivery day**, not just a concept. The flow is clear:
+setup -> context -> inspect raw data -> identify issues -> clean -> flatten and join -> use the result -> reflect.
+
+That is a strong Day 1 arc.
+
+A few thoughts.
+
+The **best part** is that the day has a visible finish line:
+they do not just clean data, they end with a trusted dataset and a simple business question. That gives the practical work purpose.
+
+I also like that you have placed the **discussion after touching the data** rather than before. That usually makes the conversation much better because learners have something concrete to say.
+
+What I would watch is the section from **11:00 to lunch**. At the moment it is quite inspect-and-discuss heavy:
+
+* inspect Sales
+* inspect Product
+* discuss problems
+* overview of cleaning moves
+
+That is sensible, but it risks feeling a little static unless learners actually do a tiny first transformation before lunch. Even one small move could help - for example converting a field, spotting a duplicate, or fixing one obvious issue in Sales. That would make the morning feel more like “we started the ETL” rather than “we studied the sources”.
+
+The afternoon looks stronger because it has more momentum:
+
+* clean
+* discuss judgement
+* flatten and join
+* answer a question
+* reflect
+
+That is probably where the day will feel most satisfying.
+
+I would also think about **VM Setup at 9:40**. If that is unavoidable, fine, but it can eat the energy of the opening. If possible, I would keep tying it back to the day’s purpose so it does not feel like admin before the real session starts.
+
+So my main suggestion is:
+
+**keep this structure, but consider making the morning end with one tiny hands-on cleaning win before lunch.**
+
+That would make the whole day feel even more like:
+inspect -> start fixing -> continue fixing -> combine -> use.
+
+As a Day 1 plan, though, this is good. It feels coherent and teachable.
+
