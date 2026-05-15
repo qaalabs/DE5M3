@@ -3,33 +3,33 @@
 ## Session 1
 
 - 🌅 Welcome to Day 2 of DE5 Module 3
-- What Fabric is in this module — lakehouse, OneLake, anchored to where Day 1 steps now sit
-- **Investigation**: Explore the Fabric environment — find where raw files, cleaned tables, and joined output live
-- **Discussion**: What stays the same from Day 1? What is new?
+- What Is Fabric?
+- **Investigation**: Explore the Fabric Environment
+- **Discussion**: What Stays the Same?
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- Demo: landing raw files in the lakehouse, reusing transformation logic in a notebook
-- **Practice**: Upload Sales and Product, recreate cleaning and flatten steps in a Fabric notebook
-- **Discussion**: What felt familiar? What felt different?
+- Landing Raw Data
+- **Practice**: Clean and Flatten in Fabric
+- **Discussion**: Familiar vs Different?
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- **Practice**: Store cleaned tables, join, query in Fabric — answer the same business question as Day 1
-- **Discussion**: What is better now? What is still fragile?
+- **Practice**: Build the Trusted Output
+- **Discussion**: What Is Better? What Is Fragile?
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- K13 lens: security, scalability, governance, cost
-- **Breakout**: Groups compare Day 1 local pipeline vs Day 2 Fabric pipeline
-- **Report-Back**: Share back findings from the comparison
-- **Discussion**: Why cloud does not equal well-architected — what needs fixing — bridge to Day 3
+- Security, Scalability, Governance, Cost
+- **Breakout**: Local vs Cloud
+- **Report-Back**: Share Your Comparison
+- **Discussion**: Cloud Is Not Well-Architected
 
 ## 🎁 Wrap
 

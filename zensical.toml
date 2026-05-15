@@ -9,10 +9,10 @@ nav = [
     {"Day 3" = "agenda/day3.md"},
   ]},
   {"Day 1 - ETL Locally" = [
-    {"Introduce HomeSphere scenario, show both raw sources, explain Day 1 finish line" = "day1/homesphere.md"},
+    {"Introducing HomeSphere" = "day1/homesphere.md"},
   ]},
   {"Day 3 - Robust & Well-Architectured" = [
-    {"Introduce bronze/silver/gold as the direct response to the weaknesses just listed — anchor each layer to the HomeSphere pipeline" = "day3/medallion/group-scenarios.md"},
+    {"Bronze, Silver, Gold" = "day3/medallion/group-scenarios.md"},
   ]},
   {"Resources" = "resources.md"},
 ]
