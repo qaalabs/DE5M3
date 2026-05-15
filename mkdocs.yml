@@ -12,6 +12,10 @@ nav:
 
   - "Day 1 - ETL Locally":
     - "Introducing HomeSphere": day1/homesphere.md
+    - "Open Sales Data": day1/inspect-sales.md
+    - "Open Product Data": day1/inspect-prod.md
+    - "Clean the Sales Data": day1/clean.md
+    - "Flatten and Join": day1/join.md
 
   - "Day 3 - Robust & Well-Architectured":
     - "Bronze, Silver, Gold": day3/medallion/group-scenarios.md
@@ -21,6 +25,11 @@ nav:
 not_in_nav: |
   404.md
   trainer.md
+  day1/inspect-debrief.md
+  day1/clean-intro.md
+  day1/clean-debrief.md
+  day1/flatten-intro.md
+  day1/reflection.md
 
 
 # Theme

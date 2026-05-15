@@ -10,8 +10,8 @@
 
 ## Session 2
 
-- **Practice**: Open Sales Data
-- **Practice**: Open Product Data
+- **Practice**: [Open Sales Data](../day1/inspect-sales.md)
+- **Practice**: [Open Product Data](../day1/inspect-prod.md)
 - **Discussion**: What Did You Find?
 - Cleaning Moves Overview
 
@@ -19,7 +19,7 @@
 
 ## Session 3
 
-- **Practice**: Clean the Sales Data
+- **Practice**: [Clean the Sales Data](../day1/clean.md)
 - **Discussion**: Mechanical or Judgement?
 
 ## ☕ Afternoon Break
@@ -27,7 +27,7 @@
 ## Session 4
 
 - Why Flatten and Join?
-- **Practice**: Flatten and Join
+- **Practice**: [Flatten and Join](../day1/join.md)
 - **Practice**: Which Categories Earn Most?
 - **Discussion**: Reflect and Look Ahead
 

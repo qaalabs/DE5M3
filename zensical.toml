@@ -10,6 +10,10 @@ nav = [
   ]},
   {"Day 1 - ETL Locally" = [
     {"Introducing HomeSphere" = "day1/homesphere.md"},
+    {"Open Sales Data" = "day1/inspect-sales.md"},
+    {"Open Product Data" = "day1/inspect-prod.md"},
+    {"Clean the Sales Data" = "day1/clean.md"},
+    {"Flatten and Join" = "day1/join.md"},
   ]},
   {"Day 3 - Robust & Well-Architectured" = [
     {"Bronze, Silver, Gold" = "day3/medallion/group-scenarios.md"},

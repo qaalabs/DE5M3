@@ -8,22 +8,22 @@
 
 ### Session 2
 
-- `11:00` **Practice**: Open Sales Data (30 mins)
-- `11:30` **Practice**: Open Product Data (10 mins)
-- `11:40` **Discussion**: What Did You Find? (20 mins)
-- `12:00` Cleaning Moves Overview (20 mins)
+- `11:00` **Practice**: [Open Sales Data](day1/inspect-sales.md) (30 mins)
+- `11:30` **Practice**: [Open Product Data](day1/inspect-prod.md) (10 mins)
+- `11:40` **Discussion**: [What Did You Find?](day1/inspect-debrief.md) (20 mins)
+- `12:00` [Cleaning Moves Overview](day1/clean-intro.md) (20 mins)
 
 ### Session 3
 
-- `13:20` **Practice**: Clean the Sales Data (50 mins)
-- `14:10` **Discussion**: Mechanical or Judgement? (20 mins)
+- `13:20` **Practice**: [Clean the Sales Data](day1/clean.md) (50 mins)
+- `14:10` **Discussion**: [Mechanical or Judgement?](day1/clean-debrief.md) (20 mins)
 
 ### Session 4
 
-- `14:50` Why Flatten and Join? (10 mins)
-- `15:00` **Practice**: Flatten and Join (30 mins)
+- `14:50` [Why Flatten and Join?](day1/flatten-intro.md) (10 mins)
+- `15:00` **Practice**: [Flatten and Join](day1/join.md) (30 mins)
 - `15:30` **Practice**: Which Categories Earn Most? (10 mins)
-- `15:40` **Discussion**: Reflect and Look Ahead (10 mins)
+- `15:40` **Discussion**: [Reflect and Look Ahead](day1/reflection.md) (10 mins)
 
 ---
 
