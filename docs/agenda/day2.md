@@ -11,15 +11,15 @@
 
 ## Session 2
 
-- Landing Raw Data
-- **Practice**: Clean and Flatten in Fabric
+- [Landing Raw Data](../day2/land-data.md)
+- **Practice**: [Clean and Flatten in Fabric](../day2/cloud-clean.md)
 - **Discussion**: Familiar vs Different?
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- **Practice**: Build the Trusted Output
+- **Practice**: [Build the Trusted Output](../day2/cloud-output.md)
 - **Discussion**: What Is Better? What Is Fragile?
 
 ## ☕ Afternoon Break

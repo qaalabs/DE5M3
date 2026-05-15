@@ -37,14 +37,14 @@
 
 ### Session 2
 
-- `11:00` Landing Raw Data (20 mins)
-- `11:20` **Practice**: Clean and Flatten in Fabric (50 mins)
-- `12:10` **Discussion**: Familiar vs Different? (10 mins)
+- `11:00` [Landing Raw Data](day2/land-data.md) (20 mins)
+- `11:20` **Practice**: [Clean and Flatten in Fabric](day2/cloud-clean.md) (50 mins)
+- `12:10` **Discussion**: [Familiar vs Different?](day2/cloud-debrief.md) (10 mins)
 
 ### Session 3
 
-- `13:20` **Practice**: Build the Trusted Output (50 mins)
-- `14:10` **Discussion**: What Is Better? What Is Fragile? (20 mins)
+- `13:20` **Practice**: [Build the Trusted Output](day2/cloud-output.md) (50 mins)
+- `14:10` **Discussion**: [What Is Better? What Is Fragile?](day2/output-debrief.md) (20 mins)
 
 ### Session 4
 

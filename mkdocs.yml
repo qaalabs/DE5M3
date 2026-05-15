@@ -8,6 +8,7 @@ nav:
 
   - Agenda:
     - Day 1: agenda/day1.md
+    - Day 2: agenda/day2.md
     - Day 3: agenda/day3.md
 
   - "Day 1 - ETL Locally":
@@ -16,6 +17,11 @@ nav:
     - "Open Product Data": day1/inspect-prod.md
     - "Clean the Sales Data": day1/clean.md
     - "Flatten and Join": day1/join.md
+
+  - "Day 2 - ETL in the Cloud":
+    - "Landing Raw Data": day2/land-data.md
+    - "Clean and Flatten in Fabric": day2/cloud-clean.md
+    - "Build the Trusted Output": day2/cloud-output.md
 
   - "Day 3 - Robust & Well-Architectured":
     - "Bronze, Silver, Gold": day3/medallion/group-scenarios.md
@@ -30,6 +36,8 @@ not_in_nav: |
   day1/clean-debrief.md
   day1/flatten-intro.md
   day1/reflection.md
+  day2/cloud-debrief.md
+  day2/output-debrief.md
 
 
 # Theme
