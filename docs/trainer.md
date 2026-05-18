@@ -32,18 +32,18 @@
 ### Session 1
 
 - `09:40` What Is Fabric? (20 mins)
-- `10:00` **Investigation**: Explore the Fabric Environment (30 mins)
+- `10:00` **Practice**: Lab 2.1 ~ Explore Fabric Environment (30 mins)
 - `10:30` **Discussion**: What Stays the Same? (10 mins)
 
 ### Session 2
 
-- `11:00` [Landing Raw Data](day2/land-data.md) (20 mins)
-- `11:20` **Practice**: [Clean and Flatten in Fabric](day2/cloud-clean.md) (50 mins)
+- `11:00` **Practice**: [Lab 2.2 ~ Landing Raw Data](day2/land-data.md) (20 mins)
+- `11:20` **Practice**: [Lab 2.3 ~ Clean & Flatten in Fabric](day2/cloud-clean.md) (50 mins)
 - `12:10` **Discussion**: [Familiar vs Different?](day2/cloud-debrief.md) (10 mins)
 
 ### Session 3
 
-- `13:20` **Practice**: [Build the Trusted Output](day2/cloud-output.md) (50 mins)
+- `13:20` **Practice**: [Lab 2.4 ~ Build the Trusted Output](day2/cloud-output.md) (50 mins)
 - `14:10` **Discussion**: [What Is Better? What Is Fragile?](day2/output-debrief.md) (20 mins)
 
 ### Session 4

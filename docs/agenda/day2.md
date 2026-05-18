@@ -4,22 +4,22 @@
 
 - 🌅 Welcome to Day 2 of DE5 Module 3
 - What Is Fabric?
-- **Investigation**: Explore the Fabric Environment
+- **Practice**: Lab 2.1 ~ Explore Fabric Environment
 - **Discussion**: What Stays the Same?
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- [Landing Raw Data](../day2/land-data.md)
-- **Practice**: [Clean and Flatten in Fabric](../day2/cloud-clean.md)
+- **Practice**: [Lab 2.2 ~ Landing Raw Data](../day2/land-data.md)
+- **Practice**: [Lab 2.3 ~ Clean & Flatten in Fabric](../day2/cloud-clean.md)
 - **Discussion**: Familiar vs Different?
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- **Practice**: [Build the Trusted Output](../day2/cloud-output.md)
+- **Practice**: [Lab 2.4 ~ Build the Trusted Output](../day2/cloud-output.md)
 - **Discussion**: What Is Better? What Is Fragile?
 
 ## ☕ Afternoon Break

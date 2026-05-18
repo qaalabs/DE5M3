@@ -18,9 +18,9 @@ nav = [
     {"Flatten and Join" = "day1/join.md"},
   ]},
   {"Day 2 - ETL in the Cloud" = [
-    {"Landing Raw Data" = "day2/land-data.md"},
-    {"Clean and Flatten in Fabric" = "day2/cloud-clean.md"},
-    {"Build the Trusted Output" = "day2/cloud-output.md"},
+    {"Lab 2.2 ~ Landing Raw Data" = "day2/land-data.md"},
+    {"Lab 2.3 ~ Clean & Flatten in Fabric" = "day2/cloud-clean.md"},
+    {"Lab 2.4 ~ Build the Trusted Output" = "day2/cloud-output.md"},
     {"Local vs Cloud" = "day2/compare.md"},
   ]},
   {"Day 3 - Robust & Well-Architectured" = [
