@@ -6,15 +6,15 @@ Last updated: 15 May 2026
 
 The seven modules follow the natural arc of a data engineering career.
 
-| Module | Focus | Lifecycle Position |
-|--------|-------|--------------------|
-| Module 1 | Fundamentals | Context and foundations across all stages |
-| Module 2 | Storage and Management | Storage undercurrent - where data lives |
-| Module 3 | Processing, Transformation and ETL | Ingestion and Transformation - the middle of the lifecycle |
-| Module 4 | Planning a Data Engineering Product | Architecture and design undercurrents |
-| Module 5 | Data Engineering Product Development | Build undercurrents - implementing towards serving |
-| Module 6 | Data Operations | DataOps undercurrent - operating what serves consumers |
-| Module 7 | Emerging Technologies | Future directions across all lifecycle stages |
+| Module   | Focus                                | Lifecycle Position |
+|----------|--------------------------------------|-----------------------------------------------------------|
+| Module 1 | Fundamentals                         | Context and foundations across all stages                 |
+| Module 2 | Storage and Management               | Storage undercurrent - where data lives                   |
+| Module 3 | Processing, Transformation and ETL   | Ingestion and Transformation - the middle of the lifecycle|
+| Module 4 | Planning a Data Engineering Product  | Architecture and design undercurrents                     |
+| Module 5 | Data Engineering Product Development | Build undercurrents - implementing towards serving        |
+| Module 6 | Data Operations                      | DataOps undercurrent - operating what serves consumers    |
+| Module 7 | Emerging Technologies                | Future directions across all lifecycle stages             |
 
 The underlying lifecycle (Reis & Housley) runs:
 
@@ -39,7 +39,7 @@ Module 3 owns **Ingestion** and **Transformation**.
 
 ## The Boundary of Module 3
 
-**What Module 3 owns:**
+### **What Module 3 owns:**
 
 - Extracting data from sources - files, APIs, databases
 - Identifying and resolving data quality issues
@@ -48,7 +48,7 @@ Module 3 owns **Ingestion** and **Transformation**.
 - Moving pipelines into cloud-based environments
 - Making pipelines understandable and supportable
 
-**What Module 3 does not own:**
+### **What Module 3 does not own:**
 
 - How data is stored and modelled (Module 2)
 - How data products are planned and designed (Module 4)

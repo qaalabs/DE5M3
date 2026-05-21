@@ -1,1 +1,1 @@
-## Introduce the MS Fabric Playground
+## VM Setup

@@ -1,3 +1,3 @@
 ## Clean Intro
 
-Cleaning moves overview — nulls, types, duplicates, standardisation
+Cleaning moves overview - nulls, types, duplicates, standardisation

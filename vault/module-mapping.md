@@ -1,6 +1,4 @@
----
 Last updated: 15 May 2026
----
 
 # Programme  Module Mapping
 

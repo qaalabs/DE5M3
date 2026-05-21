@@ -1,3 +1,4 @@
+## Compare Share
 
 - What became easier?
 - What became harder?

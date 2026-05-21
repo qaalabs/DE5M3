@@ -1,3 +1,4 @@
+# DE5 ~ Module 3: Discover
 
 1.	Discover stage introduction
 2.	Introduction to data preparation and transformation

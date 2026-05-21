@@ -10,5 +10,5 @@
 
 **Cameras dominate**
 
-— highest unit prices (£129–£150) ~ plus multi-unit orders.
+- highest unit prices (£129–£150) ~ plus multi-unit orders.
 - Thermostats second despite lower price ~ more consistent order volume.

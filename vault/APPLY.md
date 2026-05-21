@@ -3,9 +3,13 @@
 Your workplace activity brief for ​Data Processing, Transformation, and ETL
 
 As mentioned in the previous step, your first task in the Apply stage is to prepare for your workplace activity, where you can apply your new knowledge and skills.
+
 This step details your workplace activity brief for this module.
+
 In this workplace activity, you are tasked with completing the following activities whilst documenting them in a report. The entire report should include insights and findings from each task you complete along with a comprehensive overview of data processing, transformation, and ETL practices within your organisation. 
+
 Throughout your report, demonstrate how you used initiative and innovation to problem-solve and troubleshoot, providing creative solutions to the tasks you completed. Highlight specific instances where your approach was particularly innovative or effective. (B5)
+
 To effectively accomplish this activity, complete the steps/tasks below.
 
 ---
