@@ -1,90 +1,80 @@
-# ETL / Data Integration Products – Investigation Framework
+# ETL / Data Integration Products – Investigation
 
-Each group investigates one category, looking at:
+You have spent today writing ETL pipelines in Python by hand.
+That is one way to do it. There is a whole landscape of tools that take a different approach.
 
-- **Target audience** (enterprise IT, analysts, developers, etc.)
-- **Strengths & weaknesses**
-- **Cost/licensing** (commercial, SaaS, open-source)
-- **Example use cases / industries**
-- **How it fits into modern data architectures**
+Your group has been assigned one category. Each person picks one product from the list,
+investigates it, and reports back to the class.
 
-## A. Enterprise Commercial
+---
 
-Large, licensed, traditional ETL suites used in corporate data centres.
+## Investigation Framework
+
+For your product, find out:
+
+- **What it is** - what problem does it solve and who is it aimed at?
+- **Strengths and weaknesses** - what does it do well, and where does it fall short?
+- **Cost and licensing** - commercial, SaaS subscription, or open source?
+- **Typical use cases** - which industries or scenarios is it used in?
+- **Would it work in your organisation?** - and why or why not?
+
+---
+
+## Group A: Enterprise Commercial
+
+Large, licensed ETL suites used in corporate data centres.
 
 - Informatica PowerCenter
 - IBM DataStage
 - SAS Data Management
+- Microsoft SQL Server Integration Services (SSIS)
 - Oracle Data Integrator (ODI)
-- Microsoft SSIS (SQL Server Integration Services)
-- SAP Data Services (BODS)
-- Talend Data Fabric (commercial edition)
-- Ab Initio
-- CloverDX (enterprise edition)
-- Pentaho Data Integration (commercial edition)
 
+---
 
-## B. Cloud Native
+## Group B: Cloud-Managed
 
-Fully managed, scalable services provided by cloud vendors (ETL/ELT in the cloud).
+Fully managed, scalable ETL services provided by cloud vendors.
 
 - AWS Glue Studio
-- AWS Data Pipeline
 - Google Cloud Dataflow
-- Google Cloud Dataprep (by Trifacta → Alteryx)
 - Azure Synapse Pipelines
 - Azure Data Factory (ADF)
-- Snowflake Snowpipe / Snowpark
-- Databricks Workflows & Delta Live Tables
-- Fivetran (SaaS, cloud-native connectors)
-- Matillion (cloud-focused ETL/ELT tool)
-- Stitch (Talend Cloud)
-- Hevo Data / Airbyte Cloud
+- AWS Data Pipeline
 
+---
 
-## C. Self-Service / Citizen Developer
+## Group C: Self-Service / Citizen Developer
 
-Drag-and-drop or visual tools aimed at analysts and non-IT specialists.
+Visual and drag-and-drop tools aimed at analysts and non-developers.
 
 - Alteryx Designer
 - Tableau Prep
-- Microsoft Power BI Dataflows (Gen1 & Gen2)
-- Qlik Data Integration (Compose & Replicate)
-- Excel Power Query (Get & Transform)
-- SAP Data Intelligence Cloud
-- Knime Analytics Platform
-- RapidMiner
-- Zoho DataPrep
-- Trifacta Wrangler (historic, now Alteryx)
+- Microsoft Power BI Dataflows
+- Qlik Data Integration
+- Excel Power Query
 
+---
 
-## D. Open Source / Hybrid
+## Group D: Open Source / Hybrid
 
-Community-driven tools, often extensible, sometimes with hybrid SaaS offerings.
+Community-driven tools, often extensible, sometimes with commercial editions.
 
 - Apache NiFi
-- Talend Open Studio (community edition)
+- Talend Open Studio
 - dbt (data build tool)
 - Apache Airflow
-- Pentaho Kettle (PDI Community Edition)
-- Singer (taps & targets)
-- Meltano
-- Luigi (Spotify)
 - Dagster
-- Prefect
-- Kafka Connect
-- StreamSets Data Collector (community edition)
 
 ---
 
 ## Report Back
 
-*Each person in the group reports back:*
+*Each person reports back on their product:*
 
-- What is it? Brief description and primary purpose
-- How does it work? Visual interface, code-based, or hybrid?
-- Strengths vs Fabric - what does it do better/differently?
-- Typical use cases - when would companies choose this?
-- Learning curve - given Python Day 1 and Fabric Day 2 experience?
-- Cost consideration - what's the real cost?
+- **What is it?** Brief description and primary purpose
+- **How does it work?** Visual interface, code-based, or hybrid?
+- **Strengths vs Python by hand** - what does it do better or differently than what we did today?
+- **Typical use cases** - when would a company choose this?
+- **Cost** - what is the real cost of adopting it?
 
