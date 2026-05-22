@@ -19,7 +19,7 @@
 
 ## Session 3
 
-- **Practice**: [Clean the Sales Data](../day1/clean.md)
+- **Practice**: [Clean the Sales Data](../day1/clean-sales.md)
 - **Discussion**: Mechanical or Judgement?
 
 ## ☕ Afternoon Break
@@ -27,7 +27,7 @@
 ## Session 4
 
 - Why Flatten and Join?
-- **Practice**: [Flatten and Join](../day1/join.md)
+- **Practice**: [Flatten and Join](../day1/flatten-join.md)
 - **Practice**: Which Categories Earn Most?
 - **Discussion**: Reflect and Look Ahead
 

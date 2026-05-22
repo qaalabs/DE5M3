@@ -14,8 +14,8 @@ nav = [
     {"Introducing HomeSphere" = "day1/homesphere.md"},
     {"Open Sales Data" = "day1/inspect-sales.md"},
     {"Open Product Data" = "day1/inspect-prod.md"},
-    {"Clean the Sales Data" = "day1/clean.md"},
-    {"Flatten and Join" = "day1/join.md"},
+    {"Clean the Sales Data" = "day1/clean-sales.md"},
+    {"Flatten and Join" = "day1/flatten-join.md"},
   ]},
   {"Day 2 - ETL in the Cloud" = [
     {"Lab 2.2 - Landing Raw Data" = "day2/land-data.md"},
