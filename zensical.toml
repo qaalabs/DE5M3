@@ -24,7 +24,7 @@ nav = [
     {"Local vs Cloud" = "day2/compare.md"},
   ]},
   {"Day 3 - Robust & Well-Architectured" = [
-    {"Where Are the Weaknesses?" = "day3/fragile.md"},
+    {"Where are the Weaknesses?" = "day3/fragile.md"},
     {"Bronze, Silver, Gold" = "day3/medallion-lab.md"},
     {"Map the Pipeline" = "day3/med-map.md"},
     {"Design B/S/G for Your Source" = "day3/ext-design.md"},

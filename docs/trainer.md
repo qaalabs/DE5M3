@@ -60,7 +60,7 @@
 ### Session 1
 
 - `09:40` [Design Review](day3/review.md) (20 mins)
-- `10:00` **Breakout**: [Where Are the Weaknesses?](day3/fragile.md) (20 mins)
+- `10:00` **Breakout**: [Where are the Weaknesses?](day3/fragile.md) (20 mins)
 - `10:20` **Report-Back**: Our Design Debts (20 mins)
 
 ### Session 2

@@ -4,7 +4,7 @@
 
 - 🌅 Welcome to Day 3 of DE5 Module 3
 - Design Review
-- **Breakout**: [Where Are the Weaknesses?](../day3/fragile.md)
+- **Breakout**: [Where are the Weaknesses?](../day3/fragile.md)
 - **Report-Back**: Our Design Debts
 
 ## ☕ Morning Break
