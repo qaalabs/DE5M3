@@ -1,0 +1,230 @@
+# HomeSphere — Day 1: Inspect and Clean
+
+**Scenario:** HomeSphere has exported two raw source files from their systems.
+Your job is to understand what is in each file, find what is wrong, and clean the Sales data
+into something trustworthy enough to use.
+
+By the end of this notebook you will have a cleaned Sales dataset saved and ready to join.
+
+---
+
+
+```python
+import pandas as pd
+import json
+```
+
+## Part 1: Meet the Sales Data
+
+Load the raw Sales file and take a look at what is in it.
+Do not fix anything yet — just observe.
+
+
+```python
+df = pd.read_csv('sales_raw.csv')
+print(f'Shape: {df.shape}')
+df.head(10)
+```
+
+
+```python
+# Data types — what has pandas inferred?
+df.dtypes
+```
+
+
+```python
+# Missing values
+print('Missing values per column:')
+print(df.isnull().sum())
+print(f'\nDuplicate rows: {df.duplicated().sum()}')
+```
+
+
+```python
+# Look at the unique values in columns that might have problems
+print('Status values:')
+print(df['status'].unique())
+
+print('\nSample unit_price values:')
+print(df['unit_price'].unique())
+
+print('\nSample quantity values:')
+print(df['quantity'].unique())
+
+print('\nSample order_date values:')
+print(df['order_date'].unique())
+```
+
+### Discussion
+
+What problems did you spot?
+
+- Problem 1:
+- Problem 2:
+- Problem 3:
+- Problem 4:
+- Problem 5:
+
+Why would it be risky to use this data as-is for reporting?
+
+## Part 2: Meet the Product Data
+
+Now look at the second source — the Product catalogue.
+Notice what is different about its structure.
+
+
+```python
+with open('products_raw.json') as f:
+    products_data = json.load(f)
+
+print(f'Number of products: {len(products_data["products"])}')
+print('\nFirst product:')
+print(json.dumps(products_data['products'][0], indent=2))
+```
+
+
+```python
+# What categories exist?
+categories = [p['category'] for p in products_data['products']]
+print('Product categories:', sorted(set(categories)))
+```
+
+### Discussion
+
+- What is different about this source compared with Sales?
+- What would stop you using it directly as a table?
+- Which fields will you need when you join to Sales?
+
+---
+
+## Part 3: Clean the Sales Data
+
+Work through each problem you identified above.
+Fix one thing at a time and verify the result before moving on.
+
+### Fix unit_price
+
+Some prices have a `£` prefix which caused pandas to read the column as text (object) instead of a number.
+Strip the symbol and convert to float.
+
+
+```python
+df['unit_price'] = df['unit_price'].astype(str).str.replace('£', '', regex=False).astype(float)
+
+print('unit_price dtype:', df['unit_price'].dtype)
+print('Min:', df['unit_price'].min(), '  Max:', df['unit_price'].max())
+```
+
+### Standardise order_date
+
+The dates use three different formats. `pd.to_datetime` with `dayfirst=True` handles this.
+Any dates that still fail to parse will become `NaT`.
+
+
+```python
+df['order_date'] = pd.to_datetime(df['order_date'], dayfirst=True, errors='coerce')
+
+print('order_date dtype:', df['order_date'].dtype)
+print('Unparseable dates (NaT):', df['order_date'].isnull().sum())
+```
+
+### Fix quantity
+
+`pd.to_numeric` with `errors='coerce'` converts non-numeric values (like `"two"`) to `NaN`.
+We then drop rows where quantity could not be parsed, and convert to integer.
+
+
+```python
+df['quantity'] = pd.to_numeric(df['quantity'], errors='coerce')
+
+unparseable = df['quantity'].isnull().sum()
+print(f'Rows with unparseable quantity (now NaN): {unparseable}')
+
+df = df.dropna(subset=['quantity'])
+df['quantity'] = df['quantity'].astype(int)
+print('quantity dtype:', df['quantity'].dtype)
+```
+
+### Standardise status
+
+Status values have inconsistent capitalisation. Lowercase and strip whitespace.
+
+
+```python
+df['status'] = df['status'].str.lower().str.strip()
+
+print('Status values after cleaning:', df['status'].unique())
+print(df['status'].value_counts())
+```
+
+### Remove duplicates
+
+
+```python
+before = len(df)
+df = df.drop_duplicates()
+print(f'Removed {before - len(df)} duplicate rows  ({len(df)} remaining)')
+```
+
+### Handle missing values
+
+Two columns have missing values. The decision is different for each:
+
+- `product_id` — without a product ID we cannot join to Product, so the row has no value. Drop it.
+- `region` — region is useful context but not critical. Flag as `Unknown` rather than losing the row.
+
+
+```python
+before = len(df)
+df = df.dropna(subset=['product_id'])
+print(f'Removed {before - len(df)} rows with missing product_id')
+
+df['region'] = df['region'].fillna('Unknown')
+print('Remaining missing values:')
+print(df.isnull().sum())
+```
+
+### Remove invalid rows
+
+A negative price and a zero quantity are not valid order lines.
+Remove them and record how many were dropped.
+
+
+```python
+before = len(df)
+df = df[df['unit_price'] > 0]
+print(f'Removed {before - len(df)} rows with negative or zero price')
+
+before = len(df)
+df = df[df['quantity'] > 0]
+print(f'Removed {before - len(df)} rows with zero quantity')
+```
+
+## Data Quality Report
+
+
+```python
+print('=== CLEANED SALES DATA ===')
+print(f'Rows: {len(df)}')
+print(f'\nData types:')
+print(df.dtypes)
+print(f'\nMissing values:')
+print(df.isnull().sum())
+print(f'\nStatus distribution:')
+print(df['status'].value_counts())
+df.head()
+```
+
+
+```python
+df.to_csv('cleaned_sales.csv', index=False)
+print('Saved: cleaned_sales.csv')
+```
+
+### Discussion
+
+- Which fixes were mechanical (no judgement needed)?
+- Which fixes required a decision?
+- What is now better about the data?
+- What assumptions have you made that someone else might challenge?
