@@ -1,8 +1,5 @@
-## How does the same pipeline change when it runs in a cloud environment?
+## *Same pipeline but in the cloud*
 
-The same data. The same business question:
-
-- **which product categories generate the most revenue?**
-
-Today we move the Day 1 pipeline into Microsoft Fabric. The logic does not change - the environment does. We finish by comparing local and cloud approaches and identifying what is still fragile.
-
+Today we move the Day 1 pipeline into Microsoft Fabric. The logic does not change - the environment does.<br>
+We finish by comparing local and cloud approaches and identifying what is still fragile.
+<br>
