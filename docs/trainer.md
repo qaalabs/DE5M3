@@ -4,25 +4,28 @@
 
 ### Session 1
 
-- `10:10` [Introducing HomeSphere](day1/homesphere.md) (30 mins)
+- `10:10` [Introducing HomeSphere](day1/homesphere.md) (20 mins)
 
 ### Session 2
 
-- `11:00` **Practice**: [Open Sales Data](day1/inspect-sales.md) (30 mins)
-- `11:30` **Practice**: [Open Product Data](day1/inspect-prod.md) (10 mins)
-- `11:40` **Discussion**: [What Did You Find?](day1/inspect-debrief.md) (20 mins)
-- `12:00` [Cleaning Moves Overview](day1/clean-intro.md) (20 mins)
+- `10:50` **Practice**: [Open Sales Data](day1/inspect-sales.md) (20 mins)
+- `11:10` **Practice**: [Open Product Data](day1/inspect-prod.md) (10 mins)
+- `11:20` **Discussion**: [What Did You Find?](day1/inspect-debrief.md) (10 mins)
+- `11:30` [Cleaning Moves Overview](day1/clean-intro.md) (10 mins)
+- `11:40` **Practice**: [Clean the Sales Data](day1/clean-sales.md) (40 mins)
 
 ### Session 3
 
-- `13:20` **Practice**: [Clean the Sales Data](day1/clean-sales.md) (50 mins)
-- `14:10` **Discussion**: [Mechanical or Judgement?](day1/clean-debrief.md) (20 mins)
+- `13:20` **Discussion**: [Mechanical or Judgement?](day1/clean-debrief.md) (10 mins)
+- `13:30` [Why Flatten and Join?](day1/flatten-intro.md) (10 mins)
+- `13:40` **Practice**: [Flatten and Join](day1/flatten-join.md) (40 mins)
+- `14:20` **Practice**: Which Categories Earn Most? (10 mins)
 
 ### Session 4
 
-- `14:50` [Why Flatten and Join?](day1/flatten-intro.md) (10 mins)
-- `15:00` **Practice**: [Flatten and Join](day1/flatten-join.md) (30 mins)
-- `15:30` **Practice**: Which Categories Earn Most? (10 mins)
+- `14:50` ETL Product Investigation (10 mins)
+- `15:00` **Investigation**: [ETL Product Investigation](day1/etl-products.md) (20 mins)
+- `15:20` **Report-Back**: ETL Product Investigation (20 mins)
 - `15:40` **Discussion**: [Reflect and Look Ahead](day1/reflection.md) (10 mins)
 
 ---

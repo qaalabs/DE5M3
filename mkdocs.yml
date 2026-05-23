@@ -18,6 +18,7 @@ nav:
     - "Open Product Data": day1/inspect-prod.md
     - "Clean the Sales Data": day1/clean-sales.md
     - "Flatten and Join": day1/flatten-join.md
+    - "ETL Product Investigation": day1/etl-products.md
 
   - "Day 2 - ETL in the Cloud":
     - "Lab 2.2 - Landing Raw Data": day2/land-data.md

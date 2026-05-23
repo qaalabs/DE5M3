@@ -14,21 +14,24 @@
 - **Practice**: [Open Product Data](../day1/inspect-prod.md)
 - **Discussion**: What Did You Find?
 - Cleaning Moves Overview
+- **Practice**: [Clean the Sales Data](../day1/clean-sales.md)
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- **Practice**: [Clean the Sales Data](../day1/clean-sales.md)
 - **Discussion**: Mechanical or Judgement?
+- Why Flatten and Join?
+- **Practice**: [Flatten and Join](../day1/flatten-join.md)
+- **Practice**: Which Categories Earn Most?
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- Why Flatten and Join?
-- **Practice**: [Flatten and Join](../day1/flatten-join.md)
-- **Practice**: Which Categories Earn Most?
+- ETL Product Investigation
+- **Investigation**: [ETL Product Investigation](../day1/etl-products.md)
+- **Report-Back**: ETL Product Investigation
 - **Discussion**: Reflect and Look Ahead
 
 ## 🎁 Wrap
