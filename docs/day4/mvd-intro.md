@@ -1,4 +1,4 @@
-# Facilitator Notes — Minimum Viable Documentation
+# Facilitator Notes - Minimum Viable Documentation
 
 *Trainer-only. Opens Session 2 after morning break.*
 *Aim: 10 minutes before sending them into MVD-BUILD.*
@@ -7,8 +7,8 @@
 
 ## Frame the shift
 
-Session 1 was about making the pipeline trustworthy for the machine — checks that fail loudly.
-Session 2 is about making it trustworthy for a person — documentation that orients quickly.
+Session 1 was about making the pipeline trustworthy for the machine - checks that fail loudly.
+Session 2 is about making it trustworthy for a person - documentation that orients quickly.
 
 > "The pipeline checks are for Python. The documentation is for the engineer who picks this up on Monday morning."
 
@@ -26,7 +26,7 @@ Things to draw out:
 
 Then:
 
-> "That list — that is your minimum viable documentation. Not API docs, not line-by-line comments. Just the things a competent engineer needs to orientate themselves in the first 15 minutes."
+> "That list - that is your minimum viable documentation. Not API docs, not line-by-line comments. Just the things a competent engineer needs to orientate themselves in the first 15 minutes."
 
 ---
 
@@ -40,7 +40,7 @@ Be explicit about scope. The goal is not:
 
 The goal is: could a new engineer look at this artefact and understand the pipeline's purpose and flow in under 10 minutes?
 
-If the answer is yes — that is enough.
+If the answer is yes - that is enough.
 
 ---
 
@@ -48,9 +48,9 @@ If the answer is yes — that is enough.
 
 Tell the group they can choose their format:
 
-- **Table** — layer by layer, name, contents, notes
-- **Flow diagram** (even ASCII) — source → layer → output, left to right
-- **Structured note** — short prose with clear headings
+- **Table** - layer by layer, name, contents, notes
+- **Flow diagram** (even ASCII) - source → layer → output, left to right
+- **Structured note** - short prose with clear headings
 
 All three work. The best artefact is the one that would genuinely help the next person.
 
@@ -58,7 +58,7 @@ All three work. The best artefact is the one that would genuinely help the next 
 
 ## Bridge to MVD-BUILD
 
-> "Imagine you are going on leave Friday. Someone else is covering from Monday. Produce the minimum they would need. Not everything — the minimum that saves them an hour of confusion."
+> "Imagine you are going on leave Friday. Someone else is covering from Monday. Produce the minimum they would need. Not everything - the minimum that saves them an hour of confusion."
 
 Send them in.
 
@@ -69,7 +69,7 @@ Send them in.
 Common gaps:
 - No mention of run order (which notebook first)
 - No description of what the gold output is actually for
-- No caveats — the artefact implies the pipeline is perfect
-- Over-documented — trying to explain the code rather than the flow
+- No caveats - the artefact implies the pipeline is perfect
+- Over-documented - trying to explain the code rather than the flow
 
 If you see over-documentation, redirect: "If you removed that section, would a new engineer still be able to orientate themselves? Yes? Then it probably belongs in the code, not here."

@@ -5,7 +5,7 @@
 You have just heard about bronze, silver, and gold layers.
 Now map the Day 2 HomeSphere pipeline onto that structure.
 
-This is a design exercise — no code, no Fabric. Work on paper or in a shared doc.
+This is a design exercise - no code, no Fabric. Work on paper or in a shared doc.
 
 ---
 
@@ -14,7 +14,7 @@ This is a design exercise — no code, no Fabric. Work on paper or in a shared d
 | Layer | Purpose | Key rule |
 |-------|---------|----------|
 | **Bronze** | Raw data exactly as it arrived | Never modified after landing |
-| **Silver** | Cleaned, standardised, validated | Trustworthy — safe to share |
+| **Silver** | Cleaned, standardised, validated | Trustworthy - safe to share |
 | **Gold** | Business-facing output | Built from silver, answers a specific question |
 
 ---

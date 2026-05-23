@@ -1,6 +1,6 @@
 # Prepare Your Stakeholder Explanation
 
-*Breakout — Session 3. Pairs or small groups.*
+*Breakout - Session 3. Pairs or small groups.*
 *Aim: 20 minutes.*
 
 ---
@@ -15,7 +15,7 @@
 
 ## Your task
 
-Prepare a short explanation — two to three minutes — that covers:
+Prepare a short explanation - two to three minutes - that covers:
 
 1. **What `gold_revenue` is**
    What does it contain? What question does it answer?
@@ -42,9 +42,9 @@ Prepare a short explanation — two to three minutes — that covers:
 
 ## What to avoid
 
-- Disappearing into engineering detail — she does not need to know the pipeline has two notebooks
-- Vague reassurance — "it's been cleaned and validated" means nothing without specifics
-- Overclaiming — if you do not know what the data covers, say so
+- Disappearing into engineering detail - she does not need to know the pipeline has two notebooks
+- Vague reassurance - "it's been cleaned and validated" means nothing without specifics
+- Overclaiming - if you do not know what the data covers, say so
 
 ---
 
@@ -57,11 +57,11 @@ Use this as a rough outline if it helps:
 > There are a few things to be aware of: [caveats].
 > What this supports is [decision or action]."
 
-You do not have to follow this exactly — but your explanation should cover the same ground.
+You do not have to follow this exactly - but your explanation should cover the same ground.
 
 ---
 
 ## Prepare to share
 
 You will present to the room after the breakout. Keep it to two or three minutes.
-Decide who will speak — or split it between two people.
+Decide who will speak - or split it between two people.

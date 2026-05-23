@@ -1,4 +1,4 @@
-# Facilitator Notes — Cloud Is Not Well-Architected
+# Facilitator Notes - Cloud Is Not Well-Architected
 
 *Trainer-only. Final discussion of Day 2, ~20 minutes.*
 
@@ -23,10 +23,10 @@ The raw files are sitting in `Files/data/` alongside the cleaned output. There i
 One notebook does everything. If the clean step fails halfway through, the Delta table might contain partial results. There is no checkpoint, no rollback, no audit trail.
 
 **The manual trigger problem:**
-Someone has to remember to run the notebook. If HomeSphere exports data every Monday morning, someone has to log in and press Run. That is not a pipeline — that is a chore.
+Someone has to remember to run the notebook. If HomeSphere exports data every Monday morning, someone has to log in and press Run. That is not a pipeline - that is a chore.
 
 **The naming problem:**
-`cleaned_sales` and `sales_trusted` are reasonable names, but they are not a convention. A new person joining the project would not know what bronze, silver, and gold mean — because those concepts do not exist yet in this workspace.
+`cleaned_sales` and `sales_trusted` are reasonable names, but they are not a convention. A new person joining the project would not know what bronze, silver, and gold mean - because those concepts do not exist yet in this workspace.
 
 ---
 
@@ -40,11 +40,11 @@ That is what Day 3 fixes.
 
 ---
 
-## Introduce medallion — briefly
+## Introduce medallion - briefly
 
 Name it, do not explain it:
 
-> "Tomorrow we give this structure. Bronze is raw — exactly what arrived. Silver is cleaned and trusted. Gold is the output built for a specific question. Three layers, clear boundaries, each one dependent on the last."
+> "Tomorrow we give this structure. Bronze is raw - exactly what arrived. Silver is cleaned and trusted. Gold is the output built for a specific question. Three layers, clear boundaries, each one dependent on the last."
 
 One sentence each. Leave them wanting to see it rather than fully understanding it tonight.
 
@@ -52,4 +52,4 @@ One sentence each. Leave them wanting to see it rather than fully understanding 
 
 ## Close Day 2
 
-> "You built the same pipeline twice. Once locally, once in the cloud. The cloud version is better — but it is still a pipeline without architecture. Tomorrow we fix that."
+> "You built the same pipeline twice. Once locally, once in the cloud. The cloud version is better - but it is still a pipeline without architecture. Tomorrow we fix that."

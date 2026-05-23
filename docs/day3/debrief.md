@@ -1,4 +1,4 @@
-# Facilitator Notes — What Is Actually Better?
+# Facilitator Notes - What Is Actually Better?
 
 *Trainer-only. After REFACTOR, before afternoon break.*
 *Aim: 20 minutes.*
@@ -11,11 +11,11 @@
 
 Things to draw out:
 
-- **Bronze is untouched** — you can always re-run from the original source data
-- **Silver is validated** — the assert cells mean if something is wrong, the notebook fails loudly rather than silently producing bad gold
-- **Gold reads from silver** — if `silver_sales` changes, `gold_revenue` benefits automatically on next run
-- **Names encode meaning** — `silver_sales` tells you the layer; `cleaned_sales` tells you nothing about where it sits
-- **Two notebooks, clear jobs** — bronze→silver is about trust; silver→gold is about answering questions
+- **Bronze is untouched** - you can always re-run from the original source data
+- **Silver is validated** - the assert cells mean if something is wrong, the notebook fails loudly rather than silently producing bad gold
+- **Gold reads from silver** - if `silver_sales` changes, `gold_revenue` benefits automatically on next run
+- **Names encode meaning** - `silver_sales` tells you the layer; `cleaned_sales` tells you nothing about where it sits
+- **Two notebooks, clear jobs** - bronze→silver is about trust; silver→gold is about answering questions
 
 ---
 
@@ -25,10 +25,10 @@ Things to draw out:
 
 Things to draw out:
 
-- Still manual — someone has to run both notebooks in order
-- No scheduling — nothing triggers the pipeline when new data arrives
-- No logging — if gold looks wrong, you have no record of when it was last run or what version of silver it read
-- The validation checks are basic — they confirm types and nulls but not business rules (e.g. "are all product IDs valid?")
+- Still manual - someone has to run both notebooks in order
+- No scheduling - nothing triggers the pipeline when new data arrives
+- No logging - if gold looks wrong, you have no record of when it was last run or what version of silver it read
+- The validation checks are basic - they confirm types and nulls but not business rules (e.g. "are all product IDs valid?")
 
 ---
 

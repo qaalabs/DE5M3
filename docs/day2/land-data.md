@@ -27,7 +27,7 @@ Upload them now so they are ready for the notebooks.
 
 ## Step 3: Preview the data
 
-Select `sales_raw.csv` in the Explorer — Fabric will show a preview of the contents.
+Select `sales_raw.csv` in the Explorer - Fabric will show a preview of the contents.
 
 Check it looks familiar. This is the same file you worked with locally on Day 1.
 
@@ -35,7 +35,7 @@ Check it looks familiar. This is the same file you worked with locally on Day 1.
 
 ## What just happened
 
-The files are now stored in **OneLake** — Microsoft Fabric's unified storage layer.
+The files are now stored in **OneLake** - Microsoft Fabric's unified storage layer.
 Any notebook or workload in this workspace can read them from the path:
 
 ```

@@ -2,7 +2,7 @@
 
 ## Your task
 
-Look at the Day 2 pipeline you built in Fabric. Not at whether it works — it does.
+Look at the Day 2 pipeline you built in Fabric. Not at whether it works - it does.
 Look at whether it is well-designed.
 
 In your group, work through the questions below. For each one, agree on a specific answer
@@ -10,7 +10,7 @@ and be ready to share it. You have 20 minutes.
 
 ---
 
-## The Day 2 pipeline — what exists
+## The Day 2 pipeline - what exists
 
 ```
 Files/
@@ -51,7 +51,7 @@ Two notebooks. One runs after the other. Someone presses Run each time.
 
 ## Output
 
-Produce a short list of **design debts** — things that work but would cause problems at scale,
+Produce a short list of **design debts** - things that work but would cause problems at scale,
 over time, or with another person involved.
 
 Be specific. "It is not well organised" is not a design debt. "Raw and cleaned data sit in the

@@ -1,4 +1,4 @@
-# HomeSphere — Medallion Architecture in Fabric
+# HomeSphere - Medallion Architecture in Fabric
 
 By the end of this lab you will have restructured the HomeSphere pipeline into three
 clearly separated layers: **bronze** (raw), **silver** (cleaned and trusted), and **gold** (business-ready output).
@@ -17,9 +17,9 @@ You have done this before. Set up a fresh workspace and lakehouse named `HomeSph
 
 ## Step 2: Create the bronze layer
 
-The bronze layer holds raw data exactly as it arrived — no modifications.
+The bronze layer holds raw data exactly as it arrived - no modifications.
 
-1. In the **Files** folder, select **...** > **New subfolder** — name it `bronze`
+1. In the **Files** folder, select **...** > **New subfolder** - name it `bronze`
 2. In the **bronze** folder, select **...** > **Upload** > **Upload files**
 3. Upload both source files:
     - `sales_raw.csv`
@@ -33,12 +33,12 @@ The bronze layer holds raw data exactly as it arrived — no modifications.
 
 ## Step 3: Create the silver notebook
 
-Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation — but you do not yet answer any business question.
+Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation - but you do not yet answer any business question.
 
 1. On the **Home** page of the Lakehouse, select **Open notebook** > **New notebook**
-2. Name the notebook `HomeSphere — Bronze to Silver`
+2. Name the notebook `HomeSphere - Bronze to Silver`
 
-### Cell 1 — Clean Sales
+### Cell 1 - Clean Sales
 
 Paste the following into the first cell and run it:
 
@@ -68,9 +68,9 @@ print(f'Silver: {len(df)} rows')
 print(f'Dropped: {30 - len(df)} rows')
 ```
 
-### Cell 2 — Validate before saving
+### Cell 2 - Validate before saving
 
-Add a new code cell. Run basic checks before writing to silver — never save data you have not verified.
+Add a new code cell. Run basic checks before writing to silver - never save data you have not verified.
 
 ```python
 # Validation checks
@@ -84,7 +84,7 @@ print('All validation checks passed')
 print(df.dtypes)
 ```
 
-### Cell 3 — Write silver_sales
+### Cell 3 - Write silver_sales
 
 ```python
 # Write to silver layer as a Delta table
@@ -93,7 +93,7 @@ spark.createDataFrame(df).write.mode('overwrite').saveAsTable('silver_sales')
 print('Saved: silver_sales (Delta table)')
 ```
 
-### Cell 4 — Flatten Products
+### Cell 4 - Flatten Products
 
 ```python
 # Read raw Products from bronze
@@ -112,7 +112,7 @@ print(f'Products flattened: {len(products)} rows')
 print(products.columns.tolist())
 ```
 
-### Cell 5 — Write silver_products
+### Cell 5 - Write silver_products
 
 ```python
 spark.createDataFrame(products).write.mode('overwrite').saveAsTable('silver_products')
@@ -150,18 +150,18 @@ ORDER BY products DESC
 
 ## Step 5: Create the gold notebook
 
-Gold answers a specific business question. It is built from silver — never from bronze directly.
+Gold answers a specific business question. It is built from silver - never from bronze directly.
 
 1. Return to the **Lakehouse** home page
 2. Select **Open notebook** > **New notebook**
-3. Name it `HomeSphere — Silver to Gold`
+3. Name it `HomeSphere - Silver to Gold`
 
-### Cell 1 — Join silver tables
+### Cell 1 - Join silver tables
 
 ```python
 import pandas as pd
 
-# Read from silver — not from bronze, not from raw files
+# Read from silver - not from bronze, not from raw files
 sales = spark.read.table('silver_sales').toPandas()
 sales['order_date'] = pd.to_datetime(sales['order_date'])
 
@@ -176,7 +176,7 @@ print(f'Gold dataset: {len(df)} rows')
 print(f'Total revenue: £{df["line_value"].sum():,.2f}')
 ```
 
-### Cell 2 — Write gold_revenue
+### Cell 2 - Write gold_revenue
 
 ```python
 spark.createDataFrame(df).write.mode('overwrite').saveAsTable('gold_revenue')
@@ -200,7 +200,7 @@ GROUP BY category
 ORDER BY total_revenue DESC
 ```
 
-This is the same answer as Day 1 and Day 2 — but now it comes from a clearly labelled gold table
+This is the same answer as Day 1 and Day 2 - but now it comes from a clearly labelled gold table
 built from trusted silver sources, which in turn came from untouched bronze data.
 
 ---

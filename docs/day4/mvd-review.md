@@ -1,6 +1,6 @@
 # Review Each Other's Artefact
 
-*Breakout — Session 2. Pairs or small groups.*
+*Breakout - Session 2. Pairs or small groups.*
 *Aim: 20 minutes.*
 
 ---
@@ -50,5 +50,5 @@ Tell the other person or group:
 Be ready to share:
 
 - What was the most common gap in the artefacts?
-- What format worked best — table, diagram, or written note?
+- What format worked best - table, diagram, or written note?
 - What would you add to your own artefact after reading someone else's?

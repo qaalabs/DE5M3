@@ -1,4 +1,4 @@
-# Facilitator Notes — Design Review
+# Facilitator Notes - Design Review
 
 *Trainer-only. Opens Day 3, ~20 minutes before the breakout.*
 
@@ -16,7 +16,7 @@ This is not a new build day. It is a day where they judge what they have already
 
 ## Show the Day 2 pipeline
 
-Put the structure on screen — either your own workspace or a diagram:
+Put the structure on screen - either your own workspace or a diagram:
 
 ```
 Files/
@@ -33,13 +33,13 @@ Two notebooks. No structure. No labels. No validation. Someone presses Run.
 
 Ask: **"If you inherited this workspace on Monday morning, what would you need to know?"**
 
-Let a few people answer. Do not correct or elaborate yet — just surface the discomfort.
+Let a few people answer. Do not correct or elaborate yet - just surface the discomfort.
 
 ---
 
 ## Frame the breakout
 
-> "In a moment you are going to look at this pipeline as if you were reviewing it — not as the person who built it, but as the person who has to maintain it. Your job is to find the design debts."
+> "In a moment you are going to look at this pipeline as if you were reviewing it - not as the person who built it, but as the person who has to maintain it. Your job is to find the design debts."
 
 Explain what a design debt is: something that works today but will cause problems at scale, over time, or with another person involved.
 

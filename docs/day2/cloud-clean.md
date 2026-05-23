@@ -2,7 +2,7 @@
 
 ## What you are doing
 
-The same cleaning pipeline you built on Day 1 — but running in a Fabric notebook,
+The same cleaning pipeline you built on Day 1 - but running in a Fabric notebook,
 reading from OneLake, and saving to a Delta table instead of a CSV file.
 
 Open the notebook: **`cloud_clean.ipynb`**
@@ -18,7 +18,7 @@ Open the notebook: **`cloud_clean.ipynb`**
 | Where output goes | `cleaned_sales.csv` on VM | `cleaned_sales` Delta table in lakehouse |
 | Who can access output | Just you | Anyone in the workspace |
 
-Everything in between — the nine cleaning steps — is identical pandas code.
+Everything in between - the nine cleaning steps - is identical pandas code.
 
 ---
 
@@ -32,7 +32,7 @@ spark_df = spark.createDataFrame(df)
 spark_df.write.mode('overwrite').saveAsTable('cleaned_sales')
 ```
 
-`spark` is available automatically in every Fabric notebook — you do not need to import it.
+`spark` is available automatically in every Fabric notebook - you do not need to import it.
 
 Once saved, the table appears in the **Tables** section of your Lakehouse Explorer
 and is immediately queryable via the SQL analytics endpoint.
@@ -42,4 +42,4 @@ and is immediately queryable via the SQL analytics endpoint.
 ## Discussion
 
 - What changed? What stayed the same?
-- The output is now a Delta table instead of a CSV — what does that enable that a CSV cannot do?
+- The output is now a Delta table instead of a CSV - what does that enable that a CSV cannot do?

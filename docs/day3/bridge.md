@@ -1,4 +1,4 @@
-# Facilitator Notes — Bridge to Day 4
+# Facilitator Notes - Bridge to Day 4
 
 *Trainer-only. Final 10 minutes of Day 3.*
 
@@ -6,7 +6,7 @@
 
 ## Summarise Day 3 in one sentence
 
-> "The pipeline did not change what it produces — it changed how reliably and legibly it produces it."
+> "The pipeline did not change what it produces - it changed how reliably and legibly it produces it."
 
 ---
 
@@ -19,7 +19,7 @@
 
 ---
 
-## What is still missing — set up Day 4
+## What is still missing - set up Day 4
 
 Ask: **"If this pipeline ran overnight and produced wrong numbers at 9am, how would you know?"**
 
@@ -33,9 +33,9 @@ every cell of every notebook.
 
 Day 4 themes to name briefly:
 - **Data quality checks** beyond basic assertions
-- **Logging and observability** — knowing the pipeline ran and what it produced
-- **Documentation** — writing down the why, not just the what
-- **Handover** — could someone else support this pipeline on Monday morning?
+- **Logging and observability** - knowing the pipeline ran and what it produced
+- **Documentation** - writing down the why, not just the what
+- **Handover** - could someone else support this pipeline on Monday morning?
 
 ---
 

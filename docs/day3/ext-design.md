@@ -5,14 +5,14 @@
 HomeSphere has more data sources beyond Sales and Products.
 Your group has been assigned one of the sources below.
 
-Design what bronze, silver, and gold would look like for your source —
+Design what bronze, silver, and gold would look like for your source -
 without building anything. This is a design exercise.
 
 You have 20 minutes. Prepare to share your design with the room.
 
 ---
 
-## Source A — Inventory
+## Source A - Inventory
 
 HomeSphere tracks stock levels across multiple warehouses. The raw export is a
 daily CSV snapshot with one row per product per warehouse:
@@ -30,7 +30,7 @@ Known issues in the raw data:
 
 ---
 
-## Source B — Customer Support
+## Source B - Customer Support
 
 HomeSphere logs every support ticket raised by customers. The raw export is a JSON
 file with one object per ticket:
@@ -85,6 +85,6 @@ Work through these for your source:
 ## Prepare to share
 
 Be ready to explain:
-1. Your silver table — what it contains and what was cleaned
+1. Your silver table - what it contains and what was cleaned
 2. One gold output your source enables
 3. One thing that made this source awkward

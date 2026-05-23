@@ -1,6 +1,6 @@
 # Which Checks Matter?
 
-*Practice — Session 1. Individual or pairs.*
+*Practice - Session 1. Individual or pairs.*
 *Aim: 20 minutes.*
 
 ---
@@ -28,7 +28,7 @@ Design the checks you would add. Use the table below.
 For each check, decide:
 
 - **What** are you checking?
-- **Where** in the pipeline — bronze→silver, or silver→gold?
+- **Where** in the pipeline - bronze→silver, or silver→gold?
 - **Essential or nice-to-have?** Essential = the pipeline should stop if this fails. Nice-to-have = useful but not blocking.
 
 ---
@@ -49,7 +49,7 @@ For each check, decide:
 ## Discussion questions
 
 1. Which checks would you mark as essential?
-2. Is there a check on this list you would leave out entirely — and why?
+2. Is there a check on this list you would leave out entirely - and why?
 3. Can you think of a check that is not on this list but should be?
 
 ---
@@ -63,4 +63,4 @@ Some checks are easy: no nulls, positive values. Others require knowing the busi
 - How many rows should the sales file have? 20? 200? 20,000?
 - What is the expected revenue range? £500? £5,000? £500,000?
 
-When you do not know the baseline, you cannot write the check. That is a real problem in new pipelines — and it is worth naming.
+When you do not know the baseline, you cannot write the check. That is a real problem in new pipelines - and it is worth naming.

@@ -1,6 +1,6 @@
 # Add Validation Checks
 
-*Practice — Session 1. Individual.*
+*Practice - Session 1. Individual.*
 *Aim: 30 minutes.*
 
 ---
@@ -10,7 +10,7 @@
 You designed the checks. Now write the code.
 
 The existing validation cell in the bronze→silver notebook is shown below.
-Your task is to extend it with three more checks — your choice from the list you designed, or one you came up with yourself.
+Your task is to extend it with three more checks - your choice from the list you designed, or one you came up with yourself.
 
 ---
 
@@ -32,7 +32,7 @@ print(df.dtypes)
 
 ## Add your checks below the existing ones
 
-Write the assert statements you would add. Use plain Python — no Fabric required.
+Write the assert statements you would add. Use plain Python - no Fabric required.
 
 ```python
 # Your additional checks here
@@ -60,7 +60,7 @@ Once you have written your own, compare with these:
 
 ??? "Row count check"
     ```python
-    assert len(df) > 0, "dataframe is empty — check source file"
+    assert len(df) > 0, "dataframe is empty - check source file"
     ```
 
 ??? "No duplicate order IDs"
@@ -70,7 +70,7 @@ Once you have written your own, compare with these:
 
 ??? "order_date parses cleanly"
     ```python
-    assert df['order_date'].isnull().sum() == 0, "order_date has nulls — check date format in source"
+    assert df['order_date'].isnull().sum() == 0, "order_date has nulls - check date format in source"
     ```
 
 ??? "status values are from expected set"
@@ -91,12 +91,12 @@ products = spark.read.table('silver_products').toPandas()
 
 joined = sales.merge(products, on='product_id', how='left')
 
-# Your check here — what should always be true after a left join on product_id?
+# Your check here - what should always be true after a left join on product_id?
 ```
 
 ??? "Join integrity check"
     ```python
-    assert len(joined) == len(sales), "row count changed after join — unexpected"
+    assert len(joined) == len(sales), "row count changed after join - unexpected"
     assert joined['category'].isnull().sum() == 0, "some product_ids did not match silver_products"
     ```
 
@@ -106,4 +106,4 @@ joined = sales.merge(products, on='product_id', how='left')
 
 1. Did any check feel difficult to write because you did not know the expected value?
 2. Are there checks you would mark as essential vs optional in this specific pipeline?
-3. What would you do if a check fails in production — stop the pipeline, or log a warning and continue?
+3. What would you do if a check fails in production - stop the pipeline, or log a warning and continue?

@@ -1,6 +1,6 @@
 # Create a Handover Artefact
 
-*Practice — Session 2. Individual.*
+*Practice - Session 2. Individual.*
 *Aim: 30 minutes.*
 
 ---
@@ -12,7 +12,7 @@
 
 Your task: produce the minimum documentation they would need to orientate themselves.
 
-Not everything — the minimum. The thing that would save them an hour of confusion.
+Not everything - the minimum. The thing that would save them an hour of confusion.
 
 ---
 
@@ -27,7 +27,7 @@ One or two sentences. What business question does it answer?
 Where does the raw data come from? What format? How often does it arrive?
 
 **What does each layer contain?**
-Bronze, silver, gold — what is in each one, and what has been done to it?
+Bronze, silver, gold - what is in each one, and what has been done to it?
 
 **What runs first?**
 The order matters. Which notebook runs before which?
@@ -40,11 +40,11 @@ What is not checked? What could go wrong that the pipeline would not catch?
 
 ---
 
-## Format — your choice
+## Format - your choice
 
 Pick the format that feels most useful for a new engineer:
 
-**Option A — Structured table**
+**Option A - Structured table**
 
 | Layer | Name | Contents | Notes |
 |-------|------|----------|-------|
@@ -53,7 +53,7 @@ Pick the format that feels most useful for a new engineer:
 | Silver | silver_products | Flattened product catalogue | 9 products |
 | Gold | gold_revenue | Revenue by product category | Built from silver only |
 
-**Option B — Flow diagram (text)**
+**Option B - Flow diagram (text)**
 
 ```
 data/sales_raw.csv       → [bronze/sales_raw.csv]   →  silver_sales  ─┐
@@ -62,7 +62,7 @@ data/products_raw.json   → [bronze/products_raw.json] → silver_products ┘
                                                                gold_revenue
 ```
 
-**Option C — Structured note**
+**Option C - Structured note**
 
 A short written document with headings: Overview, Sources, Layers, Run Order, Output, Caveats.
 
@@ -74,7 +74,7 @@ A short written document with headings: Overview, Sources, Layers, Run Order, Ou
 - Document every column
 - Describe every assert
 
-Those belong in the code comments. The handover artefact explains what the pipeline does and how to navigate it — not how every line works.
+Those belong in the code comments. The handover artefact explains what the pipeline does and how to navigate it - not how every line works.
 
 ---
 
