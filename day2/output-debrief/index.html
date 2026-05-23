@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes — What Is Better? What Is Fragile? - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes - What Is Better? What Is Fragile? - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes — What Is Better? What Is Fragile?
+              Facilitator Notes - What Is Better? What Is Fragile?
             
           </span>
         </div>
@@ -1207,46 +1207,46 @@
 
 
 
-<h1 id="facilitator-notes-what-is-better-what-is-fragile">Facilitator Notes — What Is Better? What Is Fragile?</h1>
+<h1 id="facilitator-notes-what-is-better-what-is-fragile">Facilitator Notes - What Is Better? What Is Fragile?</h1>
 <p><em>Trainer-only. Run after CLOUD-OUTPUT.</em>
-<em>Aim: 20 minutes — this one has more to unpack.</em></p>
+<em>Aim: 20 minutes - this one has more to unpack.</em></p>
 <hr>
 <h2 id="ask-the-group">Ask the group</h2>
 <p><strong>"What can you do with the Delta table that you could not do with the CSV?"</strong></p>
 <p>Things to draw out:</p>
 <ul>
-<li><strong>SQL endpoint</strong> — any analyst in the workspace can query it without touching Python</li>
-<li><strong>Versioning</strong> — Delta tables keep a transaction log; you can time-travel to previous versions</li>
-<li><strong>Shared access</strong> — the output lives in OneLake, not on one person's VM</li>
-<li><strong>Live</strong> — re-run the notebook and the table updates; anyone querying it gets the latest data</li>
+<li><strong>SQL endpoint</strong> - any analyst in the workspace can query it without touching Python</li>
+<li><strong>Versioning</strong> - Delta tables keep a transaction log; you can time-travel to previous versions</li>
+<li><strong>Shared access</strong> - the output lives in OneLake, not on one person's VM</li>
+<li><strong>Live</strong> - re-run the notebook and the table updates; anyone querying it gets the latest data</li>
 </ul>
 <hr>
 <h2 id="ask-the-group_1">Ask the group</h2>
 <p><strong>"What is still fragile about this pipeline?"</strong></p>
-<p>This is the more important question — it sets up Day 3.</p>
+<p>This is the more important question - it sets up Day 3.</p>
 <p>Things to draw out:</p>
 <ul>
-<li><strong>No structure</strong> — bronze/silver/gold are all mixed together in one lakehouse, one notebook</li>
-<li><strong>No reusability</strong> — if someone else wanted to use just the cleaned Sales data, there is no clean boundary</li>
-<li><strong>Manual trigger</strong> — someone has to run the notebook; nothing is automated</li>
-<li><strong>No schema enforcement</strong> — if <code>sales_raw.csv</code> changes structure, the pipeline silently produces wrong output</li>
-<li><strong>Hard to debug</strong> — one notebook does everything; if something breaks mid-run it is hard to isolate</li>
+<li><strong>No structure</strong> - bronze/silver/gold are all mixed together in one lakehouse, one notebook</li>
+<li><strong>No reusability</strong> - if someone else wanted to use just the cleaned Sales data, there is no clean boundary</li>
+<li><strong>Manual trigger</strong> - someone has to run the notebook; nothing is automated</li>
+<li><strong>No schema enforcement</strong> - if <code>sales_raw.csv</code> changes structure, the pipeline silently produces wrong output</li>
+<li><strong>Hard to debug</strong> - one notebook does everything; if something breaks mid-run it is hard to isolate</li>
 </ul>
 <hr>
 <h2 id="key-point-to-make">Key point to make</h2>
 <blockquote>
-<p>"The pipeline works. The output is better than a CSV on a VM. But it is not yet engineered — it is a notebook someone runs by hand. Day 3 is about turning this into something with structure."</p>
+<p>"The pipeline works. The output is better than a CSV on a VM. But it is not yet engineered - it is a notebook someone runs by hand. Day 3 is about turning this into something with structure."</p>
 </blockquote>
-<p>Introduce the idea of <strong>medallion architecture</strong> here, briefly — bronze (raw), silver (cleaned), gold (trusted output). Do not explain it fully yet. Just name it and say that is Day 3's job.</p>
+<p>Introduce the idea of <strong>medallion architecture</strong> here, briefly - bronze (raw), silver (cleaned), gold (trusted output). Do not explain it fully yet. Just name it and say that is Day 3's job.</p>
 <hr>
 <h2 id="if-the-sql-endpoint-question-came-up">If the SQL endpoint question came up</h2>
 <p>Someone may have noticed that running the same revenue query in SQL felt more natural than <code>groupby</code> in Python. This is worth acknowledging:</p>
 <blockquote>
-<p>"SQL is the right tool for aggregation questions. Python is the right tool for complex transformation. Both live in the same environment now — that is the point of Fabric."</p>
+<p>"SQL is the right tool for aggregation questions. Python is the right tool for complex transformation. Both live in the same environment now - that is the point of Fabric."</p>
 </blockquote>
 <hr>
 <h2 id="bridge-to-the-next-session">Bridge to the next session</h2>
-<p>The afternoon continues with COMPARE — local vs cloud breakout. The fragility conversation feeds directly into that: yes, the cloud version is better, but it is not well-architected yet.</p>
+<p>The afternoon continues with COMPARE - local vs cloud breakout. The fragility conversation feeds directly into that: yes, the cloud version is better, but it is not well-architected yet.</p>
 
 
 

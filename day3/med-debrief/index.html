@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes — What Needs to Move? - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes - What Needs to Move? - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes — What Needs to Move?
+              Facilitator Notes - What Needs to Move?
             
           </span>
         </div>
@@ -1207,7 +1207,7 @@
 
 
 
-<h1 id="facilitator-notes-what-needs-to-move">Facilitator Notes — What Needs to Move?</h1>
+<h1 id="facilitator-notes-what-needs-to-move">Facilitator Notes - What Needs to Move?</h1>
 <p><em>Trainer-only. After MED-MAP, before lunch.</em>
 <em>Aim: 20 minutes.</em></p>
 <hr>
@@ -1256,12 +1256,12 @@
 </tbody>
 </table>
 <hr>
-<h2 id="what-is-missing-key-teaching-point">What is missing — key teaching point</h2>
+<h2 id="what-is-missing-key-teaching-point">What is missing - key teaching point</h2>
 <p>The Day 2 pipeline has no silver Products table. <code>products_raw.json</code> was flattened
 inside the join notebook and never saved as a reusable silver dataset.</p>
 <p>Ask: <strong>"If a second gold output needed product data, where would it read from?"</strong></p>
 <p>The answer in the Day 2 pipeline is: it would re-flatten the raw JSON again.
-That is a design problem — bronze data being processed twice, inconsistently.</p>
+That is a design problem - bronze data being processed twice, inconsistently.</p>
 <p>The fix: save <code>silver_products</code> as an explicit table. Any gold output that needs
 product data reads from silver, not bronze.</p>
 <hr>
@@ -1269,11 +1269,11 @@ product data reads from silver, not bronze.</p>
 <p>The Day 2 table names (<code>cleaned_sales</code>, <code>sales_trusted</code>) carry no layer information.
 A new person cannot tell which is silver and which is gold without reading the notebooks.</p>
 <p>The new names (<code>silver_sales</code>, <code>silver_products</code>, <code>gold_revenue</code>) encode the layer
-in the name. That is a convention, not a technical requirement — but conventions matter.</p>
+in the name. That is a convention, not a technical requirement - but conventions matter.</p>
 <hr>
 <h2 id="bridge-to-the-afternoon">Bridge to the afternoon</h2>
 <blockquote>
-<p>"This afternoon you build what you just drew. Same data, same logic — but with the structure you designed this morning. The notebooks are shorter than you might expect because the logic has not changed. What changed is where things live and what they are called."</p>
+<p>"This afternoon you build what you just drew. Same data, same logic - but with the structure you designed this morning. The notebooks are shorter than you might expect because the logic has not changed. What changed is where things live and what they are called."</p>
 </blockquote>
 <p>Keep this brief. Send them to lunch with a clear picture of what they are building.</p>
 

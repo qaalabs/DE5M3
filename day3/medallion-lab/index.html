@@ -1337,7 +1337,7 @@
 
 
 
-<h1 id="homesphere-medallion-architecture-in-fabric">HomeSphere — Medallion Architecture in Fabric</h1>
+<h1 id="homesphere-medallion-architecture-in-fabric">HomeSphere - Medallion Architecture in Fabric</h1>
 <p>By the end of this lab you will have restructured the HomeSphere pipeline into three
 clearly separated layers: <strong>bronze</strong> (raw), <strong>silver</strong> (cleaned and trusted), and <strong>gold</strong> (business-ready output).</p>
 <hr>
@@ -1350,9 +1350,9 @@ clearly separated layers: <strong>bronze</strong> (raw), <strong>silver</strong>
 </ul>
 <hr>
 <h2 id="step-2-create-the-bronze-layer">Step 2: Create the bronze layer</h2>
-<p>The bronze layer holds raw data exactly as it arrived — no modifications.</p>
+<p>The bronze layer holds raw data exactly as it arrived - no modifications.</p>
 <ol>
-<li>In the <strong>Files</strong> folder, select <strong>...</strong> &gt; <strong>New subfolder</strong> — name it <code>bronze</code></li>
+<li>In the <strong>Files</strong> folder, select <strong>...</strong> &gt; <strong>New subfolder</strong> - name it <code>bronze</code></li>
 <li>In the <strong>bronze</strong> folder, select <strong>...</strong> &gt; <strong>Upload</strong> &gt; <strong>Upload files</strong></li>
 <li>Upload both source files:<ul>
 <li><code>sales_raw.csv</code></li>
@@ -1367,12 +1367,12 @@ clearly separated layers: <strong>bronze</strong> (raw), <strong>silver</strong>
 </div>
 <hr>
 <h2 id="step-3-create-the-silver-notebook">Step 3: Create the silver notebook</h2>
-<p>Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation — but you do not yet answer any business question.</p>
+<p>Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation - but you do not yet answer any business question.</p>
 <ol>
 <li>On the <strong>Home</strong> page of the Lakehouse, select <strong>Open notebook</strong> &gt; <strong>New notebook</strong></li>
-<li>Name the notebook <code>HomeSphere — Bronze to Silver</code></li>
+<li>Name the notebook <code>HomeSphere - Bronze to Silver</code></li>
 </ol>
-<h3 id="cell-1-clean-sales">Cell 1 — Clean Sales</h3>
+<h3 id="cell-1-clean-sales">Cell 1 - Clean Sales</h3>
 <p>Paste the following into the first cell and run it:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
@@ -1398,8 +1398,8 @@ clearly separated layers: <strong>bronze</strong> (raw), <strong>silver</strong>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Silver: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Dropped: </span><span class="si">{</span><span class="mi">30</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-2-validate-before-saving">Cell 2 — Validate before saving</h3>
-<p>Add a new code cell. Run basic checks before writing to silver — never save data you have not verified.</p>
+<h3 id="cell-2-validate-before-saving">Cell 2 - Validate before saving</h3>
+<p>Add a new code cell. Run basic checks before writing to silver - never save data you have not verified.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Validation checks</span>
 <span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">float</span><span class="p">,</span> <span class="s2">"unit_price should be float"</span>
 <span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">"quantity should be int"</span>
@@ -1410,13 +1410,13 @@ clearly separated layers: <strong>bronze</strong> (raw), <strong>silver</strong>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'All validation checks passed'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-3-write-silver_sales">Cell 3 — Write silver_sales</h3>
+<h3 id="cell-3-write-silver_sales">Cell 3 - Write silver_sales</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Write to silver layer as a Delta table</span>
 <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'silver_sales'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Saved: silver_sales (Delta table)'</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-4-flatten-products">Cell 4 — Flatten Products</h3>
+<h3 id="cell-4-flatten-products">Cell 4 - Flatten Products</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Read raw Products from bronze</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/lakehouse/default/Files/bronze/products_raw.json'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">products_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -1432,7 +1432,7 @@ clearly separated layers: <strong>bronze</strong> (raw), <strong>silver</strong>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Products flattened: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">products</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
 </code></pre></div>
-<h3 id="cell-5-write-silver_products">Cell 5 — Write silver_products</h3>
+<h3 id="cell-5-write-silver_products">Cell 5 - Write silver_products</h3>
 <div class="highlight"><pre><span></span><code><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">products</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'silver_products'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Saved: silver_products (Delta table)'</span><span class="p">)</span>
@@ -1458,16 +1458,16 @@ They do not need to understand the raw file or the cleaning steps.</p>
 </div>
 <hr>
 <h2 id="step-5-create-the-gold-notebook">Step 5: Create the gold notebook</h2>
-<p>Gold answers a specific business question. It is built from silver — never from bronze directly.</p>
+<p>Gold answers a specific business question. It is built from silver - never from bronze directly.</p>
 <ol>
 <li>Return to the <strong>Lakehouse</strong> home page</li>
 <li>Select <strong>Open notebook</strong> &gt; <strong>New notebook</strong></li>
-<li>Name it <code>HomeSphere — Silver to Gold</code></li>
+<li>Name it <code>HomeSphere - Silver to Gold</code></li>
 </ol>
-<h3 id="cell-1-join-silver-tables">Cell 1 — Join silver tables</h3>
+<h3 id="cell-1-join-silver-tables">Cell 1 - Join silver tables</h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="c1"># Read from silver — not from bronze, not from raw files</span>
+<span class="c1"># Read from silver - not from bronze, not from raw files</span>
 <span class="n">sales</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'silver_sales'</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 <span class="n">sales</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">sales</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">])</span>
 
@@ -1481,7 +1481,7 @@ They do not need to understand the raw file or the cleaning steps.</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Gold dataset: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Total revenue: £</span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s2">"line_value"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s1">,.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-2-write-gold_revenue">Cell 2 — Write gold_revenue</h3>
+<h3 id="cell-2-write-gold_revenue">Cell 2 - Write gold_revenue</h3>
 <div class="highlight"><pre><span></span><code><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'gold_revenue'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Saved: gold_revenue (Delta table)'</span><span class="p">)</span>
@@ -1497,7 +1497,7 @@ They do not need to understand the raw file or the cleaning steps.</p>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_revenue</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
-<p>This is the same answer as Day 1 and Day 2 — but now it comes from a clearly labelled gold table
+<p>This is the same answer as Day 1 and Day 2 - but now it comes from a clearly labelled gold table
 built from trusted silver sources, which in turn came from untouched bronze data.</p>
 <hr>
 <h2 id="discussion">Discussion</h2>

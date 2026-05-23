@@ -1338,13 +1338,13 @@
 
 
 <h1 id="add-validation-checks">Add Validation Checks</h1>
-<p><em>Practice — Session 1. Individual.</em>
+<p><em>Practice - Session 1. Individual.</em>
 <em>Aim: 30 minutes.</em></p>
 <hr>
 <h2 id="what-you-are-doing">What you are doing</h2>
 <p>You designed the checks. Now write the code.</p>
 <p>The existing validation cell in the bronze→silver notebook is shown below.
-Your task is to extend it with three more checks — your choice from the list you designed, or one you came up with yourself.</p>
+Your task is to extend it with three more checks - your choice from the list you designed, or one you came up with yourself.</p>
 <hr>
 <h2 id="existing-validation-cell">Existing validation cell</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># Validation checks</span>
@@ -1359,7 +1359,7 @@ Your task is to extend it with three more checks — your choice from the list y
 </code></pre></div>
 <hr>
 <h2 id="add-your-checks-below-the-existing-ones">Add your checks below the existing ones</h2>
-<p>Write the assert statements you would add. Use plain Python — no Fabric required.</p>
+<p>Write the assert statements you would add. Use plain Python - no Fabric required.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Your additional checks here</span>
 </code></pre></div>
 <hr>
@@ -1403,7 +1403,7 @@ Your task is to extend it with three more checks — your choice from the list y
 <p>Once you have written your own, compare with these:</p>
 <details>
 <summary>Row count check</summary>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"dataframe is empty — check source file"</span>
+<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"dataframe is empty - check source file"</span>
 </code></pre></div>
 </details>
 <details>
@@ -1413,7 +1413,7 @@ Your task is to extend it with three more checks — your choice from the list y
 </details>
 <details>
 <summary>order_date parses cleanly</summary>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"order_date has nulls — check date format in source"</span>
+<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"order_date has nulls - check date format in source"</span>
 </code></pre></div>
 </details>
 <details>
@@ -1430,11 +1430,11 @@ Your task is to extend it with three more checks — your choice from the list y
 
 <span class="n">joined</span> <span class="o">=</span> <span class="n">sales</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'product_id'</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
 
-<span class="c1"># Your check here — what should always be true after a left join on product_id?</span>
+<span class="c1"># Your check here - what should always be true after a left join on product_id?</span>
 </code></pre></div>
 <details>
 <summary>Join integrity check</summary>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">sales</span><span class="p">),</span> <span class="s2">"row count changed after join — unexpected"</span>
+<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">sales</span><span class="p">),</span> <span class="s2">"row count changed after join - unexpected"</span>
 <span class="k">assert</span> <span class="n">joined</span><span class="p">[</span><span class="s1">'category'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"some product_ids did not match silver_products"</span>
 </code></pre></div>
 </details>
@@ -1443,7 +1443,7 @@ Your task is to extend it with three more checks — your choice from the list y
 <ol>
 <li>Did any check feel difficult to write because you did not know the expected value?</li>
 <li>Are there checks you would mark as essential vs optional in this specific pipeline?</li>
-<li>What would you do if a check fails in production — stop the pipeline, or log a warning and continue?</li>
+<li>What would you do if a check fails in production - stop the pipeline, or log a warning and continue?</li>
 </ol>
 
 

@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes — What Is Actually Better? - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes - What Is Actually Better? - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes — What Is Actually Better?
+              Facilitator Notes - What Is Actually Better?
             
           </span>
         </div>
@@ -1207,7 +1207,7 @@
 
 
 
-<h1 id="facilitator-notes-what-is-actually-better">Facilitator Notes — What Is Actually Better?</h1>
+<h1 id="facilitator-notes-what-is-actually-better">Facilitator Notes - What Is Actually Better?</h1>
 <p><em>Trainer-only. After REFACTOR, before afternoon break.</em>
 <em>Aim: 20 minutes.</em></p>
 <hr>
@@ -1215,21 +1215,21 @@
 <p><strong>"What is concretely better about the medallion version?"</strong></p>
 <p>Things to draw out:</p>
 <ul>
-<li><strong>Bronze is untouched</strong> — you can always re-run from the original source data</li>
-<li><strong>Silver is validated</strong> — the assert cells mean if something is wrong, the notebook fails loudly rather than silently producing bad gold</li>
-<li><strong>Gold reads from silver</strong> — if <code>silver_sales</code> changes, <code>gold_revenue</code> benefits automatically on next run</li>
-<li><strong>Names encode meaning</strong> — <code>silver_sales</code> tells you the layer; <code>cleaned_sales</code> tells you nothing about where it sits</li>
-<li><strong>Two notebooks, clear jobs</strong> — bronze→silver is about trust; silver→gold is about answering questions</li>
+<li><strong>Bronze is untouched</strong> - you can always re-run from the original source data</li>
+<li><strong>Silver is validated</strong> - the assert cells mean if something is wrong, the notebook fails loudly rather than silently producing bad gold</li>
+<li><strong>Gold reads from silver</strong> - if <code>silver_sales</code> changes, <code>gold_revenue</code> benefits automatically on next run</li>
+<li><strong>Names encode meaning</strong> - <code>silver_sales</code> tells you the layer; <code>cleaned_sales</code> tells you nothing about where it sits</li>
+<li><strong>Two notebooks, clear jobs</strong> - bronze→silver is about trust; silver→gold is about answering questions</li>
 </ul>
 <hr>
 <h2 id="ask-the-group_1">Ask the group</h2>
 <p><strong>"What is still not good enough?"</strong></p>
 <p>Things to draw out:</p>
 <ul>
-<li>Still manual — someone has to run both notebooks in order</li>
-<li>No scheduling — nothing triggers the pipeline when new data arrives</li>
-<li>No logging — if gold looks wrong, you have no record of when it was last run or what version of silver it read</li>
-<li>The validation checks are basic — they confirm types and nulls but not business rules (e.g. "are all product IDs valid?")</li>
+<li>Still manual - someone has to run both notebooks in order</li>
+<li>No scheduling - nothing triggers the pipeline when new data arrives</li>
+<li>No logging - if gold looks wrong, you have no record of when it was last run or what version of silver it read</li>
+<li>The validation checks are basic - they confirm types and nulls but not business rules (e.g. "are all product IDs valid?")</li>
 </ul>
 <hr>
 <h2 id="key-point-to-make">Key point to make</h2>

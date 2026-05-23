@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes — Cloud Is Not Well-Architected - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes - Cloud Is Not Well-Architected - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes — Cloud Is Not Well-Architected
+              Facilitator Notes - Cloud Is Not Well-Architected
             
           </span>
         </div>
@@ -1207,7 +1207,7 @@
 
 
 
-<h1 id="facilitator-notes-cloud-is-not-well-architected">Facilitator Notes — Cloud Is Not Well-Architected</h1>
+<h1 id="facilitator-notes-cloud-is-not-well-architected">Facilitator Notes - Cloud Is Not Well-Architected</h1>
 <p><em>Trainer-only. Final discussion of Day 2, ~20 minutes.</em></p>
 <hr>
 <h2 id="the-setup">The setup</h2>
@@ -1223,9 +1223,9 @@ The raw files are sitting in <code>Files/data/</code> alongside the cleaned outp
 <p><strong>The notebook problem:</strong>
 One notebook does everything. If the clean step fails halfway through, the Delta table might contain partial results. There is no checkpoint, no rollback, no audit trail.</p>
 <p><strong>The manual trigger problem:</strong>
-Someone has to remember to run the notebook. If HomeSphere exports data every Monday morning, someone has to log in and press Run. That is not a pipeline — that is a chore.</p>
+Someone has to remember to run the notebook. If HomeSphere exports data every Monday morning, someone has to log in and press Run. That is not a pipeline - that is a chore.</p>
 <p><strong>The naming problem:</strong>
-<code>cleaned_sales</code> and <code>sales_trusted</code> are reasonable names, but they are not a convention. A new person joining the project would not know what bronze, silver, and gold mean — because those concepts do not exist yet in this workspace.</p>
+<code>cleaned_sales</code> and <code>sales_trusted</code> are reasonable names, but they are not a convention. A new person joining the project would not know what bronze, silver, and gold mean - because those concepts do not exist yet in this workspace.</p>
 <hr>
 <h2 id="the-question-to-ask">The question to ask</h2>
 <blockquote>
@@ -1234,16 +1234,16 @@ Someone has to remember to run the notebook. If HomeSphere exports data every Mo
 <p>Let the group answer. The answer is usually: quite a lot, and none of it is written down anywhere.</p>
 <p>That is what Day 3 fixes.</p>
 <hr>
-<h2 id="introduce-medallion-briefly">Introduce medallion — briefly</h2>
+<h2 id="introduce-medallion-briefly">Introduce medallion - briefly</h2>
 <p>Name it, do not explain it:</p>
 <blockquote>
-<p>"Tomorrow we give this structure. Bronze is raw — exactly what arrived. Silver is cleaned and trusted. Gold is the output built for a specific question. Three layers, clear boundaries, each one dependent on the last."</p>
+<p>"Tomorrow we give this structure. Bronze is raw - exactly what arrived. Silver is cleaned and trusted. Gold is the output built for a specific question. Three layers, clear boundaries, each one dependent on the last."</p>
 </blockquote>
 <p>One sentence each. Leave them wanting to see it rather than fully understanding it tonight.</p>
 <hr>
 <h2 id="close-day-2">Close Day 2</h2>
 <blockquote>
-<p>"You built the same pipeline twice. Once locally, once in the cloud. The cloud version is better — but it is still a pipeline without architecture. Tomorrow we fix that."</p>
+<p>"You built the same pipeline twice. Once locally, once in the cloud. The cloud version is better - but it is still a pipeline without architecture. Tomorrow we fix that."</p>
 </blockquote>
 
 

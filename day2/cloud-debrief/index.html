@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes — Familiar vs Different? - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes - Familiar vs Different? - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes — Familiar vs Different?
+              Facilitator Notes - Familiar vs Different?
             
           </span>
         </div>
@@ -1207,35 +1207,35 @@
 
 
 
-<h1 id="facilitator-notes-familiar-vs-different">Facilitator Notes — Familiar vs Different?</h1>
-<p><em>Trainer-only. Run after CLOUD-CLEAN — before lunch.</em>
+<h1 id="facilitator-notes-familiar-vs-different">Facilitator Notes - Familiar vs Different?</h1>
+<p><em>Trainer-only. Run after CLOUD-CLEAN - before lunch.</em>
 <em>Aim: 10 minutes.</em></p>
 <hr>
 <h2 id="ask-the-group">Ask the group</h2>
 <p><strong>"What was familiar? What was different?"</strong></p>
 <p>Take answers from the room. Most will land on the right things without much prompting.</p>
 <p><strong>What should be familiar:</strong>
-- All nine cleaning steps — identical pandas code
-- The DataFrame operations — same methods, same logic
-- The output shape — same columns, same row count</p>
+- All nine cleaning steps - identical pandas code
+- The DataFrame operations - same methods, same logic
+- The output shape - same columns, same row count</p>
 <p><strong>What is different:</strong>
-- The file path — <code>/lakehouse/default/Files/data/</code> instead of a local path
-- The output — a Delta table instead of a CSV
-- The environment — Fabric notebook instead of Jupyter on the VM
-- The last step — <code>spark.createDataFrame()</code> and <code>saveAsTable()</code> — new</p>
+- The file path - <code>/lakehouse/default/Files/data/</code> instead of a local path
+- The output - a Delta table instead of a CSV
+- The environment - Fabric notebook instead of Jupyter on the VM
+- The last step - <code>spark.createDataFrame()</code> and <code>saveAsTable()</code> - new</p>
 <hr>
 <h2 id="key-point-to-make">Key point to make</h2>
 <blockquote>
-<p>"You did not learn new data skills today — you ran the same skills in a new environment. That is deliberate. The environment should feel almost invisible at this point."</p>
+<p>"You did not learn new data skills today - you ran the same skills in a new environment. That is deliberate. The environment should feel almost invisible at this point."</p>
 </blockquote>
 <p>This sets up the afternoon well. The afternoon session adds the one genuinely new thing: querying the output with SQL via the endpoint, and seeing what that enables.</p>
 <hr>
 <h2 id="if-someone-asks-about-spark">If someone asks about <code>spark</code></h2>
-<p>Fabric notebooks have <code>spark</code> pre-injected — it is always available without importing. Under the hood, Fabric is running Apache Spark. That is why we needed <code>spark.createDataFrame()</code> to save as a Delta table — pandas alone cannot write to Delta. But they did not need to think about Spark to do the cleaning. That is the point.</p>
+<p>Fabric notebooks have <code>spark</code> pre-injected - it is always available without importing. Under the hood, Fabric is running Apache Spark. That is why we needed <code>spark.createDataFrame()</code> to save as a Delta table - pandas alone cannot write to Delta. But they did not need to think about Spark to do the cleaning. That is the point.</p>
 <hr>
 <h2 id="bridge-to-the-afternoon">Bridge to the afternoon</h2>
 <blockquote>
-<p>"This morning you landed data and ran the pipeline. This afternoon you build the trusted output — join, save, and then explore what you can do with a Delta table that you could not do with a CSV."</p>
+<p>"This morning you landed data and ran the pipeline. This afternoon you build the trusted output - join, save, and then explore what you can do with a Delta table that you could not do with a CSV."</p>
 </blockquote>
 
 

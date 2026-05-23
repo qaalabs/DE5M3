@@ -1316,22 +1316,22 @@
 
 
 <h1 id="where-could-this-go-wrong">Where Could This Go Wrong?</h1>
-<p><em>Discussion — Session 1. Work in small groups, then share with the room.</em>
+<p><em>Discussion - Session 1. Work in small groups, then share with the room.</em>
 <em>Aim: 20 minutes.</em></p>
 <hr>
 <h2 id="the-question">The question</h2>
 <blockquote>
-<p>"If this pipeline ran overnight and produced wrong numbers at 9am — how would you know?"</p>
+<p>"If this pipeline ran overnight and produced wrong numbers at 9am - how would you know?"</p>
 </blockquote>
 <p>You probably would not. Not immediately. Someone would have to notice the numbers looked off.</p>
-<p>A <strong>silent failure</strong> is when the pipeline runs, produces output, and raises no errors — but the output is wrong.
+<p>A <strong>silent failure</strong> is when the pipeline runs, produces output, and raises no errors - but the output is wrong.
 That is worse than a crash, because a crash tells you something went wrong.</p>
 <hr>
 <h2 id="map-the-risks">Map the risks</h2>
 <p>Work through each layer. For each one, write down:</p>
 <ul>
 <li>What could go wrong here?</li>
-<li>Would the pipeline stop — or would it carry on and produce bad output?</li>
+<li>Would the pipeline stop - or would it carry on and produce bad output?</li>
 </ul>
 <table>
 <thead>
@@ -1343,27 +1343,27 @@ That is worse than a crash, because a crash tells you something went wrong.</p>
 </thead>
 <tbody>
 <tr>
-<td>Bronze — raw file lands</td>
+<td>Bronze - raw file lands</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Bronze→Silver — cleaning</td>
+<td>Bronze→Silver - cleaning</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Silver — validated tables</td>
+<td>Silver - validated tables</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Silver→Gold — join</td>
+<td>Silver→Gold - join</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Gold — final output</td>
+<td>Gold - final output</td>
 <td></td>
 <td></td>
 </tr>
@@ -1373,12 +1373,12 @@ That is worse than a crash, because a crash tells you something went wrong.</p>
 <h2 id="prompts-to-get-started">Prompts to get started</h2>
 <p>Things that could go wrong silently:</p>
 <ul>
-<li>The source file arrives with <strong>fewer rows than expected</strong> — a supplier dropped 200 records</li>
-<li>A <strong>new product ID</strong> appears that does not exist in the products table — it gets dropped in the join</li>
-<li>A date column <strong>changes format</strong> in the source — dates start parsing as NaT silently</li>
-<li>A column that should never be null <strong>has nulls</strong> — calculations produce NaN without warning</li>
-<li>A <strong>duplicate order ID</strong> slips through — revenue is double-counted</li>
-<li>A region name changes spelling — a filter downstream misses it</li>
+<li>The source file arrives with <strong>fewer rows than expected</strong> - a supplier dropped 200 records</li>
+<li>A <strong>new product ID</strong> appears that does not exist in the products table - it gets dropped in the join</li>
+<li>A date column <strong>changes format</strong> in the source - dates start parsing as NaT silently</li>
+<li>A column that should never be null <strong>has nulls</strong> - calculations produce NaN without warning</li>
+<li>A <strong>duplicate order ID</strong> slips through - revenue is double-counted</li>
+<li>A region name changes spelling - a filter downstream misses it</li>
 </ul>
 <hr>
 <h2 id="discuss">Discuss</h2>
@@ -1393,7 +1393,7 @@ That is worse than a crash, because a crash tells you something went wrong.</p>
 <ul>
 <li>What would go wrong?</li>
 <li>At which layer?</li>
-<li>What would a user see — and how long before they noticed?</li>
+<li>What would a user see - and how long before they noticed?</li>
 </ul>
 
 

@@ -1306,7 +1306,7 @@
 
 <h1 id="clean-the-sales-data-in-fabric">Clean the Sales Data in Fabric</h1>
 <h2 id="what-you-are-doing">What you are doing</h2>
-<p>The same cleaning pipeline you built on Day 1 — but running in a Fabric notebook,
+<p>The same cleaning pipeline you built on Day 1 - but running in a Fabric notebook,
 reading from OneLake, and saving to a Delta table instead of a CSV file.</p>
 <p>Open the notebook: <strong><code>cloud_clean.ipynb</code></strong></p>
 <hr>
@@ -1342,7 +1342,7 @@ reading from OneLake, and saving to a Delta table instead of a CSV file.</p>
 </tr>
 </tbody>
 </table>
-<p>Everything in between — the nine cleaning steps — is identical pandas code.</p>
+<p>Everything in between - the nine cleaning steps - is identical pandas code.</p>
 <hr>
 <h2 id="the-new-part-saving-as-a-delta-table">The new part: saving as a Delta table</h2>
 <p>At the end of the notebook you convert your pandas DataFrame to a Spark DataFrame
@@ -1350,14 +1350,14 @@ and write it as a managed Delta table:</p>
 <div class="highlight"><pre><span></span><code><span class="n">spark_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="n">spark_df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'cleaned_sales'</span><span class="p">)</span>
 </code></pre></div>
-<p><code>spark</code> is available automatically in every Fabric notebook — you do not need to import it.</p>
+<p><code>spark</code> is available automatically in every Fabric notebook - you do not need to import it.</p>
 <p>Once saved, the table appears in the <strong>Tables</strong> section of your Lakehouse Explorer
 and is immediately queryable via the SQL analytics endpoint.</p>
 <hr>
 <h2 id="discussion">Discussion</h2>
 <ul>
 <li>What changed? What stayed the same?</li>
-<li>The output is now a Delta table instead of a CSV — what does that enable that a CSV cannot do?</li>
+<li>The output is now a Delta table instead of a CSV - what does that enable that a CSV cannot do?</li>
 </ul>
 
 

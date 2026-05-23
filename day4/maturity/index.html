@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes — Next Maturity Steps - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes - Next Maturity Steps - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes — Next Maturity Steps
+              Facilitator Notes - Next Maturity Steps
             
           </span>
         </div>
@@ -1207,7 +1207,7 @@
 
 
 
-<h1 id="facilitator-notes-next-maturity-steps">Facilitator Notes — Next Maturity Steps</h1>
+<h1 id="facilitator-notes-next-maturity-steps">Facilitator Notes - Next Maturity Steps</h1>
 <p><em>Trainer-only. Session 4, after afternoon break.</em>
 <em>Aim: 15 minutes.</em></p>
 <hr>
@@ -1218,35 +1218,35 @@
 </blockquote>
 <hr>
 <h2 id="introduce-the-two-natural-extensions">Introduce the two natural extensions</h2>
-<p><strong>IoT — Sensor and Device Data</strong></p>
+<p><strong>IoT - Sensor and Device Data</strong></p>
 <p>HomeSphere sells connected devices. Every thermostat, camera, and sensor generates event data: activations, temperature readings, motion detections, alerts.</p>
 <p>This source would be:
-- High volume — millions of events per day, not hundreds of rows
-- Streaming — arriving continuously, not as a daily CSV
-- Different structure — event log rather than transactional records</p>
+- High volume - millions of events per day, not hundreds of rows
+- Streaming - arriving continuously, not as a daily CSV
+- Different structure - event log rather than transactional records</p>
 <p>Ask: "How would bronze/silver/gold apply to a sensor stream?"</p>
 <p>Key points:
 - Bronze: raw event log, time-stamped, never modified
 - Silver: device events joined to device registration (which customer owns this device?)
 - Gold: usage patterns, fault rates, device health by product line</p>
 <p>Ask: "Could <code>gold_revenue</code> join to sensor data? On what key?"
-The answer: <code>product_id</code> — you could correlate sales volumes with fault rates. That is a genuinely interesting business question.</p>
-<p><strong>Marketing — Customer Campaigns</strong></p>
+The answer: <code>product_id</code> - you could correlate sales volumes with fault rates. That is a genuinely interesting business question.</p>
+<p><strong>Marketing - Customer Campaigns</strong></p>
 <p>HomeSphere runs email and social campaigns. Marketing data would include:
 - Which customers received which campaigns
 - Open rates, click rates, conversion rates
 - Campaign spend per channel</p>
-<p>This source would join to sales on <code>customer_id</code> — which <code>sales_raw.csv</code> does not currently include.</p>
+<p>This source would join to sales on <code>customer_id</code> - which <code>sales_raw.csv</code> does not currently include.</p>
 <p>Ask: "What does that mean for the current pipeline?"</p>
-<p>Key point: the data we have does not support certain business questions. A more mature pipeline would capture <code>customer_id</code> at the sales stage so marketing data could join to it later. That is a design decision made (or missed) at source — not something you can fix in gold.</p>
+<p>Key point: the data we have does not support certain business questions. A more mature pipeline would capture <code>customer_id</code> at the sales stage so marketing data could join to it later. That is a design decision made (or missed) at source - not something you can fix in gold.</p>
 <hr>
 <h2 id="what-a-more-mature-team-would-add">What a more mature team would add</h2>
 <p>Without making this a wishlist, name a few realistic next steps:</p>
 <ul>
-<li><strong>Scheduling</strong> — running the notebooks on a trigger (new file arrives) rather than manually</li>
-<li><strong>Run logging</strong> — recording when the pipeline ran, how many rows processed, whether checks passed</li>
-<li><strong>Alerting</strong> — notifying someone if a check fails, rather than just crashing</li>
-<li><strong>Schema enforcement</strong> — defining the expected shape of silver tables so new code cannot accidentally break them</li>
+<li><strong>Scheduling</strong> - running the notebooks on a trigger (new file arrives) rather than manually</li>
+<li><strong>Run logging</strong> - recording when the pipeline ran, how many rows processed, whether checks passed</li>
+<li><strong>Alerting</strong> - notifying someone if a check fails, rather than just crashing</li>
+<li><strong>Schema enforcement</strong> - defining the expected shape of silver tables so new code cannot accidentally break them</li>
 </ul>
 <p>These are the things that turn a pipeline someone built into a pipeline a team can support.</p>
 <hr>

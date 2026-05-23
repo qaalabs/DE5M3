@@ -993,7 +993,7 @@
   <a href="#source-a-inventory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Source A — Inventory
+        Source A - Inventory
       
     </span>
   </a>
@@ -1004,7 +1004,7 @@
   <a href="#source-b-customer-support" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Source B — Customer Support
+        Source B - Customer Support
       
     </span>
   </a>
@@ -1319,11 +1319,11 @@
 <h2 id="your-task">Your task</h2>
 <p>HomeSphere has more data sources beyond Sales and Products.
 Your group has been assigned one of the sources below.</p>
-<p>Design what bronze, silver, and gold would look like for your source —
+<p>Design what bronze, silver, and gold would look like for your source -
 without building anything. This is a design exercise.</p>
 <p>You have 20 minutes. Prepare to share your design with the room.</p>
 <hr>
-<h2 id="source-a-inventory">Source A — Inventory</h2>
+<h2 id="source-a-inventory">Source A - Inventory</h2>
 <p>HomeSphere tracks stock levels across multiple warehouses. The raw export is a
 daily CSV snapshot with one row per product per warehouse:</p>
 <div class="highlight"><pre><span></span><code>product_id, warehouse_id, warehouse_name, stock_level, reorder_threshold,
@@ -1335,7 +1335,7 @@ last_restocked, supplier_id, supplier_name
 - Some rows have <code>stock_level = null</code> (product not tracked at that warehouse)
 - <code>supplier_name</code> is sometimes missing even when <code>supplier_id</code> exists</p>
 <hr>
-<h2 id="source-b-customer-support">Source B — Customer Support</h2>
+<h2 id="source-b-customer-support">Source B - Customer Support</h2>
 <p>HomeSphere logs every support ticket raised by customers. The raw export is a JSON
 file with one object per ticket:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1376,7 +1376,7 @@ file with one object per ticket:</p>
 <hr>
 <h2 id="prepare-to-share">Prepare to share</h2>
 <p>Be ready to explain:
-1. Your silver table — what it contains and what was cleaned
+1. Your silver table - what it contains and what was cleaned
 2. One gold output your source enables
 3. One thing that made this source awkward</p>
 
