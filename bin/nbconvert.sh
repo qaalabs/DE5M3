@@ -21,14 +21,9 @@ if [[ ! -f ${filename} ]]; then
   exit 1
 fi
 
+# Convert each file
 find ${FROM} -type f -name "*.ipynb" | while IFS= read -r file; do
-  echo $file
+  /mnt/ssd/ops/${SCRIPT} $file ${DESTINATION}
 done
-
-
-#/mnt/ssd/ops/${SCRIPT}
-
-ls -1 ${FROM}/*.md
-
 
 #EOF
