@@ -1,6 +1,6 @@
 # Facilitator Notes - Why Flatten and Join?
 
-*Trainer-only. Short setup before learners open `day1_join.ipynb`.*
+*Trainer-only. Short setup before learners open `local_join.ipynb`.*
 
 *Aim: 10 minutes, then hand over to practice.*
 

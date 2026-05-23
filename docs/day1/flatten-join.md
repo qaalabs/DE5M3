@@ -7,7 +7,7 @@ Your job is to combine them and answer the question HomeSphere is asking:
 
 > **Which product categories generate the most revenue?**
 
-Open the notebook: **`day1_join.ipynb`** and work through all parts.
+Open the notebook: **`local_join.ipynb`** and work through all parts.
 
 ---
 

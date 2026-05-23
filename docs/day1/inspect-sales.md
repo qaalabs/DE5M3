@@ -5,7 +5,7 @@
 HomeSphere has exported their order lines from the order management system as a CSV.
 Before you clean or combine anything, your job is to look closely at what is actually in it.
 
-Open the notebook: **`day1_clean.ipynb`** and work through **Part 1**.
+Open the notebook: **`local_clean.ipynb`** and work through **Part 1**.
 
 ---
 

@@ -1,6 +1,6 @@
 # Facilitator Notes - Clean Debrief
 
-*Trainer-only. Run this after learners have completed Part 3 of `day1_clean.ipynb`.*
+*Trainer-only. Run this after learners have completed Part 3 of `local_clean.ipynb`.*
 
 ---
 

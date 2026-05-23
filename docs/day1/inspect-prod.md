@@ -3,7 +3,7 @@
 ## What you are doing
 
 The Product catalogue came from a different system and is stored as JSON, not CSV.
-Work through **Part 2** of **`day1_clean.ipynb`** and look at its structure.
+Work through **Part 2** of **`local_clean.ipynb`** and look at its structure.
 
 ---
 

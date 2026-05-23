@@ -6,7 +6,7 @@ You have identified the problems in the raw Sales data.
 
 Now fix them - one at a time - so the data is trustworthy enough to use.
 
-Open the notebook: **`day1_clean.ipynb`** and work through **Part 3**.
+Open the notebook: **`local_clean.ipynb`** and work through **Part 3**.
 
 ---
 

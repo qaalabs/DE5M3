@@ -5,7 +5,7 @@
 The same cleaning pipeline you built on Day 1 — but running in a Fabric notebook,
 reading from OneLake, and saving to a Delta table instead of a CSV file.
 
-Open the notebook: **`day2_clean.ipynb`**
+Open the notebook: **`cloud_clean.ipynb`**
 
 ---
 

@@ -1,6 +1,6 @@
 # Facilitator Notes - What Did You Find?
 
-*Trainer-only. Run this after learners have completed Parts 1 and 2 of `day1_clean.ipynb`.*
+*Trainer-only. Run this after learners have completed Parts 1 and 2 of `local_clean.ipynb`.*
 
 ---
 
