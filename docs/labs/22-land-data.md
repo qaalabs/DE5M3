@@ -82,20 +82,12 @@ With the lakehouse created, you can now upload the HomeSphere source data files.
     - Name the new subfolder: `data`
     - Click **Create**
 
-2. Locate the following files in the `files` directory on your Virtual Machine:
+2. Locate the following files in the `HomeSphere/data/` folder on your Desktop:
 
     - `sales_raw.csv`
     - `products_raw.json`
 
-    If you are not using a VM, or the files are not there, download them from:
-
-    - https://raw.githubusercontent.com/QAADE5/HomeSphere/refs/heads/main/data/sales_raw.csv
-    - https://raw.githubusercontent.com/QAADE5/HomeSphere/refs/heads/main/data/products_raw.json
-
-    !!! note
-        - To download each file, open a new tab in the browser and paste in the URL.
-        - Right click anywhere on the page and select **Save as** to save the file.
-        - Make sure `products_raw.json` is saved with the `.json` extension and not `.txt`.
+    !!! tip "If you cannot find the `HomeSphere` folder, you may need to re-run the clone command from Lab 11."
 
 3. In the **...** menu for the `data` folder, select **Upload** and **Upload files**.
 
@@ -117,15 +109,17 @@ The HomeSphere notebooks contain the code for cleaning and transforming the data
 
 2. On the toolbar select **Import** and choose **Notebook**. Then select **From this computer**.
 
-3. Browse to the `files` directory on your Virtual Machine and import all four notebooks one at a time:
+3. Browse to the `HomeSphere/cloud/` folder on your Desktop and import these two notebooks:
 
     - `cloud_clean.ipynb`
     - `cloud_output.ipynb`
+
+4. Import again — this time browse to the `HomeSphere/solution/` folder on your Desktop and import:
+
     - `cloud_clean_solution.ipynb`
     - `cloud_output_solution.ipynb`
 
-    !!! tip "If you cannot find the notebook files on your VM, download them from here:"
-        - https://github.com/QAADE5/HomeSphere/tree/main/cloud
+    !!! tip "If you cannot find the `HomeSphere` folder, you may need to re-run the clone command from Lab 11."
 
     !!! success "All four notebooks should now appear as items in your workspace."
 
