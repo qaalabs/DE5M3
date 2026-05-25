@@ -1,11 +1,12 @@
-# HomeSphere — Day 2: Build the Trusted Output
+# HomeSphere ~ Cloud: Build the Trusted Output
 
 **Scenario:** Your cleaned Sales data is now a Delta table in the lakehouse.
-Your job is to flatten the Product catalogue, join it to Sales, calculate revenue,
-and save the trusted output as a second Delta table.
 
-By the end of this notebook you will have answered the same business question as
-Day 1 — but the answer will live in the lakehouse, queryable by anyone in the workspace.
+Your job is to flatten the Product catalogue, join it to Sales, calculate revenue, and save the trusted output as a second Delta table.
+
+By the end of this notebook you will have answered the same business question as when working locally.
+
+*But the answer will live in the lakehouse, queryable by anyone in the workspace.*
 
 ---
 
@@ -34,8 +35,9 @@ sales.head()
 
 ## Part 2: Flatten the Product Data
 
-The Product JSON is in the lakehouse Files folder.
-The flattening logic is identical to Day 1.
+The Product JSON is in the same lakehouse Files folder as the raw Sales CSV.
+
+The flattening logic is identical to when working locally.
 
 
 ```python
@@ -75,6 +77,10 @@ print('Saved: sales_trusted (Delta table)')
 
 ## Part 5: Answer the Question in SQL
 
+The trusted output is now in the lakehouse.
+
+Use the **SQL magic command** to answer the revenue question without leaving the notebook.
+
 
 ```sql
 %%sql
@@ -101,13 +107,19 @@ GROUP BY category, region
 ORDER BY category, total_revenue DESC
 ```
 
-This breaks revenue down by category **and** region — a query that would have
-required more Python on Day 1 but is now just SQL against a live Delta table.
+This breaks revenue down by category **and** region - a query that would have required more Python when working locally.
+
+*But is now just SQL against a live Delta table.*
 
 ---
 
 ### Discussion
 
-- On Day 1 the output was a CSV file on your VM. Today it is a Delta table in OneLake. What is the practical difference for someone who wants to use this data?
-- You ran the revenue query in Python on Day 1 and in SQL today. Which felt more natural for this kind of question?
+When working locally, the output was a CSV file on your Virtual Machine. Today it is a Delta table in OneLake.
+
+- What is the practical difference for someone who wants to use this data?
+
+You ran the revenue query in Python locally and in SQL in the cloud today.
+
+- Which felt more natural for this kind of question?
 - What would break if `sales_raw.csv` arrived tomorrow with a new column added?

@@ -1,8 +1,8 @@
-# HomeSphere — Day 1: Inspect and Clean
+# HomeSphere ~ Locally: Inspect and Clean
 
 **Scenario:** HomeSphere has exported two raw source files from their systems.
-Your job is to understand what is in each file, find what is wrong, and clean the Sales data
-into something trustworthy enough to use.
+
+Your job is to understand what is in each file, find what is wrong, and clean the Sales data into something trustworthy enough to use.
 
 By the end of this notebook you will have a cleaned Sales dataset saved and ready to join.
 
@@ -17,7 +17,8 @@ import json
 ## Part 1: Meet the Sales Data
 
 Load the raw Sales file and take a look at what is in it.
-Do not fix anything yet — just observe.
+
+Do not fix anything yet - just observe.
 
 
 ```python
@@ -68,9 +69,12 @@ What problems did you spot?
 
 Why would it be risky to use this data as-is for reporting?
 
+---
+
 ## Part 2: Meet the Product Data
 
-Now look at the second source — the Product catalogue.
+Now look at the second source - the **Product catalogue**.
+
 Notice what is different about its structure.
 
 
@@ -101,12 +105,13 @@ print('Product categories:', sorted(set(categories)))
 ## Part 3: Clean the Sales Data
 
 Work through each problem you identified above.
+
 Fix one thing at a time and verify the result before moving on.
 
 ### Fix unit_price
 
-Some prices have a `£` prefix which caused pandas to read the column as text (object) instead of a number.
-Strip the symbol and convert to float.
+- Some prices have a `£` prefix which caused pandas to read the column as text (object) instead of a number.
+- Strip the symbol and convert to float.
 
 
 ```python
@@ -118,7 +123,12 @@ print('Min:', df['unit_price'].min(), '  Max:', df['unit_price'].max())
 
 ### Standardise order_date
 
-The dates use three different formats. `pd.to_datetime` with `format='mixed'` handles each date individually rather than assuming one format for the whole column. `dayfirst=True` tells pandas to treat ambiguous dates like `01/02/2024` as 1 Feb, not 2 Jan.
+The dates use three different formats
+
+`pd.to_datetime` with `format='mixed'` handles each date individually rather than assuming one format for the whole column.
+
+`dayfirst=True` tells pandas to treat ambiguous dates like `01/02/2024` as 1 Feb, not 2 Jan.
+
 Any dates that still fail to parse will become `NaT`.
 
 
@@ -135,6 +145,7 @@ print('Unparseable dates (NaT):', df['order_date'].isnull().sum())
 ### Fix quantity
 
 `pd.to_numeric` with `errors='coerce'` converts non-numeric values (like `"two"`) to `NaN`.
+
 We then drop rows where quantity could not be parsed, and convert to integer.
 
 
@@ -151,7 +162,9 @@ print('quantity dtype:', df['quantity'].dtype)
 
 ### Standardise status
 
-Status values have inconsistent capitalisation. Lowercase and strip whitespace.
+Status values have inconsistent capitalisation.
+
+Lowercase and strip whitespace.
 
 
 ```python
@@ -174,8 +187,8 @@ print(f'Removed {before - len(df)} duplicate rows  ({len(df)} remaining)')
 
 Two columns have missing values. The decision is different for each:
 
-- `product_id` — without a product ID we cannot join to Product, so the row has no value. Drop it.
-- `region` — region is useful context but not critical. Flag as `Unknown` rather than losing the row.
+- `product_id` - without a product ID we cannot join to Product, so the row has no value. Drop it.
+- `region` - region is useful context but not critical. Flag as `Unknown` rather than losing the row.
 
 
 ```python
@@ -191,6 +204,7 @@ print(df.isnull().sum())
 ### Remove invalid rows
 
 A negative price and a zero quantity are not valid order lines.
+
 Remove them and record how many were dropped.
 
 
@@ -203,6 +217,8 @@ before = len(df)
 df = df[df['quantity'] > 0]
 print(f'Removed {before - len(df)} rows with zero quantity')
 ```
+
+---
 
 ## Data Quality Report
 
@@ -224,6 +240,8 @@ df.head()
 df.to_csv('cleaned_sales.csv', index=False)
 print('Saved: cleaned_sales.csv')
 ```
+
+---
 
 ### Discussion
 

@@ -1,17 +1,20 @@
-# HomeSphere — Day 2: Clean the Sales Data in Fabric
+# HomeSphere ~ Cloud: Clean the Sales Data in Fabric
 
-**Scenario:** The same raw Sales and Product files you worked with locally are now
-sitting in your Fabric lakehouse. Your job is to run the same cleaning pipeline
-you built on Day 1 — but this time the data lives in OneLake, and the output
-will be saved as a Delta table rather than a CSV file.
+**Scenario:** The same raw Sales and Product files you worked with locally are now sitting in your Fabric lakehouse.
+
+Your job is to run the same cleaning pipeline you built when working locally.
+
+But this time the data lives in OneLake, and the output will be saved as a Delta table rather than a CSV file.
 
 ---
 
 ## Part 1: Load the Sales Data
 
-On Day 1 we loaded from a local path. In Fabric, files uploaded to the lakehouse
-are available at `/lakehouse/default/Files/`. The path structure mirrors the
-folder you see in the Lakehouse Explorer.
+When working locally you loaded data from a local path.
+
+In Fabric, files are uploaded to the lakehouse and are then available at: `/lakehouse/default/Files/`.
+
+The path structure mirrors the folder you see in the **Lakehouse Explorer**.
 
 
 ```python
@@ -36,7 +39,9 @@ print(f'\nDuplicate rows: {df.duplicated().sum()}')
 
 ## Part 2: Clean the Sales Data
 
-The same nine fixes as Day 1. The logic is identical — only the file path changed.
+The same nine fixes as when working locally.
+
+You have done this before - work through them without the notebook prompting you this time.
 
 
 ```python
@@ -74,9 +79,11 @@ print(df.isnull().sum())
 
 ## Part 3: Save as a Delta Table
 
-On Day 1 we saved a CSV file. In Fabric, the native output is a **Delta table**
-stored in the lakehouse. Delta tables are queryable via the SQL endpoint,
-versioned, and accessible to other Fabric workloads.
+When working locally, we saved a CSV file.
+
+In Fabric, the native output is a **Delta table** stored in the lakehouse.
+
+Delta tables are queryable via the SQL endpoint, versioned, and accessible to other Fabric workloads.
 
 We convert the pandas DataFrame to a Spark DataFrame to write it as a Delta table.
 
@@ -84,7 +91,7 @@ We convert the pandas DataFrame to a Spark DataFrame to write it as a Delta tabl
 ```python
 # Convert to Spark DataFrame and save as a managed Delta table
 spark_df = spark.createDataFrame(df)
-spark_df.write.mode('overwrite').saveAsTable('cleaned_sales')
+spark_df.write.mode('overwrite').saveAsTable('cleaned_sales_solution')
 
 print('Saved: cleaned_sales (Delta table)')
 print(f'Rows: {spark_df.count()}')
@@ -92,24 +99,22 @@ print(f'Rows: {spark_df.count()}')
 
 ## Part 4: Verify in the SQL Endpoint
 
-Now that the table is saved, you can query it using SQL — without writing any more Python.
+Now that the table is saved, you can query it using SQL - without writing any more Python.
 
 Switch to the **SQL analytics endpoint** in your lakehouse and run:
 
-
 ```sql
-%%sql
 SELECT
     status,
     COUNT(*) AS order_count,
     ROUND(SUM(quantity * unit_price), 2) AS total_value
-FROM cleaned_sales
+FROM cleaned_sales_solution
 GROUP BY status
 ORDER BY total_value DESC
 ```
 
 ### Discussion
 
-- What changed between Day 1 and today?
-- What stayed exactly the same?
-- The output is now a Delta table instead of a CSV — what does that enable that a CSV cannot do?
+- What changed between **working locally**, and **working in the cloud**?
+- And what stayed exactly the same?
+- The output is now a Delta table instead of a CSV - what does that enable that a CSV cannot do?

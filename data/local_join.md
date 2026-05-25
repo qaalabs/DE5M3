@@ -1,10 +1,10 @@
-# HomeSphere — Day 1: Flatten, Join, and Answer
+# HomeSphere ~ Locally: Flatten, Join, and Answer
 
 **Scenario:** You have a cleaned Sales dataset and a Product catalogue in nested JSON.
-Your job is to flatten the Product data into a table, join it to Sales, and answer
-the question the business is asking:
 
-> **Which product categories generate the most revenue?**
+Your job is to flatten the Product data into a table, join it to Sales, and answer the question the business is asking:
+
+**Which product categories generate the most revenue?**
 
 ---
 
@@ -17,6 +17,7 @@ import json
 ## Part 1: Flatten the Product Data
 
 The Product catalogue is a JSON file with a nested `specs` object inside each product.
+
 Before we can join it to Sales we need to flatten it into a flat table.
 
 
@@ -36,6 +37,7 @@ products
 ### Tidy up column names
 
 `json_normalize` names nested fields with dot notation (`specs.rrp`).
+
 Rename them to something cleaner.
 
 
@@ -55,6 +57,7 @@ products.head()
 ### Select the columns we need
 
 For the join and the revenue analysis we only need `product_id`, `name`, and `category`.
+
 Keeping only what we need avoids polluting the joined table.
 
 
@@ -67,7 +70,9 @@ products
 
 ## Part 2: Load the Cleaned Sales Data
 
-We saved `cleaned_sales.csv` in the previous notebook. Load it now.
+We saved `cleaned_sales.csv` in the previous notebook.
+
+Load it now.
 
 
 ```python
@@ -83,7 +88,8 @@ sales.head()
 
 Merge the two DataFrames on `product_id`.
 
-We use a **left join** — keeping every Sales row and matching the product information where it exists.
+We use a **left join** - keeping every Sales row and matching the product information where it exists.
+
 Any Sales row with a `product_id` not found in Products will have `NaN` in the product columns.
 
 
@@ -101,6 +107,7 @@ df.head()
 ## Part 4: Calculate Line Value
 
 Revenue for each order line = `quantity × unit_price`.
+
 Add a `line_value` column.
 
 
@@ -115,7 +122,7 @@ print(f'\nTotal revenue across all orders: £{df["line_value"].sum():,.2f}')
 
 ## Part 5: Answer the Business Question
 
-> **Which product categories generate the most revenue?**
+**Which product categories generate the most revenue?**
 
 Group by `category`, sum `line_value`, and sort descending.
 
@@ -152,6 +159,8 @@ print('Saved: sales_joined.csv')
 print(f'Rows: {len(df)}')
 print(f'Columns: {df.columns.tolist()}')
 ```
+
+---
 
 ### Discussion
 

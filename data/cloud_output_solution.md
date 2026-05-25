@@ -1,11 +1,12 @@
-# HomeSphere — Day 2: Build the Trusted Output
+# HomeSphere ~ Cloud: Build the Trusted Output
 
 **Scenario:** Your cleaned Sales data is now a Delta table in the lakehouse.
-Your job is to flatten the Product catalogue, join it to Sales, calculate revenue,
-and save the trusted output as a second Delta table.
 
-By the end of this notebook you will have answered the same business question as
-Day 1 — but the answer will live in the lakehouse, queryable by anyone in the workspace.
+Your job is to flatten the Product catalogue, join it to Sales, calculate revenue, and save the trusted output as a second Delta table.
+
+By the end of this notebook you will have answered the same business question as when working locally.
+
+*But the answer will live in the lakehouse, queryable by anyone in the workspace.*
 
 ---
 
@@ -23,7 +24,7 @@ saved in the previous notebook.
 
 ```python
 # Read the Delta table back into a pandas DataFrame
-sales = spark.read.table('cleaned_sales').toPandas()
+sales = spark.read.table('cleaned_sales_solution').toPandas()
 sales['order_date'] = pd.to_datetime(sales['order_date'])
 
 print(f'Shape: {sales.shape}')
@@ -33,7 +34,8 @@ sales.head()
 ## Part 2: Flatten the Product Data
 
 The Product JSON is in the same lakehouse Files folder as the raw Sales CSV.
-The flattening logic is identical to Day 1.
+
+The flattening logic is identical to when working locally.
 
 
 ```python
@@ -70,7 +72,7 @@ df.head()
 
 ```python
 spark_df = spark.createDataFrame(df)
-spark_df.write.mode('overwrite').saveAsTable('sales_trusted')
+spark_df.write.mode('overwrite').saveAsTable('sales_trusted_solution')
 
 print('Saved: sales_trusted (Delta table)')
 print(f'Rows: {spark_df.count()}')
@@ -78,11 +80,11 @@ print(f'Rows: {spark_df.count()}')
 
 ## Part 5: Answer the Question in SQL
 
-The trusted output is now in the lakehouse. Use the SQL magic command
-to answer the revenue question without leaving the notebook.
+The trusted output is now in the lakehouse.
 
+Use the **SQL magic command** to answer the revenue question without leaving the notebook.
 
-```sql
+```python
 %%sql
 SELECT
     category,
@@ -107,13 +109,19 @@ GROUP BY category, region
 ORDER BY category, total_revenue DESC
 ```
 
-This breaks revenue down by category **and** region — a query that would have
-required more Python on Day 1 but is now just SQL against a live Delta table.
+This breaks revenue down by category **and** region - a query that would have required more Python when working locally.
+
+*But is now just SQL against a live Delta table.*
 
 ---
 
 ### Discussion
 
-- On Day 1 the output was a CSV file on your VM. Today it is a Delta table in OneLake. What is the practical difference for someone who wants to use this data?
-- You ran the revenue query in Python on Day 1 and in SQL today. Which felt more natural for this kind of question?
+When working locally, the output was a CSV file on your Virtual Machine. Today it is a Delta table in OneLake.
+
+- What is the practical difference for someone who wants to use this data?
+
+You ran the revenue query in Python locally and in SQL in the cloud today.
+
+- Which felt more natural for this kind of question?
 - What would break if `sales_raw.csv` arrived tomorrow with a new column added?
