@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../cloud-clean/">
+        <link rel="prev" href="../22-land-data/">
       
       
-        <link rel="next" href="../compare/">
+        <link rel="next" href="../../day2/architecture-investigation/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Lab 2.4 - Build the Trusted Output - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Lab 2.3 - Clean the Sales Data - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-the-trusted-output" class="md-skip">
+        <a href="#lab-23-clean-the-sales-data-in-fabric" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 2.4 - Build the Trusted Output
+              Lab 2.3 - Clean the Sales Data
             
           </span>
         </div>
@@ -328,62 +328,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../agenda/day3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 3
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../agenda/day4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 4
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -437,6 +381,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Clone the Data Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -669,14 +641,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../land-data/" class="md-nav__link">
+      <a href="../21-lakehouse/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.2 - Landing Raw Data
+    Lab 2.1 - Explore Fabric Environment
   
 
     
@@ -697,14 +669,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-clean/" class="md-nav__link">
+      <a href="../22-land-data/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.3 - Clean &amp; Flatten in Fabric
+    Lab 2.2 - Landing Raw Data
   
 
     
@@ -741,7 +713,7 @@
   <span class="md-ellipsis">
     
   
-    Lab 2.4 - Build the Trusted Output
+    Lab 2.3 - Clean the Sales Data
   
 
     
@@ -759,7 +731,7 @@
   <span class="md-ellipsis">
     
   
-    Lab 2.4 - Build the Trusted Output
+    Lab 2.3 - Clean the Sales Data
   
 
     
@@ -796,10 +768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reading-from-a-delta-table" class="md-nav__link">
+  <a href="#what-is-different-today" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reading from a Delta table
+        What is different today
       
     </span>
   </a>
@@ -807,21 +779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-sql-magic-command" class="md-nav__link">
+  <a href="#the-new-part-saving-as-a-delta-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The SQL magic command
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-sql-analytics-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The SQL analytics endpoint
+        The new part: saving as a Delta table
       
     </span>
   </a>
@@ -855,7 +816,91 @@
   
   
     <li class="md-nav__item">
-      <a href="../compare/" class="md-nav__link">
+      <a href="../../day2/architecture-investigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choosing a Data Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-cloud-output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.4 - Build the Trusted Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-etl-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.5 - Create ETL Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/compare/" class="md-nav__link">
         
   
   
@@ -863,394 +908,6 @@
     
   
     Local vs Cloud
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 3 - Robust &amp; Well-Architectured
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Day 3 - Robust &amp; Well-Architectured
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/fragile/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Where are the Weaknesses?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/medallion-lab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Bronze, Silver, Gold
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/med-map/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Map the Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/ext-design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Design B/S/G for Your Source
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 4 - Supportable &amp; Explainable
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Day 4 - Supportable &amp; Explainable
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/silent-fail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Silent Failures
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/checks-design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Which Checks Matter?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/checks-build/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Add Validation Checks
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/mvd-build/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Create a Handover Artefact
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/mvd-review/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Review Each Other's Artefact
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day4/pitch-prep/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Prepare Your Explanation
   
 
     
@@ -1315,44 +972,63 @@
 
 
 
-<h1 id="build-the-trusted-output">Build the Trusted Output</h1>
+<h1 id="lab-23-clean-the-sales-data-in-fabric">Lab 2.3 ~ Clean the Sales Data in Fabric</h1>
 <h2 id="what-you-are-doing">What you are doing</h2>
-<p>Your cleaned Sales data is now a Delta table in the lakehouse.
-Flatten the Product catalogue, join it to Sales, and save the trusted output
-as a second Delta table - then answer the revenue question using SQL.</p>
-<p>Open the notebook: <strong><code>cloud_output.ipynb</code></strong></p>
+<p>The same cleaning pipeline you built on Day 1 - but running in a Fabric notebook,
+reading from OneLake, and saving to a Delta table instead of a CSV file.</p>
+<p>Open the notebook in MS Fabric: <strong><code>cloud_clean.ipynb</code></strong></p>
 <hr>
-<h2 id="reading-from-a-delta-table">Reading from a Delta table</h2>
-<p>Instead of loading <code>cleaned_sales.csv</code> from a file path, you read the Delta table
-saved by the previous notebook:</p>
-<div class="highlight"><pre><span></span><code><span class="n">sales</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'cleaned_sales'</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<h2 id="what-is-different-today">What is different today</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Day 1</th>
+<th>Day 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Where files live</td>
+<td>Local VM filesystem</td>
+<td>OneLake (<code>/lakehouse/default/Files/data/</code>)</td>
+</tr>
+<tr>
+<td>How you load data</td>
+<td><code>pd.read_csv('sales_raw.csv')</code></td>
+<td><code>pd.read_csv('/lakehouse/default/Files/data/sales_raw.csv')</code></td>
+</tr>
+<tr>
+<td>Where output goes</td>
+<td><code>cleaned_sales.csv</code> on VM</td>
+<td><code>cleaned_sales</code> Delta table in lakehouse</td>
+</tr>
+<tr>
+<td>Who can access output</td>
+<td>Just you</td>
+<td>Anyone in the workspace</td>
+</tr>
+</tbody>
+</table>
+<p>Everything in between - the nine cleaning steps - is identical pandas code.</p>
+<hr>
+<h2 id="the-new-part-saving-as-a-delta-table">The new part: saving as a Delta table</h2>
+<p>At the end of the notebook you convert your pandas DataFrame to a Spark DataFrame
+and write it as a managed Delta table:</p>
+<div class="highlight"><pre><span></span><code><span class="n">spark_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">spark_df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'cleaned_sales'</span><span class="p">)</span>
 </code></pre></div>
-<p>The data is the same - the difference is where it came from. Reading from a Delta table
-means you are always reading the latest version, and the lineage is tracked automatically.</p>
-<hr>
-<h2 id="the-sql-magic-command">The SQL magic command</h2>
-<p>Fabric notebooks support <code>%%sql</code> - a magic command that runs a SQL query in a cell
-directly against your lakehouse tables:</p>
-<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="n">ROUND</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">line_value</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_revenue</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">sales_trusted</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_revenue</span><span class="w"> </span><span class="k">DESC</span>
-</code></pre></div>
-<p>This is the same question you answered with <code>groupby</code> in Python on Day 1.
-The answer should match.</p>
-<hr>
-<h2 id="the-sql-analytics-endpoint">The SQL analytics endpoint</h2>
-<p>After saving <code>sales_trusted</code>, switch to the <strong>SQL analytics endpoint</strong> in your lakehouse
-and run the region breakdown query from the notebook.</p>
-<p>This is SQL running against a live Delta table - no Python, no notebook, no file download.
-Any analyst in the workspace can run this query.</p>
+<p><code>spark</code> is available automatically in every Fabric notebook - you do not need to import it.</p>
+<p>Once saved, the table appears in the <strong>Tables</strong> section of your Lakehouse Explorer
+and is immediately queryable via the SQL analytics endpoint.</p>
 <hr>
 <h2 id="discussion">Discussion</h2>
 <ul>
-<li>On Day 1 the output was a CSV on your VM. Today it is a Delta table in OneLake. What is the practical difference for someone who wants to use this data?</li>
-<li>You answered the revenue question in Python on Day 1 and in SQL today. Which felt more natural for this kind of question?</li>
-<li>What would break if <code>sales_raw.csv</code> arrived tomorrow with a new column added?</li>
+<li>What changed? What stayed the same?</li>
+</ul>
+<p>The output is now a Delta table instead of a CSV</p>
+<ul>
+<li>What does that enable that a CSV cannot do?</li>
 </ul>
 
 
