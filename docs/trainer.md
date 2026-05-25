@@ -4,7 +4,8 @@
 
 ### Session 1
 
-- `10:10` [Introducing HomeSphere](day1/homesphere.md) (20 mins)
+- `10:10` [Git Clone the Data Files](labs/11-setup.md) (10 mins)
+- `10:20` [Introducing HomeSphere](day1/homesphere.md) (10 mins)
 
 ### Session 2
 

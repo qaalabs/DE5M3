@@ -4,6 +4,7 @@
 
 - 🌅 Welcome to Day 1 of DE5 Module 3
 - VM Setup
+- [Git Clone the Data Files](../labs/11-setup.md)
 - [Introducing HomeSphere](../day1/homesphere.md)
 
 ## ☕ Morning Break

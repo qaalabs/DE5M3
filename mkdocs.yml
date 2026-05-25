@@ -13,6 +13,7 @@ nav:
     - Day 4: agenda/day4.md
 
   - "Day 1 - ETL Locally":
+    - "Git Clone the Data Files": labs/11-setup.md
     - "Introducing HomeSphere": day1/homesphere.md
     - "Open Sales Data": day1/inspect-sales.md
     - "Open Product Data": day1/inspect-prod.md
