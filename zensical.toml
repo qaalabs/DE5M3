@@ -19,9 +19,12 @@ nav = [
     {"ETL Product Investigation" = "day1/etl-products.md"},
   ]},
   {"Day 2 - ETL in the Cloud" = [
-    {"Lab 2.2 - Landing Raw Data" = "day2/land-data.md"},
-    {"Lab 2.3 - Clean & Flatten in Fabric" = "day2/cloud-clean.md"},
-    {"Lab 2.4 - Build the Trusted Output" = "day2/cloud-output.md"},
+    {"Lab 2.1 - Explore Fabric Environment" = "labs/21-lakehouse.md"},
+    {"Lab 2.2 - Landing Raw Data" = "labs/22-land-data.md"},
+    {"Lab 2.3 - Clean the Sales Data" = "labs/23-cloud-clean.md"},
+    {"Choosing a Data Architecture" = "day2/architecture-investigation.md"},
+    {"Lab 2.4 - Build the Trusted Output" = "labs/24-cloud-output.md"},
+    {"Lab 2.5 - Create ETL Pipeline" = "labs/25-etl-pipeline.md"},
     {"Local vs Cloud" = "day2/compare.md"},
   ]},
   {"Day 3 - Robust & Well-Architectured" = [
