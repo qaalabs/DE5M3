@@ -34,7 +34,7 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 7. After confirmation, you should be redirected to the **Microsoft Fabric home page**:
 
     !!! quote ""
-        ![Fabric home page](../img/qa-fabric-home.png)
+        ![Fabric home page](img/qa-fabric-home.png)
 
 
 ## Step 2: Create a workspace
@@ -53,7 +53,7 @@ Before working with data in Fabric, you need to create a workspace.
 3. Your workspace should be empty, and look similar to this:
 
     !!! quote ""
-        ![Empty workspace in Fabric.](../img/new-workspace.png)
+        ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
 ## Step 3: Create a lakehouse
@@ -70,7 +70,7 @@ Now that you have a workspace, it's time to create a lakehouse for the HomeSpher
     After a minute or so, a new empty lakehouse will be created.
 
     !!! quote ""
-        ![New lakehouse.](../img/new-lakehouse.png)
+        ![New lakehouse.](img/new-lakehouse.png)
 
 
 ## Step 4: Upload the HomeSphere data files
@@ -105,7 +105,7 @@ The HomeSphere notebooks contain the code for cleaning and transforming the data
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
     !!! quote ""
-        ![Imported notebooks in workspace.](../img/notebook-import.png)
+        ![Imported notebooks in workspace.](img/notebook-import.png)
 
 2. On the toolbar select **Import** and choose **Notebook**. Then select **From this computer**.
 

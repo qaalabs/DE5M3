@@ -34,7 +34,7 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 7. After confirmation, you should be redirected to the **Microsoft Fabric home page**:
 
     !!! quote ""
-        ![Fabric home page](../img/qa-fabric-home.png)
+        ![Fabric home page](img/qa-fabric-home.png)
 
 
 ## Step 2: Return to your HomeSphere workspace
@@ -72,7 +72,7 @@ A pipeline lets you orchestrate the two notebooks so they run in sequence automa
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
     !!! quote ""
-        ![Workspace View](../img/25-workspace-view.png)
+        ![Workspace View](img/25-workspace-view.png)
 
 2. Select **New item**, then search for and select **Pipeline**.
 
@@ -112,7 +112,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
         This creates an **On success** dependency - **Build Output** will only run if **Clean Sales** completes without errors. This is what makes a pipeline more reliable than running notebooks by hand.
 
     !!! quote ""
-        ![Pipeline with two connected notebook activities.](../img/25-pipeline-activities.png)
+        ![Pipeline with two connected notebook activities.](img/25-pipeline-activities.png)
 
 
 ## Step 6: Run the pipeline
@@ -151,7 +151,7 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
     ```
 
     !!! quote ""
-        ![Pipeline final output.](../img/25-final-output.png)
+        ![Pipeline final output.](img/25-final-output.png)
 
     !!! success "Both tables should exist and return results - the pipeline cleaned the data and built the trusted output automatically."
 
