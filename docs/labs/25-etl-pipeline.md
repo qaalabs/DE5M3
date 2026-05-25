@@ -58,7 +58,7 @@ You imported four notebooks in Lab 22. So far you have only used the exercise no
 
 3. In the **Notebook Explorer** on the left, select **Data Items** and confirm that **HomeSphere** appears under **OneLake**.
 
-4. Return to the lakehouse and repeat for `cloud_output_solution` — select **Open notebook** > **Existing notebook** and choose `cloud_output_solution`.
+4. Return to the lakehouse and repeat for `cloud_output_solution` - select **Open notebook** > **Existing notebook** and choose `cloud_output_solution`.
 
 5. Confirm that **HomeSphere** also appears under **Data Items** in the Notebook Explorer.
 
@@ -71,7 +71,10 @@ A pipeline lets you orchestrate the two notebooks so they run in sequence automa
 
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
-2. Select **New item**, then search for and select **Data pipeline**.
+    !!! quote ""
+        ![Workspace View](../img/25-workspace-view.png)
+
+2. Select **New item**, then search for and select **Pipeline**.
 
 3. Name the pipeline: `HomeSphere ETL Pipeline`
 
@@ -80,11 +83,14 @@ A pipeline lets you orchestrate the two notebooks so they run in sequence automa
 
 ## Step 5: Configure the pipeline activities
 
-You will add two Notebook activities — one for each solution notebook — and connect them so that the output notebook only runs after the clean notebook has succeeded.
+You will add two Notebook activities - one for each solution notebook - and connect them so that the output notebook only runs after the clean notebook has succeeded.
 
-1. In the pipeline canvas, select **Add pipeline activity** and choose **Notebook**.
+1. In the pipeline canvas **start with a blank canvas**:
 
-2. In the activity properties pane below the canvas, set the **Name** to `Clean Sales`.
+    - Select **Pipeline activity**
+    - Choose **Notebook** (scroll down - it should be under the *Transform* heading)
+
+2. In the activity properties pane below the canvas, set the **Name** to `Clean Sales`
 
 3. Select the **Settings** tab and configure the following:
 
@@ -103,7 +109,7 @@ You will add two Notebook activities — one for each solution notebook — and 
 7. Connect the two activities: hover over the **Clean Sales** activity until a green arrow appears, then drag it to the **Build Output** activity.
 
     !!! note
-        This creates an **On success** dependency — **Build Output** will only run if **Clean Sales** completes without errors. This is what makes a pipeline more reliable than running notebooks by hand.
+        This creates an **On success** dependency - **Build Output** will only run if **Clean Sales** completes without errors. This is what makes a pipeline more reliable than running notebooks by hand.
 
     !!! quote ""
         ![Pipeline with two connected notebook activities.](../img/25-pipeline-activities.png)
@@ -120,8 +126,6 @@ You will add two Notebook activities — one for each solution notebook — and 
     - Use the :material-refresh: (*Refresh*) icon to refresh the status.
     - Wait for both activities to show a green tick.
 
-    !!! warning "If `Build Output` fails with a `TooManyRequestsForCapacity` error, the `Clean Sales` session may still be running. Wait a moment, refresh, and select **Run** again."
-
     !!! success "Both activities should show as **Succeeded**."
 
 
@@ -133,19 +137,23 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
 
 2. Select **Analyze data with** and choose **SQL analytics endpoint**.
 
-3. Run the following query to confirm the solution tables were created:
+3. Run the following queries to confirm the pipeline created the expected tables:
 
     ```sql
-    SELECT 'cleaned_sales' AS table_name, COUNT(*) AS rows FROM cleaned_sales
-    UNION ALL
-    SELECT 'cleaned_sales_solution', COUNT(*) FROM cleaned_sales_solution
-    UNION ALL
-    SELECT 'sales_trusted', COUNT(*) FROM sales_trusted
-    UNION ALL
-    SELECT 'sales_trusted_solution', COUNT(*) FROM sales_trusted_solution
+    SELECT COUNT(*) AS rows FROM cleaned_sales_solution
     ```
 
-    !!! success "All four tables should appear with matching row counts — the pipeline produced exactly the same result as the manual notebook run."
+    ```sql
+    SELECT category, ROUND(SUM(line_value), 2) AS total_revenue
+    FROM sales_trusted_solution
+    GROUP BY category
+    ORDER BY total_revenue DESC
+    ```
+
+    !!! quote ""
+        ![Pipeline final output.](../img/25-final-output.png)
+
+    !!! success "Both tables should exist and return results - the pipeline cleaned the data and built the trusted output automatically."
 
 
 ---

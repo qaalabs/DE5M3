@@ -140,9 +140,9 @@ Opening each notebook from within the lakehouse connects it to the HomeSphere da
 
 3. In the **Notebook Explorer** on the left, select **Data Items**.
 
-    !!! success "**HomeSphere** should be listed under **OneLake** — the lakehouse is now attached to this notebook."
+    !!! success "**HomeSphere** should be listed under **OneLake** - the lakehouse is now attached to this notebook."
 
-4. Return to the lakehouse and repeat for `cloud_output` — select **Open notebook** > **Existing notebook** and choose `cloud_output`.
+4. Return to the lakehouse and repeat for `cloud_output` - select **Open notebook** > **Existing notebook** and choose `cloud_output`.
 
 5. Select **Data Items** in the Notebook Explorer and confirm that **HomeSphere** appears under **OneLake**.
 
@@ -155,5 +155,5 @@ Opening each notebook from within the lakehouse connects it to the HomeSphere da
 
 In this exercise, you have created the HomeSphere lakehouse, uploaded the source data files, and imported the notebooks.
 
-**Do not delete your workspace** — you will continue working in it in the next lab.
+**Do not delete your workspace** - you will continue working in it in the next lab.
 
