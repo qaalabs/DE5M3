@@ -17,15 +17,19 @@ This is the pivot that makes Day 3 necessary.
 ## What to surface
 
 **The raw data problem:**
+
 The raw files are sitting in `Files/data/` alongside the cleaned output. There is no separation between what arrived and what was produced. If something goes wrong, it is hard to tell which version of the data you are looking at.
 
 **The notebook problem:**
+
 One notebook does everything. If the clean step fails halfway through, the Delta table might contain partial results. There is no checkpoint, no rollback, no audit trail.
 
 **The manual trigger problem:**
+
 Someone has to remember to run the notebook. If HomeSphere exports data every Monday morning, someone has to log in and press Run. That is not a pipeline - that is a chore.
 
 **The naming problem:**
+
 `cleaned_sales` and `sales_trusted` are reasonable names, but they are not a convention. A new person joining the project would not know what bronze, silver, and gold mean - because those concepts do not exist yet in this workspace.
 
 ---
