@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../../day2/architecture-investigation/">
+        <link rel="prev" href="../24-pm-setup/">
       
       
-        <link rel="next" href="../25-etl-pipeline/">
+        <link rel="next" href="../26-etl-pipeline/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Lab 2.4 - Build the Trusted Output - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Lab 2.5 - Build the Trusted Output - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-24-build-the-trusted-output" class="md-skip">
+        <a href="#lab-25-build-the-trusted-output" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 2.4 - Build the Trusted Output
+              Lab 2.5 - Build the Trusted Output
             
           </span>
         </div>
@@ -750,6 +750,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-pm-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.4 - Setup Fabric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -769,7 +797,7 @@
   <span class="md-ellipsis">
     
   
-    Lab 2.4 - Build the Trusted Output
+    Lab 2.5 - Build the Trusted Output
   
 
     
@@ -787,7 +815,7 @@
   <span class="md-ellipsis">
     
   
-    Lab 2.4 - Build the Trusted Output
+    Lab 2.5 - Build the Trusted Output
   
 
     
@@ -813,10 +841,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#what-you-are-doing" class="md-nav__link">
+  <a href="#step-1-open-the-cloud_output-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What you are doing
+        Step 1: Open the cloud_output notebook
       
     </span>
   </a>
@@ -824,10 +852,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reading-from-a-delta-table" class="md-nav__link">
+  <a href="#step-2-run-the-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reading from a Delta table
+        Step 2: Run the notebook
       
     </span>
   </a>
@@ -835,10 +863,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-sql-magic-command" class="md-nav__link">
+  <a href="#step-3-explore-the-results-in-the-sql-analytics-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The SQL magic command
+        Step 3: Explore the results in the SQL analytics endpoint
       
     </span>
   </a>
@@ -846,21 +874,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-sql-analytics-endpoint" class="md-nav__link">
+  <a href="#keep-your-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The SQL analytics endpoint
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#discussion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Discussion
+        Keep your workspace
       
     </span>
   </a>
@@ -883,14 +900,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../25-etl-pipeline/" class="md-nav__link">
+      <a href="../26-etl-pipeline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.5 - Create ETL Pipeline
+    Lab 2.6 - Create ETL Pipeline
   
 
     
@@ -983,49 +1000,86 @@
 
 
 
-<h1 id="lab-24-build-the-trusted-output">Lab 2.4 ~ Build the Trusted Output</h1>
-<h2 id="what-you-are-doing">What you are doing</h2>
-<p>Your cleaned Sales data is now a Delta table in the lakehouse.
-Flatten the Product catalogue, join it to Sales, and save the trusted output
-as a second Delta table - then answer the revenue question using SQL.</p>
-<p>Open the notebook: <strong><code>cloud_output.ipynb</code></strong></p>
-<hr>
-<h2 id="reading-from-a-delta-table">Reading from a Delta table</h2>
-<p>Instead of loading <code>cleaned_sales.csv</code> from a file path, you read the Delta table
-saved by the previous notebook:</p>
-<div class="highlight"><pre><span></span><code><span class="n">sales</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'cleaned_sales'</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<h1 id="lab-25-build-the-trusted-output">Lab 2.5 ~ Build the Trusted Output</h1>
+<p>This lab continues from Lab 2.4. Your HomeSphere lakehouse and the <code>cleaned_sales</code> table should already be in place.</p>
+<h2 id="step-1-open-the-cloud_output-notebook">Step 1: Open the cloud_output notebook</h2>
+<ol>
+<li>
+<p>In the left navigation bar, select your <strong>HomeSphere</strong> lakehouse.</p>
+</li>
+<li>
+<p>On the <strong>Home</strong> tab, select <strong>Open notebook</strong> &gt; <strong>Existing notebook</strong>, and choose <code>cloud_output</code>.</p>
+</li>
+<li>
+<p>In the <strong>Notebook Explorer</strong> on the left, select <strong>Data Items</strong> and confirm that <strong>HomeSphere</strong> appears under <strong>OneLake</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">The lakehouse is attached. The notebook can read the <code>cleaned_sales</code> table created in Lab 2.3.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-run-the-notebook">Step 2: Run the notebook</h2>
+<p>The notebook reads <code>cleaned_sales</code> from the lakehouse, joins it to the product catalogue, and writes the result as a new Delta table called <code>sales_trusted</code>.</p>
+<ol>
+<li>
+<p>Run each cell in order - use <strong>Run all</strong> or step through them one at a time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first cell reads the <code>cleaned_sales</code> Delta table you created in Lab 2.3:
+</p><div class="highlight"><pre><span></span><code><span class="n">sales</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'cleaned_sales'</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </code></pre></div>
-<p>The data is the same - the difference is where it came from. Reading from a Delta table
-means you are always reading the latest version, and the lineage is tracked automatically.</p>
-<hr>
-<h2 id="the-sql-magic-command">The SQL magic command</h2>
-<p>Fabric notebooks support <code>%%sql</code> - a magic command that runs a SQL query in a cell
-directly against your lakehouse tables:</p>
+Instead of loading a CSV from your VM, you are reading a managed table from OneLake - always the latest version, with lineage tracked automatically.<p></p>
+</div>
+</li>
+<li>
+<p>When you reach the <code>%%sql</code> cell, review the query before running it:</p>
 <div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="k">sql</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="n">ROUND</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">line_value</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_revenue</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">sales_trusted</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_revenue</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
-<p>This is the same question you answered with <code>groupby</code> in Python on Day 1.
-The answer should match.</p>
-<hr>
-<h2 id="the-sql-analytics-endpoint">The SQL analytics endpoint</h2>
-<p>After saving <code>sales_trusted</code>, switch to the <strong>SQL analytics endpoint</strong> in your lakehouse
-and run the region breakdown query from the notebook.</p>
-<p>This is SQL running against a live Delta table - no Python, no notebook, no file download.
-Any analyst in the workspace can run this query.</p>
-<hr>
-<h2 id="discussion">Discussion</h2>
-<p>On Day 1 the output was a CSV on your VM. Today it is a Delta table in OneLake.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>%%sql</code> is a magic command that runs a SQL query directly against your lakehouse tables. This is the same revenue question you answered with <code>groupby</code> on Day 1 - the answer should match.</p>
+</div>
+</li>
+<li>
+<p>Run all remaining cells and confirm the notebook completes without errors.</p>
+<div class="admonition success">
+<p class="admonition-title">The <code>sales_trusted</code> table should now appear in the <strong>Tables</strong> section of your lakehouse.</p>
+</div>
+</li>
+<li>
+<p>After running the last cell, select the <strong>Run</strong> tab above the ribbon and then select <strong>Stop session</strong>.</p>
 <ul>
-<li>What is the practical difference for someone who wants to use this data?</li>
+<li>This stops the compute resource being used by the notebook.</li>
 </ul>
-<p>You answered the revenue question in Python on Day 1 and in SQL today. </p>
-<ul>
-<li>Which felt more natural for this kind of question?</li>
-<li>What would break if <code>sales_raw.csv</code> arrived tomorrow with a new column added?</li>
-</ul>
+</li>
+</ol>
+<h2 id="step-3-explore-the-results-in-the-sql-analytics-endpoint">Step 3: Explore the results in the SQL analytics endpoint</h2>
+<ol>
+<li>
+<p>In the left navigation bar, return to your <strong>HomeSphere</strong> lakehouse.</p>
+</li>
+<li>
+<p>Select <strong>Analyze data with</strong> and choose <strong>SQL analytics endpoint</strong>.</p>
+</li>
+<li>
+<p>Run the following query to see the regional revenue breakdown:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">ROUND</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">line_value</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_revenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_trusted</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">region</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_revenue</span><span class="w"> </span><span class="k">DESC</span>
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">You are running SQL against a live Delta table in OneLake - no Python, no notebook, no file download needed.</p>
+</div>
+</li>
+</ol>
+<hr>
+<h2 id="keep-your-workspace">Keep your workspace</h2>
+<p>In this exercise, you read from a Delta table, joined and transformed the data in a notebook, and queried the result using both SQL magic and the SQL analytics endpoint.</p>
+<p><strong>Do not delete your workspace</strong> - you will continue working in it in Lab 2.5.</p>
 
 
 

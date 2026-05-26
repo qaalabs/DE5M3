@@ -757,10 +757,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#what-you-are-doing" class="md-nav__link">
+  <a href="#step-1-open-the-cloud_clean-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What you are doing
+        Step 1: Open the cloud_clean notebook
       
     </span>
   </a>
@@ -768,10 +768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-different-today" class="md-nav__link">
+  <a href="#step-2-complete-and-run-the-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is different today
+        Step 2: Complete and run the notebook
       
     </span>
   </a>
@@ -779,21 +779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-new-part-saving-as-a-delta-table" class="md-nav__link">
+  <a href="#clean-up-resources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The new part: saving as a Delta table
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#discussion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Discussion
+        Clean up resources
       
     </span>
   </a>
@@ -844,14 +833,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-cloud-output/" class="md-nav__link">
+      <a href="../24-pm-setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.4 - Build the Trusted Output
+    Lab 2.4 - Setup Fabric
   
 
     
@@ -872,14 +861,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../25-etl-pipeline/" class="md-nav__link">
+      <a href="../25-cloud-output/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 2.5 - Create ETL Pipeline
+    Lab 2.5 - Build the Trusted Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-etl-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.6 - Create ETL Pipeline
   
 
     
@@ -973,12 +990,24 @@
 
 
 <h1 id="lab-23-clean-the-sales-data-in-fabric">Lab 2.3 ~ Clean the Sales Data in Fabric</h1>
-<h2 id="what-you-are-doing">What you are doing</h2>
-<p>The same cleaning pipeline you built on Day 1 - but running in a Fabric notebook,
-reading from OneLake, and saving to a Delta table instead of a CSV file.</p>
-<p>Open the notebook in MS Fabric: <strong><code>cloud_clean.ipynb</code></strong></p>
-<hr>
-<h2 id="what-is-different-today">What is different today</h2>
+<p>This lab continues from Lab 2.2. Your HomeSphere lakehouse and notebooks should already be set up.</p>
+<h2 id="step-1-open-the-cloud_clean-notebook">Step 1: Open the <code>cloud_clean</code> notebook</h2>
+<ol>
+<li>
+<p>In the left navigation bar, select your <strong>HomeSphere</strong> lakehouse.</p>
+</li>
+<li>
+<p>On the <strong>Home</strong> tab, select <strong>Open notebook</strong> &gt; <strong>Existing notebook</strong>, and choose <code>cloud_clean</code></p>
+</li>
+<li>
+<p>In the <strong>Notebook Explorer</strong> on the left, select <strong>Data Items</strong> and confirm that <strong>HomeSphere</strong> appears under <strong>OneLake</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">The lakehouse is attached. The notebook can read from the <code>Files/data/</code> folder in OneLake.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-complete-and-run-the-notebook">Step 2: Complete and run the notebook</h2>
+<p>The notebook contains the same nine cleaning steps you built on Day 1 - but this time the file paths and output are different.</p>
 <table>
 <thead>
 <tr>
@@ -1010,26 +1039,60 @@ reading from OneLake, and saving to a Delta table instead of a CSV file.</p>
 </tr>
 </tbody>
 </table>
-<p>Everything in between - the nine cleaning steps - is identical pandas code.</p>
-<hr>
-<h2 id="the-new-part-saving-as-a-delta-table">The new part: saving as a Delta table</h2>
-<p>At the end of the notebook you convert your pandas DataFrame to a Spark DataFrame
-and write it as a managed Delta table:</p>
+<ol>
+<li>
+<p>Work through each cell, completing the exercise sections where indicated.</p>
+</li>
+<li>
+<p>At the end of the notebook, you will save the cleaned data as a Delta table:</p>
 <div class="highlight"><pre><span></span><code><span class="n">spark_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="n">spark_df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'cleaned_sales'</span><span class="p">)</span>
 </code></pre></div>
-<p><code>spark</code> is available automatically in every Fabric notebook - you do not need to import it.</p>
-<p>Once saved, the table appears in the <strong>Tables</strong> section of your Lakehouse Explorer
-and is immediately queryable via the SQL analytics endpoint.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>spark</code> is available automatically in every Fabric notebook - you do not need to import it. The <code>saveAsTable</code> call writes a managed Delta table to your lakehouse.</p>
+</div>
+</li>
+<li>
+<p>Run all cells and confirm the notebook completes without errors.</p>
+<div class="admonition success">
+<p class="admonition-title">The <code>cleaned_sales</code> table should now appear in the <strong>Tables</strong> section of your lakehouse.</p>
+</div>
+</li>
+<li>
+<p>After running the last cell, select the <strong>Run</strong> tab above the ribbon and then select <strong>Stop session</strong>.</p>
+<ul>
+<li>This stops the compute resource being used by the notebook.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">If you receive a <code>TooManyRequestsForCapacity</code> error when running the first cell:</p>
+<ul>
+<li>Make sure you stopped the session in any previously running notebook.</li>
+</ul>
+</div>
+</li>
+</ol>
 <hr>
-<h2 id="discussion">Discussion</h2>
-<ul>
-<li>What changed? What stayed the same?</li>
-</ul>
-<p>The output is now a Delta table instead of a CSV</p>
-<ul>
-<li>What does that enable that a CSV cannot do?</li>
-</ul>
+<h2 id="clean-up-resources">Clean up resources</h2>
+<p>In this exercise, you ran the HomeSphere cleaning pipeline in a Fabric notebook and saved the output as a Delta table in OneLake.</p>
+<p>The afternoon session starts fresh - delete your workspace and stop the Fabric Playground before lunch.</p>
+<ol>
+<li>
+<p>Navigate to Microsoft Fabric in your browser.</p>
+</li>
+<li>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
+</li>
+<li>
+<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Delete</strong> to delete the workspace.</p>
+</li>
+<li>
+<p>Return to the QA Platform and stop the Fabric Playground.</p>
+</li>
+</ol>
 
 
 
