@@ -1066,7 +1066,11 @@
 <p>In the <strong>Notebook Explorer</strong> on the left, select <strong>Data Items</strong> and confirm that <strong>HomeSphere</strong> appears under <strong>OneLake</strong>.</p>
 </li>
 <li>
-<p>Return to the lakehouse and repeat for <code>cloud_output_solution</code> - select <strong>Open notebook</strong> &gt; <strong>Existing notebook</strong> and choose <code>cloud_output_solution</code>.</p>
+<p>Return to the lakehouse and repeat for <code>cloud_output_solution</code></p>
+<ul>
+<li>Select <strong>Open notebook</strong> &gt; <strong>Existing notebook</strong> </li>
+<li>Choose <code>cloud_output_solution</code></li>
+</ul>
 </li>
 <li>
 <p>Confirm that <strong>HomeSphere</strong> also appears under <strong>Data Items</strong> in the Notebook Explorer.</p>
@@ -1128,10 +1132,17 @@
 </ul>
 </li>
 <li>
-<p>Connect the two activities: hover over the <strong>Clean Sales</strong> activity until a green arrow appears, then drag it to the <strong>Build Output</strong> activity.</p>
+<p>Connect the two activities</p>
+<ul>
+<li>Hover over the <strong>Clean Sales</strong> activity until a green arrow appears</li>
+<li>Then drag the green arrow to the <strong>Build Output</strong> activity.</li>
+</ul>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This creates an <strong>On success</strong> dependency - <strong>Build Output</strong> will only run if <strong>Clean Sales</strong> completes without errors. This is what makes a pipeline more reliable than running notebooks by hand.</p>
+<p class="admonition-title">This creates an <strong>On success</strong> dependency</p>
+<ul>
+<li><strong>Build Output</strong> will only run if <strong>Clean Sales</strong> completes without errors.</li>
+<li>This is what makes a pipeline more reliable than running notebooks by hand.</li>
+</ul>
 </div>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/26-pipeline-activities.png" data-desc-position="bottom"><img alt="Pipeline with two connected notebook activities." src="../img/26-pipeline-activities.png"></a></p>
@@ -1170,6 +1181,7 @@
 <p>Run the following queries to confirm the pipeline created the expected tables:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cleaned_sales_solution</span>
 </code></pre></div>
+<p>Then run:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="n">ROUND</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">line_value</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_revenue</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">sales_trusted_solution</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category</span>
@@ -1179,7 +1191,10 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/26-final-output.png" data-desc-position="bottom"><img alt="Pipeline final output." src="../img/26-final-output.png"></a></p>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Both tables should exist and return results - the pipeline cleaned the data and built the trusted output automatically.</p>
+<p class="admonition-title">Both tables should exist and return results</p>
+<ul>
+<li>The pipeline cleaned the data and built the trusted output automatically.</li>
+</ul>
 </div>
 </li>
 </ol>
