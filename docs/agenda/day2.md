@@ -22,9 +22,10 @@
 
 ## Session 3
 
-- **Practice**: [Lab 2.4 - Build the Trusted Output](../labs/24-cloud-output.md)
+- [Lab 2.4 - Setup Fabric](../labs/24-pm-setup.md)
+- **Practice**: [Lab 2.5 - Build the Trusted Output](../labs/25-cloud-output.md)
 - **Discussion**: What Is Better? What Is Fragile?
-- [Lab 2.5 - Create ETL Pipeline](../labs/25-etl-pipeline.md)
+- [Lab 2.6 - Create ETL Pipeline](../labs/26-etl-pipeline.md)
 
 ## ☕ Afternoon Break
 

@@ -49,9 +49,10 @@
 
 ### Session 3
 
-- `13:20` **Practice**: [Lab 2.4 - Build the Trusted Output](labs/24-cloud-output.md) (20 mins)
-- `13:40` **Discussion**: [What Is Better? What Is Fragile?](day2/output-debrief.md) (10 mins)
-- `13:50` [Lab 2.5 - Create ETL Pipeline](labs/25-etl-pipeline.md) (40 mins)
+- `13:20` [Lab 2.4 - Setup Fabric](labs/24-pm-setup.md) (10 mins)
+- `13:30` **Practice**: [Lab 2.5 - Build the Trusted Output](labs/25-cloud-output.md) (20 mins)
+- `13:50` **Discussion**: [What Is Better? What Is Fragile?](day2/output-debrief.md) (10 mins)
+- `14:00` [Lab 2.6 - Create ETL Pipeline](labs/26-etl-pipeline.md) (30 mins)
 
 ### Session 4
 
