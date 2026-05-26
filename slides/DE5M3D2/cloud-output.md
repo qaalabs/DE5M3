@@ -1,4 +1,4 @@
-## 🧪 <mark>Lab 2.5 - Trusted Output</mark>
+## 🧪 <mark>Lab 2.5 ~ Trusted Output</mark>
 
 <span style="background-color: orange;">Give learners the link:</span> https:...
 
