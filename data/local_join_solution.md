@@ -23,7 +23,7 @@ Before we can join it to Sales we need to flatten it into a flat table.
 
 
 ```python
-with open('products_raw.json') as f:
+with open('../data/products_raw.json') as f:
     products_data = json.load(f)
 
 # pd.json_normalize flattens nested dicts into columns

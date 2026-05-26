@@ -22,7 +22,7 @@ Do not fix anything yet - just observe.
 
 
 ```python
-df = pd.read_csv('sales_raw.csv')
+df = pd.read_csv('../data/sales_raw.csv')
 print(f'Shape: {df.shape}')
 df.head(10)
 ```
@@ -79,7 +79,7 @@ Notice what is different about its structure.
 
 
 ```python
-with open('products_raw.json') as f:
+with open('../data/products_raw.json') as f:
     products_data = json.load(f)
 
 print(f'Number of products: {len(products_data["products"])}')
