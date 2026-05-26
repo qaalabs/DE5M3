@@ -73,4 +73,4 @@ The notebook reads `cleaned_sales` from the lakehouse, joins it to the product c
 
 In this exercise, you read from a Delta table, joined and transformed the data in a notebook, and queried the result using both SQL magic and the SQL analytics endpoint.
 
-**Do not delete your workspace** - you will continue working in it in Lab 2.5.
+**Do not delete your workspace** - you will continue working in it in Lab 2.6.

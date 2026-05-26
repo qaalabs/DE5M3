@@ -1,3 +1,7 @@
-## Cloud Clean
+## 🧪 <mark>Lab 2.3 ~ Clean Sales data</mark>
 
-Upload Sales and Product, recreate cleaning and flatten steps in a Fabric notebook
+<span style="background-color: orange;">Give learners the link:</span> https:...
+
+### Activities
+
+Recreate cleaning and flatten steps in a Fabric notebook

@@ -1,7 +1,6 @@
-## 🧪 <mark>Lab 2.2 ~ Landing Raw Data</mark>
+## 🧪 <mark>Lab 2.6 ~ Create ETL Pipeline</mark>
 
 <span style="background-color: orange;">Give learners the link:</span> https:...
 
 ### Activities
 
-Landing raw files in the lakehouse

@@ -1,4 +1,3 @@
-```markdown
 # Activity: Choosing the Right Data Architecture
 
 ## Scenario

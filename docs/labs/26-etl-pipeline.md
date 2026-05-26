@@ -26,7 +26,10 @@ You imported four notebooks in the setup. So far you have only used the exercise
 
 3. In the **Notebook Explorer** on the left, select **Data Items** and confirm that **HomeSphere** appears under **OneLake**.
 
-4. Return to the lakehouse and repeat for `cloud_output_solution` - select **Open notebook** > **Existing notebook** and choose `cloud_output_solution`.
+4. Return to the lakehouse and repeat for `cloud_output_solution`
+
+    - Select **Open notebook** > **Existing notebook** 
+    - Choose `cloud_output_solution`
 
 5. Confirm that **HomeSphere** also appears under **Data Items** in the Notebook Explorer.
 
@@ -74,10 +77,14 @@ You will add two Notebook activities - one for each solution notebook - and conn
     - **Workspace**: select your workspace
     - **Notebook**: select `cloud_output_solution`
 
-7. Connect the two activities: hover over the **Clean Sales** activity until a green arrow appears, then drag it to the **Build Output** activity.
+7. Connect the two activities
 
-    !!! note
-        This creates an **On success** dependency - **Build Output** will only run if **Clean Sales** completes without errors. This is what makes a pipeline more reliable than running notebooks by hand.
+    - Hover over the **Clean Sales** activity until a green arrow appears
+    - Then drag the green arrow to the **Build Output** activity.
+
+    !!! note "This creates an **On success** dependency"
+        - **Build Output** will only run if **Clean Sales** completes without errors.
+        - This is what makes a pipeline more reliable than running notebooks by hand.
 
     !!! quote ""
         ![Pipeline with two connected notebook activities.](img/26-pipeline-activities.png)
@@ -111,6 +118,8 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
     SELECT COUNT(*) AS rows FROM cleaned_sales_solution
     ```
 
+    Then run:
+
     ```sql
     SELECT category, ROUND(SUM(line_value), 2) AS total_revenue
     FROM sales_trusted_solution
@@ -121,7 +130,8 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
     !!! quote ""
         ![Pipeline final output.](img/26-final-output.png)
 
-    !!! success "Both tables should exist and return results - the pipeline cleaned the data and built the trusted output automatically."
+    !!! success "Both tables should exist and return results"
+        - The pipeline cleaned the data and built the trusted output automatically.
 
 
 ---
@@ -139,3 +149,4 @@ Once you have finished exploring, you should delete the workspace you created fo
 3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
 
 4. Select **Delete** to delete the workspace.
+
