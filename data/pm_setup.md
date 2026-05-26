@@ -4,7 +4,6 @@ This notebook prepares the `cleaned_sales` Delta table for the afternoon session
 
 Run all cells — no changes needed.
 
----
 
 ```python
 import pandas as pd
@@ -13,6 +12,7 @@ df = pd.read_csv('/lakehouse/default/Files/data/sales_raw.csv')
 
 print(f'Loaded: {df.shape[0]} rows')
 ```
+
 
 ```python
 # Clean: unit_price
@@ -42,6 +42,7 @@ df = df[df['quantity'] > 0]
 
 print(f'Cleaned: {len(df)} rows')
 ```
+
 
 ```python
 spark_df = spark.createDataFrame(df)
