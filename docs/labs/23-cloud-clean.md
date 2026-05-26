@@ -3,11 +3,11 @@
 This lab continues from Lab 2.2. Your HomeSphere lakehouse and notebooks should already be set up.
 
 
-## Step 1: Open the cloud_clean notebook
+## Step 1: Open the `cloud_clean` notebook
 
 1. In the left navigation bar, select your **HomeSphere** lakehouse.
 
-2. On the **Home** tab, select **Open notebook** > **Existing notebook**, and choose `cloud_clean`.
+2. On the **Home** tab, select **Open notebook** > **Existing notebook**, and choose `cloud_clean`
 
 3. In the **Notebook Explorer** on the left, select **Data Items** and confirm that **HomeSphere** appears under **OneLake**.
 
@@ -18,12 +18,12 @@ This lab continues from Lab 2.2. Your HomeSphere lakehouse and notebooks should 
 
 The notebook contains the same nine cleaning steps you built on Day 1 - but this time the file paths and output are different.
 
-| | Day 1 | Day 2 |
-|---|---|---|
-| Where files live | Local VM filesystem | OneLake (`/lakehouse/default/Files/data/`) |
-| How you load data | `pd.read_csv('sales_raw.csv')` | `pd.read_csv('/lakehouse/default/Files/data/sales_raw.csv')` |
-| Where output goes | `cleaned_sales.csv` on VM | `cleaned_sales` Delta table in lakehouse |
-| Who can access output | Just you | Anyone in the workspace |
+|                      | Day 1                         | Day 2 |
+|----------------------|-------------------------------|-------|
+| Where files live     | Local VM filesystem           | OneLake (`/lakehouse/default/Files/data/`) |
+| How you load data    | `pd.read_csv('sales_raw.csv')`| `pd.read_csv('/lakehouse/default/Files/data/sales_raw.csv')` |
+| Where output goes    | `cleaned_sales.csv` on VM     | `cleaned_sales` Delta table in lakehouse |
+| Who can access output| Just you                      | Anyone in the workspace |
 
 1. Work through each cell, completing the exercise sections where indicated.
 
