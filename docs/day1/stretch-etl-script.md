@@ -12,7 +12,7 @@ This is closer to how a pipeline would actually be deployed.
 
 ## Getting started
 
-Open **`etl_todo.py`** from the `data/` folder in your editor.
+Open **`etl_todo.py`** from the `stretch/` folder in the HomeSphere repo in your editor.
 
 The script has three functions for you to complete:
 
@@ -28,7 +28,7 @@ The script has three functions for you to complete:
 
 ## Run the script
 
-Open a terminal, navigate to the `data/` folder, and run:
+Open a terminal, navigate to the `stretch/` folder in the HomeSphere repo, and run:
 
 ```
 python etl_todo.py
