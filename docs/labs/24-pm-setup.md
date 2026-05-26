@@ -1,16 +1,13 @@
-# Lab 22 ~ Set Up the HomeSphere Environment
+# Lab 2.4 ~ Set Up the Afternoon Session
 
 !!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
 
 !!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
 
+This lab sets up a fresh HomeSphere environment for the afternoon. By the end, your lakehouse will be ready and the `cleaned_sales` table will exist so you can continue straight into Lab 2.5.
+
 
 ## Step 1: Access Microsoft Fabric
-
-In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.
-
-!!! note
-    The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.
 
 1. In the QA Platform, wait until the lab status shows **Ready**.
 
@@ -21,7 +18,7 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
     - **Username** from the QA Platform (used as the email address)
     - **Password** from the QA Platform (used as a Temporary Access Pass)
 
-    - If prompted to "Stay signed in?", select **No**. This ensures the session ends when the private window is closed.
+    - If prompted to "Stay signed in?", select **No**.
 
     !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
 
@@ -29,17 +26,13 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
 5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
 
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
-
-7. After confirmation, you should be redirected to the **Microsoft Fabric home page**:
+6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
 
     !!! quote ""
         ![Fabric home page](img/qa-fabric-home.png)
 
 
 ## Step 2: Create a workspace
-
-Before working with data in Fabric, you need to create a workspace.
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
@@ -50,15 +43,11 @@ Before working with data in Fabric, you need to create a workspace.
     - Leave all other options as the default values
     - Click **Apply**
 
-3. Your workspace should be empty, and look similar to this:
-
     !!! quote ""
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
 ## Step 3: Create a lakehouse
-
-Now that you have a workspace, it's time to create a lakehouse for the HomeSphere data.
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
@@ -67,15 +56,11 @@ Now that you have a workspace, it's time to create a lakehouse for the HomeSpher
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
-    After a minute or so, a new empty lakehouse will be created.
-
     !!! quote ""
         ![New lakehouse.](img/new-lakehouse.png)
 
 
 ## Step 4: Upload the HomeSphere data files
-
-With the lakehouse created, you can now upload the HomeSphere source data files.
 
 1. In the **Explorer** pane of the lakehouse, click the **...** menu for the **Files** folder and select **New subfolder**.
 
@@ -87,7 +72,7 @@ With the lakehouse created, you can now upload the HomeSphere source data files.
     - `sales_raw.csv`
     - `products_raw.json`
 
-    !!! tip "If you cannot find the `HomeSphere` folder, you may need to re-run the `git clone` command."
+    !!! note "If you cannot find the `HomeSphere` folder, you may need to re-run the `git clone` clone command."
 
 3. In the **...** menu for the `data` folder, select **Upload** and **Upload files**.
 
@@ -100,52 +85,59 @@ With the lakehouse created, you can now upload the HomeSphere source data files.
 
 ## Step 5: Import the notebooks
 
-The HomeSphere notebooks contain the code for cleaning and transforming the data. You will import them into your workspace now, ready for the next lab.
-
 1. In the left navigation bar, select your workspace name to return to the workspace view.
-
-    !!! quote ""
-        ![Imported notebooks in workspace.](img/notebook-import.png)
 
 2. On the toolbar select **Import** and choose **Notebook**. Then select **From this computer**.
 
-3. Browse to the `HomeSphere/cloud/` folder on your Desktop and import these two notebooks:
+3. Browse to the `HomeSphere/cloud/` folder on your Desktop and import:
 
-    - `cloud_clean.ipynb`
     - `cloud_output.ipynb`
+    - `pm_setup.ipynb`
 
-    !!! success "Both notebooks should now appear as items in your workspace."
+4. Import again - this time browse to the `HomeSphere/solution/` folder and import:
+
+    - `cloud_clean_solution.ipynb`
+    - `cloud_output_solution.ipynb`
+
+    !!! success "All four notebooks should now appear as items in your workspace."
 
 
 ## Step 6: Attach the lakehouse to the notebooks
-
-Opening each notebook from within the lakehouse connects it to the HomeSphere data automatically.
 
 1. In the left navigation bar, return to your lakehouse `HomeSphere`.
 
 2. On the **Home** tab:
 
     - Select **Open notebook** > **Existing notebook**
-    - Choose `cloud_clean`
-
-3. In the **Notebook Explorer** on the left, select **Data Items**.
-
-    !!! success "**HomeSphere** should be listed under **OneLake** - the lakehouse is now attached to this notebook."
-
-4. Return to the lakehouse and repeat for `cloud_output`:
-
-    - Select **Open notebook** > **Existing notebook**
     - Choose `cloud_output`
+
+3. In the **Notebook Explorer** on the left, select **Data Items** and confirm **HomeSphere** appears under **OneLake**.
+
+4. Return to the lakehouse and repeat for `pm_setup`:
+
+    - select **Open notebook** > **Existing notebook**
+    - Choose `pm_setup`
 
 5. Select **Data Items** in the Notebook Explorer and confirm that **HomeSphere** appears under **OneLake**.
 
-!!! success "Both notebooks are now connected to the HomeSphere lakehouse and ready for the next lab."
+    !!! success "Both notebooks are now connected to the HomeSphere lakehouse."
+
+
+## Step 7: Run the pm_setup notebook
+
+This creates the `cleaned_sales` table ready for Lab 2.5.
+
+1. You should already have `pm_setup` open. Select **Run all**.
+
+    !!! success "The `cleaned_sales` table should now appear in the **Tables** section of your lakehouse."
+
+2. After the notebook finishes, select the **Run** tab above the ribbon and then select **Stop session**.
+
 
 ---
 
 ## Keep your workspace
 
-In this exercise, you have created the HomeSphere lakehouse, uploaded the source data files, and imported the notebooks.
+Your HomeSphere environment is ready for the afternoon. The `cleaned_sales` table is in place and all notebooks are attached.
 
-**Do not delete your workspace** - you will continue working in it in the next lab.
-
+**Do not delete your workspace** - you will continue working in it in Lab 2.5.

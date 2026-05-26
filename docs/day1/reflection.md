@@ -21,18 +21,22 @@ That is a complete pipeline. It ran locally, by hand, in a notebook. Hold that t
 ## Prompts
 
 **On the cleaning:**
+
 - Which fix surprised you most?
 - Which decision would you make differently if you knew more about the business?
 
 **On the join:**
+
 - Before today, how would you have combined two datasets?
 - What would have happened if you had joined before cleaning?
 
 **On the answer:**
+
 - Cameras generate 40% of revenue. What would HomeSphere do with that information?
 - Is one week of data enough to trust this answer?
 
 **On the process:**
+
 - What would break if this file arrived tomorrow with a new format?
 - What would you automate first if this ran every day?
 

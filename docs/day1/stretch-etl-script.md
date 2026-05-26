@@ -4,7 +4,7 @@
 
 You have run the full ETL pipeline in two notebooks.
 
-Now rebuild it as a single Python script that runs from the terminal — no notebook, no cells, just `python etl_todo.py`.
+Now rebuild it as a single Python script that runs from the terminal - no notebook, no cells, just `python etl_todo.py`.
 
 This is closer to how a pipeline would actually be deployed.
 
@@ -16,13 +16,13 @@ Open **`etl_todo.py`** from the `stretch/` folder in the HomeSphere repo in your
 
 The script has three functions for you to complete:
 
-| Function | What it does |
-|---|---|
-| `clean_sales()` | Loads and cleans `sales_raw.csv` |
-| `flatten_products()` | Loads and flattens `products_raw.json` |
+| Function               | What it does                                              |
+|------------------------|-----------------------------------------------------------|
+| `clean_sales()`        | Loads and cleans `sales_raw.csv`                          |
+| `flatten_products()`   | Loads and flattens `products_raw.json`                    |
 | `join_and_aggregate()` | Joins the two datasets and calculates revenue by category |
 
-`main()` is already written — it calls your functions, saves the outputs, and prints the summary. Run it at any point to see how far you have got.
+`main()` is already written - it calls your functions, saves the outputs, and prints the summary. Run it at any point to see how far you have got.
 
 ---
 
@@ -59,7 +59,7 @@ Loaded products: 8 rows
 
 - Work through the `# TODO:` comments one at a time, exactly as you did in the notebooks.
 - Run the script after each function to check your progress - Python will show you the error if something is wrong.
-- The logic is identical to the notebooks — you are translating it, not rewriting it.
+- The logic is identical to the notebooks - you are translating it, not rewriting it.
 - If you get stuck, the notebooks are your reference. `etl_solution.py` is there if you need it.
 
 ---

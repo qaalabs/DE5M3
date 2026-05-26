@@ -1,43 +1,11 @@
-# Lab 25 ~ Orchestrate the HomeSphere ETL with a Pipeline
+# Lab 2.6 ~ Orchestrate the HomeSphere ETL with a Pipeline
 
 !!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
 
 !!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
 
 
-## Step 1: Access Microsoft Fabric
-
-In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.
-
-!!! note
-    The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.
-
-1. In the QA Platform, wait until the lab status shows **Ready**.
-
-2. Then right-click **Open** and choose **Open in a private browsing window** (InPrivate in Edge, Incognito in Chrome).
-
-3. When prompted, sign in using:
-
-    - **Username** from the QA Platform (used as the email address)
-    - **Password** from the QA Platform (used as a Temporary Access Pass)
-
-    - If prompted to "Stay signed in?", select **No**. This ensures the session ends when the private window is closed.
-
-    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
-
-4. In the same private browsing window, **open a new tab**.
-
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
-
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
-
-7. After confirmation, you should be redirected to the **Microsoft Fabric home page**:
-
-    !!! quote ""
-        ![Fabric home page](img/qa-fabric-home.png)
-
-
-## Step 2: Return to your HomeSphere workspace
+## Step 1: Return to your HomeSphere workspace
 
 This lab continues from where you left off. Your workspace and lakehouse from the earlier session are still available.
 
@@ -45,12 +13,12 @@ This lab continues from where you left off. Your workspace and lakehouse from th
 
 2. Select your `fab_workspace` to open it.
 
-    !!! tip "If your workspace is no longer available, you will need to repeat the setup steps from Lab 22 before continuing."
+    !!! tip "If your workspace is no longer available, you will need to repeat the setup steps from Lab 2.4 before continuing."
 
 
-## Step 3: Attach the solution notebooks to the lakehouse
+## Step 2: Attach the solution notebooks to the lakehouse
 
-You imported four notebooks in Lab 22. So far you have only used the exercise notebooks. In this lab you will use the solution notebooks to build your pipeline.
+You imported four notebooks in the setup. So far you have only used the exercise notebooks. In this lab you will use the solution notebooks to build your pipeline.
 
 1. In the left navigation bar, select your **HomeSphere** lakehouse.
 
@@ -72,7 +40,7 @@ A pipeline lets you orchestrate the two notebooks so they run in sequence automa
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
     !!! quote ""
-        ![Workspace View](img/25-workspace-view.png)
+        ![Workspace View](img/26-workspace-view.png)
 
 2. Select **New item**, then search for and select **Pipeline**.
 
@@ -112,7 +80,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
         This creates an **On success** dependency - **Build Output** will only run if **Clean Sales** completes without errors. This is what makes a pipeline more reliable than running notebooks by hand.
 
     !!! quote ""
-        ![Pipeline with two connected notebook activities.](img/25-pipeline-activities.png)
+        ![Pipeline with two connected notebook activities.](img/26-pipeline-activities.png)
 
 
 ## Step 6: Run the pipeline
@@ -151,7 +119,7 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
     ```
 
     !!! quote ""
-        ![Pipeline final output.](img/25-final-output.png)
+        ![Pipeline final output.](img/26-final-output.png)
 
     !!! success "Both tables should exist and return results - the pipeline cleaned the data and built the trusted output automatically."
 
@@ -171,6 +139,3 @@ Once you have finished exploring, you should delete the workspace you created fo
 3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
 
 4. Select **Delete** to delete the workspace.
-
----
-<small><b>Source: HomeSphere DE5M3 Module 3</b></small>

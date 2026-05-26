@@ -1,15 +1,22 @@
 # Lab 2.3 ~ Clean the Sales Data in Fabric
 
-## What you are doing
+This lab continues from Lab 2.2. Your HomeSphere lakehouse and notebooks should already be set up.
 
-The same cleaning pipeline you built on Day 1 - but running in a Fabric notebook,
-reading from OneLake, and saving to a Delta table instead of a CSV file.
 
-Open the notebook in MS Fabric: **`cloud_clean.ipynb`**
+## Step 1: Open the cloud_clean notebook
 
----
+1. In the left navigation bar, select your **HomeSphere** lakehouse.
 
-## What is different today
+2. On the **Home** tab, select **Open notebook** > **Existing notebook**, and choose `cloud_clean`.
+
+3. In the **Notebook Explorer** on the left, select **Data Items** and confirm that **HomeSphere** appears under **OneLake**.
+
+    !!! success "The lakehouse is attached. The notebook can read from the `Files/data/` folder in OneLake."
+
+
+## Step 2: Complete and run the notebook
+
+The notebook contains the same nine cleaning steps you built on Day 1 - but this time the file paths and output are different.
 
 | | Day 1 | Day 2 |
 |---|---|---|
@@ -18,31 +25,44 @@ Open the notebook in MS Fabric: **`cloud_clean.ipynb`**
 | Where output goes | `cleaned_sales.csv` on VM | `cleaned_sales` Delta table in lakehouse |
 | Who can access output | Just you | Anyone in the workspace |
 
-Everything in between - the nine cleaning steps - is identical pandas code.
+1. Work through each cell, completing the exercise sections where indicated.
+
+2. At the end of the notebook, you will save the cleaned data as a Delta table:
+
+    ```python
+    spark_df = spark.createDataFrame(df)
+    spark_df.write.mode('overwrite').saveAsTable('cleaned_sales')
+    ```
+
+    !!! note
+        `spark` is available automatically in every Fabric notebook - you do not need to import it. The `saveAsTable` call writes a managed Delta table to your lakehouse.
+
+3. Run all cells and confirm the notebook completes without errors.
+
+    !!! success "The `cleaned_sales` table should now appear in the **Tables** section of your lakehouse."
+
+4. After running the last cell, select the **Run** tab above the ribbon and then select **Stop session**.
+
+    - This stops the compute resource being used by the notebook.
+
+    !!! warning "If you receive a `TooManyRequestsForCapacity` error when running the first cell:"
+        - Make sure you stopped the session in any previously running notebook.
+
 
 ---
 
-## The new part: saving as a Delta table
+## Clean up resources
 
-At the end of the notebook you convert your pandas DataFrame to a Spark DataFrame
-and write it as a managed Delta table:
+In this exercise, you ran the HomeSphere cleaning pipeline in a Fabric notebook and saved the output as a Delta table in OneLake.
 
-```python
-spark_df = spark.createDataFrame(df)
-spark_df.write.mode('overwrite').saveAsTable('cleaned_sales')
-```
+The afternoon session starts fresh - delete your workspace and stop the Fabric Playground before lunch.
 
-`spark` is available automatically in every Fabric notebook - you do not need to import it.
+1. Navigate to Microsoft Fabric in your browser.
 
-Once saved, the table appears in the **Tables** section of your Lakehouse Explorer
-and is immediately queryable via the SQL analytics endpoint.
+2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
 
----
+3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
 
-## Discussion
+4. Select **Delete** to delete the workspace.
 
-- What changed? What stayed the same?
-
-The output is now a Delta table instead of a CSV
-
-- What does that enable that a CSV cannot do?
+5. Return to the QA Platform and stop the Fabric Playground.

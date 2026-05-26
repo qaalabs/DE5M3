@@ -24,8 +24,8 @@ This will create a `HomeSphere` folder on your Desktop containing all the files 
 
 In Terminal (or File Explorer), check that the `HomeSphere` folder on your Desktop contains:
 
-- `data/` — the raw source files
-- `local/` — the notebooks for today
-- `cloud/` — notebooks for Day 2
+- `data/` - the raw source files
+- `local/` - the notebooks for today
+- `cloud/` - notebooks for Day 2
 
-!!! success "You are ready to start. Keep this folder — you will use it again on Day 2."
+!!! success "You are ready to start. Keep this folder - you will use it again on Day 2."
