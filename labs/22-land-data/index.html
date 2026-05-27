@@ -729,10 +729,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
+  <a href="#step-1-create-a-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Access Microsoft Fabric
+        Step 1: Create a workspace
       
     </span>
   </a>
@@ -740,10 +740,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
+  <a href="#step-2-create-a-lakehouse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Create a workspace
+        Step 2: Create a lakehouse
       
     </span>
   </a>
@@ -751,10 +751,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-lakehouse" class="md-nav__link">
+  <a href="#step-3-upload-the-homesphere-data-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a lakehouse
+        Step 3: Upload the HomeSphere data files
       
     </span>
   </a>
@@ -762,10 +762,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-upload-the-homesphere-data-files" class="md-nav__link">
+  <a href="#step-4-import-the-notebooks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Upload the HomeSphere data files
+        Step 4: Import the notebooks
       
     </span>
   </a>
@@ -773,21 +773,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-import-the-notebooks" class="md-nav__link">
+  <a href="#step-5-attach-the-lakehouse-to-the-notebooks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Import the notebooks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-attach-the-lakehouse-to-the-notebooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Attach the lakehouse to the notebooks
+        Step 5: Attach the lakehouse to the notebooks
       
     </span>
   </a>
@@ -1034,57 +1023,8 @@
 
 
 <h1 id="lab-22-set-up-the-homesphere-environment">Lab 22 ~ Set Up the HomeSphere Environment</h1>
-<div class="admonition info">
-<p class="admonition-title">For this lab, you will access the QA Platform and sign in using the credentials provided.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
-</div>
-<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
-<p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.</p>
-</div>
-<ol>
-<li>
-<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
-</li>
-<li>
-<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
-</li>
-<li>
-<p>When prompted, sign in using:</p>
-<ul>
-<li><strong>Username</strong> from the QA Platform (used as the email address)</li>
-<li>
-<p><strong>Password</strong> from the QA Platform (used as a Temporary Access Pass)</p>
-</li>
-<li>
-<p>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</p>
-</li>
-</ul>
-<div class="admonition success">
-<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
-</div>
-</li>
-<li>
-<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
-</li>
-<li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a></p>
-</li>
-<li>
-<p>If prompted, <strong>re-enter your email address</strong> to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.</p>
-</li>
-<li>
-<p>After confirmation, you should be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../img/qa-fabric-home.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<p>This lab continues from Lab 2.1. You should already be signed in to Microsoft Fabric.</p>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
 <p>Before working with data in Fabric, you need to create a workspace.</p>
 <ol>
 <li>
@@ -1106,7 +1046,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h2>
+<h2 id="step-2-create-a-lakehouse">Step 2: Create a lakehouse</h2>
 <p>Now that you have a workspace, it's time to create a lakehouse for the HomeSphere data.</p>
 <ol>
 <li>
@@ -1124,7 +1064,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-4-upload-the-homesphere-data-files">Step 4: Upload the HomeSphere data files</h2>
+<h2 id="step-3-upload-the-homesphere-data-files">Step 3: Upload the HomeSphere data files</h2>
 <p>With the lakehouse created, you can now upload the HomeSphere source data files.</p>
 <ol>
 <li>
@@ -1157,7 +1097,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-5-import-the-notebooks">Step 5: Import the notebooks</h2>
+<h2 id="step-4-import-the-notebooks">Step 4: Import the notebooks</h2>
 <p>The HomeSphere notebooks contain the code for cleaning and transforming the data. You will import them into your workspace now, ready for the next lab.</p>
 <ol>
 <li>
@@ -1180,7 +1120,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-6-attach-the-lakehouse-to-the-notebooks">Step 6: Attach the lakehouse to the notebooks</h2>
+<h2 id="step-5-attach-the-lakehouse-to-the-notebooks">Step 5: Attach the lakehouse to the notebooks</h2>
 <p>Opening each notebook from within the lakehouse connects it to the HomeSphere data automatically.</p>
 <ol>
 <li>
