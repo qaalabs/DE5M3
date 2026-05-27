@@ -70,10 +70,10 @@ The HomeSphere notebooks contain the code for cleaning and transforming the data
 
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
+2. On the toolbar select **Import** and choose **Notebook**. Then select **From this computer**.
+
     !!! quote ""
         ![Imported notebooks in workspace.](img/notebook-import.png)
-
-2. On the toolbar select **Import** and choose **Notebook**. Then select **From this computer**.
 
 3. Browse to the `HomeSphere/cloud/` folder on your Desktop and import these two notebooks:
 
