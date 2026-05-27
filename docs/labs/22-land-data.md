@@ -80,7 +80,12 @@ The HomeSphere notebooks contain the code for cleaning and transforming the data
     - `cloud_clean.ipynb`
     - `cloud_output.ipynb`
 
-    !!! success "Both notebooks should now appear as items in your workspace."
+4. Select **Import** again - this time browse to the `HomeSphere/solution/` folder and import:
+
+    - `cloud_clean_solution.ipynb`
+    - `cloud_output_solution.ipynb`
+
+!!! success "All four notebooks should now appear as items in your workspace."
 
 
 ## Step 5: Attach the lakehouse to the notebooks
