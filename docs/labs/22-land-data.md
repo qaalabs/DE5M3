@@ -1,43 +1,9 @@
 # Lab 22 ~ Set Up the HomeSphere Environment
 
-!!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
-
-!!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
+!!! info "This lab continues from Lab 2.1. You should already be signed in to Microsoft Fabric."
 
 
-## Step 1: Access Microsoft Fabric
-
-In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.
-
-!!! note
-    The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.
-
-1. In the QA Platform, wait until the lab status shows **Ready**.
-
-2. Then right-click **Open** and choose **Open in a private browsing window** (InPrivate in Edge, Incognito in Chrome).
-
-3. When prompted, sign in using:
-
-    - **Username** from the QA Platform (used as the email address)
-    - **Password** from the QA Platform (used as a Temporary Access Pass)
-
-    - If prompted to "Stay signed in?", select **No**. This ensures the session ends when the private window is closed.
-
-    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
-
-4. In the same private browsing window, **open a new tab**.
-
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
-
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
-
-7. After confirmation, you should be redirected to the **Microsoft Fabric home page**:
-
-    !!! quote ""
-        ![Fabric home page](img/qa-fabric-home.png)
-
-
-## Step 2: Create a workspace
+## Step 1: Create a workspace
 
 Before working with data in Fabric, you need to create a workspace.
 
@@ -56,7 +22,7 @@ Before working with data in Fabric, you need to create a workspace.
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
-## Step 3: Create a lakehouse
+## Step 2: Create a lakehouse
 
 Now that you have a workspace, it's time to create a lakehouse for the HomeSphere data.
 
@@ -73,7 +39,7 @@ Now that you have a workspace, it's time to create a lakehouse for the HomeSpher
         ![New lakehouse.](img/new-lakehouse.png)
 
 
-## Step 4: Upload the HomeSphere data files
+## Step 3: Upload the HomeSphere data files
 
 With the lakehouse created, you can now upload the HomeSphere source data files.
 
@@ -98,7 +64,7 @@ With the lakehouse created, you can now upload the HomeSphere source data files.
     !!! tip "If the files do not automatically appear, in the **...** menu for the `data` folder, select **Refresh**."
 
 
-## Step 5: Import the notebooks
+## Step 4: Import the notebooks
 
 The HomeSphere notebooks contain the code for cleaning and transforming the data. You will import them into your workspace now, ready for the next lab.
 
@@ -117,7 +83,7 @@ The HomeSphere notebooks contain the code for cleaning and transforming the data
     !!! success "Both notebooks should now appear as items in your workspace."
 
 
-## Step 6: Attach the lakehouse to the notebooks
+## Step 5: Attach the lakehouse to the notebooks
 
 Opening each notebook from within the lakehouse connects it to the HomeSphere data automatically.
 
