@@ -1,10 +1,5 @@
 # Lab 2.6 ~ Orchestrate the HomeSphere ETL with a Pipeline
 
-!!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
-
-!!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
-
-
 ## Step 1: Return to your HomeSphere workspace
 
 This lab continues from where you left off. Your workspace and lakehouse from the earlier session are still available.
@@ -13,7 +8,7 @@ This lab continues from where you left off. Your workspace and lakehouse from th
 
 2. Select your `fab_workspace` to open it.
 
-    !!! tip "If your workspace is no longer available, you will need to repeat the setup steps from Lab 2.4 before continuing."
+!!! tip "If your workspace is no longer available, you will need to repeat the setup steps from Lab 2.4 before continuing."
 
 
 ## Step 2: Attach the solution notebooks to the lakehouse
@@ -61,20 +56,20 @@ You will add two Notebook activities - one for each solution notebook - and conn
     - Select **Pipeline activity**
     - Choose **Notebook** (scroll down - it should be under the *Transform* heading)
 
-2. In the activity properties pane below the canvas, set the **Name** to `Clean Sales`
+2. In the activity properties pane below the canvas, set the **Name** to: `Clean Sales`
 
 3. Select the **Settings** tab and configure the following:
 
-    - **Workspace**: select your workspace
+    - **Workspace**: *select your workspace*
     - **Notebook**: select `cloud_clean_solution`
 
 4. Add a second **Notebook** activity to the canvas.
 
-5. In the properties pane, set the **Name** to `Build Output`.
+5. In the properties pane, set the **Name** to: `Build Output`
 
 6. Select the **Settings** tab and configure the following:
 
-    - **Workspace**: select your workspace
+    - **Workspace**: *select your workspace*
     - **Notebook**: select `cloud_output_solution`
 
 7. Connect the two activities
@@ -82,7 +77,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
     - Hover over the **Clean Sales** activity until a green arrow appears
     - Then drag the green arrow to the **Build Output** activity.
 
-    !!! note "This creates an **On success** dependency"
+    !!! note "This creates an *On success* dependency"
         - **Build Output** will only run if **Clean Sales** completes without errors.
         - This is what makes a pipeline more reliable than running notebooks by hand.
 
@@ -101,7 +96,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
     - Use the :material-refresh: (*Refresh*) icon to refresh the status.
     - Wait for both activities to show a green tick.
 
-    !!! success "Both activities should show as **Succeeded**."
+!!! success "Both activities should show as **Succeeded**."
 
 
 ## Step 7: Verify the results
