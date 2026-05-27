@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# See if VENV is activated
+filename=$(whereis jupyter | cut -d" " -f2)
+if [[ ! -f ${filename} ]]; then
+  echo "ERROR: Program not found - jupyter"
+  exit 9
+fi
+
 FROM="/mnt/ssd/projects/QAADE5/HomeSphere"
 dirname=${FROM}
 if [[ ! -d ${dirname} ]]; then
