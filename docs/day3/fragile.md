@@ -6,7 +6,7 @@ Look at the Day 2 pipeline you built in Fabric. Not at whether it works - it doe
 Look at whether it is well-designed.
 
 In your group, work through the questions below. For each one, agree on a specific answer
-and be ready to share it. You have 20 minutes.
+and be ready to share it.
 
 ---
 
