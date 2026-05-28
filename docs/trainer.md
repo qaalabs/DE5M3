@@ -37,6 +37,7 @@
 
 - `09:50` What Is Fabric? (10 mins)
 - `10:00` **Practice**: [Lab 2.1 - Explore Fabric Environment](labs/21-lakehouse.md) (30 mins)
+- `10:30` **Discussion**: What Stays the Same? (10 mins)
 
 ### Session 2
 

@@ -6,12 +6,12 @@
 - VM Setup & Start Fabric Playground
 - What Is Fabric?
 - **Practice**: [Lab 2.1 - Explore Fabric Environment](../labs/21-lakehouse.md)
+- **Discussion**: What Stays the Same?
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- 
 - **Practice**: [Lab 2.2 - Landing Raw Data](../labs/22-land-data.md)
 - **Practice**: [Lab 2.3 - Clean the Sales Data](../labs/23-cloud-clean.md)
 - **Discussion**: Familiar vs Different?
