@@ -1141,6 +1141,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../pipeline-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌅 Welcome to Day 4 of DE5 Module 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../silent-fail/" class="md-nav__link">
         
   
@@ -1312,10 +1340,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-silvergold-add-a-check-after-the-join" class="md-nav__link">
+  <a href="#for-silvergold-what-this-would-look-like-in-fabric" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For silver→gold: add a check after the join
+        For silver→gold: what this would look like in Fabric
       
     </span>
   </a>
@@ -1478,11 +1506,13 @@
 
 
 <h1 id="add-validation-checks">Add Validation Checks</h1>
-<p><em>Practice - Session 1. Individual.</em>
-<em>Aim: 30 minutes.</em></p>
+<p><em>Practice - Session 1. Individual.</em></p>
 <hr>
 <h2 id="what-you-are-doing">What you are doing</h2>
 <p>You designed the checks. Now write the code.</p>
+<blockquote>
+<p><strong>This is a code-sketch. You are writing what you would add - not running it. Plain Python assert statements are enough.</strong></p>
+</blockquote>
 <p>The existing validation cell in the bronze→silver notebook is shown below.
 Your task is to extend it with three more checks - your choice from the list you designed, or one you came up with yourself.</p>
 <hr>
@@ -1563,21 +1593,12 @@ Your task is to extend it with three more checks - your choice from the list you
 </code></pre></div>
 </details>
 <hr>
-<h2 id="for-silvergold-add-a-check-after-the-join">For silver→gold: add a check after the join</h2>
-<p>The join happens in the second notebook. Add a check after the merge:</p>
-<div class="highlight"><pre><span></span><code><span class="n">sales</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'silver_sales'</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
-<span class="n">products</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'silver_products'</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
-
-<span class="n">joined</span> <span class="o">=</span> <span class="n">sales</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'product_id'</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-
-<span class="c1"># Your check here - what should always be true after a left join on product_id?</span>
-</code></pre></div>
-<details>
-<summary>Join integrity check</summary>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">sales</span><span class="p">),</span> <span class="s2">"row count changed after join - unexpected"</span>
+<h2 id="for-silvergold-what-this-would-look-like-in-fabric">For silver→gold: what this would look like in Fabric</h2>
+<p>If this were running in Fabric, you would also add a check after the join in the Silver to Gold notebook. This is illustrative - you are not writing this as a task:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># After the merge in the Silver to Gold notebook</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">sales</span><span class="p">),</span> <span class="s2">"row count changed after join - unexpected"</span>
 <span class="k">assert</span> <span class="n">joined</span><span class="p">[</span><span class="s1">'category'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"some product_ids did not match silver_products"</span>
 </code></pre></div>
-</details>
 <hr>
 <h2 id="reflect">Reflect</h2>
 <ol>

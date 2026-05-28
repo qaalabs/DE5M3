@@ -6,7 +6,7 @@
       
       
       
-        <link rel="prev" href="../../labs/32-medallion-lab/">
+        <link rel="prev" href="../pipeline-solution/">
       
       
         <link rel="next" href="../checks-design/">
@@ -1138,6 +1138,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌅 Welcome to Day 4 of DE5 Module 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1238,17 +1266,6 @@
     <span class="md-ellipsis">
       
         Discuss
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-to-share" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prepare to share
       
     </span>
   </a>
@@ -1456,8 +1473,7 @@
 
 
 <h1 id="where-could-this-go-wrong">Where Could This Go Wrong?</h1>
-<p><em>Discussion - Session 1. Work in small groups, then share with the room.</em>
-<em>Aim: 20 minutes.</em></p>
+<p><em>Discussion - Session 1. Work in small groups, then discuss as a group.</em></p>
 <hr>
 <h2 id="the-question">The question</h2>
 <blockquote>
@@ -1511,14 +1527,12 @@ That is worse than a crash, because a crash tells you something went wrong.</p>
 </table>
 <hr>
 <h2 id="prompts-to-get-started">Prompts to get started</h2>
-<p>Things that could go wrong silently:</p>
+<p>Things that could go wrong silently in the HomeSphere pipeline:</p>
 <ul>
-<li>The source file arrives with <strong>fewer rows than expected</strong> - a supplier dropped 200 records</li>
-<li>A <strong>new product ID</strong> appears that does not exist in the products table - it gets dropped in the join</li>
-<li>A date column <strong>changes format</strong> in the source - dates start parsing as NaT silently</li>
-<li>A column that should never be null <strong>has nulls</strong> - calculations produce NaN without warning</li>
-<li>A <strong>duplicate order ID</strong> slips through - revenue is double-counted</li>
-<li>A region name changes spelling - a filter downstream misses it</li>
+<li><code>sales_raw.csv</code> arrives with 25 rows instead of 30 - Cell 1 prints the lower count, nothing fails</li>
+<li><code>order_date</code> arrives as MM/DD/YYYY - <code>dayfirst=True</code> parses it silently with wrong dates</li>
+<li>A <code>product_id</code> in sales has no match in <code>silver_products</code> - the left join drops it silently, <code>gold_revenue</code> understates revenue</li>
+<li>A £ symbol appears in <code>quantity</code> instead of <code>unit_price</code> - <code>pd.to_numeric</code> coerces it to NaN, the row is dropped silently</li>
 </ul>
 <hr>
 <h2 id="discuss">Discuss</h2>
@@ -1527,14 +1541,6 @@ That is worse than a crash, because a crash tells you something went wrong.</p>
 <li>Which would it miss?</li>
 <li>Is there a pattern to what kinds of failures are caught vs missed?</li>
 </ol>
-<hr>
-<h2 id="prepare-to-share">Prepare to share</h2>
-<p>Pick one silent failure your group thinks is the most dangerous. Be ready to explain:</p>
-<ul>
-<li>What would go wrong?</li>
-<li>At which layer?</li>
-<li>What would a user see - and how long before they noticed?</li>
-</ul>
 
 
 
