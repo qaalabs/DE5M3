@@ -1119,10 +1119,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
+  <a href="#step-1-start-the-microsoft-fabric-playground" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Access Microsoft Fabric
+        Step 1: Start the Microsoft Fabric Playground
       
     </span>
   </a>
@@ -1130,10 +1130,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
+  <a href="#step-2-logon-to-azure-and-microsoft-fabric" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Create a workspace
+        Step 2: Logon to Azure and Microsoft Fabric
       
     </span>
   </a>
@@ -1141,10 +1141,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-lakehouse" class="md-nav__link">
+  <a href="#step-3-create-a-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a lakehouse
+        Step 3: Create a workspace
       
     </span>
   </a>
@@ -1152,10 +1152,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-create-the-bronze-layer" class="md-nav__link">
+  <a href="#step-4-create-a-lakehouse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Create the bronze layer
+        Step 4: Create a lakehouse
       
     </span>
   </a>
@@ -1163,10 +1163,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-create-the-bronze-to-silver-notebook" class="md-nav__link">
+  <a href="#step-5-create-the-bronze-layer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Create the Bronze to Silver notebook
+        Step 5: Create the bronze layer
       
     </span>
   </a>
@@ -1174,10 +1174,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-explore-the-silver-layer" class="md-nav__link">
+  <a href="#step-6-create-the-bronze-to-silver-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Explore the silver layer
+        Step 6: Create the Bronze to Silver notebook
       
     </span>
   </a>
@@ -1185,10 +1185,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7-create-the-silver-to-gold-notebook" class="md-nav__link">
+  <a href="#step-7-explore-the-silver-layer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 7: Create the Silver to Gold notebook
+        Step 7: Explore the silver layer
       
     </span>
   </a>
@@ -1196,10 +1196,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-8-answer-the-business-question" class="md-nav__link">
+  <a href="#step-8-create-the-silver-to-gold-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 8: Answer the business question
+        Step 8: Create the Silver to Gold notebook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-answer-the-business-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 9: Answer the business question
       
     </span>
   </a>
@@ -1511,20 +1522,29 @@
 
 
 <h1 id="lab-32-homesphere-medallion-architecture">Lab 3.2 ~ HomeSphere Medallion Architecture</h1>
-<div class="admonition info">
-<p class="admonition-title">For this lab, you will access the QA Platform and sign in using the credentials provided.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
-</div>
-<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
 <p>In this lab, you will restructure the HomeSphere data into three clearly separated layers: <strong>bronze</strong> (raw), <strong>silver</strong> (cleaned and trusted), and <strong>gold</strong> (business-ready output).</p>
+<h2 id="step-1-start-the-microsoft-fabric-playground">Step 1: Start the Microsoft Fabric Playground</h2>
 <ol>
 <li>
-<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
+<p>Navigate to the [Microsoft Fabric Playground] on the <strong>QA Platform</strong> at: <a href="https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/">https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/</a> </p>
 </li>
 <li>
-<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
+<p>Click <strong>Start</strong> to start the lab.</p>
+</li>
+<li>
+<p>Make a note of your allocated <strong>username</strong> and <strong>password</strong>.</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Wait until the lab status shows <strong>Ready</strong>, before continuing with the next step!</p>
+</div>
+<h2 id="step-2-logon-to-azure-and-microsoft-fabric">Step 2: Logon to Azure and Microsoft Fabric</h2>
+<ol>
+<li>
+<p>Open a <strong>private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
+</li>
+<li>
+<p>Navigate to the <a href="https://portal.azure.com/">Microsoft Azure home page</a> at: <a href="https://portal.azure.com">https://portal.azure.com</a></p>
 </li>
 <li>
 <p>When prompted, sign in using:</p>
@@ -1554,7 +1574,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<h2 id="step-3-create-a-workspace">Step 3: Create a workspace</h2>
 <ol>
 <li>
 <p>In the navigation pane on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
@@ -1572,7 +1592,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h2>
+<h2 id="step-4-create-a-lakehouse">Step 4: Create a lakehouse</h2>
 <ol>
 <li>
 <p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
@@ -1588,8 +1608,8 @@
 </div>
 </li>
 </ol>
-<h2 id="step-4-create-the-bronze-layer">Step 4: Create the bronze layer</h2>
-<p>The bronze layer holds raw data exactly as it arrived — no modifications.</p>
+<h2 id="step-5-create-the-bronze-layer">Step 5: Create the bronze layer</h2>
+<p>The bronze layer holds raw data exactly as it arrived - no modifications.</p>
 <ol>
 <li>
 <p>In the <strong>Explorer</strong> pane, click the <strong>...</strong> menu for the <strong>Files</strong> folder and select <strong>New subfolder</strong>.</p>
@@ -1618,8 +1638,8 @@
 </div>
 </li>
 </ol>
-<h2 id="step-5-create-the-bronze-to-silver-notebook">Step 5: Create the Bronze to Silver notebook</h2>
-<p>Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation — but you do not yet answer any business question.</p>
+<h2 id="step-6-create-the-bronze-to-silver-notebook">Step 6: Create the Bronze to Silver notebook</h2>
+<p>Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation - but you do not yet answer any business question.</p>
 <ol>
 <li>
 <p>On the <strong>Home</strong> tab of the lakehouse, select <strong>Open notebook</strong> &gt; <strong>New notebook</strong>.</p>
@@ -1629,19 +1649,22 @@
 </li>
 </ol>
 <p>Work through the following cells in order, adding each one and running it before moving to the next.</p>
-<h3 id="cell-1-clean-sales">Cell 1 — Clean sales</h3>
+<h3 id="cell-1-load-the-sales-raw-file">Cell 1 - Load the sales raw file</h3>
 <p>Paste the following into the first cell and run it:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 1</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 
 <span class="c1"># Read raw sales from bronze</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/lakehouse/default/Files/bronze/sales_raw.csv'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Bronze: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
-
-<span class="c1"># Clean</span>
+</code></pre></div>
+<h3 id="cell-2-clean-sales">Cell 2 - Clean sales</h3>
+<p>Paste the following into the second cell and run it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 2 - Clean</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'£'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">],</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'mixed'</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">])</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -1655,10 +1678,11 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Silver: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Dropped: </span><span class="si">{</span><span class="mi">30</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-2-validate-before-saving">Cell 2 — Validate before saving</h3>
-<p>Add a new cell and run the following validation checks — never save data you have not verified:</p>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">float</span><span class="p">,</span> <span class="s2">"unit_price should be float"</span>
-<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">"quantity should be int"</span>
+<h3 id="cell-3-validate-before-saving">Cell 3 - Validate before saving</h3>
+<p>Add a new cell and run the following validation checks - never save data you have not verified:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 3 - Validate</span>
+<span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_float_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]),</span> <span class="s2">"unit_price should be float"</span>
+<span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_integer_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]),</span> <span class="s2">"quantity should be int"</span>
 <span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'product_id'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"product_id should have no nulls"</span>
 <span class="k">assert</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">"all prices should be positive"</span>
 <span class="k">assert</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">"all quantities should be positive"</span>
@@ -1666,15 +1690,17 @@
 <span class="nb">print</span><span class="p">(</span><span class="s1">'All validation checks passed'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-3-write-silver_sales">Cell 3 — Write silver_sales</h3>
+<h3 id="cell-4-write-silver_sales">Cell 4 - Write silver_sales</h3>
 <p>Add a new cell and run it:</p>
-<div class="highlight"><pre><span></span><code><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'silver_sales'</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 4 - Write</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'silver_sales'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Saved: silver_sales'</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-4-flatten-products">Cell 4 — Flatten products</h3>
+<h3 id="cell-5-flatten-products">Cell 5 - Flatten products</h3>
 <p>Add a new cell and run it:</p>
-<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/lakehouse/default/Files/bronze/products_raw.json'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 5 - Flatten</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/lakehouse/default/Files/bronze/products_raw.json'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">products_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
 <span class="n">products</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">products_data</span><span class="p">[</span><span class="s1">'products'</span><span class="p">])</span>
@@ -1688,18 +1714,19 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Products flattened: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">products</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">products</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
 </code></pre></div>
-<h3 id="cell-5-write-silver_products">Cell 5 — Write silver_products</h3>
+<h3 id="cell-6-write-silver_products">Cell 6 - Write silver_products</h3>
 <p>Add a new cell and run it:</p>
-<div class="highlight"><pre><span></span><code><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">products</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'silver_products'</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 6 - Write</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">products</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'silver_products'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Saved: silver_products'</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition success">
-<p class="admonition-title">Refresh the <strong>Tables</strong> pane — <code>silver_sales</code> and <code>silver_products</code> should now be listed.</p>
+<p class="admonition-title">Refresh the <strong>Tables</strong> pane - <code>silver_sales</code> and <code>silver_products</code> should now be listed.</p>
 </div>
 <p>After running all five cells, on the toolbar use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18H6V6h12z"></path></svg></span> (<em>Stop session</em>) button to stop the Spark session.</p>
-<h2 id="step-6-explore-the-silver-layer">Step 6: Explore the silver layer</h2>
-<p>Silver is the trust boundary — anyone querying these tables knows the data has been cleaned and validated.</p>
+<h2 id="step-7-explore-the-silver-layer">Step 7: Explore the silver layer</h2>
+<p>Silver is the trust boundary - anyone querying these tables knows the data has been cleaned and validated.</p>
 <ol>
 <li>
 <p>In the left navigation bar, select your <strong>HomeSphere</strong> lakehouse.</p>
@@ -1721,8 +1748,8 @@
 </code></pre></div>
 </li>
 </ol>
-<h2 id="step-7-create-the-silver-to-gold-notebook">Step 7: Create the Silver to Gold notebook</h2>
-<p>Gold answers a specific business question. It is always built from silver — never from bronze directly.</p>
+<h2 id="step-8-create-the-silver-to-gold-notebook">Step 8: Create the Silver to Gold notebook</h2>
+<p>Gold answers a specific business question. It is always built from silver - never from bronze directly.</p>
 <ol>
 <li>
 <p>In the left navigation bar, return to your <strong>HomeSphere</strong> lakehouse.</p>
@@ -1739,11 +1766,12 @@
 </li>
 </ol>
 <p>Work through the following cells in order.</p>
-<h3 id="cell-1-join-silver-tables">Cell 1 — Join silver tables</h3>
+<h3 id="cell-1-join-silver-tables">Cell 1 - Join silver tables</h3>
 <p>Paste the following into the first cell and run it:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 1 - Join</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="c1"># Read from silver — not from bronze, not from raw files</span>
+<span class="c1"># Read from silver - not from bronze, not from raw files</span>
 <span class="n">sales</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">'silver_sales'</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 <span class="n">sales</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">sales</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">])</span>
 
@@ -1757,16 +1785,17 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Gold dataset: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s1"> rows'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Total revenue: £</span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s2">"line_value"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s1">,.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="cell-2-write-gold_revenue">Cell 2 — Write gold_revenue</h3>
+<h3 id="cell-2-write-gold_revenue">Cell 2 - Write gold_revenue</h3>
 <p>Add a new cell and run it:</p>
-<div class="highlight"><pre><span></span><code><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'gold_revenue'</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 2 - Write</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">'overwrite'</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">'gold_revenue'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Saved: gold_revenue'</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition success">
-<p class="admonition-title">Refresh the <strong>Tables</strong> pane — <code>gold_revenue</code> should now be listed.</p>
+<p class="admonition-title">Refresh the <strong>Tables</strong> pane - <code>gold_revenue</code> should now be listed.</p>
 </div>
-<h2 id="step-8-answer-the-business-question">Step 8: Answer the business question</h2>
+<h2 id="step-9-answer-the-business-question">Step 9: Answer the business question</h2>
 <ol>
 <li>
 <p>In the left navigation bar, select your <strong>HomeSphere</strong> lakehouse.</p>
@@ -1786,7 +1815,7 @@
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is the same revenue answer as Day 1 and Day 2 — but now it comes from a clearly labelled gold table, built from trusted silver sources, which in turn came from untouched bronze data.</p>
+<p>This is the same revenue answer as Day 1 and Day 2 - but now it comes from a clearly labelled gold table, built from trusted silver sources, which in turn came from untouched bronze data.</p>
 </div>
 </li>
 </ol>

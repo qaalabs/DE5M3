@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes - Bridge to Day 4 - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>HomeSphere Pipeline — Solution Diagram - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#facilitator-notes-bridge-to-day-4" class="md-skip">
+        <a href="#homesphere-pipeline-solution-diagram" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes - Bridge to Day 4
+              HomeSphere Pipeline — Solution Diagram
             
           </span>
         </div>
@@ -969,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fragile/" class="md-nav__link">
+      <a href="../../day3/fragile/" class="md-nav__link">
         
   
   
@@ -997,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../med-map/" class="md-nav__link">
+      <a href="../../day3/med-map/" class="md-nav__link">
         
   
   
@@ -1135,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day4/silent-fail/" class="md-nav__link">
+      <a href="../silent-fail/" class="md-nav__link">
         
   
   
@@ -1163,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day4/checks-design/" class="md-nav__link">
+      <a href="../checks-design/" class="md-nav__link">
         
   
   
@@ -1191,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day4/checks-build/" class="md-nav__link">
+      <a href="../checks-build/" class="md-nav__link">
         
   
   
@@ -1219,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day4/mvd-build/" class="md-nav__link">
+      <a href="../mvd-build/" class="md-nav__link">
         
   
   
@@ -1247,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day4/mvd-review/" class="md-nav__link">
+      <a href="../mvd-review/" class="md-nav__link">
         
   
   
@@ -1275,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day4/pitch-prep/" class="md-nav__link">
+      <a href="../pitch-prep/" class="md-nav__link">
         
   
   
@@ -1347,43 +1347,74 @@
 
 
 
-<h1 id="facilitator-notes-bridge-to-day-4">Facilitator Notes - Bridge to Day 4</h1>
-<p><em>Trainer-only. Final 10 minutes of Day 3.</em></p>
+<h1 id="homesphere-pipeline-solution-diagram">HomeSphere Pipeline — Solution Diagram</h1>
+<p><em>The completed medallion architecture after Day 3.</em></p>
+<div class="highlight"><pre><span></span><code>flowchart LR
+    subgraph SRC["Sources"]
+        CSV["sales_raw.csv"]
+        JSON["products_raw.json"]
+    end
+
+    subgraph BRZ["Bronze — raw, untouched"]
+        BCSV["Files/bronze/\nsales_raw.csv"]
+        BJSON["Files/bronze/\nproducts_raw.json"]
+    end
+
+    subgraph NB1["Notebook: Bronze to Silver"]
+        CLEAN["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]
+        FLAT["flatten JSON\n(json_normalize)"]
+    end
+
+    subgraph SIL["Silver — cleaned &amp; trusted"]
+        SS["silver_sales"]
+        SP["silver_products"]
+    end
+
+    subgraph NB2["Notebook: Silver to Gold"]
+        JOIN["join on product_id\ncompute line_value"]
+    end
+
+    subgraph GLD["Gold — business-ready"]
+        GR["gold_revenue\n(revenue by category)"]
+    end
+
+    CSV --&gt; BCSV
+    JSON --&gt; BJSON
+    BCSV --&gt; CLEAN
+    BJSON --&gt; FLAT
+    CLEAN --&gt; SS
+    FLAT --&gt; SP
+    SS --&gt; JOIN
+    SP --&gt; JOIN
+    JOIN --&gt; GR
+</code></pre></div>
 <hr>
-<h2 id="summarise-day-3-in-one-sentence">Summarise Day 3 in one sentence</h2>
-<blockquote>
-<p>"The pipeline did not change what it produces - it changed how reliably and legibly it produces it."</p>
-</blockquote>
-<hr>
-<h2 id="what-they-now-have">What they now have</h2>
-<ul>
-<li>A pipeline with clear layers: bronze, silver, gold</li>
-<li>Validated silver tables that fail loudly if something is wrong</li>
-<li>A gold output that any analyst in the workspace can query with SQL</li>
-<li>A design they could hand to another engineer and explain</li>
-</ul>
-<hr>
-<h2 id="what-is-still-missing-set-up-day-4">What is still missing - set up Day 4</h2>
-<p>Ask: <strong>"If this pipeline ran overnight and produced wrong numbers at 9am, how would you know?"</strong></p>
-<p>The honest answer: they probably would not know until someone noticed.</p>
-<p>There is no monitoring. No alerting. No documentation of what the pipeline does or why
-decisions were made. No way for a new person to understand the intent without reading
-every cell of every notebook.</p>
-<blockquote>
-<p>"Tomorrow is about making this pipeline something you can hand over, explain, and trust to run without you watching it."</p>
-</blockquote>
-<p>Day 4 themes to name briefly:</p>
-<ul>
-<li><strong>Data quality checks</strong> beyond basic assertions</li>
-<li><strong>Logging and observability</strong> - knowing the pipeline ran and what it produced</li>
-<li><strong>Documentation</strong> - writing down the why, not just the what</li>
-<li><strong>Handover</strong> - could someone else support this pipeline on Monday morning?</li>
-</ul>
-<hr>
-<h2 id="close">Close</h2>
-<blockquote>
-<p>"Three days ago you had a messy CSV and a question. Today you have a documented, layered pipeline running in the cloud. Tomorrow we make it production-ready."</p>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Items</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bronze</td>
+<td><code>Files/bronze/sales_raw.csv</code>, <code>Files/bronze/products_raw.json</code></td>
+<td>Never modified after landing</td>
+</tr>
+<tr>
+<td>Silver</td>
+<td><code>silver_sales</code>, <code>silver_products</code></td>
+<td>Cleaned, validated — safe to build from</td>
+</tr>
+<tr>
+<td>Gold</td>
+<td><code>gold_revenue</code></td>
+<td>Built from silver only — answers the business question</td>
+</tr>
+</tbody>
+</table>
 
 
 
