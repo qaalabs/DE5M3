@@ -1,22 +1,25 @@
 # Lab 3.2 ~ HomeSphere Medallion Architecture
 
-!!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
-
-!!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
-
 In this lab, you will restructure the HomeSphere data into three clearly separated layers: **bronze** (raw), **silver** (cleaned and trusted), and **gold** (business-ready output).
 
-## Step 1: Access Microsoft Fabric
+## Step 1: Start the Microsoft Fabric Playground
 
-1. In the QA Platform, wait until the lab status shows **Ready**.
+1. Navigate to the [Microsoft Fabric Playground] on the **QA Platform** at: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/ 
 
-2. Make a note of your allocated **username** and **password**.
+2. Click **Start** to start the lab.
 
-3. Open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
+3. Make a note of your allocated **username** and **password**.
 
-4. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
+!!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
 
-5. When prompted, sign in using:
+
+## Step 2: Logon to Azure and Microsoft Fabric
+
+1. Open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
+
+2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
+
+3. When prompted, sign in using:
 
     - **Username** from the QA Platform (used as the email address)
     - **Password** from the QA Platform (used as a Temporary Access Pass)
@@ -25,17 +28,17 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
 
     !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
 
-6. In the same private browsing window, **open a new tab**.
+4. In the same private browsing window, **open a new tab**.
 
-7. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
+5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
 
-8. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
+6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
 
     !!! quote ""
         ![Fabric home page](img/qa-fabric-home.png)
 
 
-## Step 2: Create a workspace
+## Step 3: Create a workspace
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
@@ -50,7 +53,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
-## Step 3: Create a lakehouse
+## Step 4: Create a lakehouse
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
@@ -64,7 +67,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
         ![New lakehouse.](img/new-lakehouse.png)
 
 
-## Step 4: Create the bronze layer
+## Step 5: Create the bronze layer
 
 The bronze layer holds raw data exactly as it arrived - no modifications.
 
@@ -87,7 +90,7 @@ The bronze layer holds raw data exactly as it arrived - no modifications.
         Never write transformed data into the bronze folder. If you need to re-run the pipeline from scratch, bronze is your guaranteed clean starting point.
 
 
-## Step 5: Create the Bronze to Silver notebook
+## Step 6: Create the Bronze to Silver notebook
 
 Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation - but you do not yet answer any business question.
 
@@ -198,7 +201,7 @@ print('Saved: silver_products')
 After running all five cells, on the toolbar use the :material-stop: (*Stop session*) button to stop the Spark session.
 
 
-## Step 6: Explore the silver layer
+## Step 7: Explore the silver layer
 
 Silver is the trust boundary - anyone querying these tables knows the data has been cleaned and validated.
 
@@ -223,7 +226,7 @@ Silver is the trust boundary - anyone querying these tables knows the data has b
     ```
 
 
-## Step 7: Create the Silver to Gold notebook
+## Step 8: Create the Silver to Gold notebook
 
 Gold answers a specific business question. It is always built from silver - never from bronze directly.
 
@@ -275,7 +278,7 @@ print('Saved: gold_revenue')
 !!! success "Refresh the **Tables** pane - `gold_revenue` should now be listed."
 
 
-## Step 8: Answer the business question
+## Step 9: Answer the business question
 
 1. In the left navigation bar, select your **HomeSphere** lakehouse.
 

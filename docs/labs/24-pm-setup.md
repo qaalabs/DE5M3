@@ -1,17 +1,24 @@
 # Lab 2.4 ~ Set Up the Afternoon Session
 
-!!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
-
-!!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
-
 This lab sets up a fresh HomeSphere environment for the afternoon. By the end, your lakehouse will be ready and the `cleaned_sales` table will exist so you can continue straight into Lab 2.5.
 
 
-## Step 1: Access Microsoft Fabric
+## Step 1: Start the Microsoft Fabric Playground
 
-1. In the QA Platform, wait until the lab status shows **Ready**.
+1. Navigate to the [Microsoft Fabric Playground] on the **QA Platform** at: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
 
-2. Then right-click **Open** and choose **Open in a private browsing window** (InPrivate in Edge, Incognito in Chrome).
+2. Click **Start** to start the lab.
+
+3. Make a note of your allocated **username** and **password**.
+
+!!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
+
+
+## Step 2: Logon to Azure and Microsoft Fabric
+
+1. Open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
+
+2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
 
 3. When prompted, sign in using:
 
@@ -32,7 +39,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
         ![Fabric home page](img/qa-fabric-home.png)
 
 
-## Step 2: Create a workspace
+## Step 3: Create a workspace
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
@@ -47,7 +54,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
-## Step 3: Create a lakehouse
+## Step 4: Create a lakehouse
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
@@ -60,7 +67,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
         ![New lakehouse.](img/new-lakehouse.png)
 
 
-## Step 4: Upload the HomeSphere data files
+## Step 5: Upload the HomeSphere data files
 
 1. In the **Explorer** pane of the lakehouse, click the **...** menu for the **Files** folder and select **New subfolder**.
 
@@ -83,7 +90,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
     !!! tip "If the files do not automatically appear, in the **...** menu for the `data` folder, select **Refresh**."
 
 
-## Step 5: Import the notebooks
+## Step 6: Import the notebooks
 
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
@@ -102,7 +109,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
     !!! success "All four notebooks should now appear as items in your workspace."
 
 
-## Step 6: Attach the lakehouse to the notebooks
+## Step 7: Attach the lakehouse to the notebooks
 
 1. In the left navigation bar, return to your lakehouse `HomeSphere`.
 
@@ -123,7 +130,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
     !!! success "Both notebooks are now connected to the HomeSphere lakehouse."
 
 
-## Step 7: Run the pm_setup notebook
+## Step 8: Run the pm_setup notebook
 
 This creates the `cleaned_sales` table ready for Lab 2.5.
 

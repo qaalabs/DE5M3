@@ -32,6 +32,7 @@ every cell of every notebook.
 > "Tomorrow is about making this pipeline something you can hand over, explain, and trust to run without you watching it."
 
 Day 4 themes to name briefly:
+
 - **Data quality checks** beyond basic assertions
 - **Logging and observability** - knowing the pipeline ran and what it produced
 - **Documentation** - writing down the why, not just the what
