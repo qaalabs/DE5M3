@@ -24,6 +24,6 @@ This will create a `HomeSphere` folder on your Desktop containing all the files 
 
 In Terminal (or File Explorer), check that the `HomeSphere` folder on your Desktop contains:
 
-- `data/` — the raw source files
+- `data/` - the raw source files
 
 !!! success "You are ready to start. The lab will use the files in the `data/` folder."

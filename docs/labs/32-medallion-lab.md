@@ -63,7 +63,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
 
 ## Step 4: Create the bronze layer
 
-The bronze layer holds raw data exactly as it arrived — no modifications.
+The bronze layer holds raw data exactly as it arrived - no modifications.
 
 1. In the **Explorer** pane, click the **...** menu for the **Files** folder and select **New subfolder**.
 
@@ -86,7 +86,7 @@ The bronze layer holds raw data exactly as it arrived — no modifications.
 
 ## Step 5: Create the Bronze to Silver notebook
 
-Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation — but you do not yet answer any business question.
+Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation - but you do not yet answer any business question.
 
 1. On the **Home** tab of the lakehouse, select **Open notebook** > **New notebook**.
 
@@ -94,7 +94,7 @@ Silver is where raw data becomes trusted. You apply cleaning, validation, and st
 
 Work through the following cells in order, adding each one and running it before moving to the next.
 
-### Cell 1 — Clean sales
+### Cell 1 - Clean sales
 
 Paste the following into the first cell and run it:
 
@@ -124,9 +124,9 @@ print(f'Silver: {len(df)} rows')
 print(f'Dropped: {30 - len(df)} rows')
 ```
 
-### Cell 2 — Validate before saving
+### Cell 2 - Validate before saving
 
-Add a new cell and run the following validation checks — never save data you have not verified:
+Add a new cell and run the following validation checks - never save data you have not verified:
 
 ```python
 assert df['unit_price'].dtype == float, "unit_price should be float"
@@ -139,7 +139,7 @@ print('All validation checks passed')
 print(df.dtypes)
 ```
 
-### Cell 3 — Write silver_sales
+### Cell 3 - Write silver_sales
 
 Add a new cell and run it:
 
@@ -149,7 +149,7 @@ spark.createDataFrame(df).write.mode('overwrite').saveAsTable('silver_sales')
 print('Saved: silver_sales')
 ```
 
-### Cell 4 — Flatten products
+### Cell 4 - Flatten products
 
 Add a new cell and run it:
 
@@ -169,7 +169,7 @@ print(f'Products flattened: {len(products)} rows')
 print(products.columns.tolist())
 ```
 
-### Cell 5 — Write silver_products
+### Cell 5 - Write silver_products
 
 Add a new cell and run it:
 
@@ -179,14 +179,14 @@ spark.createDataFrame(products).write.mode('overwrite').saveAsTable('silver_prod
 print('Saved: silver_products')
 ```
 
-!!! success "Refresh the **Tables** pane — `silver_sales` and `silver_products` should now be listed."
+!!! success "Refresh the **Tables** pane - `silver_sales` and `silver_products` should now be listed."
 
 After running all five cells, on the toolbar use the :material-stop: (*Stop session*) button to stop the Spark session.
 
 
 ## Step 6: Explore the silver layer
 
-Silver is the trust boundary — anyone querying these tables knows the data has been cleaned and validated.
+Silver is the trust boundary - anyone querying these tables knows the data has been cleaned and validated.
 
 1. In the left navigation bar, select your **HomeSphere** lakehouse.
 
@@ -211,7 +211,7 @@ Silver is the trust boundary — anyone querying these tables knows the data has
 
 ## Step 7: Create the Silver to Gold notebook
 
-Gold answers a specific business question. It is always built from silver — never from bronze directly.
+Gold answers a specific business question. It is always built from silver - never from bronze directly.
 
 1. In the left navigation bar, return to your **HomeSphere** lakehouse.
 
@@ -224,14 +224,14 @@ Gold answers a specific business question. It is always built from silver — ne
 
 Work through the following cells in order.
 
-### Cell 1 — Join silver tables
+### Cell 1 - Join silver tables
 
 Paste the following into the first cell and run it:
 
 ```python
 import pandas as pd
 
-# Read from silver — not from bronze, not from raw files
+# Read from silver - not from bronze, not from raw files
 sales = spark.read.table('silver_sales').toPandas()
 sales['order_date'] = pd.to_datetime(sales['order_date'])
 
@@ -246,7 +246,7 @@ print(f'Gold dataset: {len(df)} rows')
 print(f'Total revenue: £{df["line_value"].sum():,.2f}')
 ```
 
-### Cell 2 — Write gold_revenue
+### Cell 2 - Write gold_revenue
 
 Add a new cell and run it:
 
@@ -256,7 +256,7 @@ spark.createDataFrame(df).write.mode('overwrite').saveAsTable('gold_revenue')
 print('Saved: gold_revenue')
 ```
 
-!!! success "Refresh the **Tables** pane — `gold_revenue` should now be listed."
+!!! success "Refresh the **Tables** pane - `gold_revenue` should now be listed."
 
 
 ## Step 8: Answer the business question
@@ -278,7 +278,7 @@ print('Saved: gold_revenue')
     ```
 
     !!! note
-        This is the same revenue answer as Day 1 and Day 2 — but now it comes from a clearly labelled gold table, built from trusted silver sources, which in turn came from untouched bronze data.
+        This is the same revenue answer as Day 1 and Day 2 - but now it comes from a clearly labelled gold table, built from trusted silver sources, which in turn came from untouched bronze data.
 
 
 ## Discussion
