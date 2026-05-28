@@ -73,7 +73,7 @@
 
 ### Session 2
 
-- `11:00` Bronze, Silver, Gold (30 mins)
+- `11:00` [Bronze, Silver, Gold](day3/medallion/group-scenarios.md) (30 mins)
 - `11:30` **Practice**: [Map the Pipeline](day3/med-map.md) (30 mins)
 - `12:00` **Discussion**: [What Needs to Move?](day3/med-debrief.md) (20 mins)
 
@@ -85,6 +85,7 @@
 
 ### Session 4
 
+- `14:50` [Bronze, Silver, Gold](day3/medallion/group-scenarios.md) (50 mins)
 - `15:40` **Discussion**: [Bridge to Day 4](day3/bridge.md) (10 mins)
 
 ---
