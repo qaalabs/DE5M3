@@ -1,4 +1,6 @@
 ## *Someone else needs to run this pipeline*
 
-The pipeline is working and well-structured. We now add validation checks, produce a handover artefact, and practise explaining the output to a stakeholder.
+What turns a working classroom pipeline into something another person could trust, inherit, and use?
+
+*"I thought ETL ended when the data came out right. Now I can see that trust, explanation, and handover are part of the job too."*
 <br>
