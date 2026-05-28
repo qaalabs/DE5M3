@@ -1,4 +1,4 @@
-## Picth Share
+## Pitch Share
 
 - What built trust?
 - What confused the message?
