@@ -16,7 +16,7 @@
     
     
       
-        <title>HomeSphere Pipeline — Solution Diagram - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>HomeSphere Pipeline - Solution Diagram - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HomeSphere Pipeline — Solution Diagram
+              HomeSphere Pipeline - Solution Diagram
             
           </span>
         </div>
@@ -1347,7 +1347,7 @@
 
 
 
-<h1 id="homesphere-pipeline-solution-diagram">HomeSphere Pipeline — Solution Diagram</h1>
+<h1 id="homesphere-pipeline-solution-diagram">HomeSphere Pipeline - Solution Diagram</h1>
 <p><em>The completed medallion architecture after Day 3.</em></p>
 <pre class="mermaid"><code>flowchart LR
     subgraph SRC["Sources"]
@@ -1355,7 +1355,7 @@
         JSON["products_raw.json"]
     end
 
-    subgraph BRZ["Bronze — raw, untouched"]
+    subgraph BRZ["Bronze - raw, untouched"]
         BCSV["Files/bronze/\nsales_raw.csv"]
         BJSON["Files/bronze/\nproducts_raw.json"]
     end
@@ -1365,7 +1365,7 @@
         FLAT["flatten JSON\n(json_normalize)"]
     end
 
-    subgraph SIL["Silver — cleaned &amp; trusted"]
+    subgraph SIL["Silver - cleaned &amp; trusted"]
         SS["silver_sales"]
         SP["silver_products"]
     end
@@ -1374,7 +1374,7 @@
         JOIN["join on product_id\ncompute line_value"]
     end
 
-    subgraph GLD["Gold — business-ready"]
+    subgraph GLD["Gold - business-ready"]
         GR["gold_revenue\n(revenue by category)"]
     end
 
@@ -1405,12 +1405,12 @@
 <tr>
 <td>Silver</td>
 <td><code>silver_sales</code>, <code>silver_products</code></td>
-<td>Cleaned, validated — safe to build from</td>
+<td>Cleaned, validated - safe to build from</td>
 </tr>
 <tr>
 <td>Gold</td>
 <td><code>gold_revenue</code></td>
-<td>Built from silver only — answers the business question</td>
+<td>Built from silver only - answers the business question</td>
 </tr>
 </tbody>
 </table>
