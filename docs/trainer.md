@@ -37,7 +37,6 @@
 
 - `09:50` What Is Fabric? (10 mins)
 - `10:00` **Practice**: [Lab 2.1 - Explore Fabric Environment](labs/21-lakehouse.md) (30 mins)
-- `10:30` **Discussion**: What Stays the Same? (10 mins)
 
 ### Session 2
 
@@ -67,9 +66,9 @@
 
 ### Session 1
 
-- `09:40` [Design Review](day3/review.md) (20 mins)
-- `10:00` **Breakout**: [Where are the Weaknesses?](day3/fragile.md) (20 mins)
-- `10:20` **Report-Back**: Our Design Debts (20 mins)
+- `09:40` [Design Review](day3/review.md) (10 mins)
+- `09:50` **Breakout**: [Where are the Weaknesses?](day3/fragile.md) (20 mins)
+- `10:10` **Report-Back**: Our Design Debts (20 mins)
 
 ### Session 2
 

@@ -11,6 +11,7 @@
 
 ## Session 2
 
+- 
 - Bronze, Silver, Gold
 - **Practice**: [Map the Pipeline](../day3/med-map.md)
 - **Discussion**: What Needs to Move?
