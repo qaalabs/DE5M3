@@ -1349,7 +1349,7 @@
 
 <h1 id="homesphere-pipeline-solution-diagram">HomeSphere Pipeline — Solution Diagram</h1>
 <p><em>The completed medallion architecture after Day 3.</em></p>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<pre class="mermaid"><code>flowchart LR
     subgraph SRC["Sources"]
         CSV["sales_raw.csv"]
         JSON["products_raw.json"]
@@ -1386,8 +1386,7 @@
     FLAT --&gt; SP
     SS --&gt; JOIN
     SP --&gt; JOIN
-    JOIN --&gt; GR
-</code></pre></div>
+    JOIN --&gt; GR</code></pre>
 <hr>
 <table>
 <thead>
@@ -1468,6 +1467,8 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
     
   
