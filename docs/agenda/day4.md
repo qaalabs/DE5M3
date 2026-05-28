@@ -12,6 +12,7 @@
 
 ## Session 2
 
+- 
 - Minimum Viable Documentation
 - **Practice**: [Create a Handover Artefact](../day4/mvd-build.md)
 - **Breakout**: [Review Each Other's Artefact](../day4/mvd-review.md)
