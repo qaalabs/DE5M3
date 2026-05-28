@@ -33,9 +33,9 @@ nav:
 
   - "Day 3 - Robust & Well-Architectured":
     - "Where are the Weaknesses?": day3/fragile.md
-    - "Bronze, Silver, Gold": day3/medallion-lab.md
     - "Map the Pipeline": day3/med-map.md
-    - "Design B/S/G for Your Source": day3/ext-design.md
+    - "Lab 3.1 - Setup Fabric": labs/31-setup.md
+    - "Lab 3.2 - Medallion Architecture": labs/32-medallion-lab.md
 
   - "Day 4 - Supportable & Explainable":
     - "Silent Failures": day4/silent-fail.md

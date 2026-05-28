@@ -73,20 +73,18 @@
 
 ### Session 2
 
-- `11:00` [Bronze, Silver, Gold](day3/medallion-lab.md) (30 mins)
+- `11:00` Bronze, Silver, Gold (30 mins)
 - `11:30` **Practice**: [Map the Pipeline](day3/med-map.md) (30 mins)
 - `12:00` **Discussion**: [What Needs to Move?](day3/med-debrief.md) (20 mins)
 
 ### Session 3
 
-- `13:20` **Practice**: Refactor the Pipeline (50 mins)
-- `14:10` **Discussion**: [What Is Actually Better?](day3/debrief.md) (20 mins)
+- `13:20` **Practice**: [Lab 3.1 - Setup Fabric](labs/31-setup.md) (10 mins)
+- `13:30` **Practice**: [Lab 3.2 - Medallion Architecture](labs/32-medallion-lab.md) (50 mins)
+- `14:20` **Discussion**: [What Is Actually Better?](day3/debrief.md) (10 mins)
 
 ### Session 4
 
-- `14:50` Extension Source Task (10 mins)
-- `15:00` **Breakout**: [Design B/S/G for Your Source](day3/ext-design.md) (20 mins)
-- `15:20` **Report-Back**: Share Your Design (20 mins)
 - `15:40` **Discussion**: [Bridge to Day 4](day3/bridge.md) (10 mins)
 
 ---
