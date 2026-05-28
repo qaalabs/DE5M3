@@ -4,16 +4,19 @@
 
 !!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
 
+In this lab, you will restructure the HomeSphere data into three clearly separated layers: **bronze** (raw), **silver** (cleaned and trusted), and **gold** (business-ready output).
 
 ## Step 1: Access Microsoft Fabric
 
-In this lab, you will restructure the HomeSphere data into three clearly separated layers: **bronze** (raw), **silver** (cleaned and trusted), and **gold** (business-ready output).
-
 1. In the QA Platform, wait until the lab status shows **Ready**.
 
-2. Then right-click **Open** and choose **Open in a private browsing window** (InPrivate in Edge, Incognito in Chrome).
+2. Make a note of your allocated **username** and **password**.
 
-3. When prompted, sign in using:
+3. Open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
+
+4. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
+
+5. When prompted, sign in using:
 
     - **Username** from the QA Platform (used as the email address)
     - **Password** from the QA Platform (used as a Temporary Access Pass)
@@ -22,11 +25,11 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
 
     !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
 
-4. In the same private browsing window, **open a new tab**.
+6. In the same private browsing window, **open a new tab**.
 
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
+7. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
 
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
+8. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
 
     !!! quote ""
         ![Fabric home page](img/qa-fabric-home.png)
@@ -94,11 +97,12 @@ Silver is where raw data becomes trusted. You apply cleaning, validation, and st
 
 Work through the following cells in order, adding each one and running it before moving to the next.
 
-### Cell 1 - Clean sales
+### Cell 1 - Load the sales raw file
 
 Paste the following into the first cell and run it:
 
 ```python
+# Cell 1
 import pandas as pd
 import json
 
@@ -106,10 +110,16 @@ import json
 df = pd.read_csv('/lakehouse/default/Files/bronze/sales_raw.csv')
 
 print(f'Bronze: {len(df)} rows')
+```
 
-# Clean
+### Cell 2 - Clean sales
+
+Paste the following into the second cell and run it:
+
+```python
+# Cell 2 - Clean
 df['unit_price'] = df['unit_price'].astype(str).str.replace('£', '', regex=False).astype(float)
-df['order_date'] = pd.to_datetime(df['order_date'], dayfirst=True, errors='coerce')
+df['order_date'] = pd.to_datetime(df['order_date'], format='mixed', dayfirst=True, errors='coerce')
 df['quantity'] = pd.to_numeric(df['quantity'], errors='coerce')
 df = df.dropna(subset=['quantity'])
 df['quantity'] = df['quantity'].astype(int)
@@ -124,13 +134,14 @@ print(f'Silver: {len(df)} rows')
 print(f'Dropped: {30 - len(df)} rows')
 ```
 
-### Cell 2 - Validate before saving
+### Cell 3 - Validate before saving
 
 Add a new cell and run the following validation checks - never save data you have not verified:
 
 ```python
-assert df['unit_price'].dtype == float, "unit_price should be float"
-assert df['quantity'].dtype == int, "quantity should be int"
+# Cell 3 - Validate
+assert pd.api.types.is_float_dtype(df['unit_price']), "unit_price should be float"
+assert pd.api.types.is_integer_dtype(df['quantity']), "quantity should be int"
 assert df['product_id'].isnull().sum() == 0, "product_id should have no nulls"
 assert (df['unit_price'] > 0).all(), "all prices should be positive"
 assert (df['quantity'] > 0).all(), "all quantities should be positive"
@@ -139,21 +150,23 @@ print('All validation checks passed')
 print(df.dtypes)
 ```
 
-### Cell 3 - Write silver_sales
+### Cell 4 - Write silver_sales
 
 Add a new cell and run it:
 
 ```python
+# Cell 4 - Write
 spark.createDataFrame(df).write.mode('overwrite').saveAsTable('silver_sales')
 
 print('Saved: silver_sales')
 ```
 
-### Cell 4 - Flatten products
+### Cell 5 - Flatten products
 
 Add a new cell and run it:
 
 ```python
+# Cell 5 - Flatten
 with open('/lakehouse/default/Files/bronze/products_raw.json') as f:
     products_data = json.load(f)
 
@@ -169,11 +182,12 @@ print(f'Products flattened: {len(products)} rows')
 print(products.columns.tolist())
 ```
 
-### Cell 5 - Write silver_products
+### Cell 6 - Write silver_products
 
 Add a new cell and run it:
 
 ```python
+# Cell 6 - Write
 spark.createDataFrame(products).write.mode('overwrite').saveAsTable('silver_products')
 
 print('Saved: silver_products')
@@ -229,6 +243,7 @@ Work through the following cells in order.
 Paste the following into the first cell and run it:
 
 ```python
+# Cell 1 - Join
 import pandas as pd
 
 # Read from silver - not from bronze, not from raw files
@@ -251,6 +266,7 @@ print(f'Total revenue: £{df["line_value"].sum():,.2f}')
 Add a new cell and run it:
 
 ```python
+# Cell 2 - Write
 spark.createDataFrame(df).write.mode('overwrite').saveAsTable('gold_revenue')
 
 print('Saved: gold_revenue')
