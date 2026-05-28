@@ -12,7 +12,7 @@
 ## Session 2
 
 - 
-- [Bronze, Silver, Gold](../day3/medallion/group-scenarios.md)
+- Bronze, Silver, Gold
 - **Practice**: [Map the Pipeline](../day3/med-map.md)
 - **Discussion**: What Needs to Move?
 
@@ -28,7 +28,9 @@
 
 ## Session 4
 
-- [Bronze, Silver, Gold](../day3/medallion/group-scenarios.md)
+- SCENARIO-SETUP
+- SCENARIOS
+- SCENARIO-SHARE
 - **Discussion**: Bridge to Day 4
 
 ## 🎁 Wrap
