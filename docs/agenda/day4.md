@@ -12,10 +12,9 @@
 
 ## Session 2
 
-- 
 - Minimum Viable Documentation
 - **Practice**: [Create a Handover Artefact](../day4/mvd-build.md)
-- **Breakout**: [Review Each Other's Artefact](../day4/mvd-review.md)
+- **Breakout**: [Learners Share Their Artefact](../day4/mvd-review.md)
 
 ## 🥪🥤 Lunch Break
 

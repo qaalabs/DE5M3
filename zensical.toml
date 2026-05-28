@@ -41,7 +41,7 @@ nav = [
     {"Which Checks Matter?" = "day4/checks-design.md"},
     {"Add Validation Checks" = "day4/checks-build.md"},
     {"Create a Handover Artefact" = "day4/mvd-build.md"},
-    {"Review Each Other's Artefact" = "day4/mvd-review.md"},
+    {"Learners Share Their Artefact" = "day4/mvd-review.md"},
     {"Prepare Your Explanation" = "day4/pitch-prep.md"},
   ]},
   {"Resources" = "resources.md"},

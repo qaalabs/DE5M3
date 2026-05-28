@@ -103,9 +103,9 @@
 
 ### Session 2
 
-- `11:00` [Minimum Viable Documentation](day4/mvd-intro.md) (20 mins)
-- `11:20` **Practice**: [Create a Handover Artefact](day4/mvd-build.md) (40 mins)
-- `12:00` **Breakout**: [Review Each Other's Artefact](day4/mvd-review.md) (20 mins)
+- `10:50` [Minimum Viable Documentation](day4/mvd-intro.md) (10 mins)
+- `11:00` **Practice**: [Create a Handover Artefact](day4/mvd-build.md) (40 mins)
+- `11:40` **Breakout**: [Learners Share Their Artefact](day4/mvd-review.md) (30 mins)
 
 ### Session 3
 
