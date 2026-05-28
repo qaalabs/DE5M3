@@ -1,7 +1,6 @@
 # Facilitator Notes - What Made the Difference?
 
 *Trainer-only. After PITCH-SHARE, before afternoon break.*
-*Aim: 15 minutes.*
 
 ---
 

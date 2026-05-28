@@ -1,13 +1,14 @@
 # Add Validation Checks
 
 *Practice - Session 1. Individual.*
-*Aim: 30 minutes.*
 
 ---
 
 ## What you are doing
 
 You designed the checks. Now write the code.
+
+> **This is a code-sketch. You are writing what you would add - not running it. Plain Python assert statements are enough.**
 
 The existing validation cell in the bronze→silver notebook is shown below.
 Your task is to extend it with three more checks - your choice from the list you designed, or one you came up with yourself.
@@ -81,24 +82,15 @@ Once you have written your own, compare with these:
 
 ---
 
-## For silver→gold: add a check after the join
+## For silver→gold: what this would look like in Fabric
 
-The join happens in the second notebook. Add a check after the merge:
+If this were running in Fabric, you would also add a check after the join in the Silver to Gold notebook. This is illustrative - you are not writing this as a task:
 
 ```python
-sales = spark.read.table('silver_sales').toPandas()
-products = spark.read.table('silver_products').toPandas()
-
-joined = sales.merge(products, on='product_id', how='left')
-
-# Your check here - what should always be true after a left join on product_id?
+# After the merge in the Silver to Gold notebook
+assert len(joined) == len(sales), "row count changed after join - unexpected"
+assert joined['category'].isnull().sum() == 0, "some product_ids did not match silver_products"
 ```
-
-??? "Join integrity check"
-    ```python
-    assert len(joined) == len(sales), "row count changed after join - unexpected"
-    assert joined['category'].isnull().sum() == 0, "some product_ids did not match silver_products"
-    ```
 
 ---
 

@@ -1,11 +1,12 @@
 # Facilitator Notes - Trust and Validation
 
 *Trainer-only. Opens Session 1 after the welcome.*
-*Aim: 15–20 minutes before sending them into SILENT-FAIL.*
 
 ---
 
 ## Set up the session
+
+Hand out or share the HomeSphere pipeline diagram. Give learners 30 seconds to orient themselves before speaking.
 
 Start with the holding question for the day:
 
@@ -54,9 +55,11 @@ Groups that are drifting will produce vague observations. Redirect with: "What w
 
 ---
 
-## Bridge to CHECKS-DESIGN
+## Bridge to CHECKS-DESIGN and CHECKS-BUILD
 
 > "We know the pipeline can fail silently. The question is: which failures are worth writing code to catch - and where in the pipeline should those checks live?"
+
+They will design the checks and write the assert statements as a code-sketch - what they would add, not running code.
 
 Send them into the checks design activity.
 

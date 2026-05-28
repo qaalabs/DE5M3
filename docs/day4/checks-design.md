@@ -1,7 +1,6 @@
 # Which Checks Matter?
 
 *Practice - Session 1. Individual or pairs.*
-*Aim: 20 minutes.*
 
 ---
 

@@ -1,7 +1,6 @@
 # Facilitator Notes - Technical vs Stakeholder View
 
 *Trainer-only. Opens Session 3 after lunch.*
-*Aim: 10 minutes before sending them into PITCH-PREP.*
 
 ---
 

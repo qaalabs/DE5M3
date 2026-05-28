@@ -1,7 +1,6 @@
 # Where Could This Go Wrong?
 
-*Discussion - Session 1. Work in small groups, then share with the room.*
-*Aim: 20 minutes.*
+*Discussion - Session 1. Work in small groups, then discuss as a group.*
 
 ---
 
@@ -35,14 +34,12 @@ Work through each layer. For each one, write down:
 
 ## Prompts to get started
 
-Things that could go wrong silently:
+Things that could go wrong silently in the HomeSphere pipeline:
 
-- The source file arrives with **fewer rows than expected** - a supplier dropped 200 records
-- A **new product ID** appears that does not exist in the products table - it gets dropped in the join
-- A date column **changes format** in the source - dates start parsing as NaT silently
-- A column that should never be null **has nulls** - calculations produce NaN without warning
-- A **duplicate order ID** slips through - revenue is double-counted
-- A region name changes spelling - a filter downstream misses it
+- `sales_raw.csv` arrives with 25 rows instead of 30 - Cell 1 prints the lower count, nothing fails
+- `order_date` arrives as MM/DD/YYYY - `dayfirst=True` parses it silently with wrong dates
+- A `product_id` in sales has no match in `silver_products` - the left join drops it silently, `gold_revenue` understates revenue
+- A £ symbol appears in `quantity` instead of `unit_price` - `pd.to_numeric` coerces it to NaN, the row is dropped silently
 
 ---
 
@@ -52,12 +49,3 @@ Things that could go wrong silently:
 2. Which would it miss?
 3. Is there a pattern to what kinds of failures are caught vs missed?
 
----
-
-## Prepare to share
-
-Pick one silent failure your group thinks is the most dangerous. Be ready to explain:
-
-- What would go wrong?
-- At which layer?
-- What would a user see - and how long before they noticed?

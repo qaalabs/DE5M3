@@ -1,6 +1,6 @@
 # Facilitator Notes - Module Retrospective
 
-*Trainer-only. Final 20 minutes of Day 4 and the module.*
+*Trainer-only. Closes Day 4 and the module.*
 
 ---
 

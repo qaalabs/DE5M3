@@ -1,7 +1,6 @@
 # Create a Handover Artefact
 
 *Practice - Session 2. Individual.*
-*Aim: 30 minutes.*
 
 ---
 

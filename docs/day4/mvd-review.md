@@ -1,7 +1,6 @@
 # Review Each Other's Artefact
 
 *Breakout - Session 2. Pairs or small groups.*
-*Aim: 20 minutes.*
 
 ---
 

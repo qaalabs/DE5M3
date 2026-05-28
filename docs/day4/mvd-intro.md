@@ -1,7 +1,6 @@
 # Facilitator Notes - Minimum Viable Documentation
 
 *Trainer-only. Opens Session 2 after morning break.*
-*Aim: 10 minutes before sending them into MVD-BUILD.*
 
 ---
 

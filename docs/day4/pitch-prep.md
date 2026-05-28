@@ -1,7 +1,6 @@
 # Prepare Your Stakeholder Explanation
 
 *Breakout - Session 3. Pairs or small groups.*
-*Aim: 20 minutes.*
 
 ---
 
