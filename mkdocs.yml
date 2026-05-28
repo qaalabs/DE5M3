@@ -38,6 +38,7 @@ nav:
     - "Lab 3.2 - Medallion Architecture": labs/32-medallion-lab.md
 
   - "Day 4 - Supportable & Explainable":
+    - "🌅 Welcome to Day 4 of DE5 Module 3": day4/pipeline-solution.md
     - "Silent Failures": day4/silent-fail.md
     - "Which Checks Matter?": day4/checks-design.md
     - "Add Validation Checks": day4/checks-build.md
@@ -63,7 +64,6 @@ not_in_nav: |
   day3/med-debrief.md
   day3/debrief.md
   day3/bridge.md
-  day4/pipeline-solution.md
   day4/checks-intro.md
   day4/mvd-intro.md
   day4/stakeholder.md

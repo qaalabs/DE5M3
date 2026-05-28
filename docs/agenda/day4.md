@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 4 of DE5 Module 3
+- [🌅 Welcome to Day 4 of DE5 Module 3](../day4/pipeline-solution.md)
 - CHECKS-INTRO
 - **Discussion**: [Silent Failures](../day4/silent-fail.md)
 - **Practice**: [Which Checks Matter?](../day4/checks-design.md)
