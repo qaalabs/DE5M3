@@ -1,4 +1,4 @@
-# HomeSphere Pipeline — Solution Diagram
+# HomeSphere Pipeline - Solution Diagram
 
 *The completed medallion architecture after Day 3.*
 
@@ -9,7 +9,7 @@ flowchart LR
         JSON["products_raw.json"]
     end
 
-    subgraph BRZ["Bronze — raw, untouched"]
+    subgraph BRZ["Bronze - raw, untouched"]
         BCSV["Files/bronze/\nsales_raw.csv"]
         BJSON["Files/bronze/\nproducts_raw.json"]
     end
@@ -19,7 +19,7 @@ flowchart LR
         FLAT["flatten JSON\n(json_normalize)"]
     end
 
-    subgraph SIL["Silver — cleaned & trusted"]
+    subgraph SIL["Silver - cleaned & trusted"]
         SS["silver_sales"]
         SP["silver_products"]
     end
@@ -28,7 +28,7 @@ flowchart LR
         JOIN["join on product_id\ncompute line_value"]
     end
 
-    subgraph GLD["Gold — business-ready"]
+    subgraph GLD["Gold - business-ready"]
         GR["gold_revenue\n(revenue by category)"]
     end
 
@@ -48,5 +48,5 @@ flowchart LR
 | Layer  | Items | Rule |
 |--------|-------|------|
 | Bronze | `Files/bronze/sales_raw.csv`, `Files/bronze/products_raw.json` | Never modified after landing |
-| Silver | `silver_sales`, `silver_products` | Cleaned, validated — safe to build from |
-| Gold   | `gold_revenue` | Built from silver only — answers the business question |
+| Silver | `silver_sales`, `silver_products` | Cleaned, validated - safe to build from |
+| Gold   | `gold_revenue` | Built from silver only - answers the business question |
