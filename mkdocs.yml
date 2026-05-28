@@ -63,6 +63,7 @@ not_in_nav: |
   day3/med-debrief.md
   day3/debrief.md
   day3/bridge.md
+  day4/checks-intro.md
   day4/mvd-intro.md
   day4/stakeholder.md
   day4/pitch-debrief.md
@@ -112,7 +113,11 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -122,5 +127,8 @@ markdown_extensions:
 plugins:
   - search
   - glightbox
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 
