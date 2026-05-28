@@ -1,10 +1,6 @@
 # Facilitator Notes - Next Maturity Steps
 
 *Trainer-only. Session 4, after afternoon break.*
-# Facilitator Notes - Next Maturity Steps
-
-*Trainer-only. Session 4, after afternoon break.*
-*Aim: 20 minutes.*
 
 ---
 
