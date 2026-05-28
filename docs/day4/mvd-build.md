@@ -2,6 +2,8 @@
 
 *Practice - Session 2. Individual.*
 
+**Aim: 40 minutes. Spend the first 5 choosing your format, the next 25 writing, the last 10 checking.**
+
 ---
 
 ## The scenario
@@ -12,6 +14,8 @@
 Your task: produce the minimum documentation they would need to orientate themselves.
 
 Not everything - the minimum. The thing that would save them an hour of confusion.
+
+Use the [HomeSphere pipeline diagram](pipeline-solution.md) as your reference throughout this activity.
 
 ---
 
@@ -81,4 +85,25 @@ Those belong in the code comments. The handover artefact explains what the pipel
 
 Use whichever format you chose. Aim for something you could hand to a colleague in a real job.
 
-When done, you will swap it with someone else and review it.
+---
+
+## Before you finish - check your own artefact
+
+Read it back as if you are the engineer arriving Monday morning.
+
+- [ ] Can you say in one sentence what the pipeline does?
+- [ ] Do you know what to run first?
+- [ ] Do you know where the gold output is and what it is for?
+- [ ] Have you named at least one known limitation?
+- [ ] Is there anything in there that belongs in the code rather than here?
+
+If you answer no to any of the first four - go back and add it.
+If you answer yes to the last one - remove it.
+
+---
+
+## If you finish early
+
+Extend your artefact with a short "what would make this pipeline stronger" section.
+Two or three bullet points. What would a more mature version of this pipeline include
+that this one does not?

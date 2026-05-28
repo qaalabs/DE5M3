@@ -1,66 +1,66 @@
 # Facilitator Notes - Next Maturity Steps
 
 *Trainer-only. Session 4, after afternoon break.*
+# Facilitator Notes - Next Maturity Steps
+
+*Trainer-only. Session 4, after afternoon break.*
+*Aim: 20 minutes.*
 
 ---
 
-## Frame it correctly
+## Frame it
 
-This is not a "things we did not have time for" section. It is about scope and honest ambition.
+> "A real pipeline is never finished. The real test of maturity is not whether 
+> change happens - it is how well the pipeline copes when it does."
 
-> "A real data pipeline is never finished. What you built this week is a foundation. What makes it more useful is adding sources that answer more questions."
+Then present the scenario:
 
----
+> "HomeSphere's supplier has updated their system. From Monday, `sales_raw.csv` 
+> arrives with different column names. `unit_price` is now `price`, `order_date` 
+> is now `date`, and there is a new column called `discount` that did not exist before."
 
-## Introduce the two natural extensions
-
-**IoT - Sensor and Device Data**
-
-HomeSphere sells connected devices. Every thermostat, camera, and sensor generates event data: activations, temperature readings, motion detections, alerts.
-
-This source would be:
-- High volume - millions of events per day, not hundreds of rows
-- Streaming - arriving continuously, not as a daily CSV
-- Different structure - event log rather than transactional records
-
-Ask: "How would bronze/silver/gold apply to a sensor stream?"
-
-Key points:
-- Bronze: raw event log, time-stamped, never modified
-- Silver: device events joined to device registration (which customer owns this device?)
-- Gold: usage patterns, fault rates, device health by product line
-
-Ask: "Could `gold_revenue` join to sensor data? On what key?"
-The answer: `product_id` - you could correlate sales volumes with fault rates. That is a genuinely interesting business question.
-
-**Marketing - Customer Campaigns**
-
-HomeSphere runs email and social campaigns. Marketing data would include:
-- Which customers received which campaigns
-- Open rates, click rates, conversion rates
-- Campaign spend per channel
-
-This source would join to sales on `customer_id` - which `sales_raw.csv` does not currently include.
-
-Ask: "What does that mean for the current pipeline?"
-
-Key point: the data we have does not support certain business questions. A more mature pipeline would capture `customer_id` at the sales stage so marketing data could join to it later. That is a design decision made (or missed) at source - not something you can fix in gold.
+> "This is called schema drift. It is one of the most common real-world ETL 
+> problems. Take five minutes on your own - not to find the right answer, but 
+> to think about how you would respond on Monday morning."
 
 ---
 
-## What a more mature team would add
+## Individual thinking - 5 minutes
 
-Without making this a wishlist, name a few realistic next steps:
+Put these questions on screen:
 
-- **Scheduling** - running the notebooks on a trigger (new file arrives) rather than manually
-- **Run logging** - recording when the pipeline ran, how many rows processed, whether checks passed
-- **Alerting** - notifying someone if a check fails, rather than just crashing
-- **Schema enforcement** - defining the expected shape of silver tables so new code cannot accidentally break them
+1. What from this week would you reach for first?
+2. What does the current pipeline give you that Day 1 did not?
+3. What would still be hard - what does the pipeline not yet protect you from?
+4. What is the one thing you would add next to make this pipeline more resilient?
 
-These are the things that turn a pipeline someone built into a pipeline a team can support.
+---
+
+## Whole room discussion - 15 minutes
+
+Do not go through the questions sequentially. Open it up:
+
+> "Who wants to start - what would you reach for first?"
+
+Let the conversation develop. Things worth drawing out if they do not emerge naturally:
+
+- Bronze means you still have the original file - you can reprocess once you fix the code
+- The assert checks would fail loudly rather than silently - you would know immediately
+- The documentation means a new engineer knows where to look
+- The discount column is interesting - it does not break anything, but it quietly changes what revenue means. That is worth naming as a new kind of risk: silent drift
 
 ---
 
 ## Close the discussion
 
-> "None of these are things you lack the skill to build. They are things you now know to look for. That is the difference between a pipeline that exists and a pipeline that is owned."
+> "The point of architecture, validation, and documentation is not to make the 
+> pipeline look tidy. It is to make change easier to absorb. That is what maturity 
+> means - not a perfect pipeline, but one that is easier to fix, easier to explain, 
+> and easier to hand to someone else."
+
+---
+
+## Bridge to retrospective
+
+> "You now know what the pipeline can handle and where its limits are. 
+> That is what it means to own a pipeline rather than just build one."

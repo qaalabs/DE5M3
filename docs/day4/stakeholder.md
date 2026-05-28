@@ -61,6 +61,6 @@ Ask the group. Things to draw out:
 
 ## Bridge to PITCH-PREP
 
-> "Your task is to explain `gold_revenue` to the HomeSphere Head of Sales. She does not care about notebooks or layers. She wants to know what this tells her and whether she can trust it."
+> "Your task is to explain `gold_revenue` to the HomeSphere Head of Sales. She does not care about notebooks or layers. She wants to know what this tells her and whether she can trust it. In your end point assessment you will need to explain a data product to a non-technical audience - this is the first time you are practising that."
 
 Send them into the breakout.

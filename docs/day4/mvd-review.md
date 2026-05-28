@@ -1,53 +1,53 @@
-# Review Each Other's Artefact
+# Share Your Artefact
 
-*Breakout - Session 2. Pairs or small groups.*
-
----
-
-## Swap your artefacts
-
-Exchange what you produced with one other person or group. Read theirs as if you are the new engineer arriving on Monday morning.
+*Facilitator notes - Session 2. Closes after the build activity.*
 
 ---
 
-## Review questions
+## How to run it
 
-Read the artefact you have been given and answer honestly:
+Ask for 4-5 volunteers. Do not put anyone on the spot - wait for willing hands.
 
-**Would this help you?**
+Each volunteer shares three things:
 
-1. After reading it, could you say in one sentence what the pipeline does?
-2. Do you know what to run first?
-3. Do you know where to find the gold output?
-4. Do you know what the output is used for?
+- Their one or two sentence pipeline overview
+- Which format they chose - table, diagram, or structured note - and why
+- One thing they were unsure about including
 
-**What is missing?**
+After each volunteer, ask the room:
 
-5. Is there anything you would need to know that is not here?
-6. Is there anything that confused you?
-7. Is there anything that is there but probably does not need to be?
-
-**Would you trust this pipeline based on what is documented?**
-
-8. Can you tell what has been validated and what has not?
-9. Can you tell what the known limitations are?
+> "Is there anything missing that you would want to know on Monday morning?"
 
 ---
 
-## Give feedback
+## What to listen for
 
-Tell the other person or group:
+Common gaps that are worth naming when you hear them:
 
-- One thing that is clear and genuinely useful
-- One thing that is missing or could be improved
-- One question you would still have after reading it
+- No mention of run order - which notebook runs before which
+- No description of what `gold_revenue` is actually for or who uses it
+- No caveats - the artefact implies the pipeline is perfect
+- Over-documented - explaining the code rather than the flow
+
+If you hear over-documentation, redirect:
+
+> "If you removed that section, would a new engineer still orientate themselves? If yes, it probably belongs in the code comments, not here."
 
 ---
 
-## Discuss with the room
+## Close the session
 
-Be ready to share:
+Ask the room:
 
-- What was the most common gap in the artefacts?
-- What format worked best - table, diagram, or written note?
-- What would you add to your own artefact after reading someone else's?
+> "What format came up most - and does that surprise you?"
+
+Then close with:
+
+> "The gaps people noticed just now - those are exactly what good documentation catches before someone else has to ask."
+
+---
+
+## Bridge to lunch
+
+> "This afternoon you will take what you have built and explain it to someone who is not an engineer. That is a different challenge."
+

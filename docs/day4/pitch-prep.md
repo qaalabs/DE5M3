@@ -1,8 +1,6 @@
 # Prepare Your Stakeholder Explanation
 
-*Breakout - Session 3. Pairs or small groups.*
-
----
+!! success "Can you explain the value of your pipeline in language that a non-engineer could understand?"
 
 ## The scenario
 
@@ -62,5 +60,4 @@ You do not have to follow this exactly - but your explanation should cover the s
 
 ## Prepare to share
 
-You will present to the room after the breakout. Keep it to two or three minutes.
-Decide who will speak - or split it between two people.
+You will be asked to share your explanation with the room. Keep it to two to three minutes. If someone covers similar ground before you, be ready to say what you would add or change.

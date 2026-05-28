@@ -63,7 +63,7 @@ Send them in.
 
 ---
 
-## What to watch for in MVD-REVIEW
+## What to watch for during MVD-BUILD
 
 Common gaps:
 - No mention of run order (which notebook first)
