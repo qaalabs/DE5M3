@@ -51,7 +51,7 @@ flowchart LR
 
 ---
 
-## Mermaid Diagram Code
+### Mermaid Diagram Code
 
 ```text
 flowchart LR
