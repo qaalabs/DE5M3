@@ -1150,6 +1150,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Review of Day 3 Pipeline
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1166,6 +1184,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mermaid-diagram-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mermaid Diagram Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1431,7 +1479,6 @@
     SS --&gt; JOIN
     SP --&gt; JOIN
     JOIN --&gt; GR</code></pre>
-<hr>
 <table>
 <thead>
 <tr>
@@ -1458,6 +1505,47 @@
 </tr>
 </tbody>
 </table>
+<hr>
+<h2 id="mermaid-diagram-code">Mermaid Diagram Code</h2>
+<div class="highlight"><pre><span></span><code>flowchart LR
+    subgraph SRC["Sources"]
+        CSV["sales_raw.csv"]
+        JSON["products_raw.json"]
+    end
+
+    subgraph BRZ["Bronze - raw, untouched"]
+        BCSV["Files/bronze/\nsales_raw.csv"]
+        BJSON["Files/bronze/\nproducts_raw.json"]
+    end
+
+    subgraph NB1["Notebook: Bronze to Silver"]
+        CLEAN["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]
+        FLAT["flatten JSON\n(json_normalize)"]
+    end
+
+    subgraph SIL["Silver - cleaned &amp; trusted"]
+        SS["silver_sales"]
+        SP["silver_products"]
+    end
+
+    subgraph NB2["Notebook: Silver to Gold"]
+        JOIN["join on product_id\ncompute line_value"]
+    end
+
+    subgraph GLD["Gold - business-ready"]
+        GR["gold_revenue\n(revenue by category)"]
+    end
+
+    CSV --&gt; BCSV
+    JSON --&gt; BJSON
+    BCSV --&gt; CLEAN
+    BJSON --&gt; FLAT
+    CLEAN --&gt; SS
+    FLAT --&gt; SP
+    SS --&gt; JOIN
+    SP --&gt; JOIN
+    JOIN --&gt; GR
+</code></pre></div>
 
 
 
