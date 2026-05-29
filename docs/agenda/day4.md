@@ -14,7 +14,7 @@
 
 - Minimum Viable Documentation
 - **Practice**: [Create a Handover Artefact](../day4/mvd-build.md)
-- **Breakout**: [Learners Share Their Artefact](../day4/mvd-review.md)
+- **Breakout**: Learners Share Their Artefact
 
 ## 🥪🥤 Lunch Break
 

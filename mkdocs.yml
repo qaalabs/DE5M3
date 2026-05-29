@@ -43,7 +43,6 @@ nav:
     - "Which Checks Matter?": day4/checks-design.md
     - "Add Validation Checks": day4/checks-build.md
     - "Create a Handover Artefact": day4/mvd-build.md
-    - "Learners Share Their Artefact": day4/mvd-review.md
     - "Prepare Your Explanation": day4/pitch-prep.md
 
   - Resources: resources.md
@@ -66,6 +65,7 @@ not_in_nav: |
   day3/bridge.md
   day4/checks-intro.md
   day4/mvd-intro.md
+  day4/mvd-review.md
   day4/stakeholder.md
   day4/pitch-debrief.md
   day4/maturity.md
