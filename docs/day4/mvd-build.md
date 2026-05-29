@@ -1,7 +1,5 @@
 # Create a Handover Artefact
 
-*Practice - Session 2. Individual.*
-
 **Aim: 40 minutes. Spend the first 5 choosing your format, the next 25 writing, the last 10 checking.**
 
 ---
