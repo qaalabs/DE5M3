@@ -4,9 +4,9 @@
 
 ```mermaid
 flowchart LR
-    subgraph SRC["Sources"]
-        CSV["sales_raw.csv"]
-        JSON["products_raw.json"]
+    subgraph SRC("Sources")
+        CSV("sales_raw.csv")
+        JSON("products_raw.json")
     end
 
     subgraph BRZ["Bronze - raw, untouched"]
@@ -14,7 +14,7 @@ flowchart LR
         BJSON["Files/bronze/\nproducts_raw.json"]
     end
 
-    subgraph NB1["Notebook: Bronze to Silver"]
+    subgraph NB1("Notebook: Bronze to Silver")
         CLEAN["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]
         FLAT["flatten JSON\n(json_normalize)"]
     end
@@ -24,7 +24,7 @@ flowchart LR
         SP["silver_products"]
     end
 
-    subgraph NB2["Notebook: Silver to Gold"]
+    subgraph NB2("Notebook: Silver to Gold")
         JOIN["join on product_id\ncompute line_value"]
     end
 

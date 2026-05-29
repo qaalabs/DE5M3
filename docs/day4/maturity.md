@@ -1,9 +1,5 @@
 # Facilitator Notes - Next Maturity Steps
 
-*Trainer-only. Session 4, after afternoon break.*
-
----
-
 ## Frame it
 
 > "A real pipeline is never finished. The real test of maturity is not whether 
@@ -60,3 +56,4 @@ Let the conversation develop. Things worth drawing out if they do not emerge nat
 
 > "You now know what the pipeline can handle and where its limits are. 
 > That is what it means to own a pipeline rather than just build one."
+

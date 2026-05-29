@@ -1,9 +1,5 @@
 # Facilitator Notes - Technical vs Stakeholder View
 
-*Trainer-only. Opens Session 3 after lunch.*
-
----
-
 ## Frame the shift
 
 Session 2 was about explaining the pipeline to another engineer - someone who understands layers, dependencies, and run order.
@@ -19,6 +15,7 @@ Session 3 is a different audience entirely.
 Ask: "What does a stakeholder care about that an engineer does not?"
 
 Things to draw out:
+
 - Not how it works - what it produces
 - Not how it was built - whether to trust the number
 - Not bronze and silver - what decision the output supports
@@ -63,4 +60,3 @@ Ask the group. Things to draw out:
 
 > "Your task is to explain `gold_revenue` to the HomeSphere Head of Sales. She does not care about notebooks or layers. She wants to know what this tells her and whether she can trust it. In your end point assessment you will need to explain a data product to a non-technical audience - this is the first time you are practising that."
 
-Send them into the breakout.

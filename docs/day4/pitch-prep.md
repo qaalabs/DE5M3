@@ -1,6 +1,6 @@
 # Prepare Your Stakeholder Explanation
 
-!! success "Can you explain the value of your pipeline in language that a non-engineer could understand?"
+!!! question "Can you explain the value of your pipeline in language that a non-engineer could understand?"
 
 ## The scenario
 
