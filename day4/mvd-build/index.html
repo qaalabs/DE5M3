@@ -1367,6 +1367,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#before-you-finish-check-your-own-artefact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you finish - check your own artefact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-you-finish-early" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If you finish early
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1390,7 +1412,7 @@
   <span class="md-ellipsis">
     
   
-    Review Each Other's Artefact
+    Learners Share Their Artefact
   
 
     
@@ -1485,6 +1507,7 @@
 
 <h1 id="create-a-handover-artefact">Create a Handover Artefact</h1>
 <p><em>Practice - Session 2. Individual.</em></p>
+<p><strong>Aim: 40 minutes. Spend the first 5 choosing your format, the next 25 writing, the last 10 checking.</strong></p>
 <hr>
 <h2 id="the-scenario">The scenario</h2>
 <blockquote>
@@ -1493,6 +1516,7 @@ They have not seen it before. They are a competent data engineer.</p>
 </blockquote>
 <p>Your task: produce the minimum documentation they would need to orientate themselves.</p>
 <p>Not everything - the minimum. The thing that would save them an hour of confusion.</p>
+<p>Use the <a href="../pipeline-solution/">HomeSphere pipeline diagram</a> as your reference throughout this activity.</p>
 <hr>
 <h2 id="what-to-include">What to include</h2>
 <p>A handover artefact should answer these questions for a new person:</p>
@@ -1567,7 +1591,23 @@ data/products_raw.json   → [bronze/products_raw.json] → silver_products ┘
 <hr>
 <h2 id="produce-your-artefact">Produce your artefact</h2>
 <p>Use whichever format you chose. Aim for something you could hand to a colleague in a real job.</p>
-<p>When done, you will swap it with someone else and review it.</p>
+<hr>
+<h2 id="before-you-finish-check-your-own-artefact">Before you finish - check your own artefact</h2>
+<p>Read it back as if you are the engineer arriving Monday morning.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Can you say in one sentence what the pipeline does?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Do you know what to run first?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Do you know where the gold output is and what it is for?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Have you named at least one known limitation?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Is there anything in there that belongs in the code rather than here?</li>
+</ul>
+<p>If you answer no to any of the first four - go back and add it.
+If you answer yes to the last one - remove it.</p>
+<hr>
+<h2 id="if-you-finish-early">If you finish early</h2>
+<p>Extend your artefact with a short "what would make this pipeline stronger" section.
+Two or three bullet points. What would a more mature version of this pipeline include
+that this one does not?</p>
 
 
 
