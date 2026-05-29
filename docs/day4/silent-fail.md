@@ -1,12 +1,8 @@
 # Where Could This Go Wrong?
 
-*Discussion - Session 1. Work in small groups, then discuss as a group.*
-
----
-
 ## The question
 
-> "If this pipeline ran overnight and produced wrong numbers at 9am - how would you know?"
+!!! question "If this pipeline ran overnight and produced wrong numbers at 9am - how would you know?"
 
 You probably would not. Not immediately. Someone would have to notice the numbers looked off.
 
@@ -17,7 +13,7 @@ That is worse than a crash, because a crash tells you something went wrong.
 
 ## Map the risks
 
-Work through each layer. For each one, write down:
+Work through each layer. Foreach one, write down:
 
 - What could go wrong here?
 - Would the pipeline stop - or would it carry on and produce bad output?

@@ -91,11 +91,11 @@ Use whichever format you chose. Aim for something you could hand to a colleague 
 
 Read it back as if you are the engineer arriving Monday morning.
 
-- [ ] Can you say in one sentence what the pipeline does?
-- [ ] Do you know what to run first?
-- [ ] Do you know where the gold output is and what it is for?
-- [ ] Have you named at least one known limitation?
-- [ ] Is there anything in there that belongs in the code rather than here?
+- ✅ Can you say in one sentence what the pipeline does?
+- ✅ Do you know what to run first?
+- ✅ Do you know where the gold output is and what it is for?
+- ✅ Have you named at least one known limitation?
+- ✅ Is there anything in there that belongs in the code rather than here?
 
 If you answer no to any of the first four - go back and add it.
 If you answer yes to the last one - remove it.

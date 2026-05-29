@@ -1,9 +1,5 @@
 # Which Checks Matter?
 
-*Practice - Session 1. Individual or pairs.*
-
----
-
 ## What you already have
 
 The bronze→silver notebook currently validates this after cleaning:

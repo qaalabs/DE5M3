@@ -18,6 +18,7 @@ Session 2 is about making it trustworthy for a person - documentation that orien
 Ask: "If you inherited a pipeline with no documentation, what is the first thing you would want to know?"
 
 Things to draw out:
+
 - What does it produce?
 - What order do things run in?
 - Where does the input come from?
