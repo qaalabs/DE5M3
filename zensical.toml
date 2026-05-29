@@ -36,7 +36,7 @@ nav = [
     {"Lab 3.2 - Medallion Architecture" = "labs/32-medallion-lab.md"},
   ]},
   {"Day 4 - Supportable & Explainable" = [
-    {"🌅 Welcome to Day 4 of DE5 Module 3" = "day4/pipeline-solution.md"},
+    {"Review of Day 3 Pipeline" = "day4/pipeline-solution.md"},
     {"Silent Failures" = "day4/silent-fail.md"},
     {"Which Checks Matter?" = "day4/checks-design.md"},
     {"Add Validation Checks" = "day4/checks-build.md"},
