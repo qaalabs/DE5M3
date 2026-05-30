@@ -1,0 +1,20 @@
+{
+  "file_name": "sales_raw.csv",
+  "source_system": "HomeSphere CRM",
+  "source_location": "crm.homesphere.internal/exports/sales",
+  "extracted_at": "2024-01-30T08:32:00Z",
+  "record_count": 30,
+  "columns": [
+    "order_id",
+    "order_date",
+    "customer_id",
+    "product_id",
+    "quantity",
+    "unit_price",
+    "status",
+    "region"
+  ],
+  "sha256": "1cc74c8dbae30ed6741ac3a3d16ff14abc3a04f1ce69a2d915c16f5d4db2bbb2",
+  "schema_version": "1.0",
+  "bundle_name": "homesphere_sales_20240130_083200.zip"
+}
