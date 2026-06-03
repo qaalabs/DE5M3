@@ -30,7 +30,7 @@
 
 ## Session 4
 
-- ETL Product Investigation
+- **Breakout**: ETL Product Investigation
 - **Investigation**: [ETL Product Investigation](../day1/etl-products.md)
 - **Report-Back**: ETL Product Investigation
 - **Discussion**: Reflect and Look Ahead

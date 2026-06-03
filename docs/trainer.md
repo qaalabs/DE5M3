@@ -24,7 +24,7 @@
 
 ### Session 4
 
-- `14:50` ETL Product Investigation (10 mins)
+- `14:50` **Breakout**: ETL Product Investigation (10 mins)
 - `15:00` **Investigation**: [ETL Product Investigation](day1/etl-products.md) (20 mins)
 - `15:20` **Report-Back**: ETL Product Investigation (20 mins)
 - `15:40` **Discussion**: [Reflect and Look Ahead](day1/reflection.md) (10 mins)
@@ -79,14 +79,14 @@
 
 ### Session 3
 
-- `13:20` **Practice**: [Lab 3.1 - Setup Fabric](labs/31-setup.md) (10 mins)
-- `13:30` **Practice**: [Lab 3.2 - Medallion Architecture](labs/32-medallion-lab.md) (50 mins)
+- `13:20` **Activity**: [Lab 3.1 - Setup Fabric](labs/31-setup.md) (10 mins)
+- `13:50` **Practice**: [Lab 3.2 - Medallion Architecture](labs/32-medallion-lab.md) (30 mins)
 - `14:20` **Discussion**: [What Is Actually Better?](day3/debrief.md) (10 mins)
 
 ### Session 4
 
 - `14:50` **Breakout**: Group Scenario Setup (10 mins)
-- `15:00` **Breakout**: [Industry Group Scenarios](day3/medallion-scenarios.md) (20 mins)
+- `15:00` **Investigation**: [Industry Group Scenarios](day3/medallion-scenarios.md) (20 mins)
 - `15:20` **Report-Back**: Scenario Report-back (20 mins)
 - `15:40` **Discussion**: [Bridge to Day 4](day3/bridge.md) (10 mins)
 

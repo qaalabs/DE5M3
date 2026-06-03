@@ -32,6 +32,7 @@ nav = [
   {"Day 3 - Robust & Well-Architectured" = [
     {"Where are the Weaknesses?" = "day3/fragile.md"},
     {"Map the Pipeline" = "day3/med-map.md"},
+    {"What Needs to Move?" = "day3/med-debrief.md"},
     {"Lab 3.1 - Setup Fabric" = "labs/31-setup.md"},
     {"Lab 3.2 - Medallion Architecture" = "labs/32-medallion-lab.md"},
     {"Industry Group Scenarios" = "day3/medallion-scenarios.md"},

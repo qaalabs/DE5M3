@@ -14,13 +14,14 @@
 - 
 - Bronze, Silver, Gold
 - **Practice**: [Map the Pipeline](../day3/med-map.md)
-- **Discussion**: What Needs to Move?
+- **Discussion**: [What Needs to Move?](../day3/med-debrief.md)
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- **Practice**: [Lab 3.1 - Setup Fabric](../labs/31-setup.md)
+- **Activity**: [Lab 3.1 - Setup Fabric](../labs/31-setup.md)
+- 
 - **Practice**: [Lab 3.2 - Medallion Architecture](../labs/32-medallion-lab.md)
 - **Discussion**: What Is Actually Better?
 
@@ -29,7 +30,7 @@
 ## Session 4
 
 - **Breakout**: Group Scenario Setup
-- **Breakout**: [Industry Group Scenarios](../day3/medallion-scenarios.md)
+- **Investigation**: [Industry Group Scenarios](../day3/medallion-scenarios.md)
 - **Report-Back**: Scenario Report-back
 - **Discussion**: Bridge to Day 4
 
