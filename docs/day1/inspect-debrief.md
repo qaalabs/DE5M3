@@ -14,7 +14,7 @@ Take answers from the room before revealing the full list. Most groups find 4–
 
 | # | Column      | Problem |
 |---|-------------|---------|
-| 1 | `order_date`| Three formats: `2024-01-15`, `15/01/2024`, `16/1/24` |
+| 1 | `order_date`| Three formats: `2026-05-15`, `15/05/2026`, `16/5/26` |
 | 2 | `unit_price`| `£` prefix on some rows - pandas reads the whole column as text |
 | 3 | `quantity`  | `"two"` instead of `2` (ORD-011) |
 | 4 | `quantity`  | `0` - not a valid order line (ORD-013) |

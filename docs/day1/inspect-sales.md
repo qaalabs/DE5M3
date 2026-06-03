@@ -1,5 +1,9 @@
 # Open Sales Data
 
+*Trainer note: before sending learners to the notebook, open the `data/` folder and point out that there are three files -- `sales_raw.csv`, `products_raw.json`, and a zip file. Click the zip to show that it contains a `metadata.json` alongside the CSV. Do not explain it -- just say "we will come back to what that is and why it matters on Day 3." The curiosity does the work.*
+
+---
+
 ## What you are doing
 
 HomeSphere has exported their order lines from the order management system as a CSV.

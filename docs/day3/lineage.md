@@ -12,10 +12,10 @@ The fragile breakout surfaces design debts. One that often comes up is lineage: 
 
 ## The artefact
 
-`data/homesphere_sales_20240130_083200.zip` contains:
+`data/homesphere_sales_20260530_083200.zip` contains:
 
 ```
-homesphere_sales_20240130_083200.zip
+homesphere_sales_20260530_083200.zip
 ├── sales_raw.csv       ← the data, unchanged
 └── metadata.json       ← what it is, where it came from, how to verify it
 ```
@@ -27,13 +27,13 @@ homesphere_sales_20240130_083200.zip
   "file_name": "sales_raw.csv",
   "source_system": "HomeSphere CRM",
   "source_location": "crm.homesphere.internal/exports/sales",
-  "extracted_at": "2024-01-30T08:32:00Z",
+  "extracted_at": "2026-05-30T08:32:00Z",
   "record_count": 30,
   "columns": ["order_id", "order_date", "customer_id", "product_id",
                "quantity", "unit_price", "status", "region"],
-  "sha256": "1cc74c8dbae30ed6741ac3a3d16ff14abc3a04f1ce69a2d915c16f5d4db2bbb2",
+  "sha256": "2a0ed3e360f281ae5fcb9289a80b33d1c15ee483f96392c7d4dcb7c3e3c00299",
   "schema_version": "1.0",
-  "bundle_name": "homesphere_sales_20240130_083200.zip"
+  "bundle_name": "homesphere_sales_20260530_083200.zip"
 }
 ```
 
@@ -84,13 +84,13 @@ def load_sales_bundle(zip_path):
 
     return df, metadata
 
-df, meta = load_sales_bundle("homesphere_sales_20240130_083200.zip")
+df, meta = load_sales_bundle("homesphere_sales_20260530_083200.zip")
 ```
 
 Output:
 ```
 Source:    HomeSphere CRM
-Extracted: 2024-01-30T08:32:00Z
+Extracted: 2026-05-30T08:32:00Z
 Records:   30 ✓
 Hash:      verified ✓
 ```
