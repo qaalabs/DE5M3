@@ -28,9 +28,9 @@
 
 ## Session 4
 
-- SCENARIO-SETUP
-- SCENARIOS
-- SCENARIO-SHARE
+- **Breakout**: Group Scenario Setup
+- **Breakout**: [Industry Group Scenarios](../day3/medallion-scenarios.md)
+- **Report-Back**: Scenario Report-back
 - **Discussion**: Bridge to Day 4
 
 ## 🎁 Wrap

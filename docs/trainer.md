@@ -85,9 +85,9 @@
 
 ### Session 4
 
-- `14:50` SCENARIO-SETUP (10 mins)
-- `15:00` SCENARIOS (20 mins)
-- `15:20` SCENARIO-SHARE (20 mins)
+- `14:50` **Breakout**: Group Scenario Setup (10 mins)
+- `15:00` **Breakout**: [Industry Group Scenarios](day3/medallion-scenarios.md) (20 mins)
+- `15:20` **Report-Back**: Scenario Report-back (20 mins)
 - `15:40` **Discussion**: [Bridge to Day 4](day3/bridge.md) (10 mins)
 
 ---
