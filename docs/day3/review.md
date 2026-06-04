@@ -1,14 +1,10 @@
 # Facilitator Notes - Design Review
 
-*Trainer-only. Opens Day 3, ~20 minutes before the breakout.*
-
----
-
 ## Purpose
 
 Reposition the day before anything else.
 
-> "Day 1 proved the logic. Day 2 proved it in the cloud. Today we ask whether that is enough."
+> Day 1 proved the logic. Day 2 proved it in the cloud. Today we ask whether that is enough.
 
 This is not a new build day. It is a day where they judge what they have already built.
 

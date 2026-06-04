@@ -30,20 +30,24 @@ Two notebooks. One runs after the other. Someone presses Run each time.
 ## Questions to work through
 
 **On structure:**
+
 - Where does raw data live? Where does cleaned data live? Are they clearly separated?
 - If you came back in a month, could you tell which files are inputs and which are outputs?
 - If `sales_trusted` looked wrong, where would you start investigating?
 
 **On reliability:**
+
 - What happens if the first notebook fails halfway through? What is the state of `cleaned_sales`?
 - What would happen if `sales_raw.csv` arrived with a new column added?
 - Is there anything that checks the data looks right before saving it?
 
 **On reuse:**
+
 - If another team wanted to use the cleaned Sales data, could they? Would they trust it?
 - If a second business question needed a different gold output, where would it read from?
 
 **On maintenance:**
+
 - If you handed this workspace to a colleague, what would they need to know to run it?
 - How would they know if the pipeline had run successfully?
 

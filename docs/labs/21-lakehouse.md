@@ -5,7 +5,7 @@ In this lab you will create a Microsoft Fabric lakehouse, upload data, and explo
 
 ## Step 1: Start the Microsoft Fabric Playground
 
-1. Navigate to the [Microsoft Fabric Playground] on the **QA Platform** at: https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
+1. Navigate to the [Microsoft Fabric Playground](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) on the **QA Platform**.
 
 2. Click **Start** to start the lab.
 
