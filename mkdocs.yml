@@ -40,7 +40,6 @@ nav:
     - "Industry Group Scenarios": day3/medallion-scenarios.md
 
   - "Day 4 - Supportable & Explainable":
-    - "Review of Day 3 Pipeline": day4/pipeline-solution.md
     - "Silent Failures": day4/silent-fail.md
     - "Which Checks Matter?": day4/checks-design.md
     - "Add Validation Checks": day4/checks-build.md
@@ -52,6 +51,7 @@ nav:
 not_in_nav: |
   404.md
   trainer.md
+  DAY-setup.md
   day1/inspect-debrief.md
   day1/clean-intro.md
   day1/clean-debrief.md
@@ -64,6 +64,7 @@ not_in_nav: |
   day3/review.md
   day3/debrief.md
   day3/bridge.md
+  day4/pipeline-solution.md
   day4/checks-intro.md
   day4/mvd-intro.md
   day4/mvd-review.md

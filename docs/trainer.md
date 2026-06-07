@@ -44,7 +44,7 @@
 - `11:00` **Practice**: [Lab 2.2 - Landing Raw Data](labs/22-land-data.md) (10 mins)
 - `11:10` **Practice**: [Lab 2.3 - Clean the Sales Data](labs/23-cloud-clean.md) (20 mins)
 - `11:30` **Discussion**: [Familiar vs Different?](day2/cloud-debrief.md) (10 mins)
-- `11:40` **Investigation**: [Choosing a Data Architecture](day2/architecture-investigation.md) (20 mins)
+- `11:40` **Breakout**: [Choosing a Data Architecture](day2/architecture-investigation.md) (20 mins)
 - `12:00` **Report-Back**: [Choosing a Data Architecture](day2/architecture-notes.md) (20 mins)
 
 ### Session 3

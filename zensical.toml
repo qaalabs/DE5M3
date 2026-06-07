@@ -38,7 +38,6 @@ nav = [
     {"Industry Group Scenarios" = "day3/medallion-scenarios.md"},
   ]},
   {"Day 4 - Supportable & Explainable" = [
-    {"Review of Day 3 Pipeline" = "day4/pipeline-solution.md"},
     {"Silent Failures" = "day4/silent-fail.md"},
     {"Which Checks Matter?" = "day4/checks-design.md"},
     {"Add Validation Checks" = "day4/checks-build.md"},

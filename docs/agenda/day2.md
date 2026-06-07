@@ -3,7 +3,7 @@
 ## Session 1
 
 - 🌅 Welcome to Day 2 of DE5 Module 3
-- VM Setup & Start Fabric Playground
+- 🖥️ VM Setup
 - What Is Fabric?
 - **Practice**: [Lab 2.1 - Explore Fabric Environment](../labs/21-lakehouse.md)
 - **Discussion**: What Stays the Same?
@@ -15,7 +15,7 @@
 - **Practice**: [Lab 2.2 - Landing Raw Data](../labs/22-land-data.md)
 - **Practice**: [Lab 2.3 - Clean the Sales Data](../labs/23-cloud-clean.md)
 - **Discussion**: Familiar vs Different?
-- **Investigation**: [Choosing a Data Architecture](../day2/architecture-investigation.md)
+- **Breakout**: [Choosing a Data Architecture](../day2/architecture-investigation.md)
 - **Report-Back**: Choosing a Data Architecture
 
 ## 🥪🥤 Lunch Break
