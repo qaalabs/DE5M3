@@ -4,9 +4,11 @@
 
 Reposition the day before anything else.
 
-> Day 1 proved the logic. Day 2 proved it in the cloud. Today we ask whether that is enough.
+!!! info "Day 1 proved the logic. Day 2 proved it in the cloud. Today we ask whether that is enough."
 
-This is not a new build day. It is a day where they judge what they have already built.
+!!! question "Today we ask whether that is enough."
+
+!!! note "This is not a new build day. It is a day where they judge what they have already built."
 
 ---
 
