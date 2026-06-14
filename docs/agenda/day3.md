@@ -3,7 +3,7 @@
 ## Session 1
 
 - 🌅 Welcome to Day 3 of DE5 Module 3
-- Design Review
+- **Slides**: Design Review
 - **Breakout**: [Where are the Weaknesses?](../day3/fragile.md)
 - **Report-Back**: Our Design Debts
 
