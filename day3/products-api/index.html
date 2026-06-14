@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes - End of Day Reflection - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes — API Extraction Lab - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#facilitator-notes-end-of-day-reflection" class="md-skip">
+        <a href="#facilitator-notes-api-extraction-lab" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes - End of Day Reflection
+              Facilitator Notes — API Extraction Lab
             
           </span>
         </div>
@@ -385,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../homesphere/" class="md-nav__link">
+      <a href="../../day1/homesphere/" class="md-nav__link">
         
   
   
@@ -413,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inspect-sales/" class="md-nav__link">
+      <a href="../../day1/inspect-sales/" class="md-nav__link">
         
   
   
@@ -441,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inspect-prod/" class="md-nav__link">
+      <a href="../../day1/inspect-prod/" class="md-nav__link">
         
   
   
@@ -469,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../clean-sales/" class="md-nav__link">
+      <a href="../../day1/clean-sales/" class="md-nav__link">
         
   
   
@@ -497,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flatten-join/" class="md-nav__link">
+      <a href="../../day1/flatten-join/" class="md-nav__link">
         
   
   
@@ -525,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etl-products/" class="md-nav__link">
+      <a href="../../day1/etl-products/" class="md-nav__link">
         
   
   
@@ -597,45 +597,62 @@
 
 
 
-<h1 id="facilitator-notes-end-of-day-reflection">Facilitator Notes - End of Day Reflection</h1>
-<p><em>Trainer-only. ~10 minutes to close the day.</em></p>
+<h1 id="facilitator-notes-api-extraction-lab">Facilitator Notes — API Extraction Lab</h1>
+<p><em>Trainer-only. Session 1, Day 3 — runs before the fragile breakout.</em></p>
 <hr>
-<h2 id="what-to-surface">What to surface</h2>
-<p>Ask the group: <strong>"What did you actually build today?"</strong></p>
-<p>Let them answer before you summarise. The point is for them to articulate it, not just hear it.</p>
-<p>The answer you are looking for:</p>
+<h2 id="purpose">Purpose</h2>
+<p>Introduce a new source requirement before the design critique begins. The product catalogue has moved from a static JSON file to a live API — learners update their pipeline to call it.</p>
+<p>This is the first time the pipeline logic changes between days (Day 1 and Day 2 used the same code in different environments). The change is deliberate: the CSV still arrives as batch, the products now arrive on demand. That distinction — batch vs on-demand extraction — is what grounds KSB S4 in this module.</p>
+<hr>
+<h2 id="setup">Setup</h2>
+<p>Learners work individually, locally — same environment as Day 1. No Fabric, no OneLake. Just the notebook and a working Python environment.</p>
+<p>The notebook is <code>homesphere_api</code> (TODO version). It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside.</p>
+<hr>
+<h2 id="timing">Timing</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>What learners do</th>
+<th>Approx</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Swagger exploration</td>
+<td>Q1–Q6 in the notebook, no code yet</td>
+<td>10–15 min</td>
+</tr>
+<tr>
+<td>Core exercise</td>
+<td>Write <code>extract_products_from_api()</code>, run the full pipeline</td>
+<td>20–25 min</td>
+</tr>
+<tr>
+<td>Stretch 1</td>
+<td>Header authentication with <code>/product1</code></td>
+<td>5–10 min</td>
+</tr>
+<tr>
+<td>Stretch 2</td>
+<td>Query parameter auth with <code>/product2</code></td>
+<td>5 min</td>
+</tr>
+</tbody>
+</table>
+<p>Aim to close the lab and transition to the review/fragile breakout around the 45-minute mark. The stretch tasks exist to keep faster learners occupied — not everyone needs to complete them.</p>
+<hr>
+<h2 id="what-to-listen-for">What to listen for</h2>
+<p><strong>During the Swagger phase</strong> — learners who rush straight to the code skip the exploration questions. Worth a gentle prompt: "Before you write anything, what does the response actually look like?"</p>
+<p><strong>During the coding phase</strong> — the most common sticking point is the nested <code>specs</code> structure. If someone is stuck, ask: "What did <code>flatten_products()</code> do on Day 1? The structure is the same problem."</p>
+<p><strong>On hardcoded keys (Stretch 1)</strong> — the solution deliberately hardcodes <code>API_KEY = "training-key-header"</code>. This is intentional. The note in the notebook surfaces the problem and names the right patterns (env vars, secrets managers). You do not need to resolve it — just confirm that in production, the key would not live in the code.</p>
+<hr>
+<h2 id="closing-the-lab-transition-to-fragile-breakout">Closing the lab — transition to fragile breakout</h2>
+<p>Once most learners have a working pipeline, bring them back together:</p>
 <blockquote>
-<p>Two raw, messy source files → a clean joined dataset → a business answer.</p>
+<p>"The product data is now live — if a price changes, your pipeline picks it up automatically. That is one fragility fixed. But look at the pipeline as a whole. What else would make you nervous if you inherited it on Monday morning?"</p>
 </blockquote>
-<p>That is a complete pipeline. It ran locally, by hand, in a notebook. Hold that thought - it matters tomorrow.</p>
-<hr>
-<h2 id="prompts">Prompts</h2>
-<p><strong>On the cleaning:</strong></p>
-<ul>
-<li>Which fix surprised you most?</li>
-<li>Which decision would you make differently if you knew more about the business?</li>
-</ul>
-<p><strong>On the join:</strong></p>
-<ul>
-<li>Before today, how would you have combined two datasets?</li>
-<li>What would have happened if you had joined before cleaning?</li>
-</ul>
-<p><strong>On the answer:</strong></p>
-<ul>
-<li>Cameras generate 40% of revenue. What would HomeSphere do with that information?</li>
-<li>Is one week of data enough to trust this answer?</li>
-</ul>
-<p><strong>On the process:</strong></p>
-<ul>
-<li>What would break if this file arrived tomorrow with a new format?</li>
-<li>What would you automate first if this ran every day?</li>
-</ul>
-<hr>
-<h2 id="close">Close</h2>
-<blockquote>
-<p>"Tomorrow we take the same data and the same question - and run it in Microsoft Fabric. Same pipeline, different environment. You will see what changes and what stays exactly the same."</p>
-</blockquote>
-<p>Keep it brief. End on the continuity into Day 2.</p>
+<p>That question opens the fragile breakout naturally.</p>
 
 
 
