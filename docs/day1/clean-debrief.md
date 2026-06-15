@@ -1,9 +1,5 @@
 # Facilitator Notes - Clean Debrief
 
-*Trainer-only. Run this after learners have completed Part 3 of `local_clean.ipynb`.*
-
----
-
 ## What to draw out
 
 Ask the group: **"How many rows did you start with and end with?"**

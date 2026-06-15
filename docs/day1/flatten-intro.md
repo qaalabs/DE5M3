@@ -1,11 +1,5 @@
 # Facilitator Notes - Why Flatten and Join?
 
-*Trainer-only. Short setup before learners open `local_join.ipynb`.*
-
-*Aim: 10 minutes, then hand over to practice.*
-
----
-
 ## The problem to set up
 
 > "We have two clean datasets. But they are in different shapes. We cannot just put them side by side."

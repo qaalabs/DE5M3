@@ -1,9 +1,5 @@
 # Facilitator Notes - End of Day Reflection
 
-*Trainer-only. ~10 minutes to close the day.*
-
----
-
 ## What to surface
 
 Ask the group: **"What did you actually build today?"**

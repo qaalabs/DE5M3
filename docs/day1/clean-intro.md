@@ -1,11 +1,5 @@
 # Facilitator Notes - Cleaning Moves Overview
 
-*Trainer-only. Short setup before learners open `local_clean.ipynb` Part 3.*
-
-*Aim: 10 minutes, then hand over to practice.*
-
----
-
 ## The approach to establish upfront
 
 > "We fix one thing at a time and verify before moving on."

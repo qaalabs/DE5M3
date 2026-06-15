@@ -1,5 +1,7 @@
 # Flatten, Join, and Answer
 
+!!! question "Which product categories generate the most revenue?"
+
 ## What you are doing
 
 You have a cleaned Sales dataset. You have a Product catalogue in nested JSON.
