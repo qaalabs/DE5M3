@@ -6,9 +6,6 @@ title: Medallion Architecture
 
 *A convention for organising data you can trust*
 
-![alt text](assets/my-image.png)
-
-
 ---
 
 # What is Medallion Architecture?

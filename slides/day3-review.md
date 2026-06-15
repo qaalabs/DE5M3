@@ -17,5 +17,5 @@ Tables/
 
 **Two notebooks. No structure. No labels. No validation. Someone presses Run.**
 
-<p class="fragment"><mark>❓ If you inherited this workspace on Monday morning, what would you need to know?</mark></p>
+<p class="fragment"><mark>❓ What could go wrong with this pipeline?</mark></p>
 
