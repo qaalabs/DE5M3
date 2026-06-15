@@ -296,6 +296,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agenda/day2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -559,6 +587,284 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2 - ETL in the Cloud
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Day 2 - ETL in the Cloud
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/21-lakehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.1 - Explore Fabric Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/22-land-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.2 - Landing Raw Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/23-cloud-clean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.3 - Clean the Sales Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/architecture-investigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choosing a Data Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/24-pm-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.4 - Setup Fabric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/25-cloud-output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.5 - Build the Trusted Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/26-etl-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.6 - Create ETL Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day2/compare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local vs Cloud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../resources/" class="md-nav__link">
         
@@ -598,7 +904,7 @@
 
 
 <h1 id="facilitator-notes-api-extraction-lab">Facilitator Notes — API Extraction Lab</h1>
-<p><em>Trainer-only. Session 1, Day 3 — runs before the fragile breakout.</em></p>
+<p><em>Trainer-only. Session 1, Day 3 — runs before the break. FRAGILE breakout follows.</em></p>
 <hr>
 <h2 id="purpose">Purpose</h2>
 <p>Introduce a new source requirement before the design critique begins. The product catalogue has moved from a static JSON file to a live API — learners update their pipeline to call it.</p>
@@ -606,7 +912,7 @@
 <hr>
 <h2 id="setup">Setup</h2>
 <p>Learners work individually, locally — same environment as Day 1. No Fabric, no OneLake. Just the notebook and a working Python environment.</p>
-<p>The notebook is <code>homesphere_api</code> (TODO version). It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside.</p>
+<p>The notebook is <code>day3/api/homesphere_api_todo.ipynb</code>. It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside.</p>
 <hr>
 <h2 id="timing">Timing</h2>
 <table>
@@ -620,27 +926,27 @@
 <tbody>
 <tr>
 <td>Swagger exploration</td>
-<td>Q1–Q6 in the notebook, no code yet</td>
-<td>10–15 min</td>
+<td>Q1–Q6 in the browser, no code yet</td>
+<td>15 min</td>
 </tr>
 <tr>
 <td>Core exercise</td>
 <td>Write <code>extract_products_from_api()</code>, run the full pipeline</td>
-<td>20–25 min</td>
+<td>15 min</td>
 </tr>
 <tr>
 <td>Stretch 1</td>
 <td>Header authentication with <code>/product1</code></td>
-<td>5–10 min</td>
+<td>fast finishers</td>
 </tr>
 <tr>
 <td>Stretch 2</td>
 <td>Query parameter auth with <code>/product2</code></td>
-<td>5 min</td>
+<td>fast finishers</td>
 </tr>
 </tbody>
 </table>
-<p>Aim to close the lab and transition to the review/fragile breakout around the 45-minute mark. The stretch tasks exist to keep faster learners occupied — not everyone needs to complete them.</p>
+<p>Close when the block ends regardless of where learners are. The stretch tasks exist to keep faster learners occupied -- not everyone needs to complete them.</p>
 <hr>
 <h2 id="what-to-listen-for">What to listen for</h2>
 <p><strong>During the Swagger phase</strong> — learners who rush straight to the code skip the exploration questions. Worth a gentle prompt: "Before you write anything, what does the response actually look like?"</p>
@@ -648,11 +954,11 @@
 <p><strong>On hardcoded keys (Stretch 1)</strong> — the solution deliberately hardcodes <code>API_KEY = "training-key-header"</code>. This is intentional. The note in the notebook surfaces the problem and names the right patterns (env vars, secrets managers). You do not need to resolve it — just confirm that in production, the key would not live in the code.</p>
 <hr>
 <h2 id="closing-the-lab-transition-to-fragile-breakout">Closing the lab — transition to fragile breakout</h2>
-<p>Once most learners have a working pipeline, bring them back together:</p>
+<p>Once most learners have a working pipeline, bring them back together before the break:</p>
 <blockquote>
-<p>"The product data is now live — if a price changes, your pipeline picks it up automatically. That is one fragility fixed. But look at the pipeline as a whole. What else would make you nervous if you inherited it on Monday morning?"</p>
+<p>"The product data is now live -- if a price changes, your pipeline picks it up automatically. That is one fragility fixed. After the break, you are going to name the rest."</p>
 </blockquote>
-<p>That question opens the fragile breakout naturally.</p>
+<p>The FRAGILE breakout picks this up after the break.</p>
 
 
 
