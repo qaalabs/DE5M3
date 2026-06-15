@@ -55,10 +55,23 @@ ORD-007  (null) →     no match - row kept, category = NaN
 
 **If someone asks about inner join:** An inner join would silently drop any Sales row with no matching product. We would lose rows without knowing it. The left join keeps them visible so we can see the problem.
 
-**If someone has SQL experience:** Same concept, different syntax. `df.merge(other, on='product_id', how='left')` is `SELECT * FROM sales LEFT JOIN products ON sales.product_id = products.product_id`.
+**If someone has SQL experience:** Same concept, different syntax:
+
+```python
+df.merge(other, on='product_id', how='left')
+```
+
+is
+
+```sql
+SELECT * FROM sales 
+LEFT JOIN products 
+ON sales.product_id = products.product_id
+```
 
 ---
 
 ## Hand over
 
-> "Flatten the Products, load your cleaned Sales, join them, calculate line value, and answer the question. The notebook walks you through each step."
+> Flatten the Products, load your cleaned Sales, join them, calculate line value, and answer the question. The notebook walks you through each step.
+

@@ -1,4 +1,4 @@
-# Clean the Sales Data
+# Part 3: Clean the Sales Data
 
 ## What you are doing
 

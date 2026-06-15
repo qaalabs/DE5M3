@@ -1,4 +1,4 @@
-# Open Sales Data
+# Part 1: Open Sales Data
 
 ## What you are doing
 

@@ -1,5 +1,4 @@
-## DE5M3 Day 1: Pre-Day Setup Tasks
-
+### Session 1
 
 ### Session 4
 - Breakout room with 4 groups
