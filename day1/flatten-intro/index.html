@@ -420,7 +420,7 @@
   <span class="md-ellipsis">
     
   
-    Open Sales Data
+    Part 1: Inspect Sales Data
   
 
     
@@ -448,7 +448,7 @@
   <span class="md-ellipsis">
     
   
-    Open Product Data
+    Part 2: Inspect Product Data
   
 
     
@@ -476,7 +476,7 @@
   <span class="md-ellipsis">
     
   
-    Clean the Sales Data
+    Part 3: Clean Sales Data
   
 
     
@@ -639,11 +639,18 @@ ORD-002  P007   →     P007  Smart Plug     Smart Plugs
 ORD-007  (null) →     no match - row kept, category = NaN
 </code></pre></div>
 <p><strong>If someone asks about inner join:</strong> An inner join would silently drop any Sales row with no matching product. We would lose rows without knowing it. The left join keeps them visible so we can see the problem.</p>
-<p><strong>If someone has SQL experience:</strong> Same concept, different syntax. <code>df.merge(other, on='product_id', how='left')</code> is <code>SELECT * FROM sales LEFT JOIN products ON sales.product_id = products.product_id</code>.</p>
+<p><strong>If someone has SQL experience:</strong> Same concept, different syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'product_id'</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+</code></pre></div>
+<p>is</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">sales</span><span class="w"> </span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">products</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="n">sales</span><span class="p">.</span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">products</span><span class="p">.</span><span class="n">product_id</span>
+</code></pre></div>
 <hr>
 <h2 id="hand-over">Hand over</h2>
 <blockquote>
-<p>"Flatten the Products, load your cleaned Sales, join them, calculate line value, and answer the question. The notebook walks you through each step."</p>
+<p>Flatten the Products, load your cleaned Sales, join them, calculate line value, and answer the question. The notebook walks you through each step.</p>
 </blockquote>
 
 
