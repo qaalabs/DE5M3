@@ -5,20 +5,21 @@
 ### Session 1
 
 - `10:10` **Activity**: [Git Clone the Data Files](labs/11-setup.md) (10 mins)
-- `10:20` **Reading**: [Introducing HomeSphere](day1/homesphere.md) (10 mins)
+- `10:20` **Practice**: Explore Python-101 Notebook (10 mins)
 
 ### Session 2
 
-- `10:50` **Practice**: [Open Sales Data](day1/inspect-sales.md) (20 mins)
-- `11:10` **Practice**: [Open Product Data](day1/inspect-prod.md) (10 mins)
+- `10:50` **Reading**: [Introducing HomeSphere](day1/homesphere.md) (10 mins)
+- `11:00` **Practice**: [Part 1: Inspect Sales Data](day1/inspect-sales.md) (10 mins)
+- `11:10` **Practice**: [Part 2: Inspect Product Data](day1/inspect-prod.md) (10 mins)
 - `11:20` **Discussion**: [What Did You Find?](day1/inspect-debrief.md) (10 mins)
 - `11:30` [Cleaning Moves Overview](day1/clean-intro.md) (10 mins)
-- `11:40` **Practice**: [Clean the Sales Data](day1/clean-sales.md) (40 mins)
+- `11:40` **Practice**: [Part 3: Clean Sales Data](day1/clean-sales.md) (40 mins)
 
 ### Session 3
 
 - `13:20` **Discussion**: [Mechanical or Judgement?](day1/clean-debrief.md) (10 mins)
-- `13:30` [Why Flatten and Join?](day1/flatten-intro.md) (10 mins)
+- `13:30` **Slides**: [Why Flatten and Join?](day1/flatten-intro.md) (10 mins)
 - `13:40` **Practice**: [Flatten and Join](day1/flatten-join.md) (40 mins)
 - `14:20` **Practice**: Which Categories Earn Most? (10 mins)
 

@@ -5,24 +5,25 @@
 - 🌅 Welcome to Day 1 of DE5 Module 3
 - 🖥️ VM Setup
 - **Activity**: [Git Clone the Data Files](../labs/11-setup.md)
-- **Reading**: [Introducing HomeSphere](../day1/homesphere.md)
+- **Practice**: Explore Python-101 Notebook
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- **Practice**: [Open Sales Data](../day1/inspect-sales.md)
-- **Practice**: [Open Product Data](../day1/inspect-prod.md)
+- **Reading**: [Introducing HomeSphere](../day1/homesphere.md)
+- **Practice**: [Part 1: Inspect Sales Data](../day1/inspect-sales.md)
+- **Practice**: [Part 2: Inspect Product Data](../day1/inspect-prod.md)
 - **Discussion**: What Did You Find?
 - Cleaning Moves Overview
-- **Practice**: [Clean the Sales Data](../day1/clean-sales.md)
+- **Practice**: [Part 3: Clean Sales Data](../day1/clean-sales.md)
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
 - **Discussion**: Mechanical or Judgement?
-- Why Flatten and Join?
+- **Slides**: Why Flatten and Join?
 - **Practice**: [Flatten and Join](../day1/flatten-join.md)
 - **Practice**: Which Categories Earn Most?
 
