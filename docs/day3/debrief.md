@@ -1,10 +1,5 @@
 # Facilitator Notes - What Is Actually Better?
 
-*Trainer-only. After REFACTOR, before afternoon break.*
-*Aim: 20 minutes.*
-
----
-
 ## Ask the group
 
 **"What is concretely better about the medallion version?"**

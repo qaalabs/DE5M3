@@ -1,6 +1,6 @@
 # Facilitator Notes — API Extraction Lab
 
-*Trainer-only. Session 1, Day 3 — runs before the fragile breakout.*
+*Trainer-only. Session 1, Day 3 — runs before the break. FRAGILE breakout follows.*
 
 ---
 
@@ -16,7 +16,7 @@ This is the first time the pipeline logic changes between days (Day 1 and Day 2 
 
 Learners work individually, locally — same environment as Day 1. No Fabric, no OneLake. Just the notebook and a working Python environment.
 
-The notebook is `homesphere_api` (TODO version). It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside.
+The notebook is `day3/api/homesphere_api_todo.ipynb`. It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside.
 
 ---
 
@@ -24,12 +24,12 @@ The notebook is `homesphere_api` (TODO version). It is self-contained: narrative
 
 | Phase | What learners do | Approx |
 |---|---|---|
-| Swagger exploration | Q1–Q6 in the notebook, no code yet | 10–15 min |
-| Core exercise | Write `extract_products_from_api()`, run the full pipeline | 20–25 min |
-| Stretch 1 | Header authentication with `/product1` | 5–10 min |
-| Stretch 2 | Query parameter auth with `/product2` | 5 min |
+| Swagger exploration | Q1–Q6 in the browser, no code yet | 15 min |
+| Core exercise | Write `extract_products_from_api()`, run the full pipeline | 15 min |
+| Stretch 1 | Header authentication with `/product1` | fast finishers |
+| Stretch 2 | Query parameter auth with `/product2` | fast finishers |
 
-Aim to close the lab and transition to the review/fragile breakout around the 45-minute mark. The stretch tasks exist to keep faster learners occupied — not everyone needs to complete them.
+Close when the block ends regardless of where learners are. The stretch tasks exist to keep faster learners occupied -- not everyone needs to complete them.
 
 ---
 
@@ -45,8 +45,8 @@ Aim to close the lab and transition to the review/fragile breakout around the 45
 
 ## Closing the lab — transition to fragile breakout
 
-Once most learners have a working pipeline, bring them back together:
+Once most learners have a working pipeline, bring them back together before the break:
 
-> "The product data is now live — if a price changes, your pipeline picks it up automatically. That is one fragility fixed. But look at the pipeline as a whole. What else would make you nervous if you inherited it on Monday morning?"
+> "The product data is now live -- if a price changes, your pipeline picks it up automatically. That is one fragility fixed. After the break, you are going to name the rest."
 
-That question opens the fragile breakout naturally.
+The FRAGILE breakout picks this up after the break.

@@ -1,10 +1,5 @@
 # Facilitator Notes - What Needs to Move?
 
-*Trainer-only. After MED-MAP, before lunch.*
-*Aim: 20 minutes.*
-
----
-
 ## What to draw out
 
 Ask groups to share their mapping. The correct answers:
