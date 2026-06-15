@@ -69,20 +69,23 @@
 ### Session 1
 
 - `09:40` **Slides**: [Design Review](day3/review.md) (10 mins)
-- `09:50` **Breakout**: [Where are the Weaknesses?](day3/fragile.md) (20 mins)
-- `10:10` **Report-Back**: Our Design Debts (20 mins)
+- `09:50` **Slides**: Solution: Add Metadata to a CSV File (10 mins)
+- `10:00` **Slides**: Solution: Get Data From an API (10 mins)
+- `10:10` **Practice**: Swagger: Read from a Live API (30 mins)
 
 ### Session 2
 
-- `11:00` Bronze, Silver, Gold (30 mins)
-- `11:30` **Practice**: [Map the Pipeline](day3/med-map.md) (30 mins)
+- `11:00` **Breakout**: [Where are the Weaknesses?](day3/fragile.md) (20 mins)
+- `11:20` **Report-Back**: Our Design Debts (10 mins)
+- `11:30` **Slides**: Medallion: Bronze - Silver - Gold (20 mins)
+- `11:50` **Practice**: [Map the Pipeline](day3/med-map.md) (10 mins)
 - `12:00` **Discussion**: [What Needs to Move?](day3/med-debrief.md) (20 mins)
 
 ### Session 3
 
 - `13:20` **Activity**: [Lab 3.1 - Setup Fabric](labs/31-setup.md) (10 mins)
-- `13:50` **Practice**: [Lab 3.2 - Medallion Architecture](labs/32-medallion-lab.md) (30 mins)
-- `14:20` **Discussion**: [What Is Actually Better?](day3/debrief.md) (10 mins)
+- `13:30` **Practice**: [Lab 3.2 - Medallion Architecture](labs/32-medallion-lab.md) (40 mins)
+- `14:10` **Discussion**: [What Is Actually Better?](day3/debrief.md) (20 mins)
 
 ### Session 4
 

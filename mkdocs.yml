@@ -8,6 +8,7 @@ nav:
 
   - Agenda:
     - Day 1: agenda/day1.md
+    - Day 2: agenda/day2.md
 
   - "Day 1 - ETL Locally":
     - "Git Clone the Data Files": labs/11-setup.md
@@ -17,6 +18,16 @@ nav:
     - "Part 3: Clean Sales Data": day1/clean-sales.md
     - "Flatten and Join": day1/flatten-join.md
     - "ETL Product Investigation": day1/etl-products.md
+
+  - "Day 2 - ETL in the Cloud":
+    - "Lab 2.1 - Explore Fabric Environment": labs/21-lakehouse.md
+    - "Lab 2.2 - Landing Raw Data": labs/22-land-data.md
+    - "Lab 2.3 - Clean the Sales Data": labs/23-cloud-clean.md
+    - "Choosing a Data Architecture": day2/architecture-investigation.md
+    - "Lab 2.4 - Setup Fabric": labs/24-pm-setup.md
+    - "Lab 2.5 - Build the Trusted Output": labs/25-cloud-output.md
+    - "Lab 2.6 - Create ETL Pipeline": labs/26-etl-pipeline.md
+    - "Local vs Cloud": day2/compare.md
 
   - Resources: resources.md
 
@@ -34,7 +45,6 @@ not_in_nav: |
   day2/output-debrief.md
   day2/reflection.md
   day3/review.md
-  day3/debrief.md
   day3/bridge.md
   day4/pipeline-solution.md
   day4/checks-intro.md
