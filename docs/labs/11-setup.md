@@ -1,6 +1,6 @@
-# Lab 11 ~ Get the HomeSphere Files
+# Lab 1.1 ~ Get the HomeSphere Files
 
-Before you start working with data, you need to download the HomeSphere project files to your machine.
+!!! info "Before you start working with data, you need to download the HomeSphere project files to your machine."
 
 ## Step 1: Open Terminal
 

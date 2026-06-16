@@ -13,10 +13,11 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 !!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
 
+!!! success "Switch to your Virtual Machine to complete the steps listed below."
 
 ## Step 2: Logon to Azure and Microsoft Fabric
 
-1. Open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
+1. In your VM open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
 
 2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
 
@@ -132,7 +133,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 ## Step 8: Run the pm_setup notebook
 
-This creates the `cleaned_sales` table ready for Lab 2.5.
+!!! note "This step creates the `cleaned_sales` table ready for Lab 2.5."
 
 1. You should already have `pm_setup` open. Select **Run all**.
 

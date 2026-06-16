@@ -16,7 +16,7 @@ In this lab you will create a Microsoft Fabric lakehouse, upload data, and explo
 
 ## Step 2: Logon to Azure and Microsoft Fabric
 
-1. Open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
+1. In your VM open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
 
 2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
 
@@ -83,7 +83,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 Currently, there are no tables or files in this lakehouse.
 
 
-## Step 5: Upload a file
+## Step 5: Create a subfolder and upload a file
 
 Fabric provides multiple ways to load data into the lakehouse. One of the simplest ways to ingest small amounts of data is to upload files directly.
 
@@ -111,6 +111,8 @@ Fabric provides multiple ways to load data into the lakehouse. One of the simple
 5. Select the `sales.csv` file to see a preview of its contents.
 
     !!! tip "If **sales.csv** does not automatically appear, in the **...** menu for the **data** folder, select **Refresh**."
+
+    !!! note "Make sure the file has a `.csv` extension - not `.txt`"
 
 
 ## Step 6: Load file data into a table
@@ -154,9 +156,15 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
 1. On the **Home** tab of your lakehouse, select **Open notebook** > **New notebook**.
 
-2. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
+    If the option is not on the Home tab then at the top-right of the Lakehouse page:
+    - Select **Analyze data with** dropdown and choose: **Notebook** > **New notebook**
 
-    - Set the **Name** of the notebook to `Explore Sales`
+    !!! quote ""
+        ![Lakehouse new notebook](img/qa-lakehouse-notebook.png)
+
+2. Then in the notebook menu bar, use the ⚙️  **Settings** icon to view the notebook settings.
+
+    - Set the **Name** of the notebook to: `Explore Sales`
     - Close the settings pane to save the changes.
 
 3. In the first cell, enter the following code to load and display the sales table:
