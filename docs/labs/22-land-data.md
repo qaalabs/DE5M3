@@ -1,4 +1,4 @@
-# Lab 22 ~ Set Up the HomeSphere Environment
+# Lab 2.2 ~ Set Up the HomeSphere Environment
 
 !!! info "This lab continues from Lab 2.1. You should already be signed in to Microsoft Fabric."
 

@@ -5,7 +5,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 ## Step 1: Start the Microsoft Fabric Playground
 
-1. Navigate to the [Microsoft Fabric Playground](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) on the **QA Platform**.
+1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
 
 2. Click **Start** to start the lab.
 

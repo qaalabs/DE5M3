@@ -1,6 +1,6 @@
 # Lab 2.3 ~ Clean the Sales Data in Fabric
 
-This lab continues from Lab 2.2. Your HomeSphere lakehouse and notebooks should already be set up.
+!!! info "This lab continues from Lab 2.2. Your HomeSphere lakehouse and notebooks should already be set up."
 
 
 ## Step 1: Open the `cloud_clean` notebook
