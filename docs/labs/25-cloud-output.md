@@ -11,7 +11,7 @@ This lab continues from Lab 2.4. Your HomeSphere lakehouse and the `cleaned_sale
 
 3. In the **Notebook Explorer** on the left, select **Data Items** and confirm that **HomeSphere** appears under **OneLake**.
 
-    !!! success "The lakehouse is attached. The notebook can read the `cleaned_sales` table created in Lab 2.3."
+!!! success "The lakehouse is attached. The notebook can read the `cleaned_sales` table created in Lab 2.3."
 
 
 ## Step 2: Run the notebook
@@ -73,4 +73,4 @@ The notebook reads `cleaned_sales` from the lakehouse, joins it to the product c
 
 In this exercise, you read from a Delta table, joined and transformed the data in a notebook, and queried the result using both SQL magic and the SQL analytics endpoint.
 
-**Do not delete your workspace** - you will continue working in it in Lab 2.6.
+**Do not delete your workspace** - you will continue working in it in Lab 2.6

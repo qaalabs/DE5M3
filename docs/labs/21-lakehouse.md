@@ -13,6 +13,8 @@ In this lab you will create a Microsoft Fabric lakehouse, upload data, and explo
 
 !!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
 
+!!! tip "Switch to your Virtual Machine to complete the steps listed below."
+
 
 ## Step 2: Logon to Azure and Microsoft Fabric
 
@@ -157,6 +159,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 1. On the **Home** tab of your lakehouse, select **Open notebook** > **New notebook**.
 
     If the option is not on the Home tab then at the top-right of the Lakehouse page:
+
     - Select **Analyze data with** dropdown and choose: **Notebook** > **New notebook**
 
     !!! quote ""

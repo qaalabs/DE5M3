@@ -97,7 +97,7 @@ Opening each notebook from within the lakehouse connects it to the HomeSphere da
 2. On the **Home** tab:
 
     - Select **Open notebook** > **Existing notebook**
-    - Choose `cloud_clean`
+    - Choose: `cloud_clean`
 
 3. In the **Notebook Explorer** on the left, select **Data Items**.
 
@@ -106,7 +106,7 @@ Opening each notebook from within the lakehouse connects it to the HomeSphere da
 4. Return to the lakehouse and repeat for `cloud_output`:
 
     - Select **Open notebook** > **Existing notebook**
-    - Choose `cloud_output`
+    - Choose: `cloud_output`
 
 5. Select **Data Items** in the Notebook Explorer and confirm that **HomeSphere** appears under **OneLake**.
 

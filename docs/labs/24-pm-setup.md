@@ -13,7 +13,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 !!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
 
-!!! success "Switch to your Virtual Machine to complete the steps listed below."
+!!! tip "Switch to your Virtual Machine to complete the steps listed below."
 
 ## Step 2: Logon to Azure and Microsoft Fabric
 
@@ -84,7 +84,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 3. In the **...** menu for the `data` folder, select **Upload** and **Upload files**.
 
-    - Upload both `sales_raw.csv` and `products_raw.json`.
+    - Upload both `sales_raw.csv` and `products_raw.json`
 
 4. Select the `data` folder and confirm both files are visible.
 
@@ -117,14 +117,14 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 2. On the **Home** tab:
 
     - Select **Open notebook** > **Existing notebook**
-    - Choose `cloud_output`
+    - Choose: `cloud_output`
 
 3. In the **Notebook Explorer** on the left, select **Data Items** and confirm **HomeSphere** appears under **OneLake**.
 
 4. Return to the lakehouse and repeat for `pm_setup`:
 
     - select **Open notebook** > **Existing notebook**
-    - Choose `pm_setup`
+    - Choose: `pm_setup`
 
 5. Select **Data Items** in the Notebook Explorer and confirm that **HomeSphere** appears under **OneLake**.
 
@@ -133,7 +133,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 ## Step 8: Run the pm_setup notebook
 
-!!! note "This step creates the `cleaned_sales` table ready for Lab 2.5."
+!!! note "This step creates the `cleaned_sales` table ready for Lab 2.5"
 
 1. You should already have `pm_setup` open. Select **Run all**.
 
