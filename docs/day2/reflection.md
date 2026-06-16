@@ -1,9 +1,5 @@
 # Facilitator Notes - Cloud Is Not Well-Architected
 
-*Trainer-only. Final discussion of Day 2, ~20 minutes.*
-
----
-
 ## The setup
 
 After COMPARE-SHARE, land this clearly:

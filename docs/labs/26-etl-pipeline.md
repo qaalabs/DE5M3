@@ -1,8 +1,8 @@
 # Lab 2.6 ~ Orchestrate the HomeSphere ETL with a Pipeline
 
-## Step 1: Return to your HomeSphere workspace
+!!! info "This lab continues from where you left off. Your workspace and lakehouse from the earlier session ishould be still available."
 
-This lab continues from where you left off. Your workspace and lakehouse from the earlier session are still available.
+## Step 1: Return to your HomeSphere workspace
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
@@ -13,7 +13,9 @@ This lab continues from where you left off. Your workspace and lakehouse from th
 
 ## Step 2: Attach the solution notebooks to the lakehouse
 
-You imported four notebooks in the setup. So far you have only used the exercise notebooks. In this lab you will use the solution notebooks to build your pipeline.
+You imported four notebooks in the setup.
+
+So far you have only used the exercise notebooks. In this lab **you will use the solution notebooks** to build your pipeline.
 
 1. In the left navigation bar, select your **HomeSphere** lakehouse.
 
@@ -24,7 +26,7 @@ You imported four notebooks in the setup. So far you have only used the exercise
 4. Return to the lakehouse and repeat for `cloud_output_solution`
 
     - Select **Open notebook** > **Existing notebook** 
-    - Choose `cloud_output_solution`
+    - Choose: `cloud_output_solution`
 
 5. Confirm that **HomeSphere** also appears under **Data Items** in the Notebook Explorer.
 
@@ -53,8 +55,8 @@ You will add two Notebook activities - one for each solution notebook - and conn
 
 1. In the pipeline canvas **start with a blank canvas**:
 
-    - Select **Pipeline activity**
-    - Choose **Notebook** (scroll down - it should be under the *Transform* heading)
+    - Select: **Pipeline activity**
+    - Choose: **Notebook** (scroll down - it should be under the *Transform* heading)
 
 2. In the activity properties pane below the canvas, set the **Name** to: `Clean Sales`
 
