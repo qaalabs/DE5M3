@@ -10,6 +10,7 @@ nav:
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
     - Day 3: agenda/day3.md
+    - Day 4: agenda/day4.md
 
   - "Day 1 - ETL Locally":
     - "Git Clone the Data Files": labs/11-setup.md
@@ -38,6 +39,13 @@ nav:
     - "Lab 3.2 - Medallion Architecture": labs/32-medallion-lab.md
     - "What Is Actually Better?": day3/debrief.md
     - "Industry Group Scenarios": day3/medallion-scenarios.md
+
+  - "Day 4 - Supportable & Explainable":
+    - "Silent Failures": day4/silent-fail.md
+    - "Which Checks Matter?": day4/checks-design.md
+    - "Add Validation Checks": day4/checks-build.md
+    - "Create a Handover Artefact": day4/mvd-build.md
+    - "Prepare Your Explanation": day4/pitch-prep.md
 
   - Resources: resources.md
 
