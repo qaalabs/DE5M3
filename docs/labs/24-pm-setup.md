@@ -97,12 +97,15 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 2. On the toolbar select **Import** and choose **Notebook**. Then select **From this computer**.
 
-3. Browse to the `HomeSphere/cloud/` folder on your Desktop and import:
+3. Browse to the `M3/HomeSphere/cloud/` folder on your Desktop and import:
 
     - `cloud_output.ipynb`
+
+4. Browse to the `M3/day1/` folder on your Desktop and import:
+
     - `pm_setup.ipynb`
 
-4. Import again - this time browse to the `HomeSphere/solution/` folder and import:
+5. Import again - this time browse to the `HomeSphere/solution/` folder and import:
 
     - `cloud_clean_solution.ipynb`
     - `cloud_output_solution.ipynb`
@@ -131,7 +134,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
     !!! success "Both notebooks are now connected to the HomeSphere lakehouse."
 
 
-## Step 8: Run the pm_setup notebook
+## Step 8: Run the `pm_setup` notebook
 
 !!! note "This step creates the `cleaned_sales` table ready for Lab 2.5"
 

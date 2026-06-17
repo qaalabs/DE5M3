@@ -4,7 +4,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
 
 ## Step 1: Start the Microsoft Fabric Playground
 
-1. Navigate to the [Microsoft Fabric Playground](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) on the **QA Platform**.
+1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
 
 2. Click **Start** to start the lab.
 
@@ -12,10 +12,11 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
 
 !!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
 
+!!! tip "Switch to your Virtual Machine to complete the steps listed below."
 
 ## Step 2: Logon to Azure and Microsoft Fabric
 
-1. Open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
+1. In your VM open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
 
 2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
 
@@ -57,7 +58,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
-    - Name the lakehouse `HomeSphere`
+    - Name the lakehouse: `HomeSphere`
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
