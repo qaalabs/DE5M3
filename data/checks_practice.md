@@ -77,9 +77,38 @@ else:
     print('All checks passed')
 ```
 
+## A closer look: TypeError vs AssertionError
+
+Two of those failures were TypeErrors - the comparison `> 0` crashed before the assertion
+could even run, because the column is object dtype, not numeric.
+
+Once you fix the type, the check can run - and may still fail.
+
+Run the cell below to see what is actually hiding in `unit_price`.
+
+
+```python
+# Strip the £ prefix and coerce to numeric so the comparison can run
+unit_price_coerced = pd.to_numeric(
+    df_raw['unit_price'].astype(str).str.replace('£', '', regex=False),
+    errors='coerce'
+)
+
+# Now the check runs - and finds a real problem
+try:
+    assert (unit_price_coerced > 0).all(), "some unit_price values are not positive"
+except AssertionError as e:
+    print(f'AssertionError: {e}')
+    print()
+    mask = ~(unit_price_coerced > 0)
+    print('Offending rows:')
+    print(df_raw.loc[mask, ['order_id', 'unit_price']].to_string(index=False))
+```
+
 ## Discussion
 
-The checks surfaced real problems in the raw file.
+The checks surfaced real problems in the raw file - including a genuinely negative price,
+not just a formatting issue.
 
 You know that cleaning will drop 7 rows. But should the pipeline have even started?
 

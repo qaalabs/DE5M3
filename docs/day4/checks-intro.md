@@ -29,17 +29,17 @@ The business output has not changed since Day 1. The pipeline now has a shape. T
 
 ## Frame silent failures
 
-Before sending them into SILENT-FAIL, introduce the concept briefly:
+Introduce the concept before opening the discussion:
 
 > "A crash is honest. The pipeline stops. You know something went wrong. A silent failure is worse - the pipeline runs, produces output, no one raises an error, and the numbers are wrong. The report lands in someone's inbox and looks fine."
 
 Ask: "Can you think of an example of a silent failure - not just in data pipelines, but anywhere?"
 
-Let two or three people answer. This builds intuition before they apply it to the pipeline.
+Let two or three people answer. This builds intuition before they apply it to the HomeSphere pipeline.
 
 ---
 
-## What to listen for in SILENT-FAIL
+## What to listen for in the discussion
 
 Good groups will produce specific, named failure modes:
 
@@ -51,13 +51,11 @@ Groups that are drifting will produce vague observations. Redirect with: "What w
 
 ---
 
-## Bridge to CHECKS-DESIGN and CHECKS-BUILD
+## Bridge to the validation notebook
 
-> "We know the pipeline can fail silently. The question is: which failures are worth writing code to catch - and where in the pipeline should those checks live?"
+> "We know the pipeline can fail silently. So: what should we put in place to catch that?"
 
-In CHECKS-BUILD they will run the Day 3 validation checks against the raw file - before any cleaning. The checks will fail. That then raises the real debate: what should the pipeline do when they fail? Stop entirely? Clean and drop rows? Quarantine the bad ones?
-
-Send them into the checks design activity first.
+They will run validation checks against the raw file - before any cleaning - and see what the data actually contains. The checks will fail. That surfaces the real debate: should the pipeline stop, proceed, or quarantine the bad rows?
 
 ---
 
