@@ -1247,34 +1247,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../checks-design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Which Checks Matter?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../checks-build/" class="md-nav__link">
         
   
@@ -1446,8 +1418,8 @@
 <blockquote>
 <p>"We know the pipeline can fail silently. The question is: which failures are worth writing code to catch - and where in the pipeline should those checks live?"</p>
 </blockquote>
-<p>They will design the checks and write the assert statements as a code-sketch - what they would add, not running code.</p>
-<p>Send them into the checks design activity.</p>
+<p>In CHECKS-BUILD they will run the Day 3 validation checks against the raw file - before any cleaning. The checks will fail. That then raises the real debate: what should the pipeline do when they fail? Stop entirely? Clean and drop rows? Quarantine the bad ones?</p>
+<p>Send them into the checks design activity first.</p>
 <hr>
 <h2 id="key-point-for-the-debrief">Key point for the debrief</h2>
 <p>The hardest checks to write are the ones that require knowing what normal looks like. Row count, value ranges, expected revenue totals - these require baseline knowledge. A new pipeline has no baseline. That is a real problem worth naming:</p>

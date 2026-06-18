@@ -6,7 +6,7 @@
       
       
       
-        <link rel="prev" href="../checks-design/">
+        <link rel="prev" href="../silent-fail/">
       
       
         <link rel="next" href="../mvd-build/">
@@ -1250,34 +1250,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../checks-design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Which Checks Matter?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1352,28 +1324,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#existing-validation-cell" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Existing validation cell
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-your-checks-below-the-existing-ones" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add your checks below the existing ones
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reference-useful-assert-patterns" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1400,17 +1350,6 @@
     <span class="md-ellipsis">
       
         For silver→gold: what this would look like in Fabric
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reflect" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reflect
       
     </span>
   </a>
@@ -1534,32 +1473,9 @@
 
 
 <h1 id="add-validation-checks">Add Validation Checks</h1>
-<p><em>Practice - Session 1. Individual.</em></p>
-<hr>
 <h2 id="what-you-are-doing">What you are doing</h2>
-<p>You designed the checks. Now write the code.</p>
-<blockquote>
-<p><strong>This is a code-sketch. You are writing what you would add - not running it. Plain Python assert statements are enough.</strong></p>
-</blockquote>
-<p>The existing validation cell in the bronze→silver notebook is shown below.
-Your task is to extend it with three more checks - your choice from the list you designed, or one you came up with yourself.</p>
-<hr>
-<h2 id="existing-validation-cell">Existing validation cell</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># Validation checks</span>
-<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">float</span><span class="p">,</span> <span class="s2">"unit_price should be float"</span>
-<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">"quantity should be int"</span>
-<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'product_id'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"product_id should have no nulls"</span>
-<span class="k">assert</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">"all prices should be positive"</span>
-<span class="k">assert</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">"all quantities should be positive"</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'All validation checks passed'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
-</code></pre></div>
-<hr>
-<h2 id="add-your-checks-below-the-existing-ones">Add your checks below the existing ones</h2>
-<p>Write the assert statements you would add. Use plain Python - no Fabric required.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Your additional checks here</span>
-</code></pre></div>
+<p>Open <code>day4/checks_practice.ipynb</code> and work through the three parts.</p>
+<p>The notebook runs the Day 3 validation checks against the raw file - before any cleaning has happened. Most checks will fail. That is the point.</p>
 <hr>
 <h2 id="reference-useful-assert-patterns">Reference: useful assert patterns</h2>
 <table>
@@ -1598,42 +1514,45 @@ Your task is to extend it with three more checks - your choice from the list you
 </table>
 <hr>
 <h2 id="suggested-additions">Suggested additions</h2>
-<p>Once you have written your own, compare with these:</p>
-<details>
-<summary>Row count check</summary>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"dataframe is empty - check source file"</span>
-</code></pre></div>
-</details>
+<p>The raw file has more problems than the five Day 3 checks will catch. Once you have written your own, compare with these:</p>
 <details>
 <summary>No duplicate order IDs</summary>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'order_id'</span><span class="p">]</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"duplicate order_id values found"</span>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">df_raw</span><span class="p">[</span><span class="s1">'order_id'</span><span class="p">]</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"duplicate order_id values found"</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
 </code></pre></div>
 </details>
 <details>
-<summary>order_date parses cleanly</summary>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'order_date'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"order_date has nulls - check date format in source"</span>
+<summary>status values are from the expected set</summary>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">valid_statuses</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'pending'</span><span class="p">,</span> <span class="s1">'cancelled'</span><span class="p">}</span>
+    <span class="k">assert</span> <span class="n">df_raw</span><span class="p">[</span><span class="s1">'status'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">valid_statuses</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">"unexpected status values found"</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
 </code></pre></div>
 </details>
 <details>
-<summary>status values are from expected set</summary>
-<div class="highlight"><pre><span></span><code><span class="n">valid_statuses</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Completed'</span><span class="p">,</span> <span class="s1">'Pending'</span><span class="p">,</span> <span class="s1">'Cancelled'</span><span class="p">,</span> <span class="s1">'Returned'</span><span class="p">}</span>
-<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">'status'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">valid_statuses</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">"unexpected status values found"</span>
+<summary>no £ signs in unit_price</summary>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">df_raw</span><span class="p">[</span><span class="s1">'unit_price'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">'£'</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">(),</span> <span class="s2">"unit_price contains £ signs - not yet cleaned"</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
 </code></pre></div>
 </details>
 <hr>
 <h2 id="for-silvergold-what-this-would-look-like-in-fabric">For silver→gold: what this would look like in Fabric</h2>
-<p>If this were running in Fabric, you would also add a check after the join in the Silver to Gold notebook. This is illustrative - you are not writing this as a task:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># After the merge in the Silver to Gold notebook</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">sales</span><span class="p">),</span> <span class="s2">"row count changed after join - unexpected"</span>
-<span class="k">assert</span> <span class="n">joined</span><span class="p">[</span><span class="s1">'category'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"some product_ids did not match silver_products"</span>
+<p>After the join in the silver to gold notebook, you would add checks there too. This is illustrative - not a task:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">sales</span><span class="p">),</span> <span class="s2">"row count changed after join - unexpected"</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">joined</span><span class="p">[</span><span class="s1">'category'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"some product_ids did not match silver_products"</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
 </code></pre></div>
-<hr>
-<h2 id="reflect">Reflect</h2>
-<ol>
-<li>Did any check feel difficult to write because you did not know the expected value?</li>
-<li>Are there checks you would mark as essential vs optional in this specific pipeline?</li>
-<li>What would you do if a check fails in production - stop the pipeline, or log a warning and continue?</li>
-</ol>
 
 
 
