@@ -3,9 +3,8 @@
 ## Session 1
 
 - 🌅 Welcome to Day 4 of DE5 Module 3
-- CHECKS-INTRO
+- Can You Trust Your Pipeline?
 - **Discussion**: [Silent Failures](../day4/silent-fail.md)
-- **Practice**: [Which Checks Matter?](../day4/checks-design.md)
 - **Practice**: [Add Validation Checks](../day4/checks-build.md)
 
 ## ☕ Morning Break

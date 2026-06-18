@@ -40,7 +40,6 @@ nav = [
   ]},
   {"Day 4 - Supportable & Explainable" = [
     {"Silent Failures" = "day4/silent-fail.md"},
-    {"Which Checks Matter?" = "day4/checks-design.md"},
     {"Add Validation Checks" = "day4/checks-build.md"},
     {"Create a Handover Artefact" = "day4/mvd-build.md"},
     {"Prepare Your Explanation" = "day4/pitch-prep.md"},

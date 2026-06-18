@@ -100,10 +100,9 @@
 
 ### Session 1
 
-- `09:40` [CHECKS-INTRO](day4/checks-intro.md) (10 mins)
+- `09:40` [Can You Trust Your Pipeline?](day4/checks-intro.md) (10 mins)
 - `09:50` **Discussion**: [Silent Failures](day4/silent-fail.md) (10 mins)
-- `10:00` **Practice**: [Which Checks Matter?](day4/checks-design.md) (10 mins)
-- `10:10` **Practice**: [Add Validation Checks](day4/checks-build.md) (20 mins)
+- `10:00` **Practice**: [Add Validation Checks](day4/checks-build.md) (30 mins)
 
 ### Session 2
 
