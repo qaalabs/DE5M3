@@ -1600,10 +1600,10 @@ What is not checked? What could go wrong that the pipeline would not catch?</p>
 </tbody>
 </table>
 <p><strong>Option B - Flow diagram (text)</strong></p>
-<div class="highlight"><pre><span></span><code>data/sales_raw.csv       → [bronze/sales_raw.csv]   →  silver_sales  ─┐
+<div class="highlight"><pre><span></span><code>data/sales_raw.csv       → [bronze/sales_raw.csv]     →  silver_sales  ─┐
 data/products_raw.json   → [bronze/products_raw.json] → silver_products ┘
-                                                                        ↓
-                                                               gold_revenue
+                                                               ↓
+                                                         gold_revenue
 </code></pre></div>
 <p><strong>Option C - Structured note</strong></p>
 <p>A short written document with headings: Overview, Sources, Layers, Run Order, Output, Caveats.</p>
@@ -1628,12 +1628,12 @@ data/products_raw.json   → [bronze/products_raw.json] → silver_products ┘
 <li>✅ Have you named at least one known limitation?</li>
 <li>✅ Is there anything in there that belongs in the code rather than here?</li>
 </ul>
-<p>If you answer no to any of the first four - go back and add it.
-If you answer yes to the last one - remove it.</p>
+<p>If you answer no to any of the first four - go back and add it.</p>
+<p>If you answer yes to the last one - remove it.</p>
 <hr>
 <h2 id="if-you-finish-early">If you finish early</h2>
-<p>Extend your artefact with a short "what would make this pipeline stronger" section.
-Two or three bullet points. What would a more mature version of this pipeline include
+<p>Extend your artefact with a short "what would make this pipeline stronger" section.</p>
+<p>Two or three bullet points. What would a more mature version of this pipeline include
 that this one does not?</p>
 
 

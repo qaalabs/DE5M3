@@ -1471,7 +1471,7 @@
 </table>
 <hr>
 <h3 id="diagram-top-to-bottom">Diagram ~ Top to Bottom</h3>
-<h2 id="flowchart-tb-subgraph-srcsources-csv_filesales_rawcsv-json_fileproducts_rawjson-end-subgraph-brzbronze-raw-untouched-bcsvfilesbronzebrsales_rawcsv-bjsonfilesbronzebrproducts_rawjson-end-subgraph-nb1notebook-bronze-to-silver-cleanclean-validatebrstrip-parse-datesbrdrop-bad-rows-assert-checks-flatflatten-jsonbrjson_normalize-end-subgraph-silsilver-cleaned-trusted-sssilver_sales-spsilver_products-end-subgraph-nb2notebook-silver-to-gold-joinjoin-on-product_idbrcompute-line_value-end-subgraph-gldgold-business-ready-grgold_revenuebrrevenue-by-category-end-csv_file-bcsv-json_file-bjson-bcsv-clean-bjson-flat-clean-ss-flat-sp-ss-join-sp-join-join-gr"><pre class="mermaid"><code>flowchart TB
+<pre class="mermaid"><code>flowchart TB
     subgraph SRC["Sources"]
         CSV_FILE["sales_raw.csv"]
         JSON_FILE["products_raw.json"]
@@ -1508,7 +1508,8 @@
     FLAT --&gt; SP
     SS --&gt; JOIN
     SP --&gt; JOIN
-    JOIN --&gt; GR</code></pre></h2>
+    JOIN --&gt; GR</code></pre>
+<hr>
 <h3 id="mermaid-diagram-code">Mermaid Diagram Code</h3>
 <div class="highlight"><pre><span></span><code>flowchart LR
     subgraph SRC["Sources"]
