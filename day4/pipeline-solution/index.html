@@ -1406,19 +1406,19 @@
 <h1 id="homesphere-pipeline-solution-diagram">HomeSphere Pipeline - Solution Diagram</h1>
 <p><em>The completed medallion architecture after Day 3.</em></p>
 <pre class="mermaid"><code>flowchart LR
-    subgraph SRC("Sources")
-        CSV("sales_raw.csv")
-        JSON("products_raw.json")
+    subgraph SRC["Sources"]
+        CSV_FILE["sales_raw.csv"]
+        JSON_FILE["products_raw.json"]
     end
 
     subgraph BRZ["Bronze - raw, untouched"]
-        BCSV["Files/bronze/\nsales_raw.csv"]
-        BJSON["Files/bronze/\nproducts_raw.json"]
+        BCSV["Files/bronze/&lt;br/&gt;sales_raw.csv"]
+        BJSON["Files/bronze/&lt;br/&gt;products_raw.json"]
     end
 
-    subgraph NB1("Notebook: Bronze to Silver")
-        CLEAN["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]
-        FLAT["flatten JSON\n(json_normalize)"]
+    subgraph NB1["Notebook: Bronze to Silver"]
+        CLEAN["clean + validate&lt;br/&gt;(strip £, parse dates,&lt;br/&gt;drop bad rows, assert checks)"]
+        FLAT["flatten JSON&lt;br/&gt;(json_normalize)"]
     end
 
     subgraph SIL["Silver - cleaned &amp; trusted"]
@@ -1426,16 +1426,16 @@
         SP["silver_products"]
     end
 
-    subgraph NB2("Notebook: Silver to Gold")
-        JOIN["join on product_id\ncompute line_value"]
+    subgraph NB2["Notebook: Silver to Gold"]
+        JOIN["join on product_id&lt;br/&gt;compute line_value"]
     end
 
     subgraph GLD["Gold - business-ready"]
-        GR["gold_revenue\n(revenue by category)"]
+        GR["gold_revenue&lt;br/&gt;(revenue by category)"]
     end
 
-    CSV --&gt; BCSV
-    JSON --&gt; BJSON
+    CSV_FILE --&gt; BCSV
+    JSON_FILE --&gt; BJSON
     BCSV --&gt; CLEAN
     BJSON --&gt; FLAT
     CLEAN --&gt; SS
@@ -1473,18 +1473,18 @@
 <h3 id="mermaid-diagram-code">Mermaid Diagram Code</h3>
 <div class="highlight"><pre><span></span><code>flowchart LR
     subgraph SRC["Sources"]
-        CSV["sales_raw.csv"]
-        JSON["products_raw.json"]
+        CSV_FILE["sales_raw.csv"]
+        JSON_FILE["products_raw.json"]
     end
 
     subgraph BRZ["Bronze - raw, untouched"]
-        BCSV["Files/bronze/\nsales_raw.csv"]
-        BJSON["Files/bronze/\nproducts_raw.json"]
+        BCSV["Files/bronze/&lt;br/&gt;sales_raw.csv"]
+        BJSON["Files/bronze/&lt;br/&gt;products_raw.json"]
     end
 
     subgraph NB1["Notebook: Bronze to Silver"]
-        CLEAN["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]
-        FLAT["flatten JSON\n(json_normalize)"]
+        CLEAN["clean + validate&lt;br/&gt;(strip £, parse dates,&lt;br/&gt;drop bad rows, assert checks)"]
+        FLAT["flatten JSON&lt;br/&gt;(json_normalize)"]
     end
 
     subgraph SIL["Silver - cleaned &amp; trusted"]
@@ -1493,15 +1493,15 @@
     end
 
     subgraph NB2["Notebook: Silver to Gold"]
-        JOIN["join on product_id\ncompute line_value"]
+        JOIN["join on product_id&lt;br/&gt;compute line_value"]
     end
 
     subgraph GLD["Gold - business-ready"]
-        GR["gold_revenue\n(revenue by category)"]
+        GR["gold_revenue&lt;br/&gt;(revenue by category)"]
     end
 
-    CSV --&gt; BCSV
-    JSON --&gt; BJSON
+    CSV_FILE --&gt; BCSV
+    JSON_FILE --&gt; BJSON
     BCSV --&gt; CLEAN
     BJSON --&gt; FLAT
     CLEAN --&gt; SS
