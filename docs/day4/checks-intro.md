@@ -1,20 +1,16 @@
 # Facilitator Notes - Trust and Validation
 
-*Trainer-only. Opens Session 1 after the welcome.*
-
----
-
 ## Set up the session
 
 Hand out or share the HomeSphere pipeline diagram. Give learners 30 seconds to orient themselves before speaking.
 
 Start with the holding question for the day:
 
-> "What would it take for someone who did not build this pipeline to run it, trust it, and explain it to a stakeholder?"
+> What would it take for someone who did not build this pipeline to run it, trust it, and explain it to a stakeholder?
 
 Let that sit for a moment. Then:
 
-> "Today is not about building new things. It is about making what you have built usable by other people - people who were not in the room when you built it."
+> Today is not about building new things. It is about making what you have built usable by other people - people who were not in the room when you built it.
 
 ---
 

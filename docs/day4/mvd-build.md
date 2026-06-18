@@ -47,25 +47,34 @@ Pick the format that feels most useful for a new engineer:
 
 **Option A - Structured table**
 
-| Layer | Name | Contents | Notes |
-|-------|------|----------|-------|
-| Bronze | Files/bronze/ | Raw CSV and JSON | Never modified |
-| Silver | silver_sales | Cleaned, validated sales | 23 rows after cleaning |
-| Silver | silver_products | Flattened product catalogue | 9 products |
-| Gold | gold_revenue | Revenue by product category | Built from silver only |
+| Layer  | Name            | Contents                    | Notes                  |
+|--------|-----------------|-----------------------------|------------------------|
+| Bronze | Files/bronze/   | Raw CSV and JSON            | Never modified         |
+| Silver | silver_sales    | Cleaned, validated sales    | 23 rows after cleaning |
+| Silver | silver_products | Flattened product catalogue | 9 products             |
+| Gold   | gold_revenue    | Revenue by product category | Built from silver only |
 
 **Option B - Flow diagram (text)**
 
 ```
-data/sales_raw.csv       → [bronze/sales_raw.csv]   →  silver_sales  ─┐
+data/sales_raw.csv       → [bronze/sales_raw.csv]     →  silver_sales  ─┐
 data/products_raw.json   → [bronze/products_raw.json] → silver_products ┘
-                                                                        ↓
-                                                               gold_revenue
+                                                               ↓
+                                                         gold_revenue
 ```
 
 **Option C - Structured note**
 
-A short written document with headings: Overview, Sources, Layers, Run Order, Output, Caveats.
+A short written document with headings.
+
+*For example:*
+
+1. Overview
+2. Sources
+3. Layers
+4. Run Order
+5. Output
+6. Caveats
 
 ---
 
@@ -96,6 +105,7 @@ Read it back as if you are the engineer arriving Monday morning.
 - ✅ Is there anything in there that belongs in the code rather than here?
 
 If you answer no to any of the first four - go back and add it.
+
 If you answer yes to the last one - remove it.
 
 ---
@@ -103,5 +113,7 @@ If you answer yes to the last one - remove it.
 ## If you finish early
 
 Extend your artefact with a short "what would make this pipeline stronger" section.
+
 Two or three bullet points. What would a more mature version of this pipeline include
 that this one does not?
+

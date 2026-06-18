@@ -4,19 +4,19 @@
 
 ```mermaid
 flowchart LR
-    subgraph SRC("Sources")
-        CSV("sales_raw.csv")
-        JSON("products_raw.json")
+    subgraph SRC["Sources"]
+        CSV_FILE["sales_raw.csv"]
+        JSON_FILE["products_raw.json"]
     end
 
     subgraph BRZ["Bronze - raw, untouched"]
-        BCSV["Files/bronze/\nsales_raw.csv"]
-        BJSON["Files/bronze/\nproducts_raw.json"]
+        BCSV["Files/bronze/<br/>sales_raw.csv"]
+        BJSON["Files/bronze/<br/>products_raw.json"]
     end
 
-    subgraph NB1("Notebook: Bronze to Silver")
-        CLEAN["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]
-        FLAT["flatten JSON\n(json_normalize)"]
+    subgraph NB1["Notebook: Bronze to Silver"]
+        CLEAN["clean + validate<br/>(strip £, parse dates,<br/>drop bad rows, assert checks)"]
+        FLAT["flatten JSON<br/>(json_normalize)"]
     end
 
     subgraph SIL["Silver - cleaned & trusted"]
@@ -24,16 +24,16 @@ flowchart LR
         SP["silver_products"]
     end
 
-    subgraph NB2("Notebook: Silver to Gold")
-        JOIN["join on product_id\ncompute line_value"]
+    subgraph NB2["Notebook: Silver to Gold"]
+        JOIN["join on product_id<br/>compute line_value"]
     end
 
     subgraph GLD["Gold - business-ready"]
-        GR["gold_revenue\n(revenue by category)"]
+        GR["gold_revenue<br/>(revenue by category)"]
     end
 
-    CSV --> BCSV
-    JSON --> BJSON
+    CSV_FILE --> BCSV
+    JSON_FILE --> BJSON
     BCSV --> CLEAN
     BJSON --> FLAT
     CLEAN --> SS
@@ -51,23 +51,23 @@ flowchart LR
 
 ---
 
-### Mermaid Diagram Code
+### Diagram ~ Top to Bottom
 
-```text
-flowchart LR
+```mermaid
+flowchart TB
     subgraph SRC["Sources"]
-        CSV["sales_raw.csv"]
-        JSON["products_raw.json"]
+        CSV_FILE["sales_raw.csv"]
+        JSON_FILE["products_raw.json"]
     end
 
     subgraph BRZ["Bronze - raw, untouched"]
-        BCSV["Files/bronze/\nsales_raw.csv"]
-        BJSON["Files/bronze/\nproducts_raw.json"]
+        BCSV["Files/bronze/<br/>sales_raw.csv"]
+        BJSON["Files/bronze/<br/>products_raw.json"]
     end
 
     subgraph NB1["Notebook: Bronze to Silver"]
-        CLEAN["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]
-        FLAT["flatten JSON\n(json_normalize)"]
+        CLEAN["clean + validate<br/>(strip £, parse dates,<br/>drop bad rows, assert checks)"]
+        FLAT["flatten JSON<br/>(json_normalize)"]
     end
 
     subgraph SIL["Silver - cleaned & trusted"]
@@ -76,15 +76,60 @@ flowchart LR
     end
 
     subgraph NB2["Notebook: Silver to Gold"]
-        JOIN["join on product_id\ncompute line_value"]
+        JOIN["join on product_id<br/>compute line_value"]
     end
 
     subgraph GLD["Gold - business-ready"]
-        GR["gold_revenue\n(revenue by category)"]
+        GR["gold_revenue<br/>(revenue by category)"]
     end
 
-    CSV --> BCSV
-    JSON --> BJSON
+    CSV_FILE --> BCSV
+    JSON_FILE --> BJSON
+    BCSV --> CLEAN
+    BJSON --> FLAT
+    CLEAN --> SS
+    FLAT --> SP
+    SS --> JOIN
+    SP --> JOIN
+    JOIN --> GR
+```
+
+---
+
+### Mermaid Diagram Code
+
+```text
+flowchart LR
+    subgraph SRC["Sources"]
+        CSV_FILE["sales_raw.csv"]
+        JSON_FILE["products_raw.json"]
+    end
+
+    subgraph BRZ["Bronze - raw, untouched"]
+        BCSV["Files/bronze/<br/>sales_raw.csv"]
+        BJSON["Files/bronze/<br/>products_raw.json"]
+    end
+
+    subgraph NB1["Notebook: Bronze to Silver"]
+        CLEAN["clean + validate<br/>(strip £, parse dates,<br/>drop bad rows, assert checks)"]
+        FLAT["flatten JSON<br/>(json_normalize)"]
+    end
+
+    subgraph SIL["Silver - cleaned & trusted"]
+        SS["silver_sales"]
+        SP["silver_products"]
+    end
+
+    subgraph NB2["Notebook: Silver to Gold"]
+        JOIN["join on product_id<br/>compute line_value"]
+    end
+
+    subgraph GLD["Gold - business-ready"]
+        GR["gold_revenue<br/>(revenue by category)"]
+    end
+
+    CSV_FILE --> BCSV
+    JSON_FILE --> BJSON
     BCSV --> CLEAN
     BJSON --> FLAT
     CLEAN --> SS

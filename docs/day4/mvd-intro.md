@@ -1,15 +1,12 @@
 # Facilitator Notes - Minimum Viable Documentation
 
-*Trainer-only. Opens Session 2 after morning break.*
-
----
-
 ## Frame the shift
 
-Session 1 was about making the pipeline trustworthy for the machine - checks that fail loudly.
-Session 2 is about making it trustworthy for a person - documentation that orients quickly.
+**Session 1** was about making the pipeline trustworthy for the machine - checks that fail loudly.
 
-> "The pipeline checks are for Python. The documentation is for the engineer who picks this up on Monday morning."
+**Session 2** is about making it trustworthy for a person - documentation that orients quickly.
+
+> The pipeline checks are for Python. The documentation is for the engineer who picks this up on Monday morning.
 
 ---
 
@@ -67,6 +64,7 @@ Send them in.
 ## What to watch for during MVD-BUILD
 
 Common gaps:
+
 - No mention of run order (which notebook first)
 - No description of what the gold output is actually for
 - No caveats - the artefact implies the pipeline is perfect

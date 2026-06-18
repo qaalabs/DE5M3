@@ -1,44 +1,10 @@
 # Add Validation Checks
 
-*Practice - Session 1. Individual.*
-
----
-
 ## What you are doing
 
 You designed the checks. Now write the code.
 
-> **This is a code-sketch. You are writing what you would add - not running it. Plain Python assert statements are enough.**
-
-The existing validation cell in the bronze→silver notebook is shown below.
-Your task is to extend it with three more checks - your choice from the list you designed, or one you came up with yourself.
-
----
-
-## Existing validation cell
-
-```python
-# Validation checks
-assert df['unit_price'].dtype == float, "unit_price should be float"
-assert df['quantity'].dtype == int, "quantity should be int"
-assert df['product_id'].isnull().sum() == 0, "product_id should have no nulls"
-assert (df['unit_price'] > 0).all(), "all prices should be positive"
-assert (df['quantity'] > 0).all(), "all quantities should be positive"
-
-print('All validation checks passed')
-print(df.dtypes)
-```
-
----
-
-## Add your checks below the existing ones
-
-Write the assert statements you would add. Use plain Python - no Fabric required.
-
-```python
-# Your additional checks here
-
-```
+Open `day4/checks_practice.ipynb` and work through the four parts.
 
 ---
 
@@ -61,41 +27,52 @@ Once you have written your own, compare with these:
 
 ??? "Row count check"
     ```python
-    assert len(df) > 0, "dataframe is empty - check source file"
+    try:
+        assert len(df) > 0, "dataframe is empty - check source file"
+    except AssertionError as e:
+        errors.append(str(e))
     ```
 
 ??? "No duplicate order IDs"
     ```python
-    assert df['order_id'].duplicated().sum() == 0, "duplicate order_id values found"
+    try:
+        assert df['order_id'].duplicated().sum() == 0, "duplicate order_id values found"
+    except AssertionError as e:
+        errors.append(str(e))
     ```
 
 ??? "order_date parses cleanly"
     ```python
-    assert df['order_date'].isnull().sum() == 0, "order_date has nulls - check date format in source"
+    try:
+        assert df['order_date'].isnull().sum() == 0, "order_date has nulls - check date format in source"
+    except AssertionError as e:
+        errors.append(str(e))
     ```
 
 ??? "status values are from expected set"
     ```python
-    valid_statuses = {'Completed', 'Pending', 'Cancelled', 'Returned'}
-    assert df['status'].isin(valid_statuses).all(), "unexpected status values found"
+    try:
+        valid_statuses = {'completed', 'pending', 'cancelled', 'returned'}
+        assert df['status'].isin(valid_statuses).all(), "unexpected status values found"
+    except AssertionError as e:
+        errors.append(str(e))
     ```
 
 ---
 
-## For silver→gold: what this would look like in Fabric
+## For silver-->gold: what this would look like in Fabric
 
-If this were running in Fabric, you would also add a check after the join in the Silver to Gold notebook. This is illustrative - you are not writing this as a task:
+If this were running in Fabric, you would also add checks after the join in the silver to gold notebook. This is illustrative - not a task:
 
 ```python
 # After the merge in the Silver to Gold notebook
-assert len(joined) == len(sales), "row count changed after join - unexpected"
-assert joined['category'].isnull().sum() == 0, "some product_ids did not match silver_products"
+try:
+    assert len(joined) == len(sales), "row count changed after join - unexpected"
+except AssertionError as e:
+    errors.append(str(e))
+
+try:
+    assert joined['category'].isnull().sum() == 0, "some product_ids did not match silver_products"
+except AssertionError as e:
+    errors.append(str(e))
 ```
-
----
-
-## Reflect
-
-1. Did any check feel difficult to write because you did not know the expected value?
-2. Are there checks you would mark as essential vs optional in this specific pipeline?
-3. What would you do if a check fails in production - stop the pipeline, or log a warning and continue?
