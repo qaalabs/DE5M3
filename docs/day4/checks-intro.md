@@ -55,9 +55,9 @@ Groups that are drifting will produce vague observations. Redirect with: "What w
 
 > "We know the pipeline can fail silently. The question is: which failures are worth writing code to catch - and where in the pipeline should those checks live?"
 
-They will design the checks and write the assert statements as a code-sketch - what they would add, not running code.
+In CHECKS-BUILD they will run the Day 3 validation checks against the raw file - before any cleaning. The checks will fail. That then raises the real debate: what should the pipeline do when they fail? Stop entirely? Clean and drop rows? Quarantine the bad ones?
 
-Send them into the checks design activity.
+Send them into the checks design activity first.
 
 ---
 
