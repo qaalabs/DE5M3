@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes - Trust and Validation - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Run the Pipeline Locally - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#facilitator-notes-trust-and-validation" class="md-skip">
+        <a href="#run-the-pipeline-locally" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes - Trust and Validation
+              Run the Pipeline Locally
             
           </span>
         </div>
@@ -1375,56 +1375,49 @@
 
 
 
-<h1 id="facilitator-notes-trust-and-validation">Facilitator Notes - Trust and Validation</h1>
-<h2 id="set-up-the-session">Set up the session</h2>
-<p>Hand out or share the HomeSphere pipeline diagram. Give learners 30 seconds to orient themselves before speaking.</p>
-<p>Start with the holding question for the day:</p>
-<blockquote>
-<p>What would it take for someone who did not build this pipeline to run it, trust it, and explain it to a stakeholder?</p>
-</blockquote>
-<p>Let that sit for a moment. Then:</p>
-<blockquote>
-<p>Today is not about building new things. It is about making what you have built usable by other people - people who were not in the room when you built it.</p>
-</blockquote>
+<h1 id="run-the-pipeline-locally">Run the Pipeline Locally</h1>
+<p>So far you have run the HomeSphere pipeline in notebooks - one cell at a time.</p>
+<p>A production pipeline runs as a script. No cells. No Run button. You execute it from the terminal and it either completes or it does not.</p>
 <hr>
-<h2 id="restate-where-they-are">Restate where they are</h2>
-<p>Remind the group of the full journey:</p>
+<h2 id="part-1-open-and-run-the-script">Part 1 - Open and run the script</h2>
+<p>Open VS Code and navigate to the <code>day4/</code> folder. Open <code>pipeline.py</code>.</p>
+<p>Read through it. The structure is the same as the notebooks you have been working in all week: load, validate, clean, output. The difference is that it runs top to bottom in one go.</p>
+<p>Open the terminal in VS Code (<code>Ctrl+</code> <code>`</code>), make sure you are in the <code>day4/</code> folder, and run it:</p>
+<div class="highlight"><pre><span></span><code>python pipeline.py
+</code></pre></div>
+<p>Watch the output. The pipeline loads the raw file, skips the validation (nothing is active yet), cleans the data, and writes <code>output/silver_sales.csv</code>.</p>
+<hr>
+<h2 id="part-2-make-it-fail">Part 2 - Make it fail</h2>
+<p>Find the validation section in <code>pipeline.py</code>. Two example checks are commented out. Uncomment one - either one.</p>
+<p>In VS Code you can select the lines and press <code>Ctrl+/</code> to toggle comments on and off.</p>
+<p>Run the pipeline again:</p>
+<div class="highlight"><pre><span></span><code>python pipeline.py
+</code></pre></div>
+<p>The pipeline stops before cleaning. No output file is written. The terminal shows you exactly which check failed.</p>
+<p>This is <strong>Option A: fail fast</strong>. The exit code <code>1</code> tells the operating system the pipeline failed - a scheduler or monitoring tool would use this to raise an alert.</p>
+<hr>
+<h2 id="part-3-make-it-warn">Part 3 - Make it warn</h2>
+<p>Now switch to <strong>Option B</strong>.</p>
+<p>In <code>pipeline.py</code>, comment out the Option A block and uncomment the Option B block below it.</p>
+<p>Run again:</p>
+<div class="highlight"><pre><span></span><code>python pipeline.py
+</code></pre></div>
+<p>The warning prints to the terminal. The pipeline continues. The output file is written.</p>
+<hr>
+<h2 id="think-about-it">Think about it</h2>
+<p>You made the same decision twice today - once in the notebook this morning, and just now in the script.</p>
 <ul>
-<li>Day 1 - made the logic work, locally</li>
-<li>Day 2 - moved it into Fabric</li>
-<li>Day 3 - gave it structure and architecture</li>
-<li>Day 4 - make it trustworthy and explainable</li>
+<li>Option A: the pipeline refuses to run on bad data</li>
+<li>Option B: the pipeline runs but flags what it found</li>
 </ul>
-<p>The business output has not changed since Day 1. The pipeline now has a shape. Today is about what happens after that.</p>
+<p>Which would you choose for HomeSphere? Does it depend on who is reading the output?</p>
 <hr>
-<h2 id="frame-silent-failures">Frame silent failures</h2>
-<p>Introduce the concept before opening the discussion:</p>
-<blockquote>
-<p>"A crash is honest. The pipeline stops. You know something went wrong. A silent failure is worse - the pipeline runs, produces output, no one raises an error, and the numbers are wrong. The report lands in someone's inbox and looks fine."</p>
-</blockquote>
-<p>Ask: "Can you think of an example of a silent failure - not just in data pipelines, but anywhere?"</p>
-<p>Let two or three people answer. This builds intuition before they apply it to the HomeSphere pipeline.</p>
-<hr>
-<h2 id="what-to-listen-for-in-the-discussion">What to listen for in the discussion</h2>
-<p>Good groups will produce specific, named failure modes:</p>
+<h2 id="stretch">Stretch</h2>
+<p>If you finish early and know some Python:</p>
 <ul>
-<li>"If the source file has fewer rows, nothing would alert us"</li>
-<li>"If a new product ID appears that is not in the products table, it would be silently dropped"</li>
-<li>"If the date format changes, <code>to_datetime</code> would produce NaT silently"</li>
+<li>Add the failing rows to a separate file (<code>output/rejected.csv</code>) instead of just printing them</li>
+<li>Add a timestamp to the warning message so you know when the check ran</li>
 </ul>
-<p>Groups that are drifting will produce vague observations. Redirect with: "What would the output look like if that happened? Would anyone notice immediately?"</p>
-<hr>
-<h2 id="bridge-to-the-validation-notebook">Bridge to the validation notebook</h2>
-<blockquote>
-<p>"We know the pipeline can fail silently. So: what should we put in place to catch that?"</p>
-</blockquote>
-<p>They will run validation checks against the raw file - before any cleaning - and see what the data actually contains. The checks will fail. That surfaces the real debate: should the pipeline stop, proceed, or quarantine the bad rows?</p>
-<hr>
-<h2 id="key-point-for-the-debrief">Key point for the debrief</h2>
-<p>The hardest checks to write are the ones that require knowing what normal looks like. Row count, value ranges, expected revenue totals - these require baseline knowledge. A new pipeline has no baseline. That is a real problem worth naming:</p>
-<blockquote>
-<p>"Until you have run this pipeline a dozen times, you cannot write some of the most important checks. Monitoring accumulates context."</p>
-</blockquote>
 
 
 
