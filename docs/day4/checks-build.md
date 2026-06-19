@@ -1,69 +1,156 @@
-# Add Validation Checks
+# Make It Safe to Run
 
-## What you are doing
+## The pattern
 
-Open `day4/checks_practice.ipynb` and work through the three parts.
+Every check has three parts:
 
-The notebook runs the Day 3 validation checks against the raw file - before any cleaning has happened. Most checks will fail. That is the point.
+- **Risk** - what could go wrong
+- **Check** - what you test for
+- **Response** - what the pipeline should do if it fails
 
----
-
-## Reference: useful assert patterns
-
-| What to check | Pattern |
-|---------------|---------|
-| No rows at all | `assert len(df) > 0, "dataframe is empty"` |
-| No nulls in a column | `assert df['col'].isnull().sum() == 0, "..."` |
-| No duplicate values | `assert df['col'].duplicated().sum() == 0, "..."` |
-| Values are in a known set | `assert df['col'].isin({'A', 'B', 'C'}).all(), "..."` |
-| All values positive | `assert (df['col'] > 0).all(), "..."` |
-| All values within range | `assert df['col'].between(0, 1000).all(), "..."` |
+The response is the most important decision. A check that prints a warning and carries on is not a check - it is a log message. If the check matters, failing it should do something.
 
 ---
 
-## Suggested additions
+## Open the notebook
 
-The raw file has more problems than the five Day 3 checks will catch. Once you have written your own, compare with these:
+Open `day4/checks_practice.ipynb` in Fabric.
 
-??? "No duplicate order IDs"
-    ```python
-    try:
-        assert df_raw['order_id'].duplicated().sum() == 0, "duplicate order_id values found"
-    except Exception as e:
-        errors.append(str(e))
-    ```
-
-??? "status values are from the expected set"
-    ```python
-    try:
-        valid_statuses = {'complete', 'pending', 'cancelled'}
-        assert df_raw['status'].str.lower().str.strip().isin(valid_statuses).all(), "unexpected status values found"
-    except Exception as e:
-        errors.append(str(e))
-    ```
-
-??? "no £ signs in unit_price"
-    ```python
-    try:
-        assert not df_raw['unit_price'].astype(str).str.contains('£').any(), "unit_price contains £ signs - not yet cleaned"
-    except Exception as e:
-        errors.append(str(e))
-    ```
+The trainer will demo the first check live. Watch the pattern, then continue from TODO 2.
 
 ---
 
-## For silver-->gold: what this would look like in Fabric
+## The check pattern
 
-After the join in the silver to gold notebook, you would add checks there too. This is illustrative - not a task:
+Use explicit logic that is readable and intentional:
 
 ```python
-try:
-    assert len(joined) == len(sales), "row count changed after join - unexpected"
-except Exception as e:
-    errors.append(str(e))
-
-try:
-    assert joined['category'].isnull().sum() == 0, "some product_ids did not match silver_products"
-except Exception as e:
-    errors.append(str(e))
+row_count = len(silver_sales)
+if row_count < 20:
+    raise ValueError(f"Row count too low: {row_count} rows. Pipeline stopped.")
 ```
+
+Or collect checks and report together before stopping:
+
+```python
+failures = []
+
+if len(silver_sales) < 20:
+    failures.append(f"Row count too low: {len(silver_sales)}")
+
+if silver_sales["product_id"].isnull().sum() > 0:
+    failures.append("Nulls found in product_id")
+
+if failures:
+    for msg in failures:
+        print(f"FAIL: {msg}")
+    raise ValueError("Validation failed - pipeline stopped.")
+```
+
+---
+
+## The TODOs
+
+Each TODO follows the same structure: risk, check, and what should happen if it fails.
+
+---
+
+### TODO 1 - Row count
+
+**Risk:** Sales file arrives with fewer rows than expected  
+**Check:** `silver_sales` has at least 20 rows  
+**If this fails:** Stop the pipeline
+
+```python
+row_count = len(silver_sales)
+
+# TODO: check row_count and raise a clear error if it is too low
+```
+
+---
+
+### TODO 2 - Null check on a key field
+
+**Risk:** `product_id` has nulls, which will cause silent join failures  
+**Check:** No nulls in `product_id` in `silver_sales`  
+**If this fails:** Stop the pipeline - unmatched rows will understate revenue
+
+```python
+null_count = silver_sales["product_id"].isnull().sum()
+
+# TODO: check null_count and raise a clear error if any are found
+```
+
+---
+
+### TODO 3 - Join quality
+
+**Risk:** Some sales rows did not match a product after joining  
+**Check:** No nulls in `category` after the silver-to-gold join  
+**If this fails:** Warn and identify which order IDs are affected
+
+```python
+unmatched = gold_revenue[gold_revenue["category"].isnull()]
+
+# TODO: check whether unmatched is empty and respond clearly if not
+```
+
+---
+
+### TODO 4 - Value sanity
+
+**Risk:** Negative or zero `quantity` or `line_value` would distort revenue figures  
+**Check:** All values in both columns are greater than zero  
+**If this fails:** Collect the offending rows and stop promotion to gold
+
+```python
+bad_rows = gold_revenue[(gold_revenue["quantity"] <= 0) | (gold_revenue["line_value"] <= 0)]
+
+# TODO: check whether bad_rows is empty and respond clearly if not
+```
+
+---
+
+## Stretch task
+
+If you have finished the four TODOs, move your checks into reusable functions:
+
+```python
+def check_not_empty(df, name):
+    if len(df) == 0:
+        raise ValueError(f"{name} is empty")
+
+def check_no_nulls(df, column, name):
+    null_count = df[column].isnull().sum()
+    if null_count > 0:
+        raise ValueError(f"{name}: {null_count} nulls found in {column}")
+```
+
+Then call them:
+
+```python
+check_not_empty(silver_sales, "silver_sales")
+check_no_nulls(silver_sales, "product_id", "silver_sales")
+```
+
+Same thinking, cleaner reuse. You could call these from any notebook in the pipeline.
+
+---
+
+## Debrief
+
+Before break, come back together for a few minutes.
+
+The question is not "did your checks work?" It is:
+
+> **What should the pipeline do when a check fails?**
+
+Three options:
+
+- **Stop** - raise an error and halt. Nothing downstream runs. Safe but inflexible.
+- **Warn and continue** - print the failure and keep going. Risky if downstream code consumes bad data.
+- **Quarantine** - write the failing rows to a rejected file, continue with the clean rows.
+
+There is no single right answer. It depends on what the downstream consumer expects and how bad the failure is.
+
+Push the group: for each of the four checks they wrote - which response makes most sense and why?

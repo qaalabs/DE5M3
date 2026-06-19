@@ -1,66 +1,56 @@
-# Facilitator Notes - Trust and Validation
+# Facilitator Notes - Make It Safe to Run
 
-## Set up the session
+## Session frame
 
-Hand out or share the HomeSphere pipeline diagram. Give learners 30 seconds to orient themselves before speaking.
+Session 1 is the strongest practical of the day - give it room.
 
-Start with the holding question for the day:
+The arc:
 
-> What would it take for someone who did not build this pipeline to run it, trust it, and explain it to a stakeholder?
-
-Let that sit for a moment. Then:
-
-> Today is not about building new things. It is about making what you have built usable by other people - people who were not in the room when you built it.
-
----
-
-## Restate where they are
-
-Remind the group of the full journey:
-
-- Day 1 - made the logic work, locally
-- Day 2 - moved it into Fabric
-- Day 3 - gave it structure and architecture
-- Day 4 - make it trustworthy and explainable
-
-The business output has not changed since Day 1. The pipeline now has a shape. Today is about what happens after that.
+1. Short whole-group setup (CHECKS-INTRO + SILENT-FAIL, ~20 min) - frame the problem, walk through 4 scenarios together
+2. Demo one check live in the notebook (~5 min, start of CHECKS-BUILD)
+3. Learners work through the notebook TODOs (~20 min)
+4. Stretch: move checks into functions in a `.py` file (fast finishers)
+5. Short debrief: what should happen when a check fails? (last ~5 min before break)
 
 ---
 
-## Frame silent failures
+## Opening frame
 
-Introduce the concept before opening the discussion:
+Say:
 
-> "A crash is honest. The pipeline stops. You know something went wrong. A silent failure is worse - the pipeline runs, produces output, no one raises an error, and the numbers are wrong. The report lands in someone's inbox and looks fine."
+> "A crash is honest. The pipeline stops. You know something went wrong. A silent failure is worse - the pipeline runs, produces output, and nobody raises an error. The report lands in someone's inbox and looks fine."
 
-Ask: "Can you think of an example of a silent failure - not just in data pipelines, but anywhere?"
+Then:
 
-Let two or three people answer. This builds intuition before they apply it to the HomeSphere pipeline.
-
----
-
-## What to listen for in the discussion
-
-Good groups will produce specific, named failure modes:
-
-- "If the source file has fewer rows, nothing would alert us"
-- "If a new product ID appears that is not in the products table, it would be silently dropped"
-- "If the date format changes, `to_datetime` would produce NaT silently"
-
-Groups that are drifting will produce vague observations. Redirect with: "What would the output look like if that happened? Would anyone notice immediately?"
+> "Session 1 is about making it safe to run. That means deciding what could go wrong, choosing what to check for, and making those failures visible."
 
 ---
 
-## Bridge to the validation notebook
+## Walk through the scenarios
 
-> "We know the pipeline can fail silently. So: what should we put in place to catch that?"
+The four scenarios are on `silent-fail.md`. Walk through them together - do not send learners to read independently.
 
-They will run validation checks against the raw file - before any cleaning - and see what the data actually contains. The checks will fail. That surfaces the real debate: should the pipeline stop, proceed, or quarantine the bad rows?
+For each one, ask the group:
+
+1. What went wrong?
+2. What check would catch it?
+3. Where in the pipeline should that check live - bronze, silver, or gold?
+
+Keep this quick. Its job is to build shared vocabulary before the practical, not to generate a complete answer.
+
+**What to listen for**
+
+Good responses will name a layer and a specific check:
+
+- "After the join, check whether any sales rows came back with a null product category"
+- "Before cleaning, check the row count is above a minimum"
+
+Redirect vague answers: "What would the output look like if that happened? Would anyone notice immediately?"
 
 ---
 
-## Key point for the debrief
+## Bridge to the demo
 
-The hardest checks to write are the ones that require knowing what normal looks like. Row count, value ranges, expected revenue totals - these require baseline knowledge. A new pipeline has no baseline. That is a real problem worth naming:
+> "We know the pipeline can fail silently. Now let's put some checks in place. I'll show you the pattern in the notebook, then you continue from there."
 
-> "Until you have run this pipeline a dozen times, you cannot write some of the most important checks. Monitoring accumulates context."
+Move directly into CHECKS-BUILD. Do not dwell here.

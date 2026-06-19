@@ -1,47 +1,42 @@
-# Where Could This Go Wrong?
-
-## The question
-
-!!! question "If this pipeline ran overnight and produced wrong numbers at 9am - how would you know?"
-
-You probably would not. Not immediately. Someone would have to notice the numbers looked off.
+# Silent Failures
 
 A **silent failure** is when the pipeline runs, produces output, and raises no errors - but the output is wrong.
-That is worse than a crash, because a crash tells you something went wrong.
+
+That is worse than a crash. A crash tells you something went wrong. A silent failure tells you nothing.
 
 ---
 
-## Map the risks
+## Four scenarios from HomeSphere
 
-Work through each layer. Foreach one, write down:
+Work through these together. For each one:
 
-- What could go wrong here?
-- Would the pipeline stop - or would it carry on and produce bad output?
-
-| Layer | What could go wrong? | Silent or loud? |
-|-------|---------------------|-----------------|
-| Bronze - raw file lands | | |
-| Bronze→Silver - cleaning | | |
-| Silver - validated tables | | |
-| Silver→Gold - join | | |
-| Gold - final output | | |
+1. What went wrong?
+2. What check would catch it?
+3. Where in the pipeline should that check live - bronze, silver, or gold?
 
 ---
 
-## Prompts to get started
+**Scenario A**
 
-Things that could go wrong silently in the HomeSphere pipeline:
+`sales_raw.csv` arrives with 12 rows instead of 30. The pipeline runs. The row count prints in Cell 1. Nothing stops.
 
-- `sales_raw.csv` arrives with 25 rows instead of 30 - Cell 1 prints the lower count, nothing fails
-- `order_date` arrives as MM/DD/YYYY - `dayfirst=True` parses it silently with wrong dates
-- A `product_id` in sales has no match in `silver_products` - the left join drops it silently, `gold_revenue` understates revenue
-- A £ symbol appears in `quantity` instead of `unit_price` - `pd.to_numeric` coerces it to NaN, the row is dropped silently
+**Scenario B**
+
+`order_date` arrives as MM/DD/YYYY instead of DD/MM/YYYY. `pd.to_datetime` with `dayfirst=True` parses it without a warning. The dates are wrong.
+
+**Scenario C**
+
+A `product_id` in sales has no match in `silver_products`. The left join drops that row silently. Gold revenue is understated.
+
+**Scenario D**
+
+A £ symbol appears in the `unit_price` column. `pd.to_numeric` converts the value to NaN. The row is dropped silently.
 
 ---
 
-## Discuss
-
-1. Which of these would your current pipeline catch?
-2. Which would it miss?
-3. Is there a pattern to what kinds of failures are caught vs missed?
-
+| Scenario | What went wrong | What check catches it | Where |
+|----------|----------------|----------------------|-------|
+| A | | | |
+| B | | | |
+| C | | | |
+| D | | | |
