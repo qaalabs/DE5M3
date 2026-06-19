@@ -33,7 +33,7 @@ So far you have only used the exercise notebooks. In this lab **you will use the
     !!! success "Both solution notebooks are now connected to the HomeSphere lakehouse."
 
 
-## Step 4: Create a pipeline
+## Step 3: Create a pipeline
 
 A pipeline lets you orchestrate the two notebooks so they run in sequence automatically, rather than being triggered manually one at a time.
 
@@ -49,7 +49,7 @@ A pipeline lets you orchestrate the two notebooks so they run in sequence automa
     !!! success "The pipeline designer canvas should open, ready for you to add activities."
 
 
-## Step 5: Configure the pipeline activities
+## Step 4: Configure the pipeline activities
 
 You will add two Notebook activities - one for each solution notebook - and connect them so that the output notebook only runs after the clean notebook has succeeded.
 
@@ -87,7 +87,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
         ![Pipeline with two connected notebook activities.](img/26-pipeline-activities.png)
 
 
-## Step 6: Run the pipeline
+## Step 5: Run the pipeline
 
 1. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline.
 
@@ -101,7 +101,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
 !!! success "Both activities should show as **Succeeded**."
 
 
-## Step 7: Verify the results
+## Step 6: Verify the results
 
 The pipeline has run the same cleaning and output logic as the notebooks you ran manually earlier. You should now have two additional tables in your lakehouse.
 
@@ -146,4 +146,3 @@ Once you have finished exploring, you should delete the workspace you created fo
 3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
 
 4. Select **Delete** to delete the workspace.
-
