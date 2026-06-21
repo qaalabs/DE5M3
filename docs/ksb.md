@@ -1,4 +1,4 @@
-# KSBs for: DE5 - Module 3
+# Course: DE5 - Module 3
 
 ## Knowledge:
 
