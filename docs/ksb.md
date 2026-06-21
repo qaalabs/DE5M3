@@ -1,6 +1,8 @@
 # Course: DE5 - Module 3
+> Knowledge, Skills, and Behaviours (KSBs) are the core attributes which you need to be competent in, to excel in your profession and to pass the end-point assessment (EPA) as part of this apprenticeship.
 
-## Knowledge:
+## Knowledge
+> Knowledge refers to the learning you acquire whilst on your apprenticeship. It's the information covered in the Discover stage and Practise stage activities. Some of the knowledge will be generic, and some will be more specific to your role.
 
 K8: Deployment approaches for new data pipelines and automated processes.
 
@@ -16,7 +18,9 @@ K18: How to use streaming, batching and on-demand services to move data from one
 
 K20: Types and uses of data engineering tools and applications in own organisation.
 
-## Skill:
+
+## Skill
+> Skills refer to how you apply the knowledge you have gained in your job. You will develop your skills as you progress through the modules, utilising your on and off-the-job training.
 
 S4: Automate data pipelines such as batch, real-time, on demand and other processes using programming languages and data integration platforms with graphical user interfaces.
 
@@ -31,3 +35,20 @@ S9: Query and manipulate data using tools and programming such as SQL and Python
 S15: Optimise data ingestion processes by making use of appropriate data ingestion frameworks such as batch, streaming and on-demand.
 
 S16: Develop algorithms and processes to extract structured data from unstructured sources.
+
+
+## Behaviour
+> Behaviours are the way in which you work, and your mindset. You need to act in a way that is appropriate for your organisation and profession.
+
+B1: Acts proactively and takes accountability adapting positively to changing work priorities, ensuring deadlines are met.
+
+B2: Works collaboratively with stakeholders and colleagues, developing strong working relationships to achieve common goals. Support an inclusive culture and treat technical and non- technical colleagues and stakeholders with respect.
+
+B3: Quality focus that promotes continuous improvement utilising peer review techniques, innovation and creativity to the data system development process to improve processes and address business challenges.
+
+B4: Takes personal responsibility towards net zero and prioritises environmental sustainability outcomes in how they carry out the duties of their role.
+
+B5: Use initiative and innovation to problem solve and trouble shoot, providing creative solutions.
+
+B6: Keeps abreast of developments in emerging, contemporary and advanced technologies to optimise sustainable data products and services.
+
