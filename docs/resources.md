@@ -2,7 +2,7 @@
 
 ## HomeSphere GitHub Repository
 
-- https://github.com/QAADE5/HomeSphere
+- https://github.com/QAADE5/M3
 
 ## QA Platform Playgrounds
 
