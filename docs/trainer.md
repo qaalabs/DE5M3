@@ -36,6 +36,7 @@
 
 ### Session 1
 
+- `09:40` 🖥️ Start MS Fabric Playground (10 mins)
 - `09:50` What Is Fabric? (10 mins)
 - `10:00` **Practice**: [Lab 2.1 - Explore Fabric Environment](labs/21-lakehouse.md) (30 mins)
 - `10:30` **Discussion**: What Stays the Same? (10 mins)
@@ -89,9 +90,9 @@
 
 ### Session 4
 
-- `14:50` **Breakout**: Group Scenario Setup (10 mins)
-- `15:00` **Investigation**: [Industry Group Scenarios](day3/medallion-scenarios.md) (20 mins)
-- `15:20` **Report-Back**: Scenario Report-back (20 mins)
+- `14:50` **Breakout**: Medallion Scenarios (10 mins)
+- `15:00` **Investigation**: [Medallion Scenarios](day3/medallion-scenarios.md) (20 mins)
+- `15:20` **Report-Back**: Medallion Scenarios (20 mins)
 - `15:40` **Discussion**: [Bridge to Day 4](day3/bridge.md) (10 mins)
 
 ---
@@ -112,14 +113,15 @@
 
 ### Session 3
 
-- `13:20` [Technical vs Stakeholder View](day4/stakeholder.md) (20 mins)
+- `13:20` **Breakout**: [Learners Share Their Artefact](day4/mvd-review.md) (10 mins)
+- `13:30` [Technical vs Stakeholder View](day4/stakeholder.md) (10 mins)
 - `13:40` **Breakout**: [Prepare Your Explanation](day4/pitch-prep.md) (20 mins)
 - `14:00` **Report-Back**: Share Your Explanation (20 mins)
-- `14:20` **Discussion**: [What Made the Difference?](day4/pitch-debrief.md) (10 mins)
 
 ### Session 4
 
-- `14:50` **Discussion**: [Next Maturity Steps](day4/maturity.md) (20 mins)
-- `15:10` **Discussion**: [Module Retrospective](day4/retro.md) (30 mins)
+- `14:50` **Breakout**: PHASE2-SETUP (10 mins)
+- `15:00` **Activity**: PHASE2 (20 mins)
+- `15:20` **Discussion**: PHASE2-DEBRIEF (20 mins)
 
 ---

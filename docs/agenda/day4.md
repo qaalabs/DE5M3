@@ -13,23 +13,25 @@
 
 - Minimum Viable Documentation
 - **Practice**: [Create a Handover Artefact](../day4/mvd-build.md)
-- **Breakout**: Learners Share Their Artefact
+- **Breakout**: [Learners Share Their Artefact](../day4/mvd-review.md)
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
+- **Breakout**: [Learners Share Their Artefact](../day4/mvd-review.md)
 - Technical vs Stakeholder View
 - **Breakout**: [Prepare Your Explanation](../day4/pitch-prep.md)
 - **Report-Back**: Share Your Explanation
-- **Discussion**: What Made the Difference?
+- 
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- **Discussion**: Next Maturity Steps
-- **Discussion**: Module Retrospective
+- **Breakout**: PHASE2-SETUP
+- **Activity**: PHASE2
+- **Discussion**: PHASE2-DEBRIEF
 - **Activity**: 💯 Evaluation
 
 ## 🎁 Wrap

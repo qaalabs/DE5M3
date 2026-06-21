@@ -30,9 +30,9 @@
 
 ## Session 4
 
-- **Breakout**: Group Scenario Setup
-- **Investigation**: [Industry Group Scenarios](../day3/medallion-scenarios.md)
-- **Report-Back**: Scenario Report-back
+- **Breakout**: Medallion Scenarios
+- **Investigation**: [Medallion Scenarios](../day3/medallion-scenarios.md)
+- **Report-Back**: Medallion Scenarios
 - **Discussion**: Bridge to Day 4
 
 ## 🎁 Wrap

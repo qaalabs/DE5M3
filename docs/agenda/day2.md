@@ -3,7 +3,7 @@
 ## Session 1
 
 - 🌅 Welcome to Day 2 of DE5 Module 3
-- 🖥️ VM Setup
+- 🖥️ Start MS Fabric Playground
 - What Is Fabric?
 - **Practice**: [Lab 2.1 - Explore Fabric Environment](../labs/21-lakehouse.md)
 - **Discussion**: What Stays the Same?
