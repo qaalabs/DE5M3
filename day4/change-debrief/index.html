@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes - Make It Safe to Run - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes - Respond to Change Debrief - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#facilitator-notes-make-it-safe-to-run" class="md-skip">
+        <a href="#facilitator-notes-respond-to-change-debrief" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes - Make It Safe to Run
+              Facilitator Notes - Respond to Change Debrief
             
           </span>
         </div>
@@ -1486,50 +1486,39 @@
 
 
 
-<h1 id="facilitator-notes-make-it-safe-to-run">Facilitator Notes - Make It Safe to Run</h1>
-<h2 id="session-frame">Session frame</h2>
-<p>Session 1 is the strongest practical of the day - give it room.</p>
-<p>The arc:</p>
-<ol>
-<li>Short whole-group setup (CHECKS-INTRO + SILENT-FAIL, ~20 min) - frame the problem, walk through 4 scenarios together</li>
-<li>Demo one check live in the notebook (~5 min, start of CHECKS-BUILD)</li>
-<li>Learners work through the notebook TODOs (~20 min)</li>
-<li>Stretch: move checks into functions in a <code>.py</code> file (fast finishers)</li>
-<li>Short debrief: what should happen when a check fails? (last ~5 min before break)</li>
-</ol>
+<h1 id="facilitator-notes-respond-to-change-debrief">Facilitator Notes - Respond to Change Debrief</h1>
+<p><em>Trainer-only. After the group design task, before Wrap.</em></p>
 <hr>
-<h2 id="opening-frame">Opening frame</h2>
-<p>Say:</p>
-<blockquote>
-<p>"A crash is honest. The pipeline stops. You know something went wrong. A silent failure is worse - the pipeline runs, produces output, and nobody raises an error. The report lands in someone's inbox and looks fine."</p>
-</blockquote>
-<p>Then:</p>
-<blockquote>
-<p>"Session 1 is about making it safe to run. That means deciding what could go wrong, choosing what to check for, and making those failures visible."</p>
-</blockquote>
-<hr>
-<h2 id="walk-through-the-scenarios">Walk through the scenarios</h2>
-<p>The four scenarios are on <code>silent-fail.md</code>. Walk through them together - do not send learners to read independently.</p>
-<p>For each one, ask the group:</p>
-<ol>
-<li>What went wrong?</li>
-<li>What check would catch it?</li>
-<li>Where in the pipeline should that check live - bronze, silver, or gold?</li>
-</ol>
-<p>Keep this quick. Its job is to build shared vocabulary before the practical, not to generate a complete answer.</p>
-<p><strong>What to listen for</strong></p>
-<p>Good responses will name a layer and a specific check:</p>
+<h2 id="how-to-run-it">How to run it</h2>
+<p>One rep per group, one minute each. Ask for three things only:</p>
 <ul>
-<li>"After the join, check whether any sales rows came back with a null product category"</li>
-<li>"Before cleaning, check the row count is above a minimum"</li>
+<li>Which change request they had</li>
+<li>Where it enters the pipeline (bronze, silver, or gold)</li>
+<li>The single biggest risk or unknown they could not resolve</li>
 </ul>
-<p>Redirect vague answers: "What would the output look like if that happened? Would anyone notice immediately?"</p>
+<p>Do not let groups walk through all seven questions out loud - the page or diagram speaks for itself. Hold it up or share the screen while they talk.</p>
 <hr>
-<h2 id="bridge-to-the-demo">Bridge to the demo</h2>
+<h2 id="what-to-listen-for">What to listen for</h2>
+<p>Good answers reuse the week's vocabulary without being prompted:</p>
+<ul>
+<li>Bronze as a landing point that does not force a rebuild - the new feed lands, existing layers are untouched until proven ready</li>
+<li>Validation as the thing that would catch a schema mismatch (Group D) or a missing notification (Group C) rather than a person noticing late</li>
+<li>Documentation as what lets someone else pick this up - the handover artefact from this morning is exactly what the next team would need</li>
+<li>Reuse - most groups should find that silver and gold logic barely changes; the work is mostly at the edges</li>
+</ul>
+<p>Redirect groups that treat this as a from-scratch design: "What from this week would you keep exactly as it is?"</p>
+<hr>
+<h2 id="key-point-to-land">Key point to land</h2>
 <blockquote>
-<p>"We know the pipeline can fail silently. Now let's put some checks in place. I'll show you the pattern in the notebook, then you continue from there."</p>
+<p>"Maturity is not being finished. It is being able to absorb change."</p>
 </blockquote>
-<p>Move directly into CHECKS-BUILD. Do not dwell here.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Connect it back to the open of the day: safe to run, easy to inherit, easy to explain - and now, able to cope with change. All four are what "maturity" actually means for a pipeline. None of them mean "perfect" or "done."</p>
+<hr>
+<h2 id="bridge-to-wrap">Bridge to Wrap</h2>
+<blockquote>
+<p>"You didn't build today's requirement - you didn't need to. You already know where it goes, what it touches, and what it risks. That's the difference four days has made."</p>
+</blockquote>
+<p>Move directly into the Day 4 wrap.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>

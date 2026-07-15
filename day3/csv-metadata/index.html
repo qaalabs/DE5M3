@@ -16,7 +16,7 @@
     
     
       
-        <title>Facilitator Notes - Make It Safe to Run - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Facilitator Notes — Lineage Bundle Demo - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#facilitator-notes-make-it-safe-to-run" class="md-skip">
+        <a href="#facilitator-notes-lineage-bundle-demo" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes - Make It Safe to Run
+              Facilitator Notes — Lineage Bundle Demo
             
           </span>
         </div>
@@ -1052,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/fragile/" class="md-nav__link">
+      <a href="../fragile/" class="md-nav__link">
         
   
   
@@ -1080,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/med-map/" class="md-nav__link">
+      <a href="../med-map/" class="md-nav__link">
         
   
   
@@ -1108,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/med-debrief/" class="md-nav__link">
+      <a href="../med-debrief/" class="md-nav__link">
         
   
   
@@ -1192,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/medallion-scenarios/" class="md-nav__link">
+      <a href="../medallion-scenarios/" class="md-nav__link">
         
   
   
@@ -1274,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../silent-fail/" class="md-nav__link">
+      <a href="../../day4/silent-fail/" class="md-nav__link">
         
   
   
@@ -1302,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../checks-build/" class="md-nav__link">
+      <a href="../../day4/checks-build/" class="md-nav__link">
         
   
   
@@ -1330,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-local/" class="md-nav__link">
+      <a href="../../day4/pipeline-local/" class="md-nav__link">
         
   
   
@@ -1358,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mvd-build/" class="md-nav__link">
+      <a href="../../day4/mvd-build/" class="md-nav__link">
         
   
   
@@ -1386,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pitch-prep/" class="md-nav__link">
+      <a href="../../day4/pitch-prep/" class="md-nav__link">
         
   
   
@@ -1414,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../change-respond/" class="md-nav__link">
+      <a href="../../day4/change-respond/" class="md-nav__link">
         
   
   
@@ -1486,50 +1486,93 @@
 
 
 
-<h1 id="facilitator-notes-make-it-safe-to-run">Facilitator Notes - Make It Safe to Run</h1>
-<h2 id="session-frame">Session frame</h2>
-<p>Session 1 is the strongest practical of the day - give it room.</p>
-<p>The arc:</p>
-<ol>
-<li>Short whole-group setup (CHECKS-INTRO + SILENT-FAIL, ~20 min) - frame the problem, walk through 4 scenarios together</li>
-<li>Demo one check live in the notebook (~5 min, start of CHECKS-BUILD)</li>
-<li>Learners work through the notebook TODOs (~20 min)</li>
-<li>Stretch: move checks into functions in a <code>.py</code> file (fast finishers)</li>
-<li>Short debrief: what should happen when a check fails? (last ~5 min before break)</li>
-</ol>
+<h1 id="facilitator-notes-lineage-bundle-demo">Facilitator Notes — Lineage Bundle Demo</h1>
+<p><em>Trainer-only. Day 3, morning — before the fragile breakout, as a preview of what good bronze-layer design looks like.</em></p>
 <hr>
-<h2 id="opening-frame">Opening frame</h2>
-<p>Say:</p>
-<blockquote>
-<p>"A crash is honest. The pipeline stops. You know something went wrong. A silent failure is worse - the pipeline runs, produces output, and nobody raises an error. The report lands in someone's inbox and looks fine."</p>
-</blockquote>
-<p>Then:</p>
-<blockquote>
-<p>"Session 1 is about making it safe to run. That means deciding what could go wrong, choosing what to check for, and making those failures visible."</p>
-</blockquote>
+<h2 id="purpose">Purpose</h2>
+<p>The fragile breakout surfaces design debts. One that often comes up is lineage: if a file arrives with bad data, can you trace it back to the source? This demo shows a simple pattern that answers that question — data and metadata bundled together so lineage always travels with the file.</p>
 <hr>
-<h2 id="walk-through-the-scenarios">Walk through the scenarios</h2>
-<p>The four scenarios are on <code>silent-fail.md</code>. Walk through them together - do not send learners to read independently.</p>
-<p>For each one, ask the group:</p>
+<h2 id="the-artefact">The artefact</h2>
+<p><code>data/homesphere_sales_20260530_083200.zip</code> contains:</p>
+<div class="highlight"><pre><span></span><code>homesphere_sales_20260530_083200.zip
+├── sales_raw.csv       ← the data, unchanged
+└── metadata.json       ← what it is, where it came from, how to verify it
+</code></pre></div>
+<p><strong><code>metadata.json</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"file_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sales_raw.csv"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"source_system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HomeSphere CRM"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"source_location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crm.homesphere.internal/exports/sales"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"extracted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-05-30T08:32:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"columns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"order_id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"order_date"</span><span class="p">,</span><span class="w"> </span><span class="s2">"customer_id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"product_id"</span><span class="p">,</span>
+<span class="w">               </span><span class="s2">"quantity"</span><span class="p">,</span><span class="w"> </span><span class="s2">"unit_price"</span><span class="p">,</span><span class="w"> </span><span class="s2">"status"</span><span class="p">,</span><span class="w"> </span><span class="s2">"region"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"sha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2a0ed3e360f281ae5fcb9289a80b33d1c15ee483f96392c7d4dcb7c3e3c00299"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"schema_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"bundle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"homesphere_sales_20260530_083200.zip"</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>The zip name is the first line of provenance.</strong> <code>homesphere_sales_20240130_083200</code> tells you source, dataset, date, and time before you open anything.</p>
+<hr>
+<h2 id="what-learners-should-take-from-this">What learners should take from this</h2>
+<p>Three questions the bronze layer should be able to answer for every file it holds:</p>
 <ol>
-<li>What went wrong?</li>
-<li>What check would catch it?</li>
-<li>Where in the pipeline should that check live - bronze, silver, or gold?</li>
+<li><strong>Where did it come from?</strong> — <code>source_system</code> + <code>source_location</code></li>
+<li><strong>When was it extracted?</strong> — <code>extracted_at</code></li>
+<li><strong>Is it unchanged?</strong> — re-hash the CSV and compare against <code>sha256</code></li>
 </ol>
-<p>Keep this quick. Its job is to build shared vocabulary before the practical, not to generate a complete answer.</p>
-<p><strong>What to listen for</strong></p>
-<p>Good responses will name a layer and a specific check:</p>
+<p>If the answer to any of these is "we don't know", the pipeline has a lineage gap.</p>
+<hr>
+<h2 id="python-unpacking-and-validating-the-bundle">Python — unpacking and validating the bundle</h2>
+<p>Show this in a notebook cell or talk through it on screen:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">zipfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_sales_bundle</span><span class="p">(</span><span class="n">zip_path</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">zip_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">z</span><span class="p">:</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"metadata.json"</span><span class="p">))</span>
+        <span class="n">raw_bytes</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"sales_raw.csv"</span><span class="p">)</span>
+
+    <span class="n">actual_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">raw_bytes</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">actual_hash</span> <span class="o">!=</span> <span class="n">metadata</span><span class="p">[</span><span class="s2">"sha256"</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Hash mismatch — file may be corrupt or tampered"</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">raw_bytes</span><span class="p">))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">!=</span> <span class="n">metadata</span><span class="p">[</span><span class="s2">"record_count"</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Expected </span><span class="si">{</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'record_count'</span><span class="p">]</span><span class="si">}</span><span class="s2"> rows, got </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Source:    </span><span class="si">{</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'source_system'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Extracted: </span><span class="si">{</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'extracted_at'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records:   </span><span class="si">{</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'record_count'</span><span class="p">]</span><span class="si">}</span><span class="s2"> ✓"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hash:      verified ✓"</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span><span class="p">,</span> <span class="n">metadata</span>
+
+<span class="n">df</span><span class="p">,</span> <span class="n">meta</span> <span class="o">=</span> <span class="n">load_sales_bundle</span><span class="p">(</span><span class="s2">"homesphere_sales_20260530_083200.zip"</span><span class="p">)</span>
+</code></pre></div>
+<p>Output:
+</p><div class="highlight"><pre><span></span><code>Source:    HomeSphere CRM
+Extracted: 2026-05-30T08:32:00Z
+Records:   30 ✓
+Hash:      verified ✓
+</code></pre></div><p></p>
+<hr>
+<h2 id="where-this-fits-in-the-day">Where this fits in the day</h2>
+<p>Use it early, before the fragile breakout:</p>
+<blockquote>
+<p>"Here's what it looks like when a bundle is designed with lineage in mind from the start. The zip name tells you when. The metadata tells you where. The hash tells you whether anything changed between extraction and processing. None of this required a new tool — just a deliberate bundle."</p>
+</blockquote>
+<p>Plant it here so that when learners hit the fragile breakout and start naming design debts, lineage is a gap they recognise rather than one you have to introduce for them. It also sets up the medallion conversation later in the day: if bronze is where raw data lands, it should land with enough context to be useful later.</p>
+<hr>
+<h2 id="teaching-notes">Teaching notes</h2>
 <ul>
-<li>"After the join, check whether any sales rows came back with a null product category"</li>
-<li>"Before cleaning, check the row count is above a minimum"</li>
-</ul>
-<p>Redirect vague answers: "What would the output look like if that happened? Would anyone notice immediately?"</p>
-<hr>
-<h2 id="bridge-to-the-demo">Bridge to the demo</h2>
-<blockquote>
-<p>"We know the pipeline can fail silently. Now let's put some checks in place. I'll show you the pattern in the notebook, then you continue from there."</p>
-</blockquote>
-<p>Move directly into CHECKS-BUILD. Do not dwell here.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<li>The hash is SHA-256 of the raw CSV bytes — not the parsed data. This means even a trailing newline difference would flag. That is deliberate and worth saying aloud.</li>
+<li><code>schema_version</code> is a placeholder here, but in production it would point to a schema registry entry. You do not need to go into this unless someone asks.</li>
+<li>The pattern scales: the same approach works for JSON extracts, API response snapshots, or any file that arrives from an external system.</li>
+</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
