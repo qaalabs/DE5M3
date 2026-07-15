@@ -1,0 +1,6 @@
+day3/scenario-brief-a.md
+day3/scenario-brief-b.md
+day3/scenario-brief-c.md
+day3/scenario-brief-d.md
+day4/pipeline-solution.md
+day4/mvd-example.md
