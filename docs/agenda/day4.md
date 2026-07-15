@@ -6,6 +6,7 @@
 - Can You Trust Your Pipeline?
 - **Discussion**: [Silent Failures](../day4/silent-fail.md)
 - **Practice**: [Add Validation Checks](../day4/checks-build.md)
+- [Run the Pipeline Locally](../day4/pipeline-local.md)
 
 ## ☕ Morning Break
 

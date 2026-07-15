@@ -42,6 +42,7 @@ nav = [
   {"Day 4 - Supportable & Explainable" = [
     {"Silent Failures" = "day4/silent-fail.md"},
     {"Add Validation Checks" = "day4/checks-build.md"},
+    {"Run the Pipeline Locally" = "day4/pipeline-local.md"},
     {"Create a Handover Artefact" = "day4/mvd-build.md"},
     {"Learners Share Their Artefact" = "day4/mvd-review.md"},
     {"Prepare Your Explanation" = "day4/pitch-prep.md"},
