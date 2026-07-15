@@ -11,7 +11,6 @@ nav = [
     {"Day 4" = "agenda/day4.md"},
   ]},
   {"Day 1 - ETL Locally" = [
-    {"🖥️ VM Setup" = "https://qaalabs.github.io/vmsetup/"},
     {"Git Clone the Data Files" = "labs/11-setup.md"},
     {"Introducing HomeSphere" = "day1/homesphere.md"},
     {"Part 1: Inspect Sales Data" = "day1/inspect-sales.md"},
@@ -45,6 +44,7 @@ nav = [
     {"Create a Handover Artefact" = "day4/mvd-build.md"},
     {"Learners Share Their Artefact" = "day4/mvd-review.md"},
     {"Prepare Your Explanation" = "day4/pitch-prep.md"},
+    {"Evaluate New Change Request" = "day4/change-respond.md"},
   ]},
   {"Resources" = "resources.md"},
 ]

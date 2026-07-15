@@ -23,16 +23,15 @@
 - Technical vs Stakeholder View
 - **Breakout**: [Prepare Your Explanation](../day4/pitch-prep.md)
 - **Report-Back**: Share Your Explanation
-- 
+- **Discussion**: What Made the Difference?
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- **Breakout**: PHASE2-SETUP
-- **Activity**: PHASE2
-- **Discussion**: PHASE2-DEBRIEF
+- New Requirements Arrive
+- **Breakout**: [Evaluate New Change Request](../day4/change-respond.md)
+- **Report-Back**: Evaluate New Change Request
+- **Slides**: 🎁 Wrap
 - **Activity**: 💯 Evaluation
-
-## 🎁 Wrap
 

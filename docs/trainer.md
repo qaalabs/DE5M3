@@ -117,11 +117,13 @@
 - `13:30` [Technical vs Stakeholder View](day4/stakeholder.md) (10 mins)
 - `13:40` **Breakout**: [Prepare Your Explanation](day4/pitch-prep.md) (20 mins)
 - `14:00` **Report-Back**: Share Your Explanation (20 mins)
+- `14:20` **Discussion**: [What Made the Difference?](day4/pitch-debrief.md) (10 mins)
 
 ### Session 4
 
-- `14:50` **Breakout**: PHASE2-SETUP (10 mins)
-- `15:00` **Activity**: PHASE2 (20 mins)
-- `15:20` **Discussion**: PHASE2-DEBRIEF (20 mins)
+- `14:50` New Requirements Arrive (10 mins)
+- `15:00` **Breakout**: [Evaluate New Change Request](day4/change-respond.md) (20 mins)
+- `15:20` **Report-Back**: [Evaluate New Change Request](day4/change-debrief.md) (20 mins)
+- `15:40` **Slides**: 🎁 Wrap (10 mins)
 
 ---
