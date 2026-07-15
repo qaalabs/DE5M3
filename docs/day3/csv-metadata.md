@@ -1,6 +1,6 @@
 # Facilitator Notes — Lineage Bundle Demo
 
-*Trainer-only. Day 3 — use after the fragile breakout to introduce a concrete fix.*
+*Trainer-only. Day 3, morning — before the fragile breakout, as a preview of what good bronze-layer design looks like.*
 
 ---
 
@@ -99,11 +99,11 @@ Hash:      verified ✓
 
 ## Where this fits in the day
 
-Use it after the fragile share to pivot from *identifying* debts to *fixing* them:
+Use it early, before the fragile breakout:
 
-> "You said you couldn't tell where a file came from or whether it had changed. Here's what it looks like when you design for that from the start. The zip name tells you when. The metadata tells you where. The hash tells you whether anything changed between extraction and processing. None of this required a new tool — just a deliberate bundle."
+> "Here's what it looks like when a bundle is designed with lineage in mind from the start. The zip name tells you when. The metadata tells you where. The hash tells you whether anything changed between extraction and processing. None of this required a new tool — just a deliberate bundle."
 
-This sets up the medallion conversation naturally: if bronze is where raw data lands, it should land with enough context to be useful later.
+Plant it here so that when learners hit the fragile breakout and start naming design debts, lineage is a gap they recognise rather than one you have to introduce for them. It also sets up the medallion conversation later in the day: if bronze is where raw data lands, it should land with enough context to be useful later.
 
 ---
 
