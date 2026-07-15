@@ -25,7 +25,7 @@
 - **Discussion**: Mechanical or Judgement?
 - **Slides**: Why Flatten and Join?
 - **Practice**: [Flatten and Join](../day1/flatten-join.md)
-- **Activity**: [ETL Pipeline ~ Stretch Task](../day1/stretch-etl-script.md)
+- **Practice**: [ETL Pipeline ~ Stretch Task](../day1/stretch-etl-script.md)
 - **Practice**: Which Categories Earn Most?
 
 ## ☕ Afternoon Break

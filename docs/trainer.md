@@ -21,7 +21,7 @@
 - `13:20` **Discussion**: [Mechanical or Judgement?](day1/clean-debrief.md) (10 mins)
 - `13:30` **Slides**: [Why Flatten and Join?](day1/flatten-intro.md) (10 mins)
 - `13:40` **Practice**: [Flatten and Join](day1/flatten-join.md) (30 mins)
-- `14:10` **Activity**: [ETL Pipeline ~ Stretch Task](day1/stretch-etl-script.md) (10 mins)
+- `14:10` **Practice**: [ETL Pipeline ~ Stretch Task](day1/stretch-etl-script.md) (10 mins)
 - `14:20` **Practice**: Which Categories Earn Most? (10 mins)
 
 ### Session 4
@@ -71,7 +71,7 @@
 ### Session 1
 
 - `09:40` **Slides**: [Design Review](day3/review.md) (10 mins)
-- `09:50` **Slides**: Solution: Add Metadata to a CSV File (10 mins)
+- `09:50` **Slides**: [Solution: Add Metadata to a CSV File](day3/csv-metadata.md) (10 mins)
 - `10:00` **Slides**: Solution: Get Data From an API (10 mins)
 - `10:10` **Practice**: Swagger: Read from a Live API (30 mins)
 
