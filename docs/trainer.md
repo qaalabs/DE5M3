@@ -10,11 +10,11 @@
 ### Session 2
 
 - `10:50` **Reading**: [Introducing HomeSphere](day1/homesphere.md) (10 mins)
-- `11:00` **Practice**: [Part 1: Inspect Sales Data](day1/inspect-sales.md) (10 mins)
-- `11:10` **Practice**: [Part 2: Inspect Product Data](day1/inspect-prod.md) (10 mins)
+- `11:00` **Practice**: [Part 1 ~ Inspect Sales Data](day1/inspect-sales.md) (10 mins)
+- `11:10` **Practice**: [Part 2 ~ Inspect Product Data](day1/inspect-prod.md) (10 mins)
 - `11:20` **Discussion**: [What Did You Find?](day1/inspect-debrief.md) (10 mins)
 - `11:30` [Cleaning Moves Overview](day1/clean-intro.md) (10 mins)
-- `11:40` **Practice**: [Part 3: Clean Sales Data](day1/clean-sales.md) (40 mins)
+- `11:40` **Practice**: [Part 3 ~ Clean Sales Data](day1/clean-sales.md) (40 mins)
 
 ### Session 3
 
@@ -71,15 +71,15 @@
 ### Session 1
 
 - `09:40` **Slides**: [Design Review](day3/review.md) (10 mins)
-- `09:50` **Slides**: [Solution: Add Metadata to a CSV File](day3/csv-metadata.md) (10 mins)
-- `10:00` **Slides**: Solution: Get Data From an API (10 mins)
-- `10:10` **Practice**: [Swagger: Read from a Live API](day3/products-api.md) (30 mins)
+- `09:50` **Slides**: [Add Metadata to a CSV File](day3/csv-metadata.md) (10 mins)
+- `10:00` **Slides**: Swagger ~ Read from a Live API (10 mins)
+- `10:10` **Practice**: [Swagger ~ Read from a Live API](day3/products-api.md) (30 mins)
 
 ### Session 2
 
 - `11:00` **Breakout**: [Where are the Weaknesses?](day3/fragile.md) (20 mins)
 - `11:20` **Report-Back**: Our Design Debts (10 mins)
-- `11:30` **Slides**: Medallion: Bronze - Silver - Gold (20 mins)
+- `11:30` **Slides**: Medallion ~ Bronze - Silver - Gold (20 mins)
 - `11:50` **Practice**: [Map the Pipeline](day3/med-map.md) (10 mins)
 - `12:00` **Discussion**: [What Needs to Move?](day3/med-debrief.md) (20 mins)
 
@@ -111,11 +111,11 @@
 
 - `10:50` [Minimum Viable Documentation](day4/mvd-intro.md) (10 mins)
 - `11:00` **Practice**: [Create a Handover Artefact](day4/mvd-build.md) (40 mins)
-- `11:40` **Breakout**: [Learners Share Their Artefact](day4/mvd-review.md) (30 mins)
+- `11:40` **Report-Back**: [Learners Share Their Artefact](day4/mvd-review.md) (30 mins)
 
 ### Session 3
 
-- `13:20` **Breakout**: [Learners Share Their Artefact](day4/mvd-review.md) (10 mins)
+- `13:20` **Report-Back**: [Learners Share Their Artefact](day4/mvd-review.md) (10 mins)
 - `13:30` [Technical vs Stakeholder View](day4/stakeholder.md) (10 mins)
 - `13:40` **Breakout**: [Prepare Your Explanation](day4/pitch-prep.md) (20 mins)
 - `14:00` **Report-Back**: Share Your Explanation (20 mins)

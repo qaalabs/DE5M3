@@ -12,11 +12,11 @@
 ## Session 2
 
 - **Reading**: [Introducing HomeSphere](../day1/homesphere.md)
-- **Practice**: [Part 1: Inspect Sales Data](../day1/inspect-sales.md)
-- **Practice**: [Part 2: Inspect Product Data](../day1/inspect-prod.md)
+- **Practice**: [Part 1 ~ Inspect Sales Data](../day1/inspect-sales.md)
+- **Practice**: [Part 2 ~ Inspect Product Data](../day1/inspect-prod.md)
 - **Discussion**: What Did You Find?
 - Cleaning Moves Overview
-- **Practice**: [Part 3: Clean Sales Data](../day1/clean-sales.md)
+- **Practice**: [Part 3 ~ Clean Sales Data](../day1/clean-sales.md)
 
 ## 🥪🥤 Lunch Break
 

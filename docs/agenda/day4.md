@@ -14,13 +14,13 @@
 
 - Minimum Viable Documentation
 - **Practice**: [Create a Handover Artefact](../day4/mvd-build.md)
-- **Breakout**: [Learners Share Their Artefact](../day4/mvd-review.md)
+- **Report-Back**: Learners Share Their Artefact
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
-- **Breakout**: [Learners Share Their Artefact](../day4/mvd-review.md)
+- **Report-Back**: Learners Share Their Artefact
 - Technical vs Stakeholder View
 - **Breakout**: [Prepare Your Explanation](../day4/pitch-prep.md)
 - **Report-Back**: Share Your Explanation
