@@ -1,4 +1,4 @@
-# ETL / Data Integration Products – Investigation
+# ETL / Data Integration Products ~ Investigation
 
 You have spent today writing ETL pipelines in Python by hand.
 That is one way to do it. There is a whole landscape of tools that take a different approach.

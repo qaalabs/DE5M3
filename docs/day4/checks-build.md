@@ -12,15 +12,15 @@ The response is the most important decision. A check that prints a warning and c
 
 ---
 
-## Open the notebook
+## Step 1: Run Jupyter Notebook in your Virtual Machine
 
-Open `day4/checks_practice.ipynb` in Fabric.
+Open the notebook: `day4/checks_practice.ipynb`
 
-The trainer will demo the first check live. Watch the pattern, then continue from TODO 2.
+*Your trainer will demo the first check live. Watch the pattern, then continue from TODO 2.*
 
 ---
 
-## The check pattern
+## Step 2: The check pattern
 
 Use explicit logic that is readable and intentional:
 
@@ -49,9 +49,12 @@ if failures:
 
 ---
 
-## The TODOs
+## Step 3: The TODOs
 
-Each TODO follows the same structure: risk, check, and what should happen if it fails.
+!!! info "Each TODO follows the same structure:"
+    - Risk.
+    - Check.
+    - What should happen if it fails.
 
 ---
 
@@ -137,20 +140,5 @@ Same thinking, cleaner reuse. You could call these from any notebook in the pipe
 
 ---
 
-## Debrief
+!!! note "The question is not *did your checks work?* It is: What should the pipeline do when a check fails?"
 
-Before break, come back together for a few minutes.
-
-The question is not "did your checks work?" It is:
-
-> **What should the pipeline do when a check fails?**
-
-Three options:
-
-- **Stop** - raise an error and halt. Nothing downstream runs. Safe but inflexible.
-- **Warn and continue** - print the failure and keep going. Risky if downstream code consumes bad data.
-- **Quarantine** - write the failing rows to a rejected file, continue with the clean rows.
-
-There is no single right answer. It depends on what the downstream consumer expects and how bad the failure is.
-
-Push the group: for each of the four checks they wrote - which response makes most sense and why?

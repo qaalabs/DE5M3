@@ -18,7 +18,8 @@ Run each cell in turn and pay attention to what pandas tells you:
 - Are there any duplicate rows?
 - Look at the unique values in `status`, `unit_price`, `quantity`, and `order_date` - do they look consistent?
 
-**Do not fix anything yet.** Just observe and make notes in the Discussion cell.
+!!! note "Do not fix anything yet!"
+    - Just observe and make notes in the Discussion cell.
 
 ---
 

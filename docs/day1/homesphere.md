@@ -1,10 +1,10 @@
 # HomeSphere
 
-HomeSphere is a UK company that designs, sells, and supports smart home devices - thermostats, sensors, cameras, and smart plugs.
+**HomeSphere** is a fictitious UK company that designs, sells, and supports smart home devices - thermostats, sensors, cameras, and smart plugs.
 
 ## The data problem
 
-HomeSphere collects data across several systems: sales orders, product catalogue, customer support, IoT events, and app usage. Each system was built independently, and the data they produce is inconsistent and difficult to reuse. Fields are named differently across systems. Formats vary. Records contain errors and gaps. Nothing joins cleanly out of the box.
+**HomeSphere** collects data across several systems: sales orders, product catalogue, customer support, IoT events, and app usage. Each system was built independently, and the data they produce is inconsistent and difficult to reuse. Fields are named differently across systems. Formats vary. Records contain errors and gaps. Nothing joins cleanly out of the box.
 
 The data team's job is to take that raw source data, understand it, clean it, and combine it into something that can support reliable reporting and future data products.
 
@@ -36,8 +36,20 @@ Across the four days you will build one evolving pipeline using HomeSphere data.
 
 Today you are working with two sources:
 
-**Sales** - a flat file of orders. Each row is a line item from a customer order. The data contains quality issues you will need to find and fix.
+**Sales Orders** ~ a flat file containing customer order records
 
-**Product** - a JSON file from the product catalogue system. It is semi-structured, with nested fields that need flattening before they can be joined to Sales.
+- Each row represents a product ordered by a customer.
+- The data contains quality issues you will need to find and fix.
 
-By the end of the day, you will have joined these two sources into a single trusted dataset and used it to answer a simple business question.
+**Products** ~ a JSON file exported from the product catalogue system.
+
+- Each record describes a product.
+- The data is semi-structured and contains nested fields.
+- The nested fields must be flattened before the product data can be joined to the sales order data.
+
+---
+
+!!! success "By the end of the day:"
+    - You will have joined these two sources into a single trusted dataset;
+    - And used it to answer a simple business question.
+

@@ -1,11 +1,12 @@
 # Flatten, Join, and Answer
 
-!!! question "Which product categories generate the most revenue?"
+!!! question "The question we are trying to answer is:"
+    - Which product categories generate the most revenue?
 
 ## What you are doing
 
 You have a cleaned Sales dataset. You have a Product catalogue in nested JSON.
-Your job is to combine them and answer the question HomeSphere is asking:
+Your job is to combine them and answer the question:
 
 > **Which product categories generate the most revenue?**
 
@@ -50,7 +51,8 @@ Revenue for each order line is `quantity × unit_price`. Add a `line_value` colu
 
 Group by `category`, sum `line_value`, and sort highest to lowest.
 
-Which category generates the most revenue for HomeSphere?
+!!! question "Are you now able to answer the question:"
+    - Which product categories generate the most revenue?
 
 ---
 

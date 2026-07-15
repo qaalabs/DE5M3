@@ -89,12 +89,13 @@ Currently, there are no tables or files in this lakehouse.
 
 Fabric provides multiple ways to load data into the lakehouse. One of the simplest ways to ingest small amounts of data is to upload files directly.
 
-1. In the **Explorer** pane of the lakehouse, click the **...** menu for the **Files** folder and select **New subfolder**.
+1. In the **Explorer** pane of the lakehouse:
 
+    - Click the **...** menu for the **Files** folder and select **New subfolder**
     - Name the new subfolder: `data`
     - Click **Create**
 
-2. Locate the `sales.csv` file in the `data` directory on your Virtual Machine.
+2. Locate the `sales.csv` file in the `M3/day1/data` directory on your Virtual Machine.
 
     - If the file is not there, download it from: https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv
 
@@ -114,7 +115,7 @@ Fabric provides multiple ways to load data into the lakehouse. One of the simple
 
     !!! tip "If **sales.csv** does not automatically appear, in the **...** menu for the **data** folder, select **Refresh**."
 
-    !!! note "Make sure the file has a `.csv` extension - not `.txt`"
+    !!! warning "Make sure the file has a `.csv` extension - not `.txt`"
 
 
 ## Step 6: Load file data into a table
@@ -156,16 +157,12 @@ The sales data you uploaded is in a file. Loading it into a table lets you query
 
 Fabric notebooks let you write and run code directly against your lakehouse tables using Apache Spark.
 
-1. On the **Home** tab of your lakehouse, select **Open notebook** > **New notebook**.
-
-    If the option is not on the Home tab then at the top-right of the Lakehouse page:
-
-    - Select **Analyze data with** dropdown and choose: **Notebook** > **New notebook**
+1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**
 
     !!! quote ""
         ![Lakehouse new notebook](img/qa-lakehouse-notebook.png)
 
-2. Then in the notebook menu bar, use the ⚙️  **Settings** icon to view the notebook settings.
+2. In the notebook menu bar, use the ⚙️  **Settings** icon to view the notebook settings.
 
     - Set the **Name** of the notebook to: `Explore Sales`
     - Close the settings pane to save the changes.

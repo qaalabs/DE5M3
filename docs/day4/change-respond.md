@@ -1,14 +1,30 @@
-# Respond to a New Requirement
+# Activity: Respond to a New Requirement
 
 HomeSphere's pipeline is built, checked, documented, and you can explain it to a stakeholder. Now a new requirement lands.
 
-Your job is not to build it. Your job is to design the next iteration - something you could hand to the team who builds it.
+!!! tip "Note: Your job is not to build it. Your job is to design the next iteration - something you could hand to the team who builds it."
+
+## Design task
+
+### Answer these as a group:
+
+1. What new source or requirement has arrived?
+2. Where would it enter the current pipeline?
+3. What changes are needed in bronze, silver, or gold?
+4. What new validation checks are required?
+5. What existing parts can be reused?
+6. What risks, assumptions, or unknowns must be resolved?
+7. What should the next team build first?
+
+### Output
+
+One page or one diagram. Not code.
 
 ---
 
-## Your group's change request
+## Change Requests
 
-Your trainer will assign your group one of these.
+!!! note "Your group will be assigned one of the change requests below"
 
 ### Group A - Marketing integration
 
@@ -26,22 +42,3 @@ Finance needs the pipeline to run every morning without manual file uploads or n
 
 A new supplier sends inventory data in a zipped package containing a CSV and a metadata JSON file. Its schema differs from existing inventory feeds.
 
----
-
-## Design task
-
-Answer these as a group:
-
-1. What new source or requirement has arrived?
-2. Where would it enter the current pipeline?
-3. What changes are needed in bronze, silver, or gold?
-4. What new validation checks are required?
-5. What existing parts can be reused?
-6. What risks, assumptions, or unknowns must be resolved?
-7. What should the next team build first?
-
----
-
-## Output
-
-One page or one diagram. Not code.
