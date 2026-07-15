@@ -1,4 +1,4 @@
 ## *Someone else needs to run this pipeline*
 
-What turns a working classroom pipeline into something another person could trust, inherit, and use?
+A new engineer has inherited the HomeSphere pipeline. Your job is to make it safe to run, easy to understand, easy to explain, and able to cope with change.
 

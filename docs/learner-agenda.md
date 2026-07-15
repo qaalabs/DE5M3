@@ -64,4 +64,6 @@ After the break, the focus shifts to documentation. The idea of a "minimum viabl
 
 The afternoon changes the audience. You'll prepare a short explanation of the HomeSphere pipeline aimed at a non-technical stakeholder - someone who needs to understand what it does and why it matters, but not how it works in detail. Groups share their explanations and discuss what made the difference between a clear explanation and a confusing one.
 
+The day closes with a new requirement landing on the pipeline - a marketing feed, a reliability signal, an automation demand, or a new supplier format. In groups, you'll design how the pipeline would need to change to absorb it, before a short evaluation.
+
 The day closes with a look at what a more mature version of this pipeline might include, a full module retrospective, and a short evaluation.
