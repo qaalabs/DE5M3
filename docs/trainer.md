@@ -20,7 +20,8 @@
 
 - `13:20` **Discussion**: [Mechanical or Judgement?](day1/clean-debrief.md) (10 mins)
 - `13:30` **Slides**: [Why Flatten and Join?](day1/flatten-intro.md) (10 mins)
-- `13:40` **Practice**: [Flatten and Join](day1/flatten-join.md) (40 mins)
+- `13:40` **Practice**: [Flatten and Join](day1/flatten-join.md) (30 mins)
+- `14:10` **Activity**: [ETL Pipeline ~ Stretch Task](day1/stretch-etl-script.md) (10 mins)
 - `14:20` **Practice**: Which Categories Earn Most? (10 mins)
 
 ### Session 4
