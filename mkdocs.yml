@@ -11,8 +11,6 @@ nav:
     - Topics: agenda/index.md
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
-    - Day 3: agenda/day3.md
-    - Day 4: agenda/day4.md
 
   - "Day 1 - ETL Locally":
     - "Git Clone the Data Files": labs/11-setup.md
@@ -35,22 +33,6 @@ nav:
     - "Lab 2.7 ~ Rerun Pipeline": labs/27-rerun-pipeline.md
     - "Lab 2.8 ~ Schema Drift": labs/28-schema-drift.md
     - "Lab 2.9 ~ Pipeline Failure": labs/29-pipeline-failure.md
-
-  - "Day 3 - Robust & Well-Architectured":
-    - "Where are the Weaknesses?": day3/fragile.md
-    - "Map the Pipeline": day3/med-map.md
-    - "What Needs to Move?": day3/med-debrief.md
-    - "Lab 3.1 - Setup Fabric": labs/31-setup.md
-    - "Lab 3.2 - Medallion Architecture": labs/32-medallion-lab.md
-    - "Medallion Scenarios": day3/medallion-scenarios.md
-
-  - "Day 4 - Supportable & Explainable":
-    - "Silent Failures": day4/silent-fail.md
-    - "Add Validation Checks": day4/checks-build.md
-    - "Run the Pipeline Locally": day4/pipeline-local.md
-    - "Create a Handover Artefact": day4/mvd-build.md
-    - "Prepare Your Explanation": day4/pitch-prep.md
-    - "Evaluate New Change Request": day4/change-respond.md
 
   - Resources: resources.md
 
@@ -84,6 +66,7 @@ not_in_nav: |
   day3/scenario-brief-d.md
   day4/pipeline-solution.md
   day4/mvd-example.md
+  labs/20-setup.md
 
 
 # Theme
