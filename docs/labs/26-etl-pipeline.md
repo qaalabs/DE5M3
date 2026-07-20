@@ -30,7 +30,7 @@ So far you have only used the exercise notebooks. In this lab **you will use the
 
 5. Confirm that **HomeSphere** also appears under **Data Items** in the Notebook Explorer.
 
-    !!! success "Both solution notebooks are now connected to the HomeSphere lakehouse."
+!!! success "Both solution notebooks should now be connected to the HomeSphere lakehouse."
 
 
 ## Step 3: Create a pipeline
@@ -53,7 +53,7 @@ A pipeline lets you orchestrate the two notebooks so they run in sequence automa
 
 You will add two Notebook activities - one for each solution notebook - and connect them so that the output notebook only runs after the clean notebook has succeeded.
 
-1. In the pipeline canvas **start with a blank canvas**:
+1. In the pipeline canvas: **Start with a blank canvas**:
 
     - Select: **Pipeline activity**
     - Choose: **Notebook** (scroll down - it should be under the *Transform* heading)
@@ -86,6 +86,8 @@ You will add two Notebook activities - one for each solution notebook - and conn
     !!! abstract ""
         ![Pipeline with two connected notebook activities.](img/26-pipeline-activities.png)
 
+
+!!! note "Before running the pipeline - select the Monitor tab and make sure no other notebook is still running."
 
 ## Step 5: Run the pipeline
 

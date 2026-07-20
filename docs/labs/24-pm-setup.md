@@ -105,7 +105,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
     - `pm_setup.ipynb`
 
-5. Import again - this time browse to the `HomeSphere/solution/` folder and import:
+5. Import again - this time browse to the `M3/HomeSphere/solution/` folder and import:
 
     - `cloud_clean_solution.ipynb`
     - `cloud_output_solution.ipynb`
@@ -115,19 +115,25 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 ## Step 7: Attach the lakehouse to the notebooks
 
-1. In the left navigation bar, return to your lakehouse `HomeSphere`.
+1. In the left navigation bar, return to your lakehouse: `HomeSphere`
 
-2. On the **Home** tab:
+1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **Existing notebook**
 
-    - Select **Open notebook** > **Existing notebook**
+    !!! abstract ""
+        ![Lakehouse new notebook](img/qa-lakehouse-notebook.png)
+
+2. In the *OneLake catalog* under the heading **Open existing notebook**
+
     - Choose: `cloud_output`
+    - Click: **Open**
 
 3. In the **Notebook Explorer** on the left, select **Data Items** and confirm **HomeSphere** appears under **OneLake**.
 
-4. Return to the lakehouse and repeat for `pm_setup`:
+4. Return to the lakehouse and repeat for **pm_setup**:
 
-    - select **Open notebook** > **Existing notebook**
+    - select **Notebook** > **Existing notebook**
     - Choose: `pm_setup`
+    - Click: **Open**
 
 5. Select **Data Items** in the Notebook Explorer and confirm that **HomeSphere** appears under **OneLake**.
 

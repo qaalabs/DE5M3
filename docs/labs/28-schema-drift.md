@@ -31,9 +31,23 @@ Note what it actually says.
 
 ## Step 4: Verify the results
 
-1. Run the same queries as before.
+1. Open `cloud_clean_solution` and run just the first code cell (the one with
+   `glob.glob(...)` and `pd.concat(...)`). Don't run the rest of the notebook -
+   you only need this cell's output.
 
-2. Add a third row to your table:
+    Look at the printed `Shape:` line - the first number is your **raw row
+    count**. The `Files read:` line above it also confirms all three files were
+    picked up.
+
+    !!! tip "Why just this cell?"
+        Running the whole notebook would redo the write step and produce the
+        exact same result the pipeline already gave you. You only need this
+        one cell to see how many raw rows came in - the rest of your numbers
+        come from SQL, below.
+
+2. Run the same SQL queries as before for cleaned rows, output rows, and revenue.
+
+3. Add a third row to your table:
 
     | Run         | Input                | Expected change        | Raw rows | Cleaned rows | Output rows | Revenue | Status |
     |-------------|-----------------------|------------------------|----------|--------------|-------------|---------|--------|

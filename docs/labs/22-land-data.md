@@ -48,7 +48,7 @@ With the lakehouse created, you can now upload the HomeSphere source data files.
     - Name the new subfolder: `data`
     - Click **Create**
 
-2. Locate the following files in the `HomeSphere/data/` folder on your Desktop:
+2. Locate the following files in the `M3/HomeSphere/data/` folder:
 
     - `sales_raw.csv`
     - `products_raw.json`
@@ -75,12 +75,16 @@ The HomeSphere notebooks contain the code for cleaning and transforming the data
     !!! abstract ""
         ![Imported notebooks in workspace.](img/notebook-import.png)
 
-3. Browse to the `HomeSphere/cloud/` folder on your Desktop and import these two notebooks:
+3. Click **Upload**
+
+4. Browse to the `M3/HomeSphere/cloud/` folder and import these two notebooks:
 
     - `cloud_clean.ipynb`
     - `cloud_output.ipynb`
 
-4. Select **Import** again - this time browse to the `HomeSphere/solution/` folder and import:
+5. On the toolbar select **Import** again and choose **Notebook**. Then select **From this computer**. Click **Upload**
+
+6. This time browse to the `M3/HomeSphere/solution/` folder and import:
 
     - `cloud_clean_solution.ipynb`
     - `cloud_output_solution.ipynb`
@@ -94,18 +98,21 @@ Opening each notebook from within the lakehouse connects it to the HomeSphere da
 
 1. In the left navigation bar, return to your lakehouse `HomeSphere`.
 
-2. On the **Home** tab:
+1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **Existing notebook**
 
-    - Select **Open notebook** > **Existing notebook**
+    !!! abstract ""
+        ![Lakehouse new notebook](img/qa-lakehouse-notebook.png)
+
+2. In the *OneLake catalog* under the heading **Open existing notebook**
     - Choose: `cloud_clean`
 
 3. In the **Notebook Explorer** on the left, select **Data Items**.
 
     !!! success "**HomeSphere** should be listed under **OneLake** - the lakehouse is now attached to this notebook."
 
-4. Return to the lakehouse and repeat for `cloud_output`:
+4. Return to the lakehouse and repeat for **cloud_output**:
 
-    - Select **Open notebook** > **Existing notebook**
+    - Select **Notebook** > **Existing notebook**
     - Choose: `cloud_output`
 
 5. Select **Data Items** in the Notebook Explorer and confirm that **HomeSphere** appears under **OneLake**.
