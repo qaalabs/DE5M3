@@ -37,7 +37,7 @@ homesphere_sales_20260530_083200.zip
 }
 ```
 
-**The zip name is the first line of provenance.** `homesphere_sales_20240130_083200` tells you source, dataset, date, and time before you open anything.
+**The zip name is the first line of provenance.** `homesphere_sales_20260530_083200` tells you source, dataset, date, and time before you open anything.
 
 ---
 

@@ -38,13 +38,25 @@ Fully managed, scalable ETL services provided by cloud vendors.
 
 - AWS Glue Studio
 - Google Cloud Dataflow
-- Azure Synapse Pipelines
 - Azure Data Factory (ADF)
-- AWS Data Pipeline
+- AWS Managed Workflows for Apache Airflow (MWAA)
+- Fivetran
 
 ---
 
-## Group C: Self-Service / Citizen Developer
+## Group C: Open Source / Hybrid
+
+Community-driven tools, often extensible, sometimes with commercial editions.
+
+- Apache NiFi
+- Meltano
+- dbt (data build tool)
+- Apache Airflow
+- Dagster
+
+---
+
+## Group D: Self-Service / Citizen Developer
 
 Visual and drag-and-drop tools aimed at analysts and non-developers.
 
@@ -53,18 +65,6 @@ Visual and drag-and-drop tools aimed at analysts and non-developers.
 - Microsoft Power BI Dataflows
 - Qlik Data Integration
 - Excel Power Query
-
----
-
-## Group D: Open Source / Hybrid
-
-Community-driven tools, often extensible, sometimes with commercial editions.
-
-- Apache NiFi
-- Talend Open Studio
-- dbt (data build tool)
-- Apache Airflow
-- Dagster
 
 ---
 

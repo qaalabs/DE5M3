@@ -23,10 +23,22 @@ git clone https://github.com/QAADE5/M3.git
 
 This will create a `M3` folder on your Desktop.
 
+```
+cd M3
+```
+
 Inside that folder is a `HomeSphere` folder with all the files you will need for today.
+
+```
+cd HomeSphere
+```
 
 
 ## Step 4: Confirm the files are there
+
+```
+dir
+```
 
 In Terminal (or File Explorer), check that the `HomeSphere` folder on your Desktop contains:
 
@@ -34,5 +46,7 @@ In Terminal (or File Explorer), check that the `HomeSphere` folder on your Deskt
 - `data/` - the raw source files
 - `local/` - the notebooks for today
 
-!!! success "You are ready to start. Keep this folder - you will use it again on Day 2."
+!!! success "You are ready to start"
+
+!!! note "Keep this folder - you will use it again on Day 2."
 
