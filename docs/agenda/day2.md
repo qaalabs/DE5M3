@@ -4,7 +4,7 @@
 
 - 🌅 Welcome to Day 2 of DE5 Module 3
 - 🖥️ Start MS Fabric Playground
-- What Is Fabric?
+- **Slides**: What Is Fabric?
 - **Practice**: [Lab 2.1 - Explore Fabric Environment](../labs/21-lakehouse.md)
 - **Discussion**: What Stays the Same?
 
@@ -31,9 +31,11 @@
 
 ## Session 4
 
-- Security, Scalability, Governance, Cost
-- **Breakout**: [Local vs Cloud](../day2/compare.md)
-- **Report-Back**: Share Your Comparison
+- **Practice**: [Lab 2.7 ~ Rerun Pipeline](../labs/27-rerun-pipeline.md)
+- 
+- **Practice**: [Lab 2.8 ~ Schema Drift](../labs/28-schema-drift.md)
+- **Practice**: [Lab 2.9 ~ Pipeline Failure](../labs/29-pipeline-failure.md)
+- 
 - **Discussion**: Cloud Is Not Well-Architected
 
 ## 🎁 Wrap

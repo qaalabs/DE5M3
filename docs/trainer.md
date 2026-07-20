@@ -38,7 +38,7 @@
 ### Session 1
 
 - `09:40` 🖥️ Start MS Fabric Playground (10 mins)
-- `09:50` What Is Fabric? (10 mins)
+- `09:50` **Slides**: What Is Fabric? (10 mins)
 - `10:00` **Practice**: [Lab 2.1 - Explore Fabric Environment](labs/21-lakehouse.md) (30 mins)
 - `10:30` **Discussion**: What Stays the Same? (10 mins)
 
@@ -59,10 +59,10 @@
 
 ### Session 4
 
-- `14:50` Security, Scalability, Governance, Cost (10 mins)
-- `15:00` **Breakout**: [Local vs Cloud](day2/compare.md) (20 mins)
-- `15:20` **Report-Back**: Share Your Comparison (10 mins)
-- `15:30` **Discussion**: [Cloud Is Not Well-Architected](day2/reflection.md) (20 mins)
+- `14:50` **Practice**: [Lab 2.7 ~ Rerun Pipeline](labs/27-rerun-pipeline.md) (10 mins)
+- `15:10` **Practice**: [Lab 2.8 ~ Schema Drift](labs/28-schema-drift.md) (10 mins)
+- `15:20` **Practice**: [Lab 2.9 ~ Pipeline Failure](labs/29-pipeline-failure.md) (10 mins)
+- `15:40` **Discussion**: [Cloud Is Not Well-Architected](day2/reflection.md) (10 mins)
 
 ---
 
