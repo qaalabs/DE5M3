@@ -39,7 +39,7 @@ A pipeline lets you orchestrate the two notebooks so they run in sequence automa
 
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
-    !!! quote ""
+    !!! abstract ""
         ![Workspace View](img/26-workspace-view.png)
 
 2. Select **New item**, then search for and select **Pipeline**.
@@ -83,7 +83,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
         - **Build Output** will only run if **Clean Sales Orders** completes without errors.
         - This is what makes a pipeline more reliable than running notebooks by hand.
 
-    !!! quote ""
+    !!! abstract ""
         ![Pipeline with two connected notebook activities.](img/26-pipeline-activities.png)
 
 
@@ -124,7 +124,7 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
     ORDER BY total_revenue DESC
     ```
 
-    !!! quote ""
+    !!! abstract ""
         ![Pipeline final output.](img/26-final-output.png)
 
     !!! success "Both tables should exist and return results"
@@ -133,16 +133,7 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
 
 ---
 
-## Clean up resources
-
 In this exercise, you built a pipeline to orchestrate the HomeSphere ETL process automatically. Rather than running two notebooks by hand, a single pipeline run cleaned the data and built the trusted output in sequence.
 
-Once you have finished exploring, you should delete the workspace you created for this exercise.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
+!!! info "Keep your workspace"
+    Don't delete anything - your workspace, lakehouse, and pipeline are all needed for the next lab.

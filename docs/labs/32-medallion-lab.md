@@ -35,7 +35,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
 
 6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
 
-    !!! quote ""
+    !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)
 
 
@@ -50,7 +50,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
     - Leave all other options as the default values
     - Click **Apply**
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
@@ -64,7 +64,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](img/new-lakehouse.png)
 
 
@@ -325,3 +325,8 @@ Once you have finished exploring, you should delete the workspace you created fo
 3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
 
 4. Select **Delete** to delete the workspace.
+
+5. Return to the QA Platform and click **Submit** to destroy the lab environment.
+
+!!! abstract ""
+    ![QA Platform Submit to end lab.](img/playground-submit.png)

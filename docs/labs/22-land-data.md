@@ -18,7 +18,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. Your workspace should be empty, and look similar to this:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
@@ -35,7 +35,7 @@ Now that you have a workspace, it's time to create a lakehouse for the HomeSpher
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](img/new-lakehouse.png)
 
 
@@ -72,7 +72,7 @@ The HomeSphere notebooks contain the code for cleaning and transforming the data
 
 2. On the toolbar select **Import** and choose **Notebook**. Then select **From this computer**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Imported notebooks in workspace.](img/notebook-import.png)
 
 3. Browse to the `HomeSphere/cloud/` folder on your Desktop and import these two notebooks:

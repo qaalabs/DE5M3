@@ -23,9 +23,9 @@
 13:40  What Is Better? What Is Fragile? (discussion)
 13:50  Lab 2.5 - Create ETL Pipeline (practice)
 14:30  Afternoon Break
-14:50  Security, Scalability, Governance, Cost (trainer note)
-15:00  Local vs Cloud (breakout)
-15:20  Share Your Comparison (report-back)
+14:50  Does Succeeded Mean Correct? (content)
+15:00  Rerun the Pipeline - Labs 2.7-2.9 (practice)
+15:20  Share What You Found (report-back)
 15:30  Cloud Is Not Well-Architected (discussion)
 15:50  Wrap
 16:00  End of Day 2
@@ -50,8 +50,11 @@
 | `cloud-output.md` | Lab 2.4 learner handout | Ready |
 | `output-debrief.md` | Facilitator notes - What Is Better? What Is Fragile? | Ready |
 | `labs/25-etl-pipeline.md` | Lab 2.5 - wire solution notebooks into a pipeline | Ready, tested |
-| COMPARE-INTRO trainer note | K13 framing before breakout | Ready - KSB anchor for security, scalability, governance, cost |
-| `compare.md` | Local vs Cloud breakout framework | Ready |
+| COMPARE-INTRO trainer note | Reframed as "Does Succeeded mean correct?" - K13 no longer anchored here | Superseded - K13 moved to Day 3 `fragile.md` |
+| `compare.md` | Local vs Cloud breakout framework | Superseded by Labs 2.7-2.9 |
+| `labs/27-rerun-pipeline.md` | Lab 2.7 - baseline record, then rerun with `sales_raw_batch27.csv` (new batch, one row silently dropped) | Ready |
+| `labs/28-schema-drift.md` | Lab 2.8 - rerun with `sales_raw_batch28.csv` (`unit_price` renamed to `price`); whole batch silently vanishes, pipeline still succeeds | Ready |
+| `labs/29-pipeline-failure.md` | Lab 2.9 - rerun with `sales_raw_batch29.csv` (ragged CSV row); pipeline actually fails. Workspace cleanup step now lives here instead of Lab 2.6 | Ready |
 | `day2-reflection.md` | Facilitator notes - Cloud Is Not Well-Architected | Ready |
 | `sales_raw.csv` | Raw Sales data | Verified |
 | `products_raw.json` | Raw Product catalogue | Verified |
@@ -66,6 +69,7 @@
 - **Lab 2.5 uses solution notebooks** - `cloud_clean_solution.ipynb` and `cloud_output_solution.ipynb` are wired into the pipeline. Avoids broken notebooks causing pipeline failures.
 - **Architecture investigation uses HomeSphere** - updated from generic retail scenario. Three groups: Data Warehouse, Data Lake, Data Lakehouse.
 - **No Dataflows Gen2 lab** - considered but dropped. Pipeline (Lab 2.5) introduces orchestration, which is a genuinely new concept. Dataflows would have been a third pass at transformation.
+- **Session 4 reworked as a rerun sequence (Labs 2.7-2.9)** - replaces the K13 local-vs-cloud comparison. Learners rerun the same Lab 2.6 pipeline three times: a new batch (one row silently dropped), a renamed column (whole batch silently dropped, still Succeeded), then a ragged CSV row (pipeline actually fails). `cloud_clean_solution.ipynb` was changed to glob over `Files/data/sales_raw*.csv` instead of a single hardcoded filename - backward-compatible, so Lab 2.3's exercise notebook and Day 1 are unaffected. Data files are named to match the lab that uses them (`sales_raw_batch27/28/29.csv`).
 
 ---
 
@@ -95,3 +99,5 @@ Day 3 is already partially planned. The medallion architecture lab (~45 minutes)
 - Confirmation of what artefacts exist and what needs building
 - The Fabric Eventstream lab (Lab 09, real-time bike-share data, KQL) is a candidate for streaming ingestion content
 - KSB S16 (unstructured data extraction) needs a home - likely the multi-source session on Day 3
+
+**Already picked up:** K13 (security, scalability, compliance, cost) lost its Day 2 anchor when COMPARE-INTRO was reworked - it's now signposted in the `FRAGILE` breakout instead (`tutor/DE5M3D3/fragile.md` and `docs/day3/fragile.md`, new "On cost and risk" question set). `docs/day3/fragile.md` also now has real Day 2 evidence to reference (the batch that silently vanished in Lab 2.8), not just the hypothetical "what if sales_raw.csv arrived with a new column?" question.

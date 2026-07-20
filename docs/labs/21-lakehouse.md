@@ -37,7 +37,7 @@ In this lab you will create a Microsoft Fabric lakehouse, upload data, and explo
 
 6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
 
-    !!! quote ""
+    !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)
 
 
@@ -56,7 +56,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. Your workspace should be empty, and look similar to this:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
@@ -73,7 +73,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](img/new-lakehouse.png)
 
 2. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
@@ -108,7 +108,7 @@ Fabric provides multiple ways to load data into the lakehouse. One of the simple
 
 4. Select the `data` folder and verify that `sales.csv` has been uploaded:
 
-    !!! quote ""
+    !!! abstract ""
         ![Uploaded sales.csv file in a lakehouse.](img/01-uploaded-sales-file.png)
 
 5. Select the `sales.csv` file to see a preview of its contents.
@@ -126,7 +126,7 @@ The sales data you uploaded is in a file. Loading it into a table lets you query
 
 2. In the **...** menu for the `sales.csv` file, select **Load to Tables** > **New table**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Load to tables - New table.](img/qa-01-load-to-tables.png)
 
 3. In the **Load to table** dialog box:
@@ -141,12 +141,12 @@ The sales data you uploaded is in a file. Loading it into a table lets you query
 
 4. In the **Explorer** pane, select the `sales` table to view the data:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a table preview.](img/qa-01-table-preview.png)
 
 5. In the **...** menu for the `sales` table, select **View files** to see the underlying files for this table:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of delta table files.](img/qa-01-delta-table-files.png)
 
     !!! info ""
@@ -159,7 +159,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
 1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**
 
-    !!! quote ""
+    !!! abstract ""
         ![Lakehouse new notebook](img/qa-lakehouse-notebook.png)
 
 2. In the notebook menu bar, use the ⚙️  **Settings** icon to view the notebook settings.
@@ -203,7 +203,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
 7. After exploring the notebook, select the **Run** tab above the ribbon and select **Stop session**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Run - Stop Session Notebook button.](img/run-stop-session.png)
 
 
@@ -228,7 +228,7 @@ A SQL analytics endpoint is automatically created when you define tables in a la
 
 3. Use the :material-play: **Run** button to run the query and view the results.
 
-    !!! quote ""
+    !!! abstract ""
         ![SQL query with results.](img/qa-01-sql-query.png)
 
     !!! success "You should see the same revenue totals per item that you saw in the notebook."

@@ -51,6 +51,12 @@ Two notebooks. One runs after the other. Someone presses Run each time.
 - If you handed this workspace to a colleague, what would they need to know to run it?
 - How would they know if the pipeline had run successfully?
 
+**On cost and risk:**
+
+- On Day 2, a whole batch of valid orders silently vanished and the pipeline still said Succeeded. If this ran unattended, what could that have cost the business - in money, trust, or compliance?
+- If HomeSphere operated in a regulated sector, what would need to change here before you'd trust this pipeline with real customer data?
+- Who is accountable if a bad number from this pipeline ends up in a board report?
+
 ---
 
 ## Output

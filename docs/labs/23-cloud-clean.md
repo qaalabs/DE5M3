@@ -65,4 +65,7 @@ The afternoon session starts fresh - delete your workspace and stop the Fabric P
 
 4. Select **Delete** to delete the workspace.
 
-5. Return to the QA Platform and stop the Fabric Playground.
+5. Return to the QA Platform and click **Submit** to destroy the lab environment.
+
+!!! abstract ""
+    ![QA Platform Submit to end lab.](img/playground-submit.png)

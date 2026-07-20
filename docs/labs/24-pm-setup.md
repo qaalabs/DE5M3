@@ -36,7 +36,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
 6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
 
-    !!! quote ""
+    !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)
 
 
@@ -51,7 +51,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
     - Leave all other options as the default values
     - Click **Apply**
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
@@ -64,7 +64,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](img/new-lakehouse.png)
 
 
