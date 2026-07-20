@@ -1,6 +1,6 @@
 # Lab 2.6 ~ Orchestrate the HomeSphere ETL with a Pipeline
 
-!!! info "This lab continues from where you left off. Your workspace and lakehouse from the earlier session ishould be still available."
+!!! info "This lab continues from where you left off. Your workspace and lakehouse from the earlier session should be still available."
 
 ## Step 1: Return to your HomeSphere workspace
 
@@ -58,7 +58,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
     - Select: **Pipeline activity**
     - Choose: **Notebook** (scroll down - it should be under the *Transform* heading)
 
-2. In the activity properties pane below the canvas, set the **Name** to: `Clean Sales`
+2. In the activity properties pane below the canvas, set the **Name** to: `Clean Sales Orders`
 
 3. Select the **Settings** tab and configure the following:
 
@@ -76,11 +76,11 @@ You will add two Notebook activities - one for each solution notebook - and conn
 
 7. Connect the two activities
 
-    - Hover over the **Clean Sales** activity until a green arrow appears
+    - Hover over the **Clean Sales Orders** activity until a green arrow appears
     - Then drag the green arrow to the **Build Output** activity.
 
     !!! note "This creates an *On success* dependency"
-        - **Build Output** will only run if **Clean Sales** completes without errors.
+        - **Build Output** will only run if **Clean Sales Orders** completes without errors.
         - This is what makes a pipeline more reliable than running notebooks by hand.
 
     !!! quote ""

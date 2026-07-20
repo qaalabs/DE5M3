@@ -101,7 +101,7 @@ This lab sets up a fresh HomeSphere environment for the afternoon. By the end, y
 
     - `cloud_output.ipynb`
 
-4. Browse to the `M3/day1/` folder on your Desktop and import:
+4. Browse to the `M3/day2/` folder on your Desktop and import:
 
     - `pm_setup.ipynb`
 

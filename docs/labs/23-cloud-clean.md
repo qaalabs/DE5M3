@@ -1,4 +1,4 @@
-# Lab 2.3 ~ Clean the Sales Data in Fabric
+# Lab 2.3 ~ Clean the Sales Orders Data in Fabric
 
 !!! info "This lab continues from Lab 2.2. Your HomeSphere lakehouse and notebooks should already be set up."
 

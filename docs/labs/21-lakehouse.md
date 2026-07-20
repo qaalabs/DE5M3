@@ -1,6 +1,6 @@
 # Lab 2.1 ~ Create a Microsoft Fabric Lakehouse
 
-In this lab you will create a Microsoft Fabric lakehouse, upload data, and explore how files and tables work in OneLake. You will also query the data using a notebook, SQL, and the visual query editor.
+In this lab you will create a Microsoft Fabric lakehouse, upload data, and explore how files and tables work in OneLake. You will also query the data using a notebook and SQL.
 
 
 ## Step 1: Start the Microsoft Fabric Playground
@@ -164,7 +164,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
 2. In the notebook menu bar, use the ⚙️  **Settings** icon to view the notebook settings.
 
-    - Set the **Name** of the notebook to: `Explore Sales`
+    - Set the **Name** of the notebook to: `Explore Sales Orders`
     - Close the settings pane to save the changes.
 
 3. In the first cell, enter the following code to load and display the sales table:
@@ -233,36 +233,6 @@ A SQL analytics endpoint is automatically created when you define tables in a la
 
     !!! success "You should see the same revenue totals per item that you saw in the notebook."
 
-
-## Step 9: Create a visual query
-
-Those with Power BI experience can apply their Power Query skills to create visual queries.
-
-1. On the toolbar of `fab_lakehouse`, expand the **New SQL query** option and select **New visual query**.
-
-2. Drag the `sales` table to the new visual query editor pane:
-
-    !!! quote ""
-        ![Visual query.](img/qa-01-visual-query.png)
-
-3. In the **Manage columns** menu, select **Choose columns**.
-
-    - Select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns. Click **OK**.
-
-    !!! quote ""
-        ![Choose columns dialog box.](img/01-choose-columns.png)
-
-4. In the **Transform** menu, select **Group by**. Then group the data using the following **Basic** settings:
-
-    - **Group by**: SalesOrderNumber
-    - **New column name**: `LineItems`
-    - **Operation**: Count distinct values
-    - **Column**: SalesOrderLineNumber
-
-    The results pane shows the number of line items for each sales order.
-
-    !!! quote ""
-        ![Visual query with results.](img/qa-01-visual-query-results.png)
 
 ---
 

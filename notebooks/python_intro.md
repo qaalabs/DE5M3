@@ -990,7 +990,6 @@ To install a package, we can use `pip3 install <package_name>`. Optionally, we c
 
 
 ## Classes
-*NOTE: We will discuss this further in the text in chapter 7. For now, it is important to be aware of the syntax in this section.*
 
 So far we have used Python as a functional programming language, but we also have the option to use it for **object-oriented programming**. You can think of a `class` as a way to group similar functionality together. Let's create a calculator class which can handle mathematical operations for us. For this, we use the `class` keyword and define **methods** for taking actions on the calculator. These methods are functions that take `self` as the first argument. When calling them, we don't pass in anything for that argument (example after this):
 

@@ -14,7 +14,7 @@ That is what Module 3 is about.
 
 | Source                | What it contains                          |
 |-----------------------|-------------------------------------------|
-| Sales / Orders        | Customer orders, quantities, prices, dates|
+| Sales Orders          | Customer orders, quantities, prices, dates|
 | Product catalogue     | Product names, categories, specifications |
 | Inventory / Supply    | Stock levels, supplier data               |
 | Customer support      | Tickets, resolution times, issue types    |
@@ -27,7 +27,7 @@ Across the four days you will build one evolving pipeline using HomeSphere data.
 
 | Day   | Starting point                | Output                                                    |
 |-------|-------------------------------|-----------------------------------------------------------|
-| Day 1 | Raw Sales and Product files   | A trusted order-level dataset with product detail         |
+| Day 1 | Raw Sales Orders and Product files | A trusted order-level dataset with product detail    |
 | Day 2 | The same pipeline             | The same output, running in Microsoft Fabric              |
 | Day 3 | A working but fragile pipeline| A refactored pipeline with bronze, silver, and gold layers|
 | Day 4 | A well-structured pipeline    | A pipeline that is documented, checked, and explainable   |
