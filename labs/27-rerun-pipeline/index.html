@@ -6,6 +6,10 @@
       
       
       
+        <link rel="prev" href="../26-etl-pipeline/">
+      
+      
+        <link rel="next" href="../28-schema-drift/">
       
       
         
@@ -16,7 +20,7 @@
     
     
       
-        <title>Facilitator Notes - Make It Safe to Run - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Lab 2.7 ~ Rerun Pipeline - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#facilitator-notes-make-it-safe-to-run" class="md-skip">
+        <a href="#lab-27-rerun-the-pipeline-with-new-data" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes - Make It Safe to Run
+              Lab 2.7 ~ Rerun Pipeline
             
           </span>
         </div>
@@ -440,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/11-setup/" class="md-nav__link">
+      <a href="../11-setup/" class="md-nav__link">
         
   
   
@@ -668,18 +672,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -700,7 +706,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -718,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/21-lakehouse/" class="md-nav__link">
+      <a href="../21-lakehouse/" class="md-nav__link">
         
   
   
@@ -746,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/22-land-data/" class="md-nav__link">
+      <a href="../22-land-data/" class="md-nav__link">
         
   
   
@@ -774,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/23-cloud-clean/" class="md-nav__link">
+      <a href="../23-cloud-clean/" class="md-nav__link">
         
   
   
@@ -830,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/24-pm-setup/" class="md-nav__link">
+      <a href="../24-pm-setup/" class="md-nav__link">
         
   
   
@@ -858,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/25-cloud-output/" class="md-nav__link">
+      <a href="../25-cloud-output/" class="md-nav__link">
         
   
   
@@ -886,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/26-etl-pipeline/" class="md-nav__link">
+      <a href="../26-etl-pipeline/" class="md-nav__link">
         
   
   
@@ -911,10 +917,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../labs/27-rerun-pipeline/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.7 ~ Rerun Pipeline
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -930,6 +963,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-1-establish-the-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Establish the baseline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-a-second-batch-of-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Add a second batch of orders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-rerun-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Rerun the pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Verify the results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-check-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Check your work
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -942,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/28-schema-drift/" class="md-nav__link">
+      <a href="../28-schema-drift/" class="md-nav__link">
         
   
   
@@ -970,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/29-pipeline-failure/" class="md-nav__link">
+      <a href="../29-pipeline-failure/" class="md-nav__link">
         
   
   
@@ -1042,50 +1150,137 @@
 
 
 
-<h1 id="facilitator-notes-make-it-safe-to-run">Facilitator Notes - Make It Safe to Run</h1>
-<h2 id="session-frame">Session frame</h2>
-<p>Session 1 is the strongest practical of the day - give it room.</p>
-<p>The arc:</p>
+<h1 id="lab-27-rerun-the-pipeline-with-new-data">Lab 2.7 ~ Rerun the Pipeline with New Data</h1>
+<div class="admonition info">
+<p class="admonition-title">This lab continues from Lab 2.6. Your pipeline should still exist and have run successfully.</p>
+</div>
+<p>Your pipeline already works. This lab does not change it. You are going to run it
+twice and check whether <strong>Succeeded</strong> actually means what you think it means.</p>
+<h2 id="step-1-establish-the-baseline">Step 1: Establish the baseline</h2>
+<p>Before anything changes, record what your pipeline has already produced.</p>
 <ol>
-<li>Short whole-group setup (CHECKS-INTRO + SILENT-FAIL, ~20 min) - frame the problem, walk through 4 scenarios together</li>
-<li>Demo one check live in the notebook (~5 min, start of CHECKS-BUILD)</li>
-<li>Learners work through the notebook TODOs (~20 min)</li>
-<li>Stretch: move checks into functions in a <code>.py</code> file (fast finishers)</li>
-<li>Short debrief: what should happen when a check fails? (last ~5 min before break)</li>
+<li>
+<p>Reopen the <code>cloud_clean_solution</code> notebook and note the <code>Shape:</code> line printed
+   after the first cell runs - this is your <strong>raw row count</strong>.</p>
+</li>
+<li>
+<p>Switch to the <strong>SQL analytics endpoint</strong> in your lakehouse and run:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cleaned_sales_solution</span>
+</code></pre></div>
+<p>This is your <strong>cleaned row count</strong>.</p>
+</li>
+<li>
+<p>Run:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">rows</span><span class="p">,</span><span class="w"> </span><span class="n">ROUND</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">line_value</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">revenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_trusted_solution</span>
+</code></pre></div>
+<p>This gives you the <strong>output row count</strong> and <strong>revenue</strong>.</p>
+</li>
+<li>
+<p>Check the pipeline's run history and confirm both activities show <strong>Succeeded</strong>.</p>
+</li>
+<li>
+<p>Record all four numbers:</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>Input</th>
+<th>Raw rows</th>
+<th>Cleaned rows</th>
+<th>Output rows</th>
+<th>Revenue</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial run</td>
+<td>sales_raw.csv</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
 </ol>
-<hr>
-<h2 id="opening-frame">Opening frame</h2>
-<p>Say:</p>
-<blockquote>
-<p>"A crash is honest. The pipeline stops. You know something went wrong. A silent failure is worse - the pipeline runs, produces output, and nobody raises an error. The report lands in someone's inbox and looks fine."</p>
-</blockquote>
-<p>Then:</p>
-<blockquote>
-<p>"Session 1 is about making it safe to run. That means deciding what could go wrong, choosing what to check for, and making those failures visible."</p>
-</blockquote>
-<hr>
-<h2 id="walk-through-the-scenarios">Walk through the scenarios</h2>
-<p>The four scenarios are on <code>silent-fail.md</code>. Walk through them together - do not send learners to read independently.</p>
-<p>For each one, ask the group:</p>
+<h2 id="step-2-add-a-second-batch-of-orders">Step 2: Add a second batch of orders</h2>
+<p>A new batch of orders has arrived - five additional orders, the same schema,
+a familiar mix of data-quality issues.</p>
 <ol>
-<li>What went wrong?</li>
-<li>What check would catch it?</li>
-<li>Where in the pipeline should that check live - bronze, silver, or gold?</li>
+<li>
+<p>Locate <code>sales_raw_batch27.csv</code> alongside your other HomeSphere data files.</p>
+</li>
+<li>
+<p>In your lakehouse, upload it into <code>Files/data/</code>, <strong>next to</strong> the existing
+   <code>sales_raw.csv</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Do not delete or rename anything</p>
+<p>Both files should now sit side by side in <code>Files/data/</code>.</p>
+</div>
+</li>
 </ol>
-<p>Keep this quick. Its job is to build shared vocabulary before the practical, not to generate a complete answer.</p>
-<p><strong>What to listen for</strong></p>
-<p>Good responses will name a layer and a specific check:</p>
+<h2 id="step-3-rerun-the-pipeline">Step 3: Rerun the pipeline</h2>
+<ol>
+<li>
+<p>Go to your <strong>HomeSphere ETL Pipeline</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Run</strong>. This is the same pipeline from Lab 2.6 - you have not changed it.</p>
+</li>
+<li>
+<p>Wait for both activities to show <strong>Succeeded</strong>.</p>
+</li>
+</ol>
+<h2 id="step-4-verify-the-results">Step 4: Verify the results</h2>
+<ol>
+<li>
+<p>Re-run the same queries from Step 1.</p>
+</li>
+<li>
+<p>Add a second row to your table:</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>Input</th>
+<th>Expected change</th>
+<th>Raw rows</th>
+<th>Cleaned rows</th>
+<th>Output rows</th>
+<th>Revenue</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Second batch</td>
+<td>sales_raw_batch27.csv</td>
+<td>Five additional orders</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="step-5-check-your-work">Step 5: Check your work</h2>
+<p>Look at your two rows side by side.</p>
 <ul>
-<li>"After the join, check whether any sales rows came back with a null product category"</li>
-<li>"Before cleaning, check the row count is above a minimum"</li>
+<li>Did <strong>raw rows</strong> increase by 5?</li>
+<li>Did <strong>cleaned rows</strong> and <strong>output rows</strong> increase by the same amount?</li>
+<li>If not - where do you think the missing row went, and why?</li>
 </ul>
-<p>Redirect vague answers: "What would the output look like if that happened? Would anyone notice immediately?"</p>
-<hr>
-<h2 id="bridge-to-the-demo">Bridge to the demo</h2>
-<blockquote>
-<p>"We know the pipeline can fail silently. Now let's put some checks in place. I'll show you the pattern in the notebook, then you continue from there."</p>
-</blockquote>
-<p>Move directly into CHECKS-BUILD. Do not dwell here.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Don't guess. Go and find the actual row in the data if you need to.</p>
+<div class="admonition question">
+<p class="admonition-title">The pipeline said Succeeded both times. Does that tell you the output is correct?</p>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
