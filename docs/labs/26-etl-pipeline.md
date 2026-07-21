@@ -17,18 +17,25 @@ You imported four notebooks in the setup.
 
 So far you have only used the exercise notebooks. In this lab **you will use the solution notebooks** to build your pipeline.
 
-1. In the left navigation bar, select your **HomeSphere** lakehouse.
+1. In the left navigation bar, return to your lakehouse `HomeSphere`.
 
-2. On the **Home** tab, select **Open notebook** > **Existing notebook**, and choose `cloud_clean_solution`.
+2. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **Existing notebook**
+
+    !!! abstract ""
+        ![Lakehouse new notebook](img/qa-lakehouse-notebook.png)
+
+3. In the *OneLake catalog* under the heading **Open existing notebook**
+
+    - Choose: `cloud_clean_solution`
 
 3. In the **Notebook Explorer** on the left, select **Data Items** and confirm that **HomeSphere** appears under **OneLake**.
 
-4. Return to the lakehouse and repeat for `cloud_output_solution`
+4. Return to the lakehouse and repeat for **cloud_output_solution**:
 
-    - Select **Open notebook** > **Existing notebook** 
+    - Select: **Notebook** > **Existing notebook** 
     - Choose: `cloud_output_solution`
 
-5. Confirm that **HomeSphere** also appears under **Data Items** in the Notebook Explorer.
+5. Confirm that **HomeSphere** appears under **Data Items** in the Notebook Explorer.
 
 !!! success "Both solution notebooks should now be connected to the HomeSphere lakehouse."
 
@@ -88,6 +95,7 @@ You will add two Notebook activities - one for each solution notebook - and conn
 
 
 !!! note "Before running the pipeline - select the Monitor tab and make sure no other notebook is still running."
+
 
 ## Step 5: Run the pipeline
 

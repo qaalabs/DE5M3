@@ -98,24 +98,24 @@ Opening each notebook from within the lakehouse connects it to the HomeSphere da
 
 1. In the left navigation bar, return to your lakehouse `HomeSphere`.
 
-1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **Existing notebook**
+2. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **Existing notebook**
 
     !!! abstract ""
         ![Lakehouse new notebook](img/qa-lakehouse-notebook.png)
 
-2. In the *OneLake catalog* under the heading **Open existing notebook**
+3. In the *OneLake catalog* under the heading **Open existing notebook**
     - Choose: `cloud_clean`
 
-3. In the **Notebook Explorer** on the left, select **Data Items**.
+4. In the **Notebook Explorer** on the left, select **Data Items**.
 
     !!! success "**HomeSphere** should be listed under **OneLake** - the lakehouse is now attached to this notebook."
 
-4. Return to the lakehouse and repeat for **cloud_output**:
+5. Return to the lakehouse and repeat for **cloud_output**:
 
     - Select **Notebook** > **Existing notebook**
     - Choose: `cloud_output`
 
-5. Select **Data Items** in the Notebook Explorer and confirm that **HomeSphere** appears under **OneLake**.
+6. Select **Data Items** in the Notebook Explorer and confirm that **HomeSphere** appears under **OneLake**.
 
 !!! success "Both notebooks are now connected to the HomeSphere lakehouse and ready for the next lab."
 
