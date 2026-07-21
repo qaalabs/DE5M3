@@ -8,6 +8,7 @@ But this time the data lives in OneLake, and the output will be saved as a Delta
 
 ---
 
+
 ## Part 1: Load the Sales Data
 
 When working locally you loaded data from a local path.
@@ -20,9 +21,14 @@ The path structure mirrors the folder you see in the **Lakehouse Explorer**.
 ```python
 import pandas as pd
 import json
+import glob
 
-df = pd.read_csv('/lakehouse/default/Files/data/sales_raw.csv')
+# Read every sales_raw file in the folder, not just one - so a new batch
+# landing alongside the original is picked up automatically on rerun.
+files = sorted(glob.glob('/lakehouse/default/Files/data/sales_raw*.csv'))
+df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
 
+print(f'Files read: {files}')
 print(f'Shape: {df.shape}')
 df.head()
 ```
@@ -70,6 +76,10 @@ df['region'] = df['region'].fillna('Unknown')
 df = df[df['unit_price'] > 0]
 df = df[df['quantity'] > 0]
 
+# Keep only the expected columns - a stray column from a source file
+# should not change the shape of the table we write
+df = df[['order_id', 'order_date', 'customer_id', 'product_id', 'quantity', 'unit_price', 'status', 'region']]
+
 print(f'Rows after cleaning: {len(df)}')
 print('\nData types:')
 print(df.dtypes)
@@ -91,7 +101,7 @@ We convert the pandas DataFrame to a Spark DataFrame to write it as a Delta tabl
 ```python
 # Convert to Spark DataFrame and save as a managed Delta table
 spark_df = spark.createDataFrame(df)
-spark_df.write.mode('overwrite').saveAsTable('cleaned_sales_solution')
+spark_df.write.mode('overwrite').option('overwriteSchema', 'true').saveAsTable('cleaned_sales_solution')
 
 print('Saved: cleaned_sales (Delta table)')
 print(f'Rows: {spark_df.count()}')

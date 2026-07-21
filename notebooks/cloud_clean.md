@@ -21,13 +21,14 @@ The path structure mirrors the folder you see in the **Lakehouse Explorer**.
 import pandas as pd
 import json
 
-# TODO: Load sales_raw.csv from the lakehouse Files folder
-# Hint: the path is /lakehouse/default/Files/data/sales_raw.csv
-df = # YOUR CODE HERE
+# Load sales_raw.csv from the lakehouse Files folder
+df = pd.read_csv('/lakehouse/default/Files/data/sales_raw.csv')
 
 print(f'Shape: {df.shape}')
 df.head()
 ```
+
+Note: if the `read_csv` doesn't run - make sure your file is in a folder called `data` ~ if different eg `Data` then change the path above
 
 
 ```python
@@ -85,9 +86,8 @@ We convert the pandas DataFrame to a Spark DataFrame to write it as a Delta tabl
 # spark.createDataFrame() converts a pandas DataFrame to a Spark DataFrame
 spark_df = spark.createDataFrame(df)
 
-# TODO: Save spark_df as a managed Delta table named 'cleaned_sales'
-# Hint: .write.mode('overwrite').saveAsTable('table_name')
-# YOUR CODE HERE
+# Save spark_df as a managed Delta table named 'cleaned_sales'
+spark_df.write.mode('overwrite').option('overwriteSchema', 'true').saveAsTable('cleaned_sales')
 
 print('Saved: cleaned_sales (Delta table)')
 print(f'Rows: {spark_df.count()}')
@@ -97,11 +97,23 @@ print(f'Rows: {spark_df.count()}')
 
 Now that the table is saved, you can query it using SQL - without writing any more Python.
 
-Switch to the **SQL analytics endpoint** in your lakehouse and run:
+You can run it directly in the notebook:
 
 
 ```sql
 %%sql
+SELECT
+    status,
+    COUNT(*) AS order_count,
+    ROUND(SUM(quantity * unit_price), 2) AS total_value
+FROM cleaned_sales
+GROUP BY status
+ORDER BY total_value DESC
+```
+
+And you can switch to the **SQL analytics endpoint** in your lakehouse and run:
+
+```sql
 SELECT
     status,
     COUNT(*) AS order_count,

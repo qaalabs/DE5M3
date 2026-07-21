@@ -2,7 +2,7 @@
 
 This notebook prepares the `cleaned_sales` Delta table for the afternoon session.
 
-Run all cells — no changes needed.
+Run all cells - no changes needed.
 
 
 ```python
@@ -46,7 +46,7 @@ print(f'Cleaned: {len(df)} rows')
 
 ```python
 spark_df = spark.createDataFrame(df)
-spark_df.write.mode('overwrite').saveAsTable('cleaned_sales')
+spark_df.write.mode('overwrite').option('overwriteSchema', 'true').saveAsTable('cleaned_sales')
 
 print(f'Done: cleaned_sales table created ({spark_df.count()} rows)')
 ```
