@@ -1,6 +1,8 @@
 # Lab 3.1 ~ Get the HomeSphere Files
 
-Before you start working in Fabric, you need to download the HomeSphere project files to your machine.
+!!! note "This only applies to those using a Learn On Demand (LOD) virtual machine"
+
+Before you start working in Fabric, you may need to download the HomeSphere project files to your machine.
 
 ## Step 1: Open Terminal
 

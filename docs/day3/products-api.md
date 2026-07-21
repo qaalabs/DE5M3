@@ -39,7 +39,7 @@ Close when the block ends regardless of where learners are. The stretch tasks ex
 
 **During the coding phase** — the most common sticking point is the nested `specs` structure. If someone is stuck, ask: "What did `flatten_products()` do on Day 1? The structure is the same problem."
 
-**On hardcoded keys (Stretch 1)** — the solution deliberately hardcodes `API_KEY = "training-key-header"`. This is intentional. The note in the notebook surfaces the problem and names the right patterns (env vars, secrets managers). You do not need to resolve it — just confirm that in production, the key would not live in the code.
+**On hardcoded keys (Stretch 1)** — the solution deliberately hardcodes the API key as a constant. This is intentional. The note in the notebook surfaces the problem and names the right patterns (env vars, secrets managers). You do not need to resolve it — just confirm that in production, the key would not live in the code.
 
 ---
 

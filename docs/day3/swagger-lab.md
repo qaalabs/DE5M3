@@ -16,7 +16,7 @@ HomeSphere has solved this by exposing their product catalogue through an API - 
 
 Your job today is to understand that API and then update your pipeline to use it.
 
-Open the notebook: **`day3/api/homesphere_api_todo.ipynb`** and work through it alongside this page.
+Open the notebook: **`M3/day3/api/homesphere_api_todo.ipynb`** and work through it alongside this page.
 
 ---
 
