@@ -1,5 +1,7 @@
 # Group B: Healthcare Clinic
 
+!!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
+
 ## Business Context
 
 You work for "WellCare Medical Centre" - a multi-specialty clinic with 15 doctors, 5 locations, serving 25,000 patients annually.

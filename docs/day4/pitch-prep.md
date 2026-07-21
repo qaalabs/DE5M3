@@ -1,5 +1,7 @@
 # Prepare Your Stakeholder Explanation
 
+!!! abstract "B2: Works collaboratively with stakeholders and colleagues, developing strong working relationships to achieve common goals. Support an inclusive culture and treat technical and non-technical colleagues and stakeholders with respect."
+
 !!! question "Can you explain the value of your pipeline in language that a non-engineer could understand?"
 
 ## The scenario

@@ -1,5 +1,7 @@
 # Lab 2.8 ~ Rerun with a Schema Change
 
+!!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
+
 !!! info "This lab continues from Lab 2.7. Your pipeline and both sales files should still be in place."
 
 A third batch of orders has arrived. This time, nothing about the data itself is

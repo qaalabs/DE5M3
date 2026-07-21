@@ -1,5 +1,9 @@
 # Flatten, Join, and Answer
 
+!!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
+
+!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+
 !!! question "The question we are trying to answer is:"
     - Which product categories generate the most revenue?
 

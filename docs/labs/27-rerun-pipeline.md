@@ -1,5 +1,7 @@
 # Lab 2.7 ~ Rerun the Pipeline with New Data
 
+!!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
+
 !!! info "This lab continues from Lab 2.6. Your pipeline should still exist and have run successfully."
 
 Your pipeline already works. This lab does not change it. You are going to run it

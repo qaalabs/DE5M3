@@ -1,5 +1,7 @@
 # Local vs Cloud: A Comparison
 
+!!! abstract "K14: The uses of on-demand Cloud computing platform(s) in a public or private environment such as Amazon AWS, Google Cloud, Hadoop, IBM Cloud, Salesforce and Microsoft Azure."
+
 ## Your task
 
 In your group, compare the Day 1 pipeline (local, on your VM) with the Day 2 pipeline (Fabric, in the cloud).

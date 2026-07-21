@@ -1,5 +1,9 @@
 # Lab 2.1 ~ Create a Microsoft Fabric Lakehouse
 
+!!! abstract "K14: The uses of on-demand Cloud computing platform(s) in a public or private environment such as Amazon AWS, Google Cloud, Hadoop, IBM Cloud, Salesforce and Microsoft Azure."
+
+!!! abstract "S7: Work with different types of data stores, such as SQL, NoSQL, and distributed file system."
+
 In this lab you will create a Microsoft Fabric lakehouse, upload data, and explore how files and tables work in OneLake. You will also query the data using a notebook and SQL.
 
 

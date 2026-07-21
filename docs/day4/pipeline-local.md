@@ -1,5 +1,9 @@
 # Run the Pipeline Locally
 
+!!! abstract "K8: Deployment approaches for new data pipelines and automated processes."
+
+!!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
+
 So far you have run the HomeSphere pipeline in notebooks - one cell at a time.
 
 A production pipeline runs as a script. No cells. No Run button. You execute it from the terminal and it either completes or it does not.

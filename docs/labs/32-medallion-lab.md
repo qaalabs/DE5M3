@@ -1,5 +1,9 @@
 # Lab 3.2 ~ HomeSphere Medallion Architecture
 
+!!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
+
+!!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
+
 In this lab, you will restructure the HomeSphere data into three clearly separated layers: **bronze** (raw), **silver** (cleaned and trusted), and **gold** (business-ready output).
 
 ## Step 1: Start the Microsoft Fabric Playground

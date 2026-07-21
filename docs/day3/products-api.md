@@ -16,7 +16,7 @@ This is the first time the pipeline logic changes between days (Day 1 and Day 2 
 
 Learners work individually, locally — same environment as Day 1. No Fabric, no OneLake. Just the notebook and a working Python environment.
 
-The notebook is `day3/api/homesphere_api_todo.ipynb`. It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside.
+The notebook is `day3/api/homesphere_api_todo.ipynb`. It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside. The same narrative also exists as a learner-facing page - `swagger-lab.md` - for anyone who prefers to read it outside the notebook.
 
 ---
 

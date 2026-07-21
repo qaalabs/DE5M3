@@ -1,5 +1,7 @@
 # Lab 2.5 ~ Build the Trusted Output
 
+!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+
 This lab continues from Lab 2.4. Your HomeSphere lakehouse and the `cleaned_sales` table should already be in place.
 
 

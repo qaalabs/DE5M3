@@ -1,5 +1,9 @@
 # ETL / Data Integration Products ~ Investigation
 
+!!! abstract "K20: Types and uses of data engineering tools and applications in own organisation."
+
+!!! abstract "B6: Keeps abreast of developments in emerging, contemporary and advanced technologies to optimise sustainable data products and services."
+
 You have spent today writing ETL pipelines in Python by hand.
 That is one way to do it. There is a whole landscape of tools that take a different approach.
 

@@ -1,5 +1,7 @@
 # Create a Handover Artefact
 
+!!! abstract "K11: Data and information security standards, ethical practices, policies and procedures relevant to data management activities such as data lineage and metadata management."
+
 **Aim: 40 minutes. Spend the first 5 choosing your format, the next 25 writing, the last 10 checking.**
 
 ---

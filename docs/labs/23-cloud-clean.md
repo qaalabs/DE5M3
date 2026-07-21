@@ -1,5 +1,7 @@
 # Lab 2.3 ~ Clean the Sales Orders Data in Fabric
 
+!!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
+
 !!! info "This lab continues from Lab 2.2. Your HomeSphere lakehouse and notebooks should already be set up."
 
 

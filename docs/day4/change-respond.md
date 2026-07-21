@@ -1,5 +1,9 @@
 # Activity: Respond to a New Requirement
 
+!!! abstract "B1: Acts proactively and takes accountability adapting positively to changing work priorities, ensuring deadlines are met."
+
+!!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
+
 HomeSphere's pipeline is built, checked, documented, and you can explain it to a stakeholder. Now a new requirement lands.
 
 !!! tip "Note: Your job is not to build it. Your job is to design the next iteration - something you could hand to the team who builds it."

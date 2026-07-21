@@ -1,5 +1,7 @@
 # Where Are the Weaknesses?
 
+!!! abstract "K13: The implications of financial, strategic and compliance regarding to security, scalability, compliance and cost of local, remote or distributed solutions."
+
 ## Your task
 
 Look at the Day 2 pipeline you built in Fabric. Not at whether it works - it does.

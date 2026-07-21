@@ -1,5 +1,7 @@
 # Group 4: Manufacturing Plant
 
+!!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
+
 ## Business Context
 
 You work for "Northern Steel Manufacturing" - automotive parts production, 3 production lines, 24/7 operations, 2 million parts annually.

@@ -1,5 +1,7 @@
 # Group 3: Regional Bank
 
+!!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
+
 ## Business Context
 
 You work for "Yorkshire Community Bank" - 50 branches, 150,000 customers, focusing on personal and small business banking.

@@ -1,5 +1,7 @@
 # Group A: E-commerce
 
+!!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
+
 ## Business Context
 
 You work for "TechStyle" - an online retailer selling electronics and fashion. 50,000 orders/month, 200,000 active customers.

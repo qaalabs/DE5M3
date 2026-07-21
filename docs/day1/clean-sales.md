@@ -1,5 +1,7 @@
 # Part 3: Clean the Sales Data
 
+!!! abstract "S6: Systematically clean, validate, and describe data at all stages of extract, transform, load (ETL)."
+
 ## What you are doing
 
 You have identified the problems in the raw Sales data.

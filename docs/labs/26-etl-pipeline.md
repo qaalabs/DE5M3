@@ -1,5 +1,9 @@
 # Lab 2.6 ~ Orchestrate the HomeSphere ETL with a Pipeline
 
+!!! abstract "S4: Automate data pipelines such as batch, real-time, on demand and other processes using programming languages and data integration platforms with graphical user interfaces."
+
+!!! abstract "K8: Deployment approaches for new data pipelines and automated processes."
+
 !!! info "This lab continues from where you left off. Your workspace and lakehouse from the earlier session should be still available."
 
 ## Step 1: Return to your HomeSphere workspace

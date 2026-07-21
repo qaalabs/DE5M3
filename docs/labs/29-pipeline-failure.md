@@ -1,5 +1,7 @@
 # Lab 2.9 ~ Rerun with a Hard Failure
 
+!!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
+
 !!! info "This lab continues from Lab 2.8. Your pipeline and all three sales files should still be in place."
 
 So far, every rerun has ended in **Succeeded** - even when the output was wrong.

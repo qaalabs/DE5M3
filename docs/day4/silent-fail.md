@@ -1,5 +1,7 @@
 # Silent Failures
 
+!!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
+
 A **silent failure** is when the pipeline runs, produces output, and raises no errors - but the output is wrong.
 
 That is worse than a crash. A crash tells you something went wrong. A silent failure tells you nothing.

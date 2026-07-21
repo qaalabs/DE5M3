@@ -1,5 +1,7 @@
 # Lab 2.2 ~ Set Up the HomeSphere Environment
 
+!!! abstract "S15: Optimise data ingestion processes by making use of appropriate data ingestion frameworks such as batch, streaming and on-demand."
+
 !!! info "This lab continues from Lab 2.1. You should already be signed in to Microsoft Fabric."
 
 

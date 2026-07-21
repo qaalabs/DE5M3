@@ -1,5 +1,9 @@
 # Stretch: Turn the Pipeline into a Script
 
+!!! abstract "K8: Deployment approaches for new data pipelines and automated processes."
+
+!!! abstract "S4: Automate data pipelines such as batch, real-time, on demand and other processes using programming languages and data integration platforms with graphical user interfaces."
+
 ## What you are doing
 
 You have run the full ETL pipeline in two notebooks.
