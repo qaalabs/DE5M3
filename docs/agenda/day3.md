@@ -16,7 +16,7 @@
 - **Report-Back**: Our Design Debts
 - **Slides**: Medallion ~ Bronze - Silver - Gold
 - **Practice**: [Map the Pipeline](../day3/med-map.md)
-- **Discussion**: [What Needs to Move?](../day3/med-debrief.md)
+- **Discussion**: What Needs to Move?
 
 ## 🥪🥤 Lunch Break
 
