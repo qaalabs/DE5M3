@@ -37,6 +37,7 @@ nav:
     - "Lab 2.9 ~ Pipeline Failure": labs/29-pipeline-failure.md
 
   - "Day 3 - Robust & Well-Architectured":
+    - "Swagger ~ Read from a Live API": day3/swagger-lab.md
     - "Where are the Weaknesses?": day3/fragile.md
     - "Map the Pipeline": day3/med-map.md
     - "What Needs to Move?": day3/med-debrief.md

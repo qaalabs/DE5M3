@@ -72,8 +72,8 @@
 
 - `09:40` **Slides**: [Design Review](day3/review.md) (10 mins)
 - `09:50` **Slides**: [Add Metadata to a CSV File](day3/csv-metadata.md) (10 mins)
-- `10:00` **Slides**: Swagger ~ Read from a Live API (10 mins)
-- `10:10` **Practice**: [Swagger ~ Read from a Live API](day3/products-api.md) (30 mins)
+- `10:00` **Slides**: [Swagger ~ Read from a Live API](day3/products-api.md) (10 mins)
+- `10:10` **Practice**: [Swagger ~ Read from a Live API](day3/swagger-lab.md) (30 mins)
 
 ### Session 2
 

@@ -6,7 +6,7 @@
 - **Slides**: Design Review
 - **Slides**: Add Metadata to a CSV File
 - **Slides**: Swagger ~ Read from a Live API
-- **Practice**: Swagger ~ Read from a Live API
+- **Practice**: [Swagger ~ Read from a Live API](../day3/swagger-lab.md)
 
 ## ☕ Morning Break
 
