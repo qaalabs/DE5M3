@@ -32,10 +32,8 @@
 ## Session 4
 
 - **Practice**: [Lab 2.7 ~ Rerun Pipeline](../labs/27-rerun-pipeline.md)
-- 
 - **Practice**: [Lab 2.8 ~ Schema Drift](../labs/28-schema-drift.md)
 - **Practice**: [Lab 2.9 ~ Pipeline Failure](../labs/29-pipeline-failure.md)
-- 
 - **Discussion**: Cloud Is Not Well-Architected
 
 ## 🎁 Wrap

@@ -59,9 +59,9 @@
 
 ### Session 4
 
-- `14:50` **Practice**: [Lab 2.7 ~ Rerun Pipeline](labs/27-rerun-pipeline.md) (10 mins)
+- `14:50` **Practice**: [Lab 2.7 ~ Rerun Pipeline](labs/27-rerun-pipeline.md) (20 mins)
 - `15:10` **Practice**: [Lab 2.8 ~ Schema Drift](labs/28-schema-drift.md) (10 mins)
-- `15:20` **Practice**: [Lab 2.9 ~ Pipeline Failure](labs/29-pipeline-failure.md) (10 mins)
+- `15:20` **Practice**: [Lab 2.9 ~ Pipeline Failure](labs/29-pipeline-failure.md) (20 mins)
 - `15:40` **Discussion**: [Cloud Is Not Well-Architected](day2/reflection.md) (10 mins)
 
 ---
