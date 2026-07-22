@@ -80,8 +80,8 @@
 - `11:00` **Breakout**: [Where are the Weaknesses?](day3/fragile.md) (20 mins)
 - `11:20` **Report-Back**: Our Design Debts (10 mins)
 - `11:30` **Slides**: Medallion ~ Bronze - Silver - Gold (20 mins)
-- `11:50` **Practice**: [Map the Pipeline](day3/med-map.md) (10 mins)
-- `12:00` **Discussion**: [What Needs to Move?](day3/med-debrief.md) (20 mins)
+- `11:50` **Practice**: [Map the Pipeline](day3/medallion-mapping.md) (10 mins)
+- `12:00` **Discussion**: [What Needs to Move?](day3/medallion-debrief.md) (20 mins)
 
 ### Session 3
 

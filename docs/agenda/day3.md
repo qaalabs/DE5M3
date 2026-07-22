@@ -15,7 +15,7 @@
 - **Breakout**: [Where are the Weaknesses?](../day3/fragile.md)
 - **Report-Back**: Our Design Debts
 - **Slides**: Medallion ~ Bronze - Silver - Gold
-- **Practice**: [Map the Pipeline](../day3/med-map.md)
+- **Practice**: [Map the Pipeline](../day3/medallion-mapping.md)
 - **Discussion**: What Needs to Move?
 
 ## 🥪🥤 Lunch Break

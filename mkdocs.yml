@@ -39,7 +39,7 @@ nav:
   - "Day 3 - Robust & Well-Architectured":
     - "Swagger ~ Read from a Live API": day3/swagger-lab.md
     - "Where are the Weaknesses?": day3/fragile.md
-    - "Map the Pipeline": day3/med-map.md
+    - "Map the Pipeline": day3/medallion-mapping.md
     - "Lab 3.1 - Setup Fabric": labs/31-setup.md
     - "Lab 3.2 - Medallion Architecture": labs/32-medallion-lab.md
     - "Medallion Scenarios": day3/medallion-scenarios.md
@@ -70,7 +70,7 @@ not_in_nav: |
   day3/review.md
   day3/csv-metadata.md
   day3/products-api.md
-  day3/med-debrief.md
+  day3/medallion-debrief.md
   day3/debrief.md
   day3/bridge.md
   day4/checks-intro.md
