@@ -1108,6 +1108,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../swagger-lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Swagger ~ Read from a Live API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../fragile/" class="md-nav__link">
         
   
@@ -1144,34 +1172,6 @@
     
   
     Map the Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../med-debrief/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    What Needs to Move?
   
 
     
@@ -1551,7 +1551,7 @@
 <hr>
 <h2 id="setup">Setup</h2>
 <p>Learners work individually, locally — same environment as Day 1. No Fabric, no OneLake. Just the notebook and a working Python environment.</p>
-<p>The notebook is <code>day3/api/homesphere_api_todo.ipynb</code>. It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside.</p>
+<p>The notebook is <code>day3/api/homesphere_api_todo.ipynb</code>. It is self-contained: narrative, Swagger exploration questions, the coding exercise, and two stretch tasks are all inside. The same narrative also exists as a learner-facing page - <code>swagger-lab.md</code> - for anyone who prefers to read it outside the notebook.</p>
 <hr>
 <h2 id="timing">Timing</h2>
 <table>
@@ -1590,7 +1590,7 @@
 <h2 id="what-to-listen-for">What to listen for</h2>
 <p><strong>During the Swagger phase</strong> — learners who rush straight to the code skip the exploration questions. Worth a gentle prompt: "Before you write anything, what does the response actually look like?"</p>
 <p><strong>During the coding phase</strong> — the most common sticking point is the nested <code>specs</code> structure. If someone is stuck, ask: "What did <code>flatten_products()</code> do on Day 1? The structure is the same problem."</p>
-<p><strong>On hardcoded keys (Stretch 1)</strong> — the solution deliberately hardcodes <code>API_KEY = "training-key-header"</code>. This is intentional. The note in the notebook surfaces the problem and names the right patterns (env vars, secrets managers). You do not need to resolve it — just confirm that in production, the key would not live in the code.</p>
+<p><strong>On hardcoded keys (Stretch 1)</strong> — the solution deliberately hardcodes the API key as a constant. This is intentional. The note in the notebook surfaces the problem and names the right patterns (env vars, secrets managers). You do not need to resolve it — just confirm that in production, the key would not live in the code.</p>
 <hr>
 <h2 id="closing-the-lab-transition-to-fragile-breakout">Closing the lab — transition to fragile breakout</h2>
 <p>Once most learners have a working pipeline, bring them back together before the break:</p>

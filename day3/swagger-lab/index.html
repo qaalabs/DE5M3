@@ -6,6 +6,10 @@
       
       
       
+        <link rel="prev" href="../../labs/29-pipeline-failure/">
+      
+      
+        <link rel="next" href="../fragile/">
       
       
         
@@ -16,7 +20,7 @@
     
     
       
-        <title>Local vs Cloud: A Comparison - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Swagger ~ Read from a Live API - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#local-vs-cloud-a-comparison" class="md-skip">
+        <a href="#swagger-read-from-a-live-api" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Local vs Cloud: A Comparison
+              Swagger ~ Read from a Live API
             
           </span>
         </div>
@@ -858,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture-investigation/" class="md-nav__link">
+      <a href="../../day2/architecture-investigation/" class="md-nav__link">
         
   
   
@@ -1058,18 +1062,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1090,7 +1096,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1105,10 +1111,173 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Swagger ~ Read from a Live API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Swagger ~ Read from a Live API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#a-new-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A new requirement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is an API?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-the-homesphere-product-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducing the HomeSphere Product API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explore-the-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore the API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-exploration-to-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From exploration to code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stretch-1-what-happens-when-the-source-requires-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stretch 1 - what happens when the source requires authentication?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stretch-2-query-parameter-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stretch 2 - query parameter authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discussion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../day3/fragile/" class="md-nav__link">
+      <a href="../fragile/" class="md-nav__link">
         
   
   
@@ -1136,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/med-map/" class="md-nav__link">
+      <a href="../med-map/" class="md-nav__link">
         
   
   
@@ -1144,34 +1313,6 @@
     
   
     Map the Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/med-debrief/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    What Needs to Move?
   
 
     
@@ -1248,7 +1389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/medallion-scenarios/" class="md-nav__link">
+      <a href="../medallion-scenarios/" class="md-nav__link">
         
   
   
@@ -1542,83 +1683,117 @@
 
 
 
-<h1 id="local-vs-cloud-a-comparison">Local vs Cloud: A Comparison</h1>
-<h2 id="your-task">Your task</h2>
-<p>In your group, compare the Day 1 pipeline (local, on your VM) with the Day 2 pipeline (Fabric, in the cloud).</p>
-<p>Use the framework below.</p>
-<h2 id="comparison-framework">Comparison framework</h2>
-<table>
-<thead>
-<tr>
-<th>Dimension</th>
-<th>Day 1 - Local</th>
-<th>Day 2 - Fabric</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Where data lives</strong></td>
-<td>VM filesystem</td>
-<td>OneLake</td>
-</tr>
-<tr>
-<td><strong>Who can access output</strong></td>
-<td>Just you</td>
-<td>Anyone in the workspace</td>
-</tr>
-<tr>
-<td><strong>How output is stored</strong></td>
-<td>CSV file</td>
-<td>Delta table</td>
-</tr>
-<tr>
-<td><strong>How to query results</strong></td>
-<td>Python / pandas</td>
-<td>Python, SQL endpoint, or both</td>
-</tr>
-<tr>
-<td><strong>What happens if VM is off</strong></td>
-<td>Data unavailable</td>
-<td>Data always available</td>
-</tr>
-<tr>
-<td><strong>How to share results</strong></td>
-<td>Email a file</td>
-<td>Share a workspace link</td>
-</tr>
-<tr>
-<td><strong>What happens when data changes</strong></td>
-<td>Re-run notebook manually</td>
-<td>Re-run notebook manually</td>
-</tr>
-<tr>
-<td><strong>Scale</strong></td>
-<td>Limited by laptop RAM</td>
-<td>Distributed compute</td>
-</tr>
-</tbody>
-</table>
+<h1 id="swagger-read-from-a-live-api">Swagger ~ Read from a Live API</h1>
+<div class="admonition abstract">
+<p class="admonition-title">K18: How to use streaming, batching and on-demand services to move data from one location to another.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">S16: Develop algorithms and processes to extract structured data from unstructured sources.</p>
+</div>
+<h2 id="a-new-requirement">A new requirement</h2>
+<p>So far, HomeSphere's product catalogue has arrived as a file - <code>products_raw.json</code> - uploaded manually before the pipeline runs.</p>
+<p>That works. But it has a problem.</p>
+<p>What happens when a product is added? Or a price changes? Someone has to remember to upload a new file. And until they do, your pipeline is running on stale data.</p>
+<p>HomeSphere has solved this by exposing their product catalogue through an API - a live endpoint your pipeline can call programmatically, whenever it needs fresh data.</p>
+<p>Your job today is to understand that API and then update your pipeline to use it.</p>
+<p>Open the notebook: <strong><code>M3/day3/api/homesphere_api_todo.ipynb</code></strong> and work through it alongside this page.</p>
 <hr>
-<h2 id="discussion-questions">Discussion questions</h2>
-<p>Choose two or three that feel most relevant to your group:</p>
-<ol>
-<li>Which approach would you choose for a dataset that 10 people need to query daily?</li>
-<li>Which approach is easier to debug when something goes wrong?</li>
-<li>What would a business stakeholder notice about the difference - or would they notice anything?</li>
-<li>What are you giving up by moving to the cloud? What are you gaining?</li>
-<li>At what point does the local approach become genuinely inadequate?</li>
-</ol>
-<hr>
-<h2 id="prepare-to-share">Prepare to share</h2>
-<p>Pick an insight from your group to share back with the room:</p>
+<h2 id="what-is-an-api">What is an API?</h2>
+<p>An API (Application Programming Interface) is a way for one system to request data from another over a network.</p>
+<p>Instead of a file sitting on disk, you send a request to a URL and get data back - usually in JSON format.</p>
+<p>You have almost certainly used APIs without knowing it:</p>
 <ul>
-<li>Something that surprised you</li>
-<li>A dimension where the answer was less obvious than you expected</li>
-<li>A situation where local would still be the right choice</li>
+<li>a weather app requesting a forecast</li>
+<li>a payment system checking a card</li>
+<li>a map showing live traffic</li>
 </ul>
-<div class="admonition question">
-<p class="admonition-title">Is local <strong>on-premisis better than cloud</strong>? Or is the <strong>cloud better than on-prem</strong>?</p>
-</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Your pipeline is about to do the same thing.</p>
+<hr>
+<h2 id="introducing-the-homesphere-product-api">Introducing the HomeSphere Product API</h2>
+<p>HomeSphere's product API is documented and testable at:</p>
+<p>🔗 <a href="https://api.qaalabs.com/homesphere/v1/">https://api.qaalabs.com/homesphere/v1/</a></p>
+<p>This interface is called <strong>Swagger UI</strong> - it lets you explore and test an API without writing any code first.</p>
+<p>Before you write a single line of Python, spend a few minutes reading this page and then exploring the interface.</p>
+<hr>
+<h2 id="explore-the-api">Explore the API</h2>
+<p>Work through these before writing any code:</p>
+<p><strong>Q1 - What endpoints are available?</strong>
+List all the endpoints you can see. What pattern do you notice?</p>
+<p><strong>Q2 - Try <code>/homesphere/v1/product</code></strong>
+Click Try it out → Execute. Look at the response.</p>
+<ul>
+<li>How many products are returned?</li>
+<li>How is the data structured - is it flat or nested?</li>
+<li>Does this look familiar?</li>
+</ul>
+<p><strong>Q3 - Try <code>/homesphere/v1/product/{id}</code></strong>
+Request a single product using the ID <code>P001</code>.</p>
+<ul>
+<li>What does the response look like?</li>
+<li>What would happen if you requested an ID that doesn't exist?</li>
+</ul>
+<p><strong>Q4 - Try <code>/homesphere/v1/product1</code></strong>
+Click Try it out → Execute without filling anything in.</p>
+<ul>
+<li>What happens?</li>
+<li>What does the response tell you?</li>
+<li>Now look at the endpoint description - what does it require?</li>
+</ul>
+<p><strong>Q5 - Compare <code>/product</code>, <code>/product1</code>, and <code>/product2</code></strong>
+All three return the same data. What is different about each one?
+Why might a real API require authentication?</p>
+<p><strong>Q6 - Before you write any code</strong>
+Looking at the response from Q2 - what will you need to do to this data before you can join it to the sales data?
+Think about what <code>flatten_products()</code> did on Day 1.</p>
+<hr>
+<h2 id="from-exploration-to-code">From exploration to code</h2>
+<p>You've seen what the API returns. Now you need to use it in Python.</p>
+<p>In your Day 1 pipeline, <code>flatten_products()</code> read from a local file:</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"products_raw.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</code></pre></div>
+<p>That no longer works. The data isn't in a file - it's at a URL.</p>
+<p>Your task is to write <code>extract_products_from_api()</code> that:</p>
+<ul>
+<li>calls the HomeSphere product API</li>
+<li>handles the nested <code>specs</code> structure</li>
+<li>returns a DataFrame in the same shape as <code>flatten_products()</code> did</li>
+</ul>
+<p>The rest of your pipeline - the join, the aggregation - should not need to change.</p>
+<p>The base URL is: <code>https://api.qaalabs.com/homesphere/v1</code></p>
+<hr>
+<h2 id="stretch-1-what-happens-when-the-source-requires-authentication">Stretch 1 - what happens when the source requires authentication?</h2>
+<p>Change your function to call <code>/product1</code> instead of <code>/product</code>. Run it without changing anything else first.</p>
+<ul>
+<li>What happens?</li>
+<li>What does the response tell you?</li>
+<li>What does this mean for your pipeline?</li>
+</ul>
+<p>Now fix it. The endpoint requires a header: <code>X-API-Key: &lt;training-key&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">"X-API-Key"</span><span class="p">:</span> <span class="s2">"your-key-here"</span><span class="p">})</span>
+</code></pre></div>
+<p>Once it works, think about this:</p>
+<ul>
+<li>Where did you put the key in your code?</li>
+<li>Is that a good place for it?</li>
+<li>What happens when the key changes?</li>
+</ul>
+<hr>
+<h2 id="stretch-2-query-parameter-authentication">Stretch 2 - query parameter authentication</h2>
+<p><code>/product2</code> uses a different authentication pattern - instead of a header, the key is passed as a query parameter.</p>
+<div class="highlight"><pre><span></span><code><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">"api_key"</span><span class="p">:</span> <span class="s2">"your-key-here"</span><span class="p">})</span>
+</code></pre></div>
+<ul>
+<li>What is different about this approach compared to <code>/product1</code>?</li>
+<li>Which do you think is more secure, and why?</li>
+</ul>
+<hr>
+<h2 id="discussion">Discussion</h2>
+<ul>
+<li>The product data used to arrive as a batch file. Now it arrives on demand. What actually changed about your pipeline - and what stayed the same?</li>
+<li>If a price changes on HomeSphere's system right now, how long before your pipeline would see it?</li>
+<li>What would happen to your pipeline if the API was temporarily unavailable?</li>
+</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
