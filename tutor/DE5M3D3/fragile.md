@@ -1,5 +1,8 @@
 ## <mark>Breakout into groups ~ Identify Weaknesses</mark>
 
+- Frame it: "You're reviewing this pipeline as the person who has to maintain it, not the person who built it. Find the design debts."
+- Design debt = something that works today but causes problems at scale, over time, or with another person involved
+
 ### Review Day 2 pipeline, find the design debts
 
 - Where are raw and cleaned data mixed?

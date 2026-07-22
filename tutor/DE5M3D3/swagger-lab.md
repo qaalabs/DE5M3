@@ -7,5 +7,8 @@
 
 ### Notebook vars
 
-- HEADER ~ `training-key-header`
-- PARAM ~ `training-key-param`
+| Key    | Value         |
+|--------|---------------|
+| HEADER | `de5m3-header`|
+| PARAM  | `de5m3-query` |
+

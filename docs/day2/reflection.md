@@ -2,7 +2,7 @@
 
 ## The setup
 
-After COMPARE-SHARE, land this clearly:
+After the pipeline reruns (Labs 2.7-2.9), land this clearly:
 
 > "The cloud version is better than the local version on almost every dimension you compared. But it is not well-architected. It is a pipeline someone runs by hand, with no structure, no separation of concerns, and no guarantee that it will produce the same output twice."
 

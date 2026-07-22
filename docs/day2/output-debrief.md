@@ -52,4 +52,4 @@ Someone may have noticed that running the same revenue query in SQL felt more na
 
 ## Bridge to the next session
 
-The afternoon continues with COMPARE - local vs cloud breakout. The fragility conversation feeds directly into that: yes, the cloud version is better, but it is not well-architected yet.
+The next lab builds the ETL pipeline itself - orchestrating today's notebooks so they run in sequence rather than by hand. The fragility conversation feeds directly into that: yes, the cloud version is better, but it is not well-architected yet.
