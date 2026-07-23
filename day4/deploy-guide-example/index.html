@@ -1575,14 +1575,14 @@
 <hr>
 <h3 id="deployment-steps">Deployment steps</h3>
 <ol>
-<li>Add a Copy Data activity to the pipeline that pulls the raw files from the source's secure FTP site into <code>Files/bronze/</code>, using a saved Fabric connection rather than someone uploading files by hand.</li>
-<li>Build and test the clean and output logic as separate notebooks first, running them by hand to confirm each one works on its own.</li>
-<li>Add a Notebook activity for the clean step and a second Notebook activity for the output step, connected after the Copy Data activity.</li>
-<li>Connect them with an <em>on success</em> dependency, so the output step only runs if the clean step completes without errors - this is what makes it more reliable than running notebooks by hand.</li>
-<li>Add an Office 365 Outlook activity connected via an <em>on failure</em> dependency from the Copy Data activity and each notebook activity, so the team gets an email the moment any step fails - not silence until someone happens to check.</li>
-<li>Save and run the pipeline, watching the Monitor/Output pane until all activities show as succeeded.</li>
-<li>Verify the result by querying the output table directly, rather than assuming success from a green tick alone.</li>
-<li>Share the workspace with the team who will run or maintain it, with the right role (not full admin by default), and agree how the pipeline gets triggered going forward - manually for now, scheduled later.</li>
+<li><strong>Add a Copy Data activity</strong> to the pipeline that pulls the raw files from the source's secure FTP site into <code>Files/bronze/</code>, using a saved Fabric connection rather than someone uploading files by hand.</li>
+<li><strong>Build and test</strong> the clean and output logic as separate notebooks first, running them by hand to confirm each one works on its own.</li>
+<li><strong>Add a Notebook activity</strong> for the clean step and a second Notebook activity for the output step, connected after the Copy Data activity.</li>
+<li><strong>Connect them with an <em>on success</em> dependency</strong>, so the output step only runs if the clean step completes without errors - this is what makes it more reliable than running notebooks by hand.</li>
+<li><strong>Add an Office 365 Outlook activity</strong> connected via an <em>on failure</em> dependency from the Copy Data activity and each notebook activity, so the team gets an email the moment any step fails - not silence until someone happens to check.</li>
+<li><strong>Save and run the pipeline</strong>, watching the Monitor/Output pane until all activities show as succeeded.</li>
+<li><strong>Verify the result</strong> by querying the output table directly, rather than assuming success from a green tick alone.</li>
+<li><strong>Share the workspace</strong> with the team who will run or maintain it, with the right role (not full admin by default), and agree how the pipeline gets triggered going forward - manually for now, scheduled later.</li>
 </ol>
 <hr>
 <h3 id="security">Security</h3>
