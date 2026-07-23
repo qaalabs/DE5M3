@@ -10,8 +10,6 @@
 
 > Create a step-by-step guide on deploying a new data pipeline using a chosen data integration platform in your organisation. Include considerations for security, scalability, and governance.
 
-This is the same wording as this module's Apply task. Today is a chance to practise it before you do it for real.
-
 ---
 
 ## Choose your platform
