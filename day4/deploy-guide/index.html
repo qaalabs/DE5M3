@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../pipeline-local/">
+        <link rel="prev" href="../mvd-build/">
       
       
-        <link rel="next" href="../deploy-guide/">
+        <link rel="next" href="../pitch-prep/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Create a Handover Artefact - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Deploy a New Pipeline - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-handover-artefact" class="md-skip">
+        <a href="#deploy-a-new-pipeline-step-by-step-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create a Handover Artefact
+              Deploy a New Pipeline
             
           </span>
         </div>
@@ -1417,6 +1417,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../mvd-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a Handover Artefact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1436,7 +1464,7 @@
   <span class="md-ellipsis">
     
   
-    Create a Handover Artefact
+    Deploy a New Pipeline
   
 
     
@@ -1454,7 +1482,7 @@
   <span class="md-ellipsis">
     
   
-    Create a Handover Artefact
+    Deploy a New Pipeline
   
 
     
@@ -1480,10 +1508,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#the-scenario" class="md-nav__link">
+  <a href="#the-task" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The scenario
+        The task
       
     </span>
   </a>
@@ -1491,10 +1519,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-to-include" class="md-nav__link">
+  <a href="#choose-your-platform" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What to include
+        Choose your platform
       
     </span>
   </a>
@@ -1502,10 +1530,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#format-your-choice" class="md-nav__link">
+  <a href="#your-task" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Format - your choice
+        Your task
       
     </span>
   </a>
@@ -1513,10 +1541,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-you-are-not-trying-to-do" class="md-nav__link">
+  <a href="#prompts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What you are not trying to do
+        Prompts
       
     </span>
   </a>
@@ -1524,10 +1552,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#produce-your-artefact" class="md-nav__link">
+  <a href="#what-to-avoid" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Produce your artefact
+        What to avoid
       
     </span>
   </a>
@@ -1535,21 +1563,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#before-you-finish-check-your-own-artefact" class="md-nav__link">
+  <a href="#keep-it-scoped" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Before you finish - check your own artefact
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-you-finish-early" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If you finish early
+        Keep it scoped
       
     </span>
   </a>
@@ -1560,34 +1577,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deploy-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deploy a New Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1700,120 +1689,53 @@
 
 
 
-<h1 id="create-a-handover-artefact">Create a Handover Artefact</h1>
+<h1 id="deploy-a-new-pipeline-step-by-step-guide">Deploy a New Pipeline: Step-by-Step Guide</h1>
 <div class="admonition abstract">
-<p class="admonition-title">K11: Data and information security standards, ethical practices, policies and procedures relevant to data management activities such as data lineage and metadata management.</p>
+<p class="admonition-title">K8: Deployment approaches for new data pipelines and automated processes.</p>
 </div>
-<p><strong>Aim: 40 minutes. Spend the first 5 choosing your format, the next 25 writing, the last 10 checking.</strong></p>
-<hr>
-<h2 id="the-scenario">The scenario</h2>
+<div class="admonition abstract">
+<p class="admonition-title">K13: The implications of financial, strategic and compliance regarding to security, scalability, compliance and cost of local, remote or distributed solutions.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">K20: Types and uses of data engineering tools and applications in own organisation.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Could you hand this guide to a colleague and have them deploy a new pipeline correctly, without you in the room?</p>
+</div>
+<h2 id="the-task">The task</h2>
 <blockquote>
-<p>You are going on leave on Friday. Someone else is supporting the HomeSphere pipeline from Monday morning.
-They have not seen it before. They are a competent data engineer.</p>
+<p>Create a step-by-step guide on deploying a new data pipeline using a chosen data integration platform in your organisation. Include considerations for security, scalability, and governance.</p>
 </blockquote>
-<p>Your task: produce the minimum documentation they would need to orientate themselves.</p>
-<p>Not everything - the minimum. The thing that would save them an hour of confusion.</p>
-<p>Use the <a href="../pipeline-solution/">HomeSphere pipeline diagram</a> as your reference throughout this activity.</p>
+<p>This is the same wording as this module's Apply task. Today is a chance to practise it before you do it for real.</p>
 <hr>
-<h2 id="what-to-include">What to include</h2>
-<p>A handover artefact should answer these questions for a new person:</p>
-<p><strong>What does this pipeline do?</strong>
-One or two sentences. What business question does it answer?</p>
-<p><strong>What are the sources?</strong>
-Where does the raw data come from? What format? How often does it arrive?</p>
-<p><strong>What does each layer contain?</strong>
-Bronze, silver, gold - what is in each one, and what has been done to it?</p>
-<p><strong>What runs first?</strong>
-The order matters. Which notebook runs before which?</p>
-<p><strong>What is the final output for?</strong>
-Who uses <code>gold_revenue</code>? What decisions does it support?</p>
-<p><strong>What are the known limitations?</strong>
-What is not checked? What could go wrong that the pipeline would not catch?</p>
+<h2 id="choose-your-platform">Choose your platform</h2>
+<p>Pick a data integration platform you actually know - from your own organisation if you can, or one you have used on this course (Fabric, ADF, Airflow, dbt, Fivetran... whatever fits). Do not research a platform you have never touched - the guide needs to be grounded in something real.</p>
 <hr>
-<h2 id="format-your-choice">Format - your choice</h2>
-<p>Pick the format that feels most useful for a new engineer:</p>
-<p><strong>Option A - Structured table</strong></p>
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th>Name</th>
-<th>Contents</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bronze</td>
-<td>Files/bronze/</td>
-<td>Raw CSV and JSON</td>
-<td>Never modified</td>
-</tr>
-<tr>
-<td>Silver</td>
-<td>silver_sales</td>
-<td>Cleaned, validated sales</td>
-<td>23 rows after cleaning</td>
-</tr>
-<tr>
-<td>Silver</td>
-<td>silver_products</td>
-<td>Flattened product catalogue</td>
-<td>9 products</td>
-</tr>
-<tr>
-<td>Gold</td>
-<td>gold_revenue</td>
-<td>Revenue by product category</td>
-<td>Built from silver only</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Option B - Flow diagram (text)</strong></p>
-<div class="highlight"><pre><span></span><code>data/sales_raw.csv       → [bronze/sales_raw.csv]     →  silver_sales  ─┐
-data/products_raw.json   → [bronze/products_raw.json] → silver_products ┘
-                                                               ↓
-                                                         gold_revenue
-</code></pre></div>
-<p><strong>Option C - Structured note</strong></p>
-<p>A short written document with headings.</p>
-<p><em>For example:</em></p>
+<h2 id="your-task">Your task</h2>
+<p>Write a guide with four sections:</p>
 <ol>
-<li>Overview</li>
-<li>Sources</li>
-<li>Layers</li>
-<li>Run Order</li>
-<li>Output</li>
-<li>Caveats</li>
+<li><strong>Deployment steps</strong> - What has to happen, in order, to get a new pipeline live? Provisioning, connecting sources, configuring the pipeline logic, testing, deploying, monitoring.</li>
+<li><strong>Security</strong> - Who can access what? How are credentials and secrets handled? What happens to data in transit and at rest?</li>
+<li><strong>Scalability</strong> - What happens as data volume grows? Where are the limits - compute, concurrency, cost?</li>
+<li><strong>Governance</strong> - Who owns this pipeline once it is live? How is it documented, tracked, and changed safely? What compliance or retention rules apply?</li>
 </ol>
 <hr>
-<h2 id="what-you-are-not-trying-to-do">What you are not trying to do</h2>
+<h2 id="prompts">Prompts</h2>
 <ul>
-<li>Explain every cleaning step</li>
-<li>Document every column</li>
-<li>Describe every assert</li>
+<li>If a new starter followed this guide with no other context, where would they get stuck?</li>
+<li>Which of your four sections is thinnest right now - and why?</li>
+<li>What would your organisation's security or compliance team ask about, that you have not covered?</li>
 </ul>
-<p>Those belong in the code comments. The handover artefact explains what the pipeline does and how to navigate it - not how every line works.</p>
 <hr>
-<h2 id="produce-your-artefact">Produce your artefact</h2>
-<p>Use whichever format you chose. Aim for something you could hand to a colleague in a real job.</p>
-<hr>
-<h2 id="before-you-finish-check-your-own-artefact">Before you finish - check your own artefact</h2>
-<p>Read it back as if you are the engineer arriving Monday morning.</p>
+<h2 id="what-to-avoid">What to avoid</h2>
 <ul>
-<li>✅ Can you say in one sentence what the pipeline does?</li>
-<li>✅ Do you know what to run first?</li>
-<li>✅ Do you know where the gold output is and what it is for?</li>
-<li>✅ Have you named at least one known limitation?</li>
-<li>✅ Is there anything in there that belongs in the code rather than here?</li>
+<li>A guide that is only deployment steps with security, scalability, and governance bolted on as an afterthought - all four should carry real weight</li>
+<li>Vague statements ("access is controlled", "it scales well") without saying how</li>
+<li>Copying platform documentation - this should reflect how deployment actually works where you are, or would, using your chosen platform</li>
 </ul>
-<p>If you answer no to any of the first four - go back and add it.</p>
-<p>If you answer yes to the last one - remove it.</p>
 <hr>
-<h2 id="if-you-finish-early">If you finish early</h2>
-<p>Extend your artefact with a short "what would make this pipeline stronger" section.</p>
-<p>Two or three bullet points. What would a more mature version of this pipeline include
-that this one does not?</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<h2 id="keep-it-scoped">Keep it scoped</h2>
+<p>Aim for one page, not a full runbook. Enough to show you understand the considerations, not exhaustive operational detail.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>

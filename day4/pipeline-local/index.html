@@ -1550,6 +1550,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../deploy-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy a New Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../pitch-prep/" class="md-nav__link">
         
   
@@ -1666,20 +1694,26 @@
 <p>Open the terminal in VS Code (<code>Ctrl+</code> <code>`</code>), make sure you are in the <code>day4/</code> folder, and run it:</p>
 <div class="highlight"><pre><span></span><code>python pipeline.py
 </code></pre></div>
-<p>Watch the output. The pipeline loads the raw file, skips the validation (nothing is active yet), cleans the data, and writes <code>output/silver_sales.csv</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">ModuleNotFoundError: No module named 'pandas'</p>
+<p>If your VM resets each day, the terminal's Python may not have pandas installed, even though the notebook kernel does. Fix it with:</p>
+<div class="highlight"><pre><span></span><code>pip install pandas
+</code></pre></div>
+<p>Then run <code>python pipeline.py</code> again.</p>
+</div>
+<p>Watch the output. The pipeline loads the raw file, skips the validation (nothing is active yet), cleans the data, and writes <code>silver_sales.csv</code>.</p>
 <hr>
 <h2 id="part-2-make-it-fail">Part 2 - Make it fail</h2>
-<p>Find the validation section in <code>pipeline.py</code>. Two example checks are commented out. Uncomment one - either one.</p>
+<p>Find <code>get_failures()</code> in <code>checks.py</code>. Two example checks are commented out. Uncomment one - either one.</p>
 <p>In VS Code you can select the lines and press <code>Ctrl+/</code> to toggle comments on and off.</p>
 <p>Run the pipeline again:</p>
 <div class="highlight"><pre><span></span><code>python pipeline.py
 </code></pre></div>
 <p>The pipeline stops before cleaning. No output file is written. The terminal shows you exactly which check failed.</p>
-<p>This is <strong>Option A: fail fast</strong>. The exit code <code>1</code> tells the operating system the pipeline failed - a scheduler or monitoring tool would use this to raise an alert.</p>
+<p>This is <strong>fail fast</strong>: a check in <code>get_failures()</code> stops the pipeline. The exit code <code>1</code> tells the operating system the pipeline failed - a scheduler or monitoring tool would use this to raise an alert.</p>
 <hr>
 <h2 id="part-3-make-it-warn">Part 3 - Make it warn</h2>
-<p>Now switch to <strong>Option B</strong>.</p>
-<p>In <code>pipeline.py</code>, comment out the Option A block and uncomment the Option B block below it.</p>
+<p>Now move the check you just uncommented from <code>get_failures()</code> into <code>get_warnings()</code>.</p>
 <p>Run again:</p>
 <div class="highlight"><pre><span></span><code>python pipeline.py
 </code></pre></div>
@@ -1688,15 +1722,15 @@
 <h2 id="think-about-it">Think about it</h2>
 <p>You made the same decision twice today - once in the notebook this morning, and just now in the script.</p>
 <ul>
-<li>Option A: the pipeline refuses to run on bad data</li>
-<li>Option B: the pipeline runs but flags what it found</li>
+<li>A check in <code>get_failures()</code>: the pipeline refuses to run on bad data</li>
+<li>A check in <code>get_warnings()</code>: the pipeline runs but flags what it found</li>
 </ul>
 <p>Which would you choose for HomeSphere? Does it depend on who is reading the output?</p>
 <hr>
 <h2 id="stretch">Stretch</h2>
 <p>If you finish early and know some Python:</p>
 <ul>
-<li>Add the failing rows to a separate file (<code>output/rejected.csv</code>) instead of just printing them</li>
+<li>Add the failing rows to a separate file (<code>rejected.csv</code>) instead of just printing them</li>
 <li>Add a timestamp to the warning message so you know when the check ran</li>
 </ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
