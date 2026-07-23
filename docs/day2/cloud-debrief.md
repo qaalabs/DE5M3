@@ -1,6 +1,6 @@
 # Facilitator Notes - Familiar vs Different?
 
-*Trainer-only. Run after CLOUD-CLEAN - before lunch.*
+*Trainer-only. Run after [Lab 2.3 - Clean the Sales Data](../labs/23-cloud-clean.md) - before lunch.*
 *Aim: 10 minutes.*
 
 ---

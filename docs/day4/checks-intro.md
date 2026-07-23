@@ -6,8 +6,8 @@ Session 1 is the strongest practical of the day - give it room.
 
 The arc:
 
-1. Short whole-group setup (CHECKS-INTRO + SILENT-FAIL, ~20 min) - frame the problem, walk through 4 scenarios together
-2. Demo one check live in the notebook (~5 min, start of CHECKS-BUILD)
+1. Short whole-group setup (this page + [Silent Failures](silent-fail.md), ~20 min) - discussion only, no notebook yet: frame the problem, walk through 4 scenarios together
+2. Demo one check live in the notebook (~5 min, start of [Add Validation Checks](checks-build.md))
 3. Learners work through the notebook TODOs (~20 min)
 4. Stretch: move checks into functions in a `.py` file (fast finishers)
 5. Short debrief: what should happen when a check fails? (last ~5 min before break)
@@ -53,4 +53,4 @@ Redirect vague answers: "What would the output look like if that happened? Would
 
 > "We know the pipeline can fail silently. Now let's put some checks in place. I'll show you the pattern in the notebook, then you continue from there."
 
-Move directly into CHECKS-BUILD. Do not dwell here.
+Move directly into [Add Validation Checks](checks-build.md). Do not dwell here.

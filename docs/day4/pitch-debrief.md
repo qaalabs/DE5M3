@@ -1,6 +1,6 @@
 # Facilitator Notes - What Made the Difference?
 
-*Trainer-only. After PITCH-SHARE, before afternoon break.*
+*Trainer-only. After the share-back, before afternoon break.*
 
 ---
 

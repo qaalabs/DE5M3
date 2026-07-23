@@ -1,6 +1,6 @@
 # Example Handover Artefact
 
-*Trainer reference. An example of a well-scoped structured note from the MVD-BUILD activity.*
+*Trainer reference. An example of a well-scoped structured note from the [Create a Handover Artefact](mvd-build.md) activity.*
 *Use after the share-back to anchor the debrief - not before the activity.*
 
 ---

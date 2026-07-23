@@ -53,7 +53,7 @@ All three work. The best artefact is the one that would genuinely help the next 
 
 ---
 
-## Bridge to MVD-BUILD
+## Bridge to [Create a Handover Artefact](mvd-build.md)
 
 > "Imagine you are going on leave Friday. Someone else is covering from Monday. Produce the minimum they would need. Not everything - the minimum that saves them an hour of confusion."
 
@@ -61,7 +61,7 @@ Send them in.
 
 ---
 
-## What to watch for during MVD-BUILD
+## What to watch for during [the practical](mvd-build.md)
 
 Common gaps:
 

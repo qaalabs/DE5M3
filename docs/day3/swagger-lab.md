@@ -48,6 +48,22 @@ Before you write a single line of Python, spend a few minutes reading this page 
 
 ---
 
+## Reading the Swagger UI
+
+When you open the link you will see a list of endpoints - these are the URLs your pipeline can call.
+
+Each endpoint shows:
+
+- the **method** - GET means you are requesting data
+- the **path** - the URL you call
+- a short **description** of what it returns
+
+You can click on any endpoint to expand it, then click **Try it out** to send a real request and see a real response.
+
+Work through the questions below before writing any code.
+
+---
+
 ## Explore the API
 
 Work through these before writing any code:
@@ -74,6 +90,12 @@ Click Try it out → Execute without filling anything in.
 - What happens?
 - What does the response tell you?
 - Now look at the endpoint description - what does it require?
+
+!!! warning "Don't use the X-Fields box"
+    This endpoint shows two input boxes: `X-Fields` and the auth padlock. `X-Fields` is
+    an unrelated flask-restx feature for filtering response fields - it is **not** where
+    the API key goes. To authenticate, click the padlock/**Authorize** button (top of the
+    page or next to the endpoint) and enter the key against `X-API-Key`.
 
 **Q5 - Compare `/product`, `/product1`, and `/product2`**
 All three return the same data. What is different about each one?
