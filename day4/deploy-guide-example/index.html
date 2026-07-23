@@ -1584,14 +1584,6 @@
 <li><strong>Verify the result</strong> by querying the output table directly, rather than assuming success from a green tick alone.</li>
 <li><strong>Share the workspace</strong> with the team who will run or maintain it, with the right role (not full admin by default), and agree how the pipeline gets triggered going forward - manually for now, scheduled later.</li>
 </ol>
-<pre class="mermaid"><code>flowchart TD
-    A["1. Add Copy Data activity&lt;br/&gt;pull from secure FTP"] --&gt; B["2. Build and test notebooks&lt;br/&gt;run by hand first"]
-    B --&gt; C["3. Add Notebook activities&lt;br/&gt;clean, then output"]
-    C --&gt; D["4. Connect on-success dependency"]
-    D --&gt; E["5. Add failure email activity&lt;br/&gt;on-failure dependency"]
-    E --&gt; F["6. Save and run the pipeline"]
-    F --&gt; G["7. Verify the result&lt;br/&gt;query the output table"]
-    G --&gt; H["8. Share the workspace&lt;br/&gt;agree how it gets triggered"]</code></pre>
 <hr>
 <h3 id="security">Security</h3>
 <ul>
@@ -1613,7 +1605,16 @@
 <li>The Data Engineering team owns the pipeline; ownership is noted in the handover artefact from this morning's session.</li>
 <li>Known limitations (no row count alerting, no run history, manual trigger) are documented rather than hidden - see the handover note.</li>
 <li>No formal retention or compliance rules apply yet, since this is a training pipeline - a real deployment would need this section to name actual policies (e.g. how long raw files are kept, who can request deletion).</li>
-</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+</ul>
+<hr>
+<pre class="mermaid"><code>flowchart TD
+    A["1. Add Copy Data activity&lt;br/&gt;pull from secure FTP"] --&gt; B["2. Build and test notebooks&lt;br/&gt;run by hand first"]
+    B --&gt; C["3. Add Notebook activities&lt;br/&gt;clean, then output"]
+    C --&gt; D["4. Connect on-success dependency"]
+    D --&gt; E["5. Add failure email activity&lt;br/&gt;on-failure dependency"]
+    E --&gt; F["6. Save and run the pipeline"]
+    F --&gt; G["7. Verify the result&lt;br/&gt;query the output table"]
+    G --&gt; H["8. Share the workspace&lt;br/&gt;agree how it gets triggered"]</code></pre><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
