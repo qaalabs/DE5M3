@@ -1584,13 +1584,14 @@
 <li><strong>Verify the result</strong> by querying the output table directly, rather than assuming success from a green tick alone.</li>
 <li><strong>Share the workspace</strong> with the team who will run or maintain it, with the right role (not full admin by default), and agree how the pipeline gets triggered going forward - manually for now, scheduled later.</li>
 </ol>
-<pre class="mermaid"><code>flowchart LR
-    A["Copy Data&lt;br/&gt;pull files via secure FTP"] --&gt;|on success| B["Notebook&lt;br/&gt;Clean Sales Orders"]
-    B --&gt;|on success| C["Notebook&lt;br/&gt;Build Output"]
-    C --&gt;|on success| F["Verify output table"]
-    A --&gt;|on failure| E["Send failure email"]
-    B --&gt;|on failure| E
-    C --&gt;|on failure| E</code></pre>
+<pre class="mermaid"><code>flowchart TD
+    A["1. Add Copy Data activity&lt;br/&gt;pull from secure FTP"] --&gt; B["2. Build and test notebooks&lt;br/&gt;run by hand first"]
+    B --&gt; C["3. Add Notebook activities&lt;br/&gt;clean, then output"]
+    C --&gt; D["4. Connect on-success dependency"]
+    D --&gt; E["5. Add failure email activity&lt;br/&gt;on-failure dependency"]
+    E --&gt; F["6. Save and run the pipeline"]
+    F --&gt; G["7. Verify the result&lt;br/&gt;query the output table"]
+    G --&gt; H["8. Share the workspace&lt;br/&gt;agree how it gets triggered"]</code></pre>
 <hr>
 <h3 id="security">Security</h3>
 <ul>
