@@ -105,18 +105,18 @@
 - `09:40` [Can You Trust Your Pipeline?](day4/checks-intro.md) (10 mins)
 - `09:50` **Discussion**: [Silent Failures](day4/silent-fail.md) (10 mins)
 - `10:00` **Practice**: [Add Validation Checks](day4/checks-build.md) (20 mins)
-- `10:20` [Run the Pipeline Locally](day4/pipeline-local.md) (10 mins)
+- `10:20` [Run the Pipeline Locally](day4/pipeline-local.md) (20 mins)
 
 ### Session 2
 
-- `10:50` [Minimum Viable Documentation](day4/mvd-intro.md) (10 mins)
-- `11:00` **Practice**: [Create a Handover Artefact](day4/mvd-build.md) (40 mins)
-- `11:40` **Report-Back**: [Learners Share Their Artefact](day4/mvd-review.md) (30 mins)
+- `11:00` [Minimum Viable Documentation](day4/mvd-intro.md) (10 mins)
+- `11:10` **Practice**: [Create a Handover Artefact](day4/mvd-build.md) (40 mins)
+- `11:50` **Report-Back**: [Learners Share Their Artefact](day4/mvd-review.md) (30 mins)
 
 ### Session 3
 
-- `13:20` **Report-Back**: [Learners Share Their Artefact](day4/mvd-review.md) (10 mins)
-- `13:30` [Technical vs Stakeholder View](day4/stakeholder.md) (10 mins)
+- `13:20` [Deploy a New Pipeline](day4/deploy-guide.md) (10 mins)
+- `13:30` **Slides**: [Technical vs Stakeholder View](day4/stakeholder.md) (10 mins)
 - `13:40` **Breakout**: [Prepare Your Explanation](day4/pitch-prep.md) (20 mins)
 - `14:00` **Report-Back**: Share Your Explanation (20 mins)
 - `14:20` **Discussion**: [What Made the Difference?](day4/pitch-debrief.md) (10 mins)

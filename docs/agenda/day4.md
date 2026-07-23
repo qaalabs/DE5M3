@@ -20,8 +20,8 @@
 
 ## Session 3
 
-- **Report-Back**: Learners Share Their Artefact
-- Technical vs Stakeholder View
+- [Deploy a New Pipeline](../day4/deploy-guide.md)
+- **Slides**: Technical vs Stakeholder View
 - **Breakout**: [Prepare Your Explanation](../day4/pitch-prep.md)
 - **Report-Back**: Share Your Explanation
 - **Discussion**: What Made the Difference?
