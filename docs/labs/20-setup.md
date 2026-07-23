@@ -2,6 +2,7 @@
 
 !!! info "Your Virtual Machine has kept the files from Day 1. This step makes sure they are up to date before you start Day 2."
 
+
 ## Step 1: Open Terminal
 
 Open **Terminal** on your Virtual Machine. It will open at: `C:\Users\Admin`
