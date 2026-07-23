@@ -1207,6 +1207,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reading-the-swagger-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading the Swagger UI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#explore-the-api" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1715,6 +1726,17 @@
 <p>This interface is called <strong>Swagger UI</strong> - it lets you explore and test an API without writing any code first.</p>
 <p>Before you write a single line of Python, spend a few minutes reading this page and then exploring the interface.</p>
 <hr>
+<h2 id="reading-the-swagger-ui">Reading the Swagger UI</h2>
+<p>When you open the link you will see a list of endpoints - these are the URLs your pipeline can call.</p>
+<p>Each endpoint shows:</p>
+<ul>
+<li>the <strong>method</strong> - GET means you are requesting data</li>
+<li>the <strong>path</strong> - the URL you call</li>
+<li>a short <strong>description</strong> of what it returns</li>
+</ul>
+<p>You can click on any endpoint to expand it, then click <strong>Try it out</strong> to send a real request and see a real response.</p>
+<p>Work through the questions below before writing any code.</p>
+<hr>
 <h2 id="explore-the-api">Explore the API</h2>
 <p>Work through these before writing any code:</p>
 <p><strong>Q1 - What endpoints are available?</strong>
@@ -1739,6 +1761,13 @@ Click Try it out → Execute without filling anything in.</p>
 <li>What does the response tell you?</li>
 <li>Now look at the endpoint description - what does it require?</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Don't use the X-Fields box</p>
+<p>This endpoint shows two input boxes: <code>X-Fields</code> and the auth padlock. <code>X-Fields</code> is
+an unrelated flask-restx feature for filtering response fields - it is <strong>not</strong> where
+the API key goes. To authenticate, click the padlock/<strong>Authorize</strong> button (top of the
+page or next to the endpoint) and enter the key against <code>X-API-Key</code>.</p>
+</div>
 <p><strong>Q5 - Compare <code>/product</code>, <code>/product1</code>, and <code>/product2</code></strong>
 All three return the same data. What is different about each one?
 Why might a real API require authentication?</p>
