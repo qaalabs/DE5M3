@@ -1584,6 +1584,13 @@
 <li><strong>Verify the result</strong> by querying the output table directly, rather than assuming success from a green tick alone.</li>
 <li><strong>Share the workspace</strong> with the team who will run or maintain it, with the right role (not full admin by default), and agree how the pipeline gets triggered going forward - manually for now, scheduled later.</li>
 </ol>
+<pre class="mermaid"><code>flowchart LR
+    A["Copy Data&lt;br/&gt;pull files via secure FTP"] --&gt;|on success| B["Notebook&lt;br/&gt;Clean Sales Orders"]
+    B --&gt;|on success| C["Notebook&lt;br/&gt;Build Output"]
+    C --&gt;|on success| F["Verify output table"]
+    A --&gt;|on failure| E["Send failure email"]
+    B --&gt;|on failure| E
+    C --&gt;|on failure| E</code></pre>
 <hr>
 <h3 id="security">Security</h3>
 <ul>
