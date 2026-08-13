@@ -1,5 +1,5 @@
 ## Deploy Guide
 
-- Push back if their platform choice is unfamiliar - the guide should be grounded in something they actually know, not researched cold
-- Walk the room watching for security/scalability/governance sections that are thin compared to the deployment steps
-- No report-back planned yet - schedule slot still to be decided
+- Individual work, not breakout rooms - push back if their platform choice is unfamiliar, the guide should be grounded in something they actually know, not researched cold
+- In the report back, check for security/scalability/governance sections that are thinner than the deployment steps
+- Schedule slot still to be decided

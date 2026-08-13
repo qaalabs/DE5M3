@@ -1,10 +1,50 @@
-# DE5M3 - Data Processing, Transformation & ETL
+# The Data Engineering Programme
 
-Day 1 is where you meet the project you'll be working on for the whole module and start building a data pipeline from scratch, using Python in a Jupyter notebook on your virtual machine.
+## Module 1: Fundamentals of Data Engineering
 
-Day 2 takes the pipeline you built locally and moves it into Microsoft Fabric, a cloud data platform. The logic stays the same - the environment changes. By the end of the day you'll have a working cloud pipeline and a clear view of what that buys you and what it doesn't.
+> Orient
 
-Day 3 is a design day. You are not starting from scratch - you are looking critically at the pipeline you have built and refactoring it into something more reliable and better structured. The pattern you'll learn and apply is called medallion architecture, which organises data into three layers: bronze, silver, and gold.
+- **How do you turn a messy, real-world data challenge into a working solution?**
+- *Working through a business scenario to design a database, then building it with SQL and taking your first steps in Python.*
 
-Day 4 answers a question that rarely comes up in early data work: what happens after you build it? You'll add validation to catch problems, write the documentation a new engineer would actually need, and practise explaining your work to someone who is not a data engineer.
+## Module 2: Data Storage and Management
 
+> Store
+
+- **Where does data live, and how do we choose a structure that's accessible, scalable, and secure?**
+- *Designing and building relational tables, enforcing integrity with constraints, then exploring data warehouses and MongoDB as alternative ways to store data.*
+
+## <mark>Module 3: Data Processing, Transformation & ETL</mark>
+
+> Process
+
+- **How does data move and transform as it flows through a pipeline?**
+- *Building an ETL pipeline from a local Python notebook through to a refactored, production-ready pipeline in Microsoft Fabric.*
+
+## Module 4: Planning a Data Engineering Product
+
+> Plan
+
+- **What problem are we solving and how will we design the solution?**
+- *Defining business needs, architecting data solutions, and creating comprehensive blueprints for success.*
+
+## Module 5: Data Engineering Product Development
+
+> Build
+
+- **How do we bring our design to life?**
+- *Transforming plans into functional data pipelines, implementing storage solutions, and creating robust processing workflows.*
+
+## Module 6: Data Operations
+
+> Monitor
+
+- **How do we ensure lasting value?**
+- *Deploying, monitoring, and evolving data products to deliver continuous business impact through changing requirements.*
+
+## Module 7: Emerging Technologies and Personal Development
+
+> Explore
+
+- **How can AI models and agents extend what you build as a data engineer?**
+- *Developing custom Copilots in Azure AI Foundry, then building your own tool-using AI agents in Python.*
