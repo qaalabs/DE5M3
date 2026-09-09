@@ -1,10 +1,10 @@
-## 🧪 <mark>Lab 2.5 ~ Trusted Output</mark>
+## 🧪 <mark>Lab 2.5 ~ Create ETL Pipeline</mark>
 
 ### Activities
 
-- Store cleaned tables
-- Join
-- Query in Fabric
-
-### **Answer the same business question as Day 1**
-
+1. Return to your HomeSphere workspace
+2. Attach the solution notebooks to the lakehouse
+3. Create a pipeline
+4. Configure the pipeline activities
+5. Run the pipeline
+6. Verify the results

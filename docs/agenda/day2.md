@@ -22,18 +22,18 @@
 
 ## Session 3
 
-- **Practice**: [Lab 2.4 - Setup Fabric](../labs/24-pm-setup.md)
-- **Practice**: [Lab 2.5 - Build the Trusted Output](../labs/25-cloud-output.md)
+- 
+- **Practice**: [Lab 2.4 - Build the Trusted Output](../labs/24-cloud-output.md)
 - **Discussion**: What Is Better? What Is Fragile?
-- **Practice**: [Lab 2.6 - Create ETL Pipeline](../labs/26-etl-pipeline.md)
+- **Practice**: [Lab 2.5 - Create ETL Pipeline](../labs/25-etl-pipeline.md)
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- **Practice**: [Lab 2.7 ~ Rerun Pipeline](../labs/27-rerun-pipeline.md)
-- **Practice**: [Lab 2.8 ~ Schema Drift](../labs/28-schema-drift.md)
-- **Practice**: [Lab 2.9 ~ Pipeline Failure](../labs/29-pipeline-failure.md)
+- **Practice**: [Lab 2.6 - Rerun Pipeline](../labs/26-rerun-pipeline.md)
+- **Practice**: [Lab 2.7 - Schema Drift](../labs/27-schema-drift.md)
+- **Practice**: [Lab 2.8 - Pipeline Failure](../labs/28-pipeline-failure.md)
 - **Discussion**: Cloud Is Not Well-Architected
 
 ## 🎁 Wrap

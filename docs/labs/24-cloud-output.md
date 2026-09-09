@@ -1,8 +1,8 @@
-# Lab 2.5 ~ Build the Trusted Output
+# Lab 2.4 ~ Build the Trusted Output
 
 !!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
 
-This lab continues from Lab 2.4. Your HomeSphere lakehouse and the `cleaned_sales` table should already be in place.
+This lab continues from Lab 2.3. Your HomeSphere lakehouse and the `cleaned_sales` table should already be in place.
 
 
 ## Step 1: Open the cloud_output notebook
@@ -75,4 +75,4 @@ The notebook reads `cleaned_sales` from the lakehouse, joins it to the product c
 
 In this exercise, you read from a Delta table, joined and transformed the data in a notebook, and queried the result using both SQL magic and the SQL analytics endpoint.
 
-**Do not delete your workspace** - you will continue working in it in Lab 2.6
+**Do not delete your workspace** - you will continue working in it in Lab 2.5

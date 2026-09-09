@@ -1,8 +1,8 @@
-# Lab 2.7 ~ Rerun the Pipeline with New Data
+# Lab 2.6 ~ Rerun the Pipeline with New Data
 
 !!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
 
-!!! info "This lab continues from Lab 2.6. Your pipeline should still exist and have run successfully."
+!!! info "This lab continues from Lab 2.5. Your pipeline should still exist and have run successfully."
 
 Your pipeline already works. This lab does not change it. You are going to run it
 twice and check whether **Succeeded** actually means what you think it means.
@@ -44,7 +44,7 @@ Before anything changes, record what your pipeline has already produced.
 A new batch of orders has arrived - five additional orders, the same schema,
 a familiar mix of data-quality issues.
 
-1. Locate `sales_raw_batch27.csv` alongside your other HomeSphere data files.
+1. Locate `sales_raw_batch26.csv` alongside your other HomeSphere data files.
 
 2. In your lakehouse, upload it into `Files/data/`, **next to** the existing
    `sales_raw.csv`.
@@ -56,7 +56,7 @@ a familiar mix of data-quality issues.
 
 1. Go to your **HomeSphere ETL Pipeline**.
 
-2. Select **Run**. This is the same pipeline from Lab 2.6 - you have not changed it.
+2. Select **Run**. This is the same pipeline from Lab 2.5 - you have not changed it.
 
 3. Wait for both activities to show **Succeeded**.
 
@@ -68,7 +68,7 @@ a familiar mix of data-quality issues.
 
     | Run          | Input                 | Expected change        | Raw rows | Cleaned rows | Output rows | Revenue | Status |
     |--------------|-----------------------|-------------------------|----------|--------------|-------------|---------|--------|
-    | Second batch | sales_raw_batch27.csv  | Five additional orders |          |              |             |         |        |
+    | Second batch | sales_raw_batch26.csv  | Five additional orders |          |              |             |         |        |
 
 ## Step 5: Check your work
 

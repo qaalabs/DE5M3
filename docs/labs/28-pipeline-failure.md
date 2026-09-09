@@ -1,15 +1,15 @@
-# Lab 2.9 ~ Rerun with a Hard Failure
+# Lab 2.8 ~ Rerun with a Hard Failure
 
 !!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
 
-!!! info "This lab continues from Lab 2.8. Your pipeline and all three sales files should still be in place."
+!!! info "This lab continues from Lab 2.7. Your pipeline and all three sales files should still be in place."
 
 So far, every rerun has ended in **Succeeded** - even when the output was wrong.
 This time, the pipeline actually fails.
 
 ## Step 1: Add the fourth batch
 
-1. Locate `sales_raw_batch29.csv` alongside your other HomeSphere data files.
+1. Locate `sales_raw_batch28.csv` alongside your other HomeSphere data files.
 
 2. Upload it into `Files/data/`, next to the other three files. Don't delete or
    rename anything.
@@ -28,7 +28,7 @@ This time, the pipeline actually fails.
 
 1. Open the failed activity's error output from the pipeline run history.
 
-2. Find the row in `sales_raw_batch29.csv` that caused it.
+2. Find the row in `sales_raw_batch28.csv` that caused it.
 
     !!! question "What's different about this row compared to every other row you've seen so far?"
 
@@ -36,11 +36,11 @@ This time, the pipeline actually fails.
 
 | Run          | Input                | Expected change | Raw rows | Cleaned rows | Output rows | Revenue | Status |
 |--------------|-----------------------|------------------|----------|--------------|-------------|---------|--------|
-| Fourth batch | sales_raw_batch29.csv | -                | -        | -            | -           | -       | Failed |
+| Fourth batch | sales_raw_batch28.csv | -                | -        | -            | -           | -       | Failed |
 
 There's nothing to compare this time - the pipeline stopped before producing
 anything new. `cleaned_sales_solution` and `sales_trusted_solution` still hold
-whatever Lab 2.8 left behind.
+whatever Lab 2.7 left behind.
 
 !!! question "Across all four runs: which failure mode worried you the most - the row that silently vanished, the batch that silently vanished, or the pipeline that stopped outright? Why?"
 

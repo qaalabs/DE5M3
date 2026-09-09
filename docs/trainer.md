@@ -4,9 +4,9 @@
 
 ### Session 1
 
-- `10:00` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 3 (10 mins)
-- `10:10` **Activity**: [Git Clone the Data Files](labs/11-setup.md) (10 mins)
-- `10:20` **Practice**: Explore Python-101 Notebook (10 mins)
+- `09:30` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 3 (10 mins)
+- `10:00` **Activity**: [Git Clone the Data Files](labs/11-setup.md) (10 mins)
+- `10:10` **Practice**: Explore Python-101 Notebook (20 mins)
 
 ### Session 2
 
@@ -54,16 +54,15 @@
 
 ### Session 3
 
-- `13:20` **Practice**: [Lab 2.4 - Setup Fabric](labs/24-pm-setup.md) (10 mins)
-- `13:30` **Practice**: [Lab 2.5 - Build the Trusted Output](labs/25-cloud-output.md) (20 mins)
+- `13:30` **Practice**: [Lab 2.4 - Build the Trusted Output](labs/24-cloud-output.md) (20 mins)
 - `13:50` **Discussion**: [What Is Better? What Is Fragile?](day2/output-debrief.md) (10 mins)
-- `14:00` **Practice**: [Lab 2.6 - Create ETL Pipeline](labs/26-etl-pipeline.md) (30 mins)
+- `14:00` **Practice**: [Lab 2.5 - Create ETL Pipeline](labs/25-etl-pipeline.md) (30 mins)
 
 ### Session 4
 
-- `14:50` **Practice**: [Lab 2.7 ~ Rerun Pipeline](labs/27-rerun-pipeline.md) (20 mins)
-- `15:10` **Practice**: [Lab 2.8 ~ Schema Drift](labs/28-schema-drift.md) (10 mins)
-- `15:20` **Practice**: [Lab 2.9 ~ Pipeline Failure](labs/29-pipeline-failure.md) (20 mins)
+- `14:50` **Practice**: [Lab 2.6 - Rerun Pipeline](labs/26-rerun-pipeline.md) (20 mins)
+- `15:10` **Practice**: [Lab 2.7 - Schema Drift](labs/27-schema-drift.md) (10 mins)
+- `15:20` **Practice**: [Lab 2.8 - Pipeline Failure](labs/28-pipeline-failure.md) (20 mins)
 - `15:40` **Discussion**: [Cloud Is Not Well-Architected](day2/reflection.md) (10 mins)
 
 ---

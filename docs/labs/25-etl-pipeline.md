@@ -1,4 +1,4 @@
-# Lab 2.6 ~ Orchestrate the HomeSphere ETL with a Pipeline
+# Lab 2.5 ~ Orchestrate the HomeSphere ETL with a Pipeline
 
 !!! abstract "S4: Automate data pipelines such as batch, real-time, on demand and other processes using programming languages and data integration platforms with graphical user interfaces."
 
@@ -12,7 +12,7 @@
 
 2. Select your `fab_workspace` to open it.
 
-!!! tip "If your workspace is no longer available, you will need to repeat the setup steps from Lab 2.4 before continuing."
+!!! tip "If your workspace is no longer available, you will need to repeat the workspace setup from Lab 2.2 and Lab 2.3 before continuing."
 
 
 ## Step 2: Attach the solution notebooks to the lakehouse

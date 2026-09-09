@@ -1,8 +1,8 @@
-# Lab 2.8 ~ Rerun with a Schema Change
+# Lab 2.7 ~ Rerun with a Schema Change
 
 !!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
 
-!!! info "This lab continues from Lab 2.7. Your pipeline and both sales files should still be in place."
+!!! info "This lab continues from Lab 2.6. Your pipeline and both sales files should still be in place."
 
 A third batch of orders has arrived. This time, nothing about the data itself is
 wrong - every row is valid. But the file was produced by a different system,
@@ -10,7 +10,7 @@ and one column has a different name.
 
 ## Step 1: Add the third batch
 
-1. Locate `sales_raw_batch28.csv` alongside your other HomeSphere data files.
+1. Locate `sales_raw_batch27.csv` alongside your other HomeSphere data files.
 
 2. Open it and compare its columns to `sales_raw.csv`.
 
@@ -53,13 +53,13 @@ Note what it actually says.
 
     | Run         | Input                | Expected change        | Raw rows | Cleaned rows | Output rows | Revenue | Status |
     |-------------|-----------------------|------------------------|----------|--------------|-------------|---------|--------|
-    | Third batch | sales_raw_batch28.csv | Four additional orders |          |              |             |         |        |
+    | Third batch | sales_raw_batch27.csv | Four additional orders |          |              |             |         |        |
 
 ## Step 5: Find out what happened
 
-Compare this run to Lab 2.7's second batch.
+Compare this run to Lab 2.6's second batch.
 
-- In Lab 2.7, one row out of five went missing. This time, how many of the four
+- In Lab 2.6, one row out of five went missing. This time, how many of the four
   new orders actually made it into `sales_trusted_solution`?
 - The renamed column still exists in the raw file - it just isn't the column the
   notebook is looking for. Trace through `cloud_clean_solution` and find the

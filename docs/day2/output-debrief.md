@@ -1,6 +1,6 @@
 # Facilitator Notes - What Is Better? What Is Fragile?
 
-*Trainer-only. Run after [Lab 2.5 - Build the Trusted Output](../labs/25-cloud-output.md).*
+*Trainer-only. Run after [Lab 2.4 - Build the Trusted Output](../labs/24-cloud-output.md).*
 *Aim: 20 minutes - this one has more to unpack.*
 
 ---

@@ -53,21 +53,8 @@ The notebook contains the same nine cleaning steps you built on Day 1 - but this
 
 ---
 
-## Clean up resources
+## Keep your workspace
 
 In this exercise, you ran the HomeSphere cleaning pipeline in a Fabric notebook and saved the output as a Delta table in OneLake.
 
-The afternoon session starts fresh - delete your workspace and stop the Fabric Playground before lunch.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
-
-5. Return to the QA Platform and click **Submit** to destroy the lab environment.
-
-!!! abstract ""
-    ![QA Platform Submit to end lab.](img/playground-submit.png)
+**Do not delete your workspace** - you will continue working in it after lunch in Lab 2.4.
