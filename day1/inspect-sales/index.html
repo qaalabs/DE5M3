@@ -5,6 +5,8 @@
       
       
       
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M3/day1/inspect-sales/">
+      
       
         <link rel="prev" href="../homesphere/">
       
@@ -16,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -24,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -494,6 +496,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://qaalabs.github.io/vmsetup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🖥️ VM Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1978,9 +2008,10 @@ input[type="radio"].wrong {
   z-index: 3; /* Below Material header (z-index: 4) but above page content */
 }
 
-/* Show mobile tracker only on small screens (mobile/tablet) */
-/* Material breakpoint: up to 76.1875em (1219px) */
-@media screen and (max-width: 76.1875em) {
+/* Show the mobile tracker only when the secondary sidebar (and its progress
+   widget) is hidden. Material reveals .md-sidebar--secondary at min-width: 60em,
+   so the mobile tracker must stop at 60em - 1px to avoid showing both at once. */
+@media screen and (max-width: 59.9375em) {
   .quiz-progress-mobile {
     display: block;
   }
@@ -2219,7 +2250,7 @@ window.mkdocsQuizConfig = {
   progressSidebarPosition: "top"
 };
 </script><script type="text/javascript" defer="">// Wrap everything in an IIFE to avoid variable redeclaration issues
-// when Material for MkDocs instant navigation reloads the page
+// when Material theme instant navigation reloads the page
 (function () {
   // Constants
   const STORAGE_KEY_PREFIX = "quiz_progress_";
@@ -2898,7 +2929,7 @@ window.mkdocsQuizConfig = {
       if (headerLink) {
         const handler = (e) => {
           // Let the browser handle the anchor navigation normally
-          // This prevents Material for MkDocs from intercepting it as a page navigation
+          // This prevents Material themes from intercepting it as a page navigation
           e.stopPropagation();
         };
         addTrackedEventListener(headerLink, "click", handler);
@@ -3190,7 +3221,7 @@ window.mkdocsQuizConfig = {
 
       const submitHandler = (event) => {
         event.preventDefault();
-        event.stopPropagation(); // Prevent Material theme from intercepting form submission
+        event.stopPropagation(); // Prevent Material themes from intercepting form submission
         let is_correct = false;
         let selectedValues = [];
         let section = quiz.querySelector("section");
@@ -3362,7 +3393,7 @@ window.mkdocsQuizConfig = {
     initializePage();
   }
 
-  // Material for MkDocs instant navigation support
+  // Material theme instant navigation support
   // Cleanup and reinitialize when navigating between pages
   if (typeof document$ !== "undefined") {
     // Unsubscribe from any previous subscription to prevent duplicate handlers
@@ -3372,7 +3403,7 @@ window.mkdocsQuizConfig = {
       window._mkdocsQuizSubscription.unsubscribe();
     }
 
-    // Material theme with instant navigation is active
+    // A Material theme with instant navigation is active
     window._mkdocsQuizSubscription = document$.subscribe(() => {
       cleanup(); // Remove old event listeners to prevent memory leaks
       // Reinitialize everything for the new page
@@ -3433,7 +3464,7 @@ window.mkdocsQuizConfig = {
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
