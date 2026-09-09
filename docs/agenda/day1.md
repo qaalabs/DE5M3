@@ -2,8 +2,8 @@
 
 ## Session 1
 
-- **Slides**: [🖥️ VM Setup](https://qaalabs.github.io/vmsetup/)
 - **Slides**: 🌅 Welcome to Day 1 of DE5 Module 3
+- **Slides**: [🖥️ VM Setup](https://qaalabs.github.io/vmsetup/)
 - **Activity**: [Git Clone the Data Files](../labs/11-setup.md)
 - **Practice**: Explore Python-101 Notebook
 
