@@ -2,8 +2,8 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 1 of DE5 Module 3
-- **Slides**: 🖥️ VM Setup
+- **Slides**: [🖥️ VM Setup](https://qaalabs.github.io/vmsetup/)
+- **Slides**: 🌅 Welcome to Day 1 of DE5 Module 3
 - **Activity**: [Git Clone the Data Files](../labs/11-setup.md)
 - **Practice**: Explore Python-101 Notebook
 
@@ -32,8 +32,8 @@
 
 ## Session 4
 
-- **Breakout**: ETL Product Investigation
-- **Investigation**: [ETL Product Investigation](../day1/etl-products.md)
+- **Instructions**: ETL Product Investigation
+- **Breakout**: [ETL Product Investigation](../day1/etl-products.md)
 - **Report-Back**: ETL Product Investigation
 - **Discussion**: Reflect and Look Ahead
 

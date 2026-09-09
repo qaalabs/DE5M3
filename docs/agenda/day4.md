@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 4 of DE5 Module 3
+- **Slides**: 🌅 Welcome to Day 4 of DE5 Module 3
 - Can You Trust Your Pipeline?
 - **Discussion**: [Silent Failures](../day4/silent-fail.md)
 - **Practice**: [Add Validation Checks](../day4/checks-build.md)

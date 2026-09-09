@@ -4,6 +4,7 @@
 
 ### Session 1
 
+- `10:00` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 3 (10 mins)
 - `10:10` **Activity**: [Git Clone the Data Files](labs/11-setup.md) (10 mins)
 - `10:20` **Practice**: Explore Python-101 Notebook (10 mins)
 
@@ -26,8 +27,8 @@
 
 ### Session 4
 
-- `14:50` **Breakout**: ETL Product Investigation (10 mins)
-- `15:00` **Investigation**: [ETL Product Investigation](day1/etl-products.md) (20 mins)
+- `14:50` **Instructions**: ETL Product Investigation (10 mins)
+- `15:00` **Breakout**: [ETL Product Investigation](day1/etl-products.md) (20 mins)
 - `15:20` **Report-Back**: ETL Product Investigation (20 mins)
 - `15:40` **Discussion**: [Reflect and Look Ahead](day1/reflection.md) (10 mins)
 
@@ -37,6 +38,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: 🌅 Welcome to Day 2 of DE5 Module 3 (10 mins)
 - `09:40` 🖥️ Start MS Fabric Playground (10 mins)
 - `09:50` **Slides**: What Is Fabric? (10 mins)
 - `10:00` **Practice**: [Lab 2.1 - Explore Fabric Environment](labs/21-lakehouse.md) (30 mins)
@@ -70,6 +72,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: 🌅 Welcome to Day 3 of DE5 Module 3 (10 mins)
 - `09:40` **Slides**: [Design Review](day3/review.md) (10 mins)
 - `09:50` **Slides**: [Add Metadata to a CSV File](day3/csv-metadata.md) (10 mins)
 - `10:00` **Slides**: [Swagger ~ Read from a Live API](day3/products-api.md) (10 mins)
@@ -102,6 +105,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: 🌅 Welcome to Day 4 of DE5 Module 3 (10 mins)
 - `09:40` [Can You Trust Your Pipeline?](day4/checks-intro.md) (10 mins)
 - `09:50` **Discussion**: [Silent Failures](day4/silent-fail.md) (10 mins)
 - `10:00` **Practice**: [Add Validation Checks](day4/checks-build.md) (20 mins)

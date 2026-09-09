@@ -1,11 +1,12 @@
 # Site name
 site_name: Module 3 - Data Processing, Transformation & ETL
+site_url: https://qaalabs.github.io/DE5M3/
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
 nav:
   - Overview: index.md
-  - Module KSBs: ksb.md
+  - Module KSBs: ksb/index.md
 
   - Agenda:
     - Topics: agenda/index.md
@@ -15,6 +16,7 @@ nav:
     - Day 4: agenda/day4.md
 
   - "Day 1 - ETL Locally":
+    - "🖥️ VM Setup": https://qaalabs.github.io/vmsetup/
     - "Git Clone the Data Files": labs/11-setup.md
     - "Introducing HomeSphere": day1/homesphere.md
     - "Part 1 ~ Inspect Sales Data": day1/inspect-sales.md

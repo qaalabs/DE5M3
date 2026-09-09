@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 3 of DE5 Module 3
+- **Slides**: 🌅 Welcome to Day 3 of DE5 Module 3
 - **Slides**: Design Review
 - **Slides**: Add Metadata to a CSV File
 - **Slides**: Swagger ~ Read from a Live API
