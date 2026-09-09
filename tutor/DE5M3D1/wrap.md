@@ -1,8 +1,16 @@
-## End of Day Pulse Check
+## Wrap up the day with a summary and pulse check
 
-Ask them to complete the short anonymous pulse check.
+### Ask them to fill in the pulse survey
 
-### 1.How confident do you feel with today’s content?
+- https://files.qaalabs.com/pulse
+
+or
+
+- https://forms.office.com/e/iQTxe4XrAq
+
+---
+
+**1.How confident do you feel with today’s content?**
 
 - 5 ~ confident
 - 4 ~ mostly okay
@@ -10,7 +18,7 @@ Ask them to complete the short anonymous pulse check.
 - 2 ~ quite unsure
 - 1 ~ lost
 
-### 2. What would help most tomorrow?
+**2. What would help most tomorrow?**
 
 - slower pace
 - more examples
