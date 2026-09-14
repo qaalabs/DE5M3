@@ -6,16 +6,16 @@
 
 - `09:30` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 3 (10 mins)
 - `10:00` **Activity**: [Git Clone the Data Files](labs/11-setup.md) (10 mins)
-- `10:10` **Practice**: Explore Python-101 Notebook (20 mins)
+- `10:20` **Practice**: Explore Python-101 Notebook (20 mins)
 
 ### Session 2
 
-- `10:50` **Reading**: [Introducing HomeSphere](day1/homesphere.md) (10 mins)
-- `11:00` **Practice**: [Part 1 ~ Inspect Sales Data](day1/inspect-sales.md) (10 mins)
-- `11:10` **Practice**: [Part 2 ~ Inspect Product Data](day1/inspect-prod.md) (10 mins)
-- `11:20` **Discussion**: [What Did You Find?](day1/inspect-debrief.md) (10 mins)
-- `11:30` [Cleaning Moves Overview](day1/clean-intro.md) (10 mins)
-- `11:40` **Practice**: [Part 3 ~ Clean Sales Data](day1/clean-sales.md) (40 mins)
+- `11:00` **Reading**: [Introducing HomeSphere](day1/homesphere.md) (10 mins)
+- `11:10` **Practice**: [Part 1 ~ Inspect Sales Data](day1/inspect-sales.md) (10 mins)
+- `11:20` **Practice**: [Part 2 ~ Inspect Product Data](day1/inspect-prod.md) (10 mins)
+- `11:30` **Discussion**: [What Did You Find?](day1/inspect-debrief.md) (10 mins)
+- `11:40` [Cleaning Moves Overview](day1/clean-intro.md) (10 mins)
+- `11:50` **Practice**: [Part 3 ~ Clean Sales Data](day1/clean-sales.md) (30 mins)
 
 ### Session 3
 
