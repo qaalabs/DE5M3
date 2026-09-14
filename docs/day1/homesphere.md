@@ -16,7 +16,7 @@ That is what Module 3 is about.
 |-----------------------|-------------------------------------------|
 | Sales Orders          | Customer orders, quantities, prices, dates|
 | Product catalogue     | Product names, categories, specifications |
-| Inventory / Supply    | Stock levels, supplier data               |
+| Inventory / Supply    | Stock levels, incoming supplier feeds     |
 | Customer support      | Tickets, resolution times, issue types    |
 | IoT events            | Device telemetry and usage signals        |
 | Marketing / App usage | Campaign data, app engagement             |
