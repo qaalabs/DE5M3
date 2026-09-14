@@ -18,11 +18,11 @@ This time, the pipeline actually fails.
 
 1. Go to your **HomeSphere ETL Pipeline** and select **Run**.
 
-2. Watch the two activities as they run, rather than only checking at the end.
+2. Watch all four activities as they run, rather than only checking at the end.
 
 ## Step 3: Check the status
 
-!!! question "Which activity failed - Clean Sales Orders, or Build Output? What does that tell you about whether the second activity ran at all?"
+!!! question "Which activity failed - Clean Sales Orders, or Build Output? What does that tell you about whether Build Output, Log Success, and Log Failure each ran?"
 
 ## Step 4: Find out why
 

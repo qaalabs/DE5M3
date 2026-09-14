@@ -23,7 +23,7 @@ and one column has a different name.
 
 1. Go to your **HomeSphere ETL Pipeline** and select **Run**.
 
-2. Wait for both activities to finish.
+2. Wait for **Clean Sales Orders**, **Build Output**, and **Log Success** to finish.
 
 ## Step 3: Check the status
 

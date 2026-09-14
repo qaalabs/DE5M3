@@ -31,7 +31,7 @@ Before anything changes, record what your pipeline has already produced.
 
     This gives you the **output row count** and **revenue**.
 
-4. Check the pipeline's run history and confirm both activities show **Succeeded**.
+4. Check the pipeline's run history and confirm **Clean Sales Orders**, **Build Output**, and **Log Success** show **Succeeded**, and **Log Failure** shows **Skipped**.
 
 5. Record all four numbers:
 
@@ -58,7 +58,7 @@ a familiar mix of data-quality issues.
 
 2. Select **Run**. This is the same pipeline from Lab 2.5 - you have not changed it.
 
-3. Wait for both activities to show **Succeeded**.
+3. Wait for **Clean Sales Orders**, **Build Output**, and **Log Success** to show **Succeeded**.
 
 ## Step 4: Verify the results
 

