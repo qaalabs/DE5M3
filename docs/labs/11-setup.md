@@ -21,20 +21,29 @@ cd Desktop
 git clone https://github.com/QAADE5/M3.git
 ```
 
-This will create a `M3` folder on your Desktop.
+This will create the `M3` folder on your Desktop.
 
 ```
 cd M3
 ```
 
-Inside that folder is a `HomeSphere` folder with all the files you will need for today.
+
+## Step 4: Install the `pandas` library
+
+Run the following command in Terminal from the `M3` directory:
+
+```
+python -m pip install -r requirements.txt`
+```
+
+
+## Step 5: Confirm the files are there
+
+Inside the `M3` folder is a `HomeSphere` folder with all the files you will need for today.
 
 ```
 cd HomeSphere
 ```
-
-
-## Step 4: Confirm the files are there
 
 ```
 dir
@@ -45,6 +54,7 @@ In Terminal (or File Explorer), check that the `HomeSphere` folder on your Deskt
 - `cloud/` - notebooks for Day 2
 - `data/` - the raw source files
 - `local/` - the notebooks for today
+- `solution/` - solution notebooks for today
 
 !!! success "You are ready to start"
 
