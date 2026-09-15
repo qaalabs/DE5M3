@@ -53,7 +53,7 @@ You will add two small notebooks to the pipeline, purely to record whether a run
 
 2. Select **New item**, then search for and select **Notebook**.
 
-3. Use the :material-cog: **Settings** icon to name the notebook: `Track Pipeline Success`
+3. Name the notebook: `Track Pipeline Success`
 
 4. Select the existing empty cell and replace its contents with:
 
@@ -68,7 +68,7 @@ You will add two small notebooks to the pipeline, purely to record whether a run
         pass  # a dead endpoint must never fail the notebook run
     ```
 
-5. Save the notebook.
+    !!!! note "The notebook will save automatically."
 
 6. Repeat steps 2-5 for a second notebook:
 
@@ -78,8 +78,6 @@ You will add two small notebooks to the pipeline, purely to record whether a run
         ```python
         ctx["source"] = "de5m3-FAILURE"
         ```
-
-    - Save the notebook.
 
 
 ## Step 4: Create a pipeline
@@ -102,7 +100,7 @@ A pipeline lets you orchestrate the four notebooks so they run automatically, ra
 
 You will add four Notebook activities - one for each solution notebook, and one for each tracking notebook - and connect them so each only runs when the activity before it reaches the right outcome.
 
-1. In the pipeline canvas: **Start with a blank canvas**:
+1. In the pipeline canvas you should see: **Start with a blank canvas**
 
     - Select: **Pipeline activity**
     - Choose: **Notebook** (scroll down - it should be under the *Transform* heading)
@@ -114,7 +112,7 @@ You will add four Notebook activities - one for each solution notebook, and one 
     - **Workspace**: *select your workspace*
     - **Notebook**: select `cloud_clean_solution`
 
-4. Add a second **Notebook** activity to the canvas.
+4. Click the **Activities** tab and add a second **Notebook** activity to the canvas. 
 
 5. In the properties pane, set the **Name** to: `Build Output`
 
@@ -125,7 +123,7 @@ You will add four Notebook activities - one for each solution notebook, and one 
 
 7. Add a third **Notebook** activity to the canvas.
 
-8. In the properties pane, set the **Name** to: `Log Success`
+8. In the properties pane, set the **Name** to: `Track Success`
 
 9. Select the **Settings** tab and configure the following:
 
@@ -134,33 +132,36 @@ You will add four Notebook activities - one for each solution notebook, and one 
 
 10. Add a fourth **Notebook** activity to the canvas.
 
-11. In the properties pane, set the **Name** to: `Log Failure`
+11. In the properties pane, set the **Name** to: `Track Failure`
 
 12. Select the **Settings** tab and configure the following:
 
     - **Workspace**: *select your workspace*
     - **Notebook**: select `Track Pipeline Failure`
 
-13. Connect the four activities
+13. On the **Home** tab, click **Save**
+
+
+## Step 6: Connect the four activities
 
     - Hover over the **Clean Sales Orders** activity until small coloured arrows appear at its corners. Drag the **green** (on success) arrow to the **Build Output** activity.
-    - Hover over the **Clean Sales Orders** activity again. Drag the **red** (on failure) arrow to the **Log Failure** activity.
-    - Hover over the **Build Output** activity. Drag the **green** (on success) arrow to the **Log Success** activity.
+    - Hover over the **Clean Sales Orders** activity again. Drag the **red** (on failure) arrow to the **Track Failure** activity.
+    - Hover over the **Build Output** activity. Drag the **green** (on success) arrow to the **Track Success** activity.
 
-    !!! note "Why Log Failure only connects to Clean Sales Orders"
+    !!! note "Why Track Failure only connects to Clean Sales Orders"
         - **Build Output** only ever runs after **Clean Sales Orders** succeeds, so if **Clean Sales Orders** fails, **Build Output** never runs at all.
-        - An activity with more than one incoming dependency needs *all* of them satisfied before it runs - so if **Log Failure** also waited on a failure from **Build Output**, it would never fire in that case, because **Build Output** would never reach a failed state either.
-        - **Log Success** will only run if **Build Output** completes without errors, so a success ping only ever reflects a fully successful pipeline run.
+        - An activity with more than one incoming dependency needs *all* of them satisfied before it runs - so if **Track Failure** also waited on a failure from **Build Output**, it would never fire in that case, because **Build Output** would never reach a failed state either.
+        - **Track Success** will only run if **Build Output** completes without errors, so a success ping only ever reflects a fully successful pipeline run.
         - This is what makes a pipeline more reliable than running notebooks by hand.
 
     !!! abstract ""
-        ![Pipeline with two connected notebook activities.](img/25-pipeline-activities.png)
+        ![Pipeline with two connected notebook activities.](img/25-pipeline-activities-track.png)
 
 
 !!! note "Before running the pipeline - select the Monitor tab and make sure no other notebook is still running."
 
 
-## Step 6: Run the pipeline
+## Step 7: Run the pipeline
 
 1. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline.
 
@@ -169,12 +170,12 @@ You will add four Notebook activities - one for each solution notebook, and one 
 3. Monitor the progress in the **Output** pane below the canvas.
 
     - Use the :material-refresh: (*Refresh*) icon to refresh the status.
-    - Wait for **Clean Sales Orders**, **Build Output**, and **Log Success** to show a green tick.
+    - Wait for **Clean Sales Orders**, **Build Output**, and **Track Success** to show a green tick.
 
-!!! success "Clean Sales Orders, Build Output, and Log Success should show as **Succeeded**. Log Failure should show as **Skipped** - that is expected, since its failure condition was never met."
+!!! success "Clean Sales Orders, Build Output, and Track Success should show as **Succeeded**. Track Failure should show as **Skipped** - that is expected, since its failure condition was never met."
 
 
-## Step 7: Verify the results
+## Step 8: Verify the results
 
 The pipeline has run the same cleaning and output logic as the notebooks you ran manually earlier. You should now have two additional tables in your lakehouse.
 
