@@ -116,6 +116,9 @@ plugins:
   - search
   - glightbox
   - mkdocs_quiz
+  - print-site:
+      enumerate_headings: false
+      add_table_of_contents: false
 
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js

@@ -1,0 +1,15 @@
+INHERIT: mkdocs.yml
+
+site_name: DE5 Module 3 - Day 1
+
+nav:
+  - "Day 1 - ETL Locally":
+    - "Git Clone the Data Files": labs/11-setup.md
+    - "Introducing HomeSphere": day1/homesphere.md
+    - "Part 1 ~ Inspect Sales Data": day1/inspect-sales.md
+    - "Part 2 ~ Inspect Product Data": day1/inspect-prod.md
+    - "Part 3 ~ Clean Sales Data": day1/clean-sales.md
+    - "Flatten and Join": day1/flatten-join.md
+    - "ETL Pipeline ~ Stretch Task": day1/stretch-etl-script.md
+    - "ETL Product Investigation": day1/etl-products.md
+
