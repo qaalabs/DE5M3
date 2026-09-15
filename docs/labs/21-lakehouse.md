@@ -7,45 +7,11 @@
 In this lab you will create a Microsoft Fabric lakehouse, upload data, and explore how files and tables work in OneLake. You will also query the data using a notebook and SQL.
 
 
-## Step 1: Start the Microsoft Fabric Playground
-
-1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
-
-2. Click **Start** to start the lab.
-
-3. Make a note of your allocated **username** and **password**.
-
-!!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
-
-!!! tip "Switch to your Virtual Machine to complete the steps listed below."
+!!! note "Not logged in to Microsoft Fabric yet?"
+    Follow the [VM login instructions](run-inside-vm.md) first, then come back here.
 
 
-## Step 2: Logon to Azure and Microsoft Fabric
-
-1. In your VM open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
-
-2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
-
-3. When prompted, sign in using:
-
-    - **Username** from the QA Platform (used as the email address)
-    - **Password** from the QA Platform (used as a Temporary Access Pass)
-
-    - If prompted to "Stay signed in?", select **No**.
-
-    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
-
-4. In the same private browsing window, **open a new tab**.
-
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
-
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
-
-    !!! abstract ""
-        ![Fabric home page](img/qa-fabric-home.png)
-
-
-## Step 3: Create a workspace
+## Step 1: Create a workspace
 
 Before working with data in Fabric, you need to create a workspace.
 
@@ -64,7 +30,7 @@ Before working with data in Fabric, you need to create a workspace.
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
-## Step 4: Create a lakehouse
+## Step 2: Create a lakehouse
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
@@ -89,7 +55,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 Currently, there are no tables or files in this lakehouse.
 
 
-## Step 5: Create a subfolder and upload a file
+## Step 3: Create a subfolder and upload a file
 
 Fabric provides multiple ways to load data into the lakehouse. One of the simplest ways to ingest small amounts of data is to upload files directly.
 
@@ -122,7 +88,7 @@ Fabric provides multiple ways to load data into the lakehouse. One of the simple
     !!! warning "Make sure the file has a `.csv` extension - not `.txt`"
 
 
-## Step 6: Load file data into a table
+## Step 4: Load file data into a table
 
 The sales data you uploaded is in a file. Loading it into a table lets you query it using SQL.
 
@@ -157,7 +123,7 @@ The sales data you uploaded is in a file. Loading it into a table lets you query
         Files for a delta table are stored in *Parquet* format, and include a subfolder named `_delta_log` in which details of transactions applied to the table are logged.
 
 
-## Step 7: Use a notebook to query tables
+## Step 5: Use a notebook to query tables
 
 Fabric notebooks let you write and run code directly against your lakehouse tables using Apache Spark.
 
@@ -211,7 +177,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
         ![Run - Stop Session Notebook button.](img/run-stop-session.png)
 
 
-## Step 8: Use SQL to query tables
+## Step 6: Use SQL to query tables
 
 A SQL analytics endpoint is automatically created when you define tables in a lakehouse, allowing you to query them using standard SQL.
 

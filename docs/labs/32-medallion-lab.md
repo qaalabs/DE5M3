@@ -6,44 +6,11 @@
 
 In this lab, you will restructure the HomeSphere data into three clearly separated layers: **bronze** (raw), **silver** (cleaned and trusted), and **gold** (business-ready output).
 
-## Step 1: Start the Microsoft Fabric Playground
-
-1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
-
-2. Click **Start** to start the lab.
-
-3. Make a note of your allocated **username** and **password**.
-
-!!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
-
-!!! tip "Switch to your Virtual Machine to complete the steps listed below."
-
-## Step 2: Logon to Azure and Microsoft Fabric
-
-1. In your VM open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
-
-2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
-
-3. When prompted, sign in using:
-
-    - **Username** from the QA Platform (used as the email address)
-    - **Password** from the QA Platform (used as a Temporary Access Pass)
-
-    - If prompted to "Stay signed in?", select **No**.
-
-    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
-
-4. In the same private browsing window, **open a new tab**.
-
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
-
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
-
-    !!! abstract ""
-        ![Fabric home page](img/qa-fabric-home.png)
+!!! note "Not logged in to Microsoft Fabric yet?"
+    Follow the [VM login instructions](run-inside-vm.md) first, then come back here.
 
 
-## Step 3: Create a workspace
+## Step 1: Create a workspace
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
@@ -58,7 +25,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
-## Step 4: Create a lakehouse
+## Step 2: Create a lakehouse
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
@@ -72,7 +39,7 @@ In this lab, you will restructure the HomeSphere data into three clearly separat
         ![New lakehouse.](img/new-lakehouse.png)
 
 
-## Step 5: Create the bronze layer
+## Step 3: Create the bronze layer
 
 The bronze layer holds raw data exactly as it arrived - no modifications.
 
@@ -95,7 +62,7 @@ The bronze layer holds raw data exactly as it arrived - no modifications.
         Never write transformed data into the bronze folder. If you need to re-run the pipeline from scratch, bronze is your guaranteed clean starting point.
 
 
-## Step 6: Create the Bronze to Silver notebook
+## Step 4: Create the Bronze to Silver notebook
 
 Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation - but you do not yet answer any business question.
 
@@ -206,7 +173,7 @@ print('Saved: silver_products')
 After running all five cells, on the toolbar use the :material-stop: (*Stop session*) button to stop the Spark session.
 
 
-## Step 7: Explore the silver layer
+## Step 5: Explore the silver layer
 
 Silver is the trust boundary - anyone querying these tables knows the data has been cleaned and validated.
 
@@ -231,7 +198,7 @@ Silver is the trust boundary - anyone querying these tables knows the data has b
     ```
 
 
-## Step 8: Create the Silver to Gold notebook
+## Step 6: Create the Silver to Gold notebook
 
 Gold answers a specific business question. It is always built from silver - never from bronze directly.
 
@@ -283,7 +250,7 @@ print('Saved: gold_revenue')
 !!! success "Refresh the **Tables** pane - `gold_revenue` should now be listed."
 
 
-## Step 9: Answer the business question
+## Step 7: Answer the business question
 
 1. In the left navigation bar, select your **HomeSphere** lakehouse.
 
