@@ -1029,20 +1029,29 @@
 </li>
 </ol>
 <h2 id="step-6-connect-the-four-activities">Step 6: Connect the four activities</h2>
-<div class="codehilite"><pre><span></span><code>- Hover over the **Clean Sales Orders** activity until small coloured arrows appear at its corners. Drag the **green** (on success) arrow to the **Build Output** activity.
-- Hover over the **Clean Sales Orders** activity again. Drag the **red** (on failure) arrow to the **Track Failure** activity.
-- Hover over the **Build Output** activity. Drag the **green** (on success) arrow to the **Track Success** activity.
-
-!!! note "Why Track Failure only connects to Clean Sales Orders"
-    - **Build Output** only ever runs after **Clean Sales Orders** succeeds, so if **Clean Sales Orders** fails, **Build Output** never runs at all.
-    - An activity with more than one incoming dependency needs *all* of them satisfied before it runs - so if **Track Failure** also waited on a failure from **Build Output**, it would never fire in that case, because **Build Output** would never reach a failed state either.
-    - **Track Success** will only run if **Build Output** completes without errors, so a success ping only ever reflects a fully successful pipeline run.
-    - This is what makes a pipeline more reliable than running notebooks by hand.
-
-!!! abstract ""
-    ![Pipeline with two connected notebook activities.](img/25-pipeline-activities-track.png)
-</code></pre></div>
-
+<ol>
+<li>
+<p>Hover over the <strong>Clean Sales Orders</strong> activity until small coloured arrows appear at its corners. Drag the <strong>green</strong> (on success) arrow to the <strong>Build Output</strong> activity.</p>
+</li>
+<li>
+<p>Hover over the <strong>Clean Sales Orders</strong> activity again. Drag the <strong>red</strong> (on failure) arrow to the <strong>Track Failure</strong> activity.</p>
+</li>
+<li>
+<p>Hover over the <strong>Build Output</strong> activity. Drag the <strong>green</strong> (on success) arrow to the <strong>Track Success</strong> activity.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Why Track Failure only connects to Clean Sales Orders</p>
+<ul>
+<li><strong>Build Output</strong> only ever runs after <strong>Clean Sales Orders</strong> succeeds, so if <strong>Clean Sales Orders</strong> fails, <strong>Build Output</strong> never runs at all.</li>
+<li>An activity with more than one incoming dependency needs <em>all</em> of them satisfied before it runs - so if <strong>Track Failure</strong> also waited on a failure from <strong>Build Output</strong>, it would never fire in that case, because <strong>Build Output</strong> would never reach a failed state either.</li>
+<li><strong>Track Success</strong> will only run if <strong>Build Output</strong> completes without errors, so a success ping only ever reflects a fully successful pipeline run.</li>
+<li>This is what makes a pipeline more reliable than running notebooks by hand.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/25-pipeline-activities-track.png" data-desc-position="bottom"><img alt="Pipeline with two connected notebook activities." src="../img/25-pipeline-activities-track.png"></a></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Before running the pipeline - select the Monitor tab and make sure no other notebook is still running.</p>
 </div>
