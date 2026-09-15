@@ -28,16 +28,7 @@ cd M3
 ```
 
 
-## Step 4: Install the `pandas` library
-
-Run the following command in Terminal from the `M3` directory:
-
-```
-python -m pip install -r requirements.txt`
-```
-
-
-## Step 5: Confirm the files are there
+## Step 4: Confirm the files are there
 
 Inside the `M3` folder is a `HomeSphere` folder with all the files you will need for today.
 
@@ -58,5 +49,5 @@ In Terminal (or File Explorer), check that the `HomeSphere` folder on your Deskt
 
 !!! success "You are ready to start"
 
-!!! note "Keep this folder - you will use it again on Day 2."
+!!! note "Keep this folder - you will use it in other days."
 
