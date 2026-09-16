@@ -734,15 +734,21 @@ Look at whether it is well-designed.</p>
 and be ready to share it.</p>
 <hr>
 <h2 id="the-day-2-pipeline-what-exists">The Day 2 pipeline - what exists</h2>
-<div class="highlight"><pre><span></span><code>Files/
-  data/
-    sales_raw.csv
-    products_raw.json
+<p>The diagram from this morning:</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Files
+        Raw[sales_raw.csv]
+        Products[products_raw.json]
+    end
 
-Tables/
-  cleaned_sales      ← output of first notebook
-  sales_trusted      ← output of second notebook
-</code></pre></div>
+    subgraph Tables
+        Clean[cleaned_sales]
+        Trusted[sales_trusted]
+    end
+
+    Raw --&gt; Clean
+    Products --&gt; Trusted
+    Clean --&gt; Trusted</code></pre>
 <p>Two notebooks. One runs after the other. Someone presses Run each time.</p>
 <hr>
 <h2 id="questions-to-work-through">Questions to work through</h2>

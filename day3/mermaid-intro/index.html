@@ -5,7 +5,7 @@
       
       
       
-        <link rel="canonical" href="https://qaalabs.github.io/DE5M3/day3/review/">
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M3/day3/mermaid-intro/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Facilitator Notes - Design Review - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Creating Diagrams with Mermaid - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#facilitator-notes-design-review" class="md-skip">
+        <a href="#creating-diagrams-with-mermaid" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes - Design Review
+              Creating Diagrams with Mermaid
             
           </span>
         </div>
@@ -626,24 +626,84 @@
 
 
 
-<h1 id="facilitator-notes-design-review">Facilitator Notes - Design Review</h1>
-<h2 id="purpose">Purpose</h2>
-<p>Reposition the day before anything else.</p>
-<div class="admonition info">
-<p class="admonition-title">Day 1 proved the logic. Day 2 proved it in the cloud. Today we ask whether that is enough.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Today we ask whether that is enough.</p>
-</div>
+<h1 id="creating-diagrams-with-mermaid">Creating Diagrams with Mermaid</h1>
+<h2 id="1-mermaid-turns-text-into-a-diagram">1. Mermaid turns text into a diagram</h2>
+<p>Show this:</p>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    A --&gt; B
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    A --&gt; B</code></pre><p></p>
 <div class="admonition note">
-<p class="admonition-title">This is not a new build day. It is a day where they judge what they have already built.</p>
+<p class="admonition-title">Mermaid is just text. The arrows describe relationships. No drawing tool needed.</p>
 </div>
-<hr>
-<h2 id="point-back-at-the-diagram">Point back at the diagram</h2>
-<p>MERMAID just put the Day 2 pipeline on screen as a diagram. Bring it back up - do not re-draw or re-describe it from scratch.</p>
-<p>Two notebooks. No structure. No labels. No validation. Someone presses Run.</p>
-<p>Ask: <strong>"If you inherited this workspace on Monday morning, what would you need to know?"</strong></p>
-<p>Let a few people answer. Do not correct or elaborate yet - just surface the discomfort.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<h2 id="2-nodes-need-meaningful-labels">2. Nodes need meaningful labels</h2>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    Raw[sales_raw.csv] --&gt; Clean[cleaned_sales]
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    Raw[sales_raw.csv] --&gt; Clean[cleaned_sales]</code></pre><p></p>
+<div class="highlight"><pre><span></span><code>Raw is the internal name
+[sales_raw.csv] is what appears on the diagram
+</code></pre></div>
+<h2 id="3-one-arrow-per-relationship">3. One arrow per relationship</h2>
+<p>The Day 2 pipeline is two notebooks, one after the other. Chain it:</p>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    Raw[sales_raw.csv] --&gt; Clean[cleaned_sales]
+    Clean --&gt; Trusted[sales_trusted]
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    Raw[sales_raw.csv] --&gt; Clean[cleaned_sales]
+    Clean --&gt; Trusted[sales_trusted]</code></pre><p></p>
+<h2 id="4-a-node-can-have-more-than-one-input">4. A node can have more than one input</h2>
+<p><code>sales_trusted</code> is not just <code>cleaned_sales</code> carried forward - the second notebook joins in the product data too:</p>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    Raw[sales_raw.csv] --&gt; Clean[cleaned_sales]
+    Products[products_raw.json] --&gt; Trusted[sales_trusted]
+    Clean --&gt; Trusted
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    Raw[sales_raw.csv] --&gt; Clean[cleaned_sales]
+    Products[products_raw.json] --&gt; Trusted[sales_trusted]
+    Clean --&gt; Trusted</code></pre><p></p>
+<div class="admonition question">
+<p class="admonition-title">QUESTION: Looking at this diagram, where do raw files and cleaned tables actually live? The diagram does not say - yet.</p>
+</div>
+<h2 id="5-subgraphs-group-nodes-that-belong-together">5. Subgraphs group nodes that belong together</h2>
+<p><code>sales_raw.csv</code> and <code>products_raw.json</code> both live in Files. <code>cleaned_sales</code> and <code>sales_trusted</code> both live in Tables. Group them:</p>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    subgraph Files
+        Raw[sales_raw.csv]
+        Products[products_raw.json]
+    end
+
+    subgraph Tables
+        Clean[cleaned_sales]
+        Trusted[sales_trusted]
+    end
+
+    Raw --&gt; Clean
+    Products --&gt; Trusted
+    Clean --&gt; Trusted
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Files
+        Raw[sales_raw.csv]
+        Products[products_raw.json]
+    end
+
+    subgraph Tables
+        Clean[cleaned_sales]
+        Trusted[sales_trusted]
+    end
+
+    Raw --&gt; Clean
+    Products --&gt; Trusted
+    Clean --&gt; Trusted</code></pre><p></p>
+<p>This is the Day 2 pipeline, as a diagram, in six lines of text - no drawing tool, no click-and-drag.</p>
+<div class="admonition info">
+<p class="admonition-title">Mermaid also renders natively in GitHub <code>.md</code> files and in HedgeDoc - useful later when you are building your own diagrams.</p>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
