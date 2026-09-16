@@ -5,7 +5,7 @@
       
       
       
-        <link rel="canonical" href="https://qaalabs.github.io/DE5M3/labs/11-setup/">
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M3/labs/git-pull/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Lab 1.1 ~ Get the HomeSphere Files - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Update the HomeSphere Files - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-11-get-the-homesphere-files" class="md-skip">
+        <a href="#update-the-homesphere-files" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 1.1 ~ Get the HomeSphere Files
+              Update the HomeSphere Files
             
           </span>
         </div>
@@ -498,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../31-setup/" class="md-nav__link">
+      <a href="../31-setup.md" class="md-nav__link">
         
   
   
@@ -626,39 +626,39 @@
 
 
 
-<h1 id="lab-11-get-the-homesphere-files">Lab 1.1 ~ Get the HomeSphere Files</h1>
+<h1 id="update-the-homesphere-files">Update the HomeSphere Files</h1>
 <div class="admonition info">
-<p class="admonition-title">Before you start working with data, you need to download the HomeSphere project files to your machine.</p>
+<p class="admonition-title">Your Virtual Machine has kept the files from a previous day. This step makes sure they are up to date before you start.</p>
 </div>
 <h2 id="step-1-open-terminal">Step 1: Open Terminal</h2>
 <p>Open <strong>Terminal</strong> on your Virtual Machine. It will open at: <code>C:\Users\Admin</code></p>
-<h2 id="step-2-navigate-to-your-desktop">Step 2: Navigate to your Desktop</h2>
-<div class="highlight"><pre><span></span><code>cd Desktop
+<h2 id="step-2-navigate-to-the-m3-folder">Step 2: Navigate to the M3 folder</h2>
+<div class="highlight"><pre><span></span><code>cd Desktop/M3
 </code></pre></div>
-<h2 id="step-3-clone-the-repository">Step 3: Clone the repository</h2>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/QAADE5/M3.git
+<h2 id="step-3-pull-the-latest-files">Step 3: Pull the latest files</h2>
+<div class="highlight"><pre><span></span><code>git pull
 </code></pre></div>
-<p>This will create the <code>M3</code> folder on your Desktop.</p>
-<div class="highlight"><pre><span></span><code>cd M3
-</code></pre></div>
+<p>This updates the <code>HomeSphere</code> folder with anything added or changed since your last clone -
+you do not need to download anything again.</p>
 <h2 id="step-4-confirm-the-files-are-there">Step 4: Confirm the files are there</h2>
-<p>Inside the <code>M3</code> folder is a <code>HomeSphere</code> folder with all the files you will need for today.</p>
 <div class="highlight"><pre><span></span><code>cd HomeSphere
+dir
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>dir
-</code></pre></div>
-<p>In Terminal (or File Explorer), check that the <code>HomeSphere</code> folder on your Desktop contains:</p>
+<p>Check that the <code>HomeSphere</code> folder still contains:</p>
 <ul>
 <li><code>cloud/</code> - notebooks for Day 2</li>
 <li><code>data/</code> - the raw source files</li>
-<li><code>local/</code> - the notebooks for today</li>
-<li><code>solution/</code> - solution notebooks for today</li>
+<li><code>local/</code> - the notebooks from Day 1</li>
 </ul>
 <div class="admonition success">
 <p class="admonition-title">You are ready to start</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Keep this folder - you will use it in other days.</p>
+<div class="admonition tip">
+<p class="admonition-title">If <code>git pull</code> shows an error</p>
+<p>Delete the <code>M3</code> folder and clone it again, the same way you did on Day 1:</p>
+<div class="highlight"><pre><span></span><code>cd Desktop
+git clone https://github.com/QAADE5/M3.git
+</code></pre></div>
 </div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">

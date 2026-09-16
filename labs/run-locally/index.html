@@ -5,13 +5,9 @@
       
       
       
-        <link rel="canonical" href="https://qaalabs.github.io/DE5M3/labs/31-setup/">
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M3/labs/run-locally/">
       
       
-        <link rel="prev" href="../../day3/medallion-mapping/">
-      
-      
-        <link rel="next" href="../32-medallion-lab/">
       
       
         
@@ -22,7 +18,7 @@
     
     
       
-        <title>Lab 3.1 - Setup Fabric - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>MS Fabric Playground ~ Local Login Instructions - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -73,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-31-get-the-homesphere-files" class="md-skip">
+        <a href="#ms-fabric-playground-local-login-instructions" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 3.1 - Setup Fabric
+              MS Fabric Playground ~ Local Login Instructions
             
           </span>
         </div>
@@ -368,20 +364,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -402,7 +396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -501,37 +495,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lab 3.1 - Setup Fabric
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../31-setup.md" class="md-nav__link">
         
   
   
@@ -547,70 +514,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#step-1-open-terminal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Open Terminal
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-navigate-to-your-desktop" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Navigate to your Desktop
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-clone-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Clone the repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-confirm-the-files-are-there" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Confirm the files are there
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -723,29 +626,70 @@
 
 
 
-<h1 id="lab-31-get-the-homesphere-files">Lab 3.1 ~ Get the HomeSphere Files</h1>
+<h1 id="ms-fabric-playground-local-login-instructions">MS Fabric Playground ~ Local Login Instructions</h1>
+<pre class="mermaid"><code>flowchart TD
+    A["QA Platform:&lt;br/&gt;Wait for status Ready"]
+    B["Right-click Open,&lt;br/&gt;▶ Open in private/incognito window"]
+    C["Logon to Microsoft Azure&lt;br/&gt;portal.azure.com"]
+    D["New tab:&lt;br/&gt;Logon to Microsoft Fabric&lt;br/&gt;app.fabric.microsoft.com"]
+
+    A --&gt; B --&gt; C --&gt; D</code></pre>
+<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
+<p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
 <div class="admonition note">
-<p class="admonition-title">This only applies to those using a Learn On Demand (LOD) virtual machine</p>
+<p class="admonition-title">Note</p>
+<p>The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.</p>
 </div>
-<p>Before you start working in Fabric, you may need to download the HomeSphere project files to your machine.</p>
-<h2 id="step-1-open-terminal">Step 1: Open Terminal</h2>
-<p>Open <strong>Terminal</strong> on your Virtual Machine. It will open at: <code>C:\Users\Admin</code></p>
-<h2 id="step-2-navigate-to-your-desktop">Step 2: Navigate to your Desktop</h2>
-<div class="highlight"><pre><span></span><code>cd Desktop
-</code></pre></div>
-<h2 id="step-3-clone-the-repository">Step 3: Clone the repository</h2>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/QAADE5/M3.git
-</code></pre></div>
-<p>This will create a <code>M3</code> folder on your Desktop.
-Inside that folder is a <code>HomeSphere</code> folder with all the files you will need for today.</p>
-<h2 id="step-4-confirm-the-files-are-there">Step 4: Confirm the files are there</h2>
-<p>In Terminal (or File Explorer), check that the <code>HomeSphere</code> folder on your Desktop contains:</p>
+<ol>
+<li>
+<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
+</li>
+<li>
+<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
+</li>
+</ol>
+<h2 id="step-2-logon-to-microsoft-azure">Step 2: Logon to Microsoft Azure</h2>
+<ol>
+<li>
+<p>When prompted, sign in using:</p>
 <ul>
-<li><code>data/</code> - the raw source files</li>
+<li><strong>Username</strong> from the QA Platform (used as the email address)</li>
+<li>
+<p><strong>Password</strong> from the QA Platform (used as a Temporary Access Pass)</p>
+</li>
+<li>
+<p>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</p>
+</li>
 </ul>
 <div class="admonition success">
-<p class="admonition-title">You are ready to start. The lab will use the files in the <code>data/</code> folder.</p>
-</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-3-logon-to-microsoft-fabric">Step 3: Logon to Microsoft Fabric</h2>
+<ol>
+<li>
+<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
+</li>
+<li>
+<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a></p>
+</li>
+<li>
+<p>If prompted, <strong>re-enter your email address</strong> to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.</p>
+</li>
+<li>
+<p>After confirmation, you should be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../img/qa-fabric-home.png"></a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">You do not have to signup to a Microsoft Fabric Trial!</p>
+<ul>
+<li>If asked to do so please let your trainer know.</li>
+</ul>
+</div>
+</li>
+</ol><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
