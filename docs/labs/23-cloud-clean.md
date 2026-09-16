@@ -9,7 +9,7 @@
 
 1. In the left navigation bar, select your **HomeSphere** lakehouse.
 
-2. On the **Home** tab, select **Open notebook** > **Existing notebook**, and choose `cloud_clean`
+2. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **Existing notebook**, and choose `cloud_clean`
 
 3. In the **Notebook Explorer** on the left, select **Data Items** and confirm that **HomeSphere** appears under **OneLake**.
 

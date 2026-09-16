@@ -15,6 +15,25 @@ Ask groups to share their mapping. The correct answers:
 | `line_value` calculation | Gold |
 | Revenue groupby | Gold (or a view on top of gold) |
 
+The target diagram, filled in - put this next to whatever groups sketched at MED-MAP:
+
+```mermaid
+flowchart TD
+    subgraph Bronze
+    end
+    subgraph Silver
+        SilverSales[silver_sales]
+        SilverProducts[silver_products]
+    end
+    subgraph Gold
+        GoldRevenue[gold_revenue]
+    end
+    sales_raw.csv --> Bronze
+    products_raw.json --> Bronze
+    Bronze --> Silver
+    Silver --> Gold
+```
+
 ---
 
 ## What is missing - key teaching point

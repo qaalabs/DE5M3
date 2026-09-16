@@ -1,9 +1,20 @@
-## 🧪 <mark>Lab 3.1 ~ Setup Fabric</mark>
+## Lab 3.1 ~ HomeSphere Medallion Architecture
 
-<span style="background-color: orange;">Give learners the link:</span> https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/ 
+- Keep raw data untouched
+- Make silver Sales explicit
+- Make silver Product explicit
+- Make gold output explicit
+- Add lightweight validation
 
 ### Activities
 
-- Start the QA Platform Playground
-- Run the instructions to upload the files
+1. Start the Microsoft Fabric Playground
+2. Logon to Azure and Microsoft Fabric
+3. Create a workspace
+4. Create a lakehouse
+6. Create the Bronze to Silver notebook
+7. Explore the silver layer
+8. Create the Silver to Gold notebook
+9. Answer the business question
+10. Clean up resources
 

@@ -66,6 +66,29 @@ GOLD Layer (Business Ready)
 
 ---
 
+## Diagram
+
+Sketch your Bronze -> Silver -> Gold design as a mermaid diagram:
+
+```mermaid
+flowchart TD
+    subgraph Bronze
+        Process2[What happens here?]
+    end
+    subgraph Silver
+        Process3[What happens here?]
+    end
+    subgraph Gold
+        Process4[What happens here?]
+    end
+    File1 --> Bronze
+    File2 --> Bronze
+    Bronze --> Silver
+    Silver --> Gold
+```
+
+---
+
 ## Report back
 
 - Describe your scenario

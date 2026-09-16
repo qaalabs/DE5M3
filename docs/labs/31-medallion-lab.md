@@ -1,4 +1,4 @@
-# Lab 3.2 ~ HomeSphere Medallion Architecture
+# Lab 3.1 ~ HomeSphere Medallion Architecture
 
 !!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
 
@@ -66,7 +66,7 @@ The bronze layer holds raw data exactly as it arrived - no modifications.
 
 Silver is where raw data becomes trusted. You apply cleaning, validation, and standardisation - but you do not yet answer any business question.
 
-1. On the **Home** tab of the lakehouse, select **Open notebook** > **New notebook**.
+1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
 2. Select the notebook name at the top of the page and rename it to `HomeSphere - Bronze to Silver`.
 
@@ -220,7 +220,7 @@ Gold answers a specific business question. It is always built from silver - neve
 
 1. In the left navigation bar, return to your **HomeSphere** lakehouse.
 
-2. On the **Home** tab, select **Open notebook** > **New notebook**.
+2. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
 3. Select the notebook name at the top of the page and rename it to `HomeSphere - Silver to Gold`.
 

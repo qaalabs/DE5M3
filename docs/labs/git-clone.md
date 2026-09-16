@@ -1,4 +1,4 @@
-# Lab 1.1 ~ Get the HomeSphere Files
+# Get the HomeSphere Files
 
 !!! info "Before you start working with data, you need to download the HomeSphere project files to your machine."
 

@@ -52,18 +52,23 @@ After mapping what exists, discuss what the medallion structure reveals is absen
 
 ## Sketch the target
 
-Draw a simple diagram of what the HomeSphere pipeline should look like after Day 3:
+Draw what the HomeSphere pipeline should look like after Day 3, as a mermaid diagram:
 
-```
-Files/
-  bronze/
-    sales_raw.csv
-    products_raw.json
-
-Tables/
-  silver_???
-  silver_???
-  gold_???
+```mermaid
+flowchart TD
+    subgraph Bronze
+    end
+    subgraph Silver
+        SilverA[silver_???]
+        SilverB[silver_???]
+    end
+    subgraph Gold
+        GoldA[gold_???]
+    end
+    sales_raw.csv --> Bronze
+    products_raw.json --> Bronze
+    Bronze --> Silver
+    Silver --> Gold
 ```
 
 Fill in the table names. These will be what you build in the afternoon.

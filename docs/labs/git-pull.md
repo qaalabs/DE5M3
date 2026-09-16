@@ -1,6 +1,6 @@
-# Lab 2.0 ~ Update the HomeSphere Files
+# Update the HomeSphere Files
 
-!!! info "Your Virtual Machine has kept the files from Day 1. This step makes sure they are up to date before you start Day 2."
+!!! info "Your Virtual Machine has kept the files from a previous day. This step makes sure they are up to date before you start."
 
 
 ## Step 1: Open Terminal
@@ -21,7 +21,7 @@ cd Desktop/M3
 git pull
 ```
 
-This updates the `HomeSphere` folder with anything added or changed since Day 1 -
+This updates the `HomeSphere` folder with anything added or changed since your last clone -
 you do not need to download anything again.
 
 
@@ -38,7 +38,7 @@ Check that the `HomeSphere` folder still contains:
 - `data/` - the raw source files
 - `local/` - the notebooks from Day 1
 
-!!! success "You are ready to start Day 2"
+!!! success "You are ready to start"
 
 !!! tip "If `git pull` shows an error"
     Delete the `M3` folder and clone it again, the same way you did on Day 1:
