@@ -14,15 +14,23 @@ and be ready to share it.
 
 ## The Day 2 pipeline - what exists
 
-```
-Files/
-  data/
-    sales_raw.csv
-    products_raw.json
+The diagram from this morning:
 
-Tables/
-  cleaned_sales      ← output of first notebook
-  sales_trusted      ← output of second notebook
+```mermaid
+flowchart LR
+    subgraph Files
+        Raw[sales_raw.csv]
+        Products[products_raw.json]
+    end
+
+    subgraph Tables
+        Clean[cleaned_sales]
+        Trusted[sales_trusted]
+    end
+
+    Raw --> Clean
+    Products --> Trusted
+    Clean --> Trusted
 ```
 
 Two notebooks. One runs after the other. Someone presses Run each time.

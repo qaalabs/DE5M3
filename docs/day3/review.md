@@ -12,20 +12,9 @@ Reposition the day before anything else.
 
 ---
 
-## Show the Day 2 pipeline
+## Point back at the diagram
 
-Put the structure on screen - either your own workspace or a diagram:
-
-```
-Files/
-  data/
-    sales_raw.csv
-    products_raw.json
-
-Tables/
-  cleaned_sales
-  sales_trusted
-```
+MERMAID just put the Day 2 pipeline on screen as a diagram. Bring it back up - do not re-draw or re-describe it from scratch.
 
 Two notebooks. No structure. No labels. No validation. Someone presses Run.
 

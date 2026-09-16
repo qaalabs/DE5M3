@@ -6,3 +6,10 @@
 - We surface the weaknesses in the current solution
 - Introduce medallion architecture as one practical response
 - And refactor the real pipeline into bronze, silver, and gold layers.
+
+<hr>
+
+<span style="background-color: orange;">Get learners to start their VM</span>
+
+Give LOD learners the link to download the files: 
+

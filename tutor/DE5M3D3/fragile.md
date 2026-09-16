@@ -9,3 +9,5 @@
 - What is hardest to debug?
 - What is hardest for another engineer to reuse?
 - K13 lens (security, scalability, compliance, cost) - use "On cost and risk" to surface it explicitly, not just structure/reliability
+
+This is where DAY3-REVIEW's question actually gets answered. The list this group builds is what MEDALLION-M3 responds to directly - so push for specific, named debts, not vague discomfort.
