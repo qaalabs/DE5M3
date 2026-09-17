@@ -10,13 +10,29 @@ A production pipeline runs as a script. No cells. No Run button. You execute it 
 
 ---
 
+## Getting started
+
+Open a terminal and navigate to the `day4` folder:
+
+```
+cd Desktop\M3\day4
+```
+
+Open VS Code in that folder:
+
+```
+code .
+```
+
+---
+
 ## Part 1 - Open and run the script
 
-Open VS Code and navigate to the `day4/` folder. Open `pipeline.py`.
+Open `pipeline.py`.
 
 Read through it. The structure is the same as the notebooks you have been working in all week: load, validate, clean, output. The difference is that it runs top to bottom in one go.
 
-Open the terminal in VS Code (`Ctrl+` `` ` ``), make sure you are in the `day4/` folder, and run it:
+Open the terminal in VS Code (`Ctrl+` `` ` ``) and run it:
 
 ```
 python pipeline.py
