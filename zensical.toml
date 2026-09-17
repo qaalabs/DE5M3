@@ -47,7 +47,7 @@ nav = [
     {"Run the Pipeline Locally" = "day4/pipeline-local.md"},
     {"Create a Handover Artefact" = "day4/mvd-build.md"},
     {"Deploy a New Pipeline" = "day4/deploy-guide.md"},
-    {"CLOUD-COMPARE" = "day4/cloud-compare.md"},
+    {"Compare Cloud ETL Platforms" = "day4/cloud-compare.md"},
     {"Prepare Your Explanation" = "day4/pitch-prep.md"},
   ]},
   {"Resources" = "resources.md"},

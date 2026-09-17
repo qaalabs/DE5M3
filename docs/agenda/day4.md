@@ -21,9 +21,9 @@
 ## Session 3
 
 - [Deploy a New Pipeline](../day4/deploy-guide.md)
-- **Instructions**: CLOUD-SETUP
-- **Breakout**: [CLOUD-COMPARE](../day4/cloud-compare.md)
-- **Report-Back**: CLOUD-SHARE
+- **Instructions**: Compare Cloud Platforms
+- **Breakout**: [Compare Cloud ETL Platforms](../day4/cloud-compare.md)
+- **Report-Back**: Pitch Your Platform
 - **Slides**: Technical vs Stakeholder View
 
 ## ☕ Afternoon Break
