@@ -8,6 +8,10 @@
         <link rel="canonical" href="https://qaalabs.github.io/DE5M3/day4/mvd-build/">
       
       
+        <link rel="prev" href="../pipeline-local/">
+      
+      
+        <link rel="next" href="../deploy-guide/">
       
       
         
@@ -332,14 +336,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day3/" class="md-nav__link">
+      <a href="../../agenda/day4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 3
+    Day 4
   
 
     
@@ -364,18 +368,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -385,7 +391,7 @@
   <span class="md-ellipsis">
     
   
-    Day 3 - Robust &amp; Well-Architectured
+    Day 4 - Supportable &amp; Explainable
   
 
     
@@ -396,12 +402,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 3 - Robust &amp; Well-Architectured
+    Day 4 - Supportable &amp; Explainable
   
 
           </label>
@@ -414,14 +420,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/swagger-lab/" class="md-nav__link">
+      <a href="../silent-fail/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Swagger ~ Read from a Live API
+    Silent Failures
   
 
     
@@ -442,14 +448,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/fragile/" class="md-nav__link">
+      <a href="../checks-build/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Where are the Weaknesses?
+    Add Validation Checks
   
 
     
@@ -470,14 +476,194 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day3/medallion-mapping/" class="md-nav__link">
+      <a href="../pipeline-local/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Map the Pipeline
+    Run the Pipeline Locally
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a Handover Artefact
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a Handover Artefact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#the-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The scenario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to include
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-your-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format - your choice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-are-not-trying-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you are not trying to do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#produce-your-artefact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produce your artefact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-finish-check-your-own-artefact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you finish - check your own artefact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-you-finish-early" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If you finish early
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy a New Pipeline
   
 
     
@@ -498,14 +684,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/31-setup.md" class="md-nav__link">
+      <a href="../pitch-prep/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 3.1 - Setup Fabric
+    Prepare Your Explanation
   
 
     
@@ -526,42 +712,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/32-medallion-lab/" class="md-nav__link">
+      <a href="../change-respond/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 3.2 - Medallion Architecture
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/medallion-scenarios/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Medallion Scenarios
+    Evaluate New Change Request
   
 
     
