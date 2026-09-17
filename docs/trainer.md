@@ -120,16 +120,16 @@
 ### Session 3
 
 - `13:20` [Deploy a New Pipeline](day4/deploy-guide.md) (10 mins)
-- `13:30` **Slides**: [Technical vs Stakeholder View](day4/stakeholder.md) (10 mins)
-- `13:40` **Breakout**: [Prepare Your Explanation](day4/pitch-prep.md) (20 mins)
-- `14:00` **Report-Back**: Share Your Explanation (20 mins)
-- `14:20` **Discussion**: [What Made the Difference?](day4/pitch-debrief.md) (10 mins)
+- `13:30` **Instructions**: CLOUD-SETUP (10 mins)
+- `13:40` **Breakout**: [CLOUD-COMPARE](day4/cloud-compare.md) (20 mins)
+- `14:00` **Report-Back**: CLOUD-SHARE (20 mins)
+- `14:20` **Slides**: [Technical vs Stakeholder View](day4/stakeholder.md) (10 mins)
 
 ### Session 4
 
-- `14:50` New Requirements Arrive (10 mins)
-- `15:00` **Breakout**: [Evaluate New Change Request](day4/change-respond.md) (20 mins)
-- `15:20` **Report-Back**: [Evaluate New Change Request](day4/change-debrief.md) (20 mins)
+- `14:50` **Breakout**: [Prepare Your Explanation](day4/pitch-prep.md) (20 mins)
+- `15:10` **Report-Back**: Share Your Explanation (20 mins)
+- `15:30` **Discussion**: [What Made the Difference?](day4/pitch-debrief.md) (10 mins)
 - `15:40` **Slides**: 🎁 Wrap (10 mins)
 
 ---

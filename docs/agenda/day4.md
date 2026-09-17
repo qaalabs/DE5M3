@@ -21,18 +21,18 @@
 ## Session 3
 
 - [Deploy a New Pipeline](../day4/deploy-guide.md)
+- **Instructions**: CLOUD-SETUP
+- **Breakout**: [CLOUD-COMPARE](../day4/cloud-compare.md)
+- **Report-Back**: CLOUD-SHARE
 - **Slides**: Technical vs Stakeholder View
-- **Breakout**: [Prepare Your Explanation](../day4/pitch-prep.md)
-- **Report-Back**: Share Your Explanation
-- **Discussion**: What Made the Difference?
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- New Requirements Arrive
-- **Breakout**: [Evaluate New Change Request](../day4/change-respond.md)
-- **Report-Back**: Evaluate New Change Request
+- **Breakout**: [Prepare Your Explanation](../day4/pitch-prep.md)
+- **Report-Back**: Share Your Explanation
+- **Discussion**: What Made the Difference?
 - **Slides**: 🎁 Wrap
 - **Activity**: 💯 Evaluation
 
