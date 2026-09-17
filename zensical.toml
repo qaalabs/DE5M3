@@ -12,7 +12,7 @@ nav = [
   ]},
   {"Day 1 - ETL Locally" = [
     {"🖥️ VM Setup" = "https://qaalabs.github.io/vmsetup/"},
-    {"Git Clone the Data Files" = "labs/11-setup.md"},
+    {"Git Clone the Data Files" = "labs/git-clone.md"},
     {"Introducing HomeSphere" = "day1/homesphere.md"},
     {"Part 1 ~ Inspect Sales Data" = "day1/inspect-sales.md"},
     {"Part 2 ~ Inspect Product Data" = "day1/inspect-prod.md"},
@@ -33,11 +33,12 @@ nav = [
     {"Lab 2.8 - Pipeline Failure" = "labs/28-pipeline-failure.md"},
   ]},
   {"Day 3 - Robust & Well-Architectured" = [
+    {"MERMAID" = "day3/mermaid-intro.md"},
     {"Swagger ~ Read from a Live API" = "day3/swagger-lab.md"},
     {"Where are the Weaknesses?" = "day3/fragile.md"},
     {"Map the Pipeline" = "day3/medallion-mapping.md"},
-    {"Lab 3.1 - Setup Fabric" = "labs/31-setup.md"},
-    {"Lab 3.2 - Medallion Architecture" = "labs/32-medallion-lab.md"},
+    {"🖥️ Start MS Fabric Playground" = "day3/pipeline-diagram.md"},
+    {"Lab 3.1 - Medallion Architecture" = "labs/31-medallion-lab.md"},
     {"Medallion Scenarios" = "day3/medallion-scenarios.md"},
   ]},
   {"Day 4 - Supportable & Explainable" = [

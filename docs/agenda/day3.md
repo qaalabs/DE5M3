@@ -3,6 +3,7 @@
 ## Session 1
 
 - **Slides**: 🌅 Welcome to Day 3 of DE5 Module 3
+- **Demo**: [MERMAID](../day3/mermaid-intro.md)
 - **Slides**: Design Review
 - **Slides**: Add Metadata to a CSV File
 - **Slides**: Swagger ~ Read from a Live API
@@ -22,16 +23,16 @@
 
 ## Session 3
 
-- **Activity**: [Lab 3.1 - Setup Fabric](../labs/31-setup.md)
-- **Practice**: [Lab 3.2 - Medallion Architecture](../labs/32-medallion-lab.md)
+- [🖥️ Start MS Fabric Playground](../day3/pipeline-diagram.md)
+- **Practice**: [Lab 3.1 - Medallion Architecture](../labs/31-medallion-lab.md)
 - **Discussion**: What Is Actually Better?
 
 ## ☕ Afternoon Break
 
 ## Session 4
 
-- **Breakout**: Medallion Scenarios
-- **Investigation**: [Medallion Scenarios](../day3/medallion-scenarios.md)
+- **Instructions**: Medallion Scenarios
+- **Breakout**: [Medallion Scenarios](../day3/medallion-scenarios.md)
 - **Report-Back**: Medallion Scenarios
 - **Discussion**: Bridge to Day 4
 

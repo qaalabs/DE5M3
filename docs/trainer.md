@@ -5,7 +5,7 @@
 ### Session 1
 
 - `09:30` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 3 (10 mins)
-- `10:00` **Activity**: [Git Clone the Data Files](labs/11-setup.md) (10 mins)
+- `10:00` **Activity**: [Git Clone the Data Files](labs/git-clone.md) (10 mins)
 - `10:20` **Practice**: Explore Python-101 Notebook (20 mins)
 
 ### Session 2
@@ -72,10 +72,11 @@
 ### Session 1
 
 - `09:30` **Slides**: 🌅 Welcome to Day 3 of DE5 Module 3 (10 mins)
-- `09:40` **Slides**: [Design Review](day3/review.md) (10 mins)
-- `09:50` **Slides**: [Add Metadata to a CSV File](day3/csv-metadata.md) (10 mins)
-- `10:00` **Slides**: [Swagger ~ Read from a Live API](day3/products-api.md) (10 mins)
-- `10:10` **Practice**: [Swagger ~ Read from a Live API](day3/swagger-lab.md) (30 mins)
+- `09:40` **Demo**: [MERMAID](day3/mermaid-intro.md) (10 mins)
+- `09:50` **Slides**: [Design Review](day3/review.md) (10 mins)
+- `10:00` **Slides**: [Add Metadata to a CSV File](day3/csv-metadata.md) (10 mins)
+- `10:10` **Slides**: [Swagger ~ Read from a Live API](day3/products-api.md) (10 mins)
+- `10:20` **Practice**: [Swagger ~ Read from a Live API](day3/swagger-lab.md) (20 mins)
 
 ### Session 2
 
@@ -87,14 +88,14 @@
 
 ### Session 3
 
-- `13:20` **Activity**: [Lab 3.1 - Setup Fabric](labs/31-setup.md) (10 mins)
-- `13:30` **Practice**: [Lab 3.2 - Medallion Architecture](labs/32-medallion-lab.md) (40 mins)
+- `13:20` [🖥️ Start MS Fabric Playground](day3/pipeline-diagram.md) (10 mins)
+- `13:30` **Practice**: [Lab 3.1 - Medallion Architecture](labs/31-medallion-lab.md) (40 mins)
 - `14:10` **Discussion**: [What Is Actually Better?](day3/debrief.md) (20 mins)
 
 ### Session 4
 
-- `14:50` **Breakout**: Medallion Scenarios (10 mins)
-- `15:00` **Investigation**: [Medallion Scenarios](day3/medallion-scenarios.md) (20 mins)
+- `14:50` **Instructions**: Medallion Scenarios (10 mins)
+- `15:00` **Breakout**: [Medallion Scenarios](day3/medallion-scenarios.md) (20 mins)
 - `15:20` **Report-Back**: Medallion Scenarios (20 mins)
 - `15:40` **Discussion**: [Bridge to Day 4](day3/bridge.md) (10 mins)
 
