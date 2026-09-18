@@ -1,6 +1,8 @@
 # Cloud ETL Platforms: Compare and Contrast
 
-!!! abstract "K13: The implications of financial, strategic and compliance regarding to security, scalability, compliance and cost of local, remote or distributed solutions."
+!!! success "Compare and contrast at least three cloud computing platforms"
+
+!!! abstract "K14: The uses of on-demand Cloud computing platform(s) in a public or private environment such as Amazon AWS, Google Cloud, Hadoop, IBM Cloud, Salesforce and Microsoft Azure."
 
 !!! abstract "K20: Types and uses of data engineering tools and applications in own organisation."
 

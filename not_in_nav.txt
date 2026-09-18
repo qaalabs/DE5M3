@@ -4,4 +4,5 @@ day3/scenario-brief-c.md
 day3/scenario-brief-d.md
 day4/pipeline-solution.md
 day4/mvd-example.md
-labs/20-setup.md
+labs/run-inside-vm.md
+labs/run-locally.md

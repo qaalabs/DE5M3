@@ -2,6 +2,8 @@
 
 !!! abstract "B2: Works collaboratively with stakeholders and colleagues, developing strong working relationships to achieve common goals. Support an inclusive culture and treat technical and non-technical colleagues and stakeholders with respect."
 
+!!! abstract "S23: Present, communicate, and disseminate messages about the data product, tailoring the message and medium to the needs of the audience."
+
 !!! question "Can you explain the value of your pipeline in language that a non-engineer could understand?"
 
 ## The scenario
@@ -14,19 +16,26 @@
 
 ## Your task
 
-Prepare a short explanation - two to three minutes - that covers:
+Working as a group, prepare a short explanation - two to three minutes - that covers:
 
 1. **What `gold_revenue` is**
-   What does it contain? What question does it answer?
+
+    - What does it contain? What question does it answer?
 
 2. **Why it can be trusted**
-   What gives you confidence in the numbers? You should explain this without using the words bronze, silver, gold, medallion, or assertion.
+
+    - What gives you confidence in the numbers? 
+    - You should explain this without using the words bronze, silver, gold, medallion, or assertion.
 
 3. **What caveats remain**
-   What does it not tell her? What could still be wrong? What assumptions are built in?
+
+    - What does it not tell her? 
+    - What could still be wrong? 
+    - What assumptions are built in?
 
 4. **What she can do with it**
-   A concrete next action or decision the data supports.
+
+    - A concrete next action or decision the data supports.
 
 ---
 
@@ -62,4 +71,4 @@ You do not have to follow this exactly - but your explanation should cover the s
 
 ## Prepare to share
 
-You will be asked to share your explanation with the room. Keep it to two to three minutes. If someone covers similar ground before you, be ready to say what you would add or change.
+Agree as a group who will present. One person shares your explanation with the room, in two to three minutes. If another group covers similar ground before you, be ready to say what you would add or change.
