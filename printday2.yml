@@ -1,0 +1,70 @@
+# Site name
+site_name: Module 3 - Data Processing, Transformation & ETL
+dev_addr: '0.0.0.0:8000'
+
+# Navigation menu
+nav:
+  - "Day 2 - ETL in the Cloud":
+    - "Lab 2.1 - Explore Fabric Environment": labs/21-lakehouse.md
+    - "Lab 2.2 - Landing Raw Data": labs/22-land-data.md
+    - "Lab 2.3 - Clean the Sales Data": labs/23-cloud-clean.md
+    - "Choosing a Data Architecture": day2/architecture-investigation.md
+    - "Lab 2.4 - Build the Trusted Output": labs/24-cloud-output.md
+    - "Lab 2.5 - Create ETL Pipeline": labs/25-etl-pipeline.md
+    - "Lab 2.6 - Rerun Pipeline": labs/26-rerun-pipeline.md
+    - "Lab 2.7 - Schema Drift": labs/27-schema-drift.md
+    - "Lab 2.8 - Pipeline Failure": labs/28-pipeline-failure.md
+
+# Theme
+theme:
+    name: material
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - def_list
+  - footnotes
+  - meta
+  - tables
+  - toc:
+      permalink: false
+      toc_depth: 2
+
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - print-site:
+      enumerate_headings: false
+      add_table_of_contents: false
+

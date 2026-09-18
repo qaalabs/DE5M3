@@ -1,0 +1,68 @@
+# Site name
+site_name: Module 3 - Data Processing, Transformation & ETL
+dev_addr: '0.0.0.0:8000'
+
+# Navigation menu
+nav:
+  - "Day 4 - Supportable & Explainable":
+    - "Silent Failures": day4/silent-fail.md
+    - "Add Validation Checks": day4/checks-build.md
+    - "Run the Pipeline Locally": day4/pipeline-local.md
+    - "Create a Handover Artefact": day4/mvd-build.md
+    - "Deploy a New Pipeline": day4/deploy-guide.md
+    - "Compare Cloud ETL Platforms": day4/cloud-compare.md
+    - "Prepare Your Explanation": day4/pitch-prep.md
+
+# Theme
+theme:
+    name: material
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - def_list
+  - footnotes
+  - meta
+  - tables
+  - toc:
+      permalink: false
+      toc_depth: 2
+
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - print-site:
+      enumerate_headings: false
+      add_table_of_contents: false
+
