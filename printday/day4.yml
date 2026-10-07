@@ -5,14 +5,14 @@ dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
 nav:
-  - "Day 4 - Supportable & Explainable":
-    - "Silent Failures": day4/silent-fail.md
-    - "Add Validation Checks": day4/checks-build.md
-    - "Run the Pipeline Locally": day4/pipeline-local.md
-    - "Create a Handover Artefact": day4/mvd-build.md
-    - "Deploy a New Pipeline": day4/deploy-guide.md
-    - "Compare Cloud ETL Platforms": day4/cloud-compare.md
-    - "Prepare Your Explanation": day4/pitch-prep.md
+  - "Day 4 ~ Supportable & Explainable":
+    - "Silent failures": day4/silent-fail.md
+    - "Add validation checks": day4/checks-build.md
+    - "Run the pipeline locally": day4/pipeline-local.md
+    - "Create a handover artefact": day4/mvd-build.md
+    - "Deploy a new pipeline": day4/deploy-guide.md
+    - "👥 Compare cloud ETL platforms": day4/cloud-compare.md
+    - "👥 Prepare your explanation": day4/pitch-prep.md
 
 # Theme
 theme:

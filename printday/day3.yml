@@ -5,14 +5,14 @@ dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
 nav:
-  - "Day 3 - Robust & Well-Architectured":
+  - "Day 3 ~ Robust & Well-Architectured":
     - "MERMAID": day3/mermaid-intro.md
-    - "Swagger ~ Read from a Live API": day3/swagger-lab.md
-    - "Where are the Weaknesses?": day3/fragile.md
-    - "Map the Pipeline": day3/medallion-mapping.md
-    - "🖥️ Start MS Fabric Playground": day3/pipeline-diagram.md
-    - "Lab 3.1 - Medallion Architecture": labs/31-medallion-lab.md
-    - "Medallion Scenarios": day3/medallion-scenarios.md
+    - "Swagger - Read from a live API": day3/swagger-lab.md
+    - "👥 Where are the weaknesses?": day3/fragile.md
+    - "Map the pipeline": day3/medallion-mapping.md
+    - "🖥️ Start MS Fabric playground": day3/pipeline-diagram.md
+    - "Lab 3.1 - Medallion architecture": labs/31-medallion-lab.md
+    - "👥 Medallion scenarios": day3/medallion-scenarios.md
 
 # Theme
 theme:

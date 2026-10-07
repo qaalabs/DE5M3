@@ -1,40 +1,40 @@
-# Day 2 - ETL in the Cloud
+# Day 2 ~ ETL in the Cloud
 
 ## Session 1
 
-- **Slides**: 🌅 Welcome to Day 2 of DE5 Module 3
-- **Setup**: 🖥️ Start MS Fabric Playground
-- **Slides**: What Is Fabric?
-- **Practice**: [Lab 2.1 - Explore Fabric Environment](../labs/21-lakehouse.md)
-- **Discussion**: What Stays the Same?
+- **Slides**: 🌅 Welcome to day 2 of module 3
+- **Setup**: 🖥️ Start MS Fabric playground
+- **Slides**: What is Fabric?
+- **Practice**: [Lab 2.1 - Explore Fabric environment](../labs/21-lakehouse.md)
+- **Discussion**: What stays the same?
 
-## ☕ Morning Break
+## ☕ Morning break
 
 ## Session 2
 
-- **Practice**: [Lab 2.2 - Landing Raw Data](../labs/22-land-data.md)
-- **Practice**: [Lab 2.3 - Clean the Sales Data](../labs/23-cloud-clean.md)
-- **Discussion**: Familiar vs Different?
-- **Breakout**: [Choosing a Data Architecture](../day2/architecture-investigation.md)
-- **Report-Back**: Choosing a Data Architecture
+- **Practice**: [Lab 2.2 - Landing raw data](../labs/22-land-data.md)
+- **Practice**: [Lab 2.3 - Clean the sales data](../labs/23-cloud-clean.md)
+- **Discussion**: Familiar vs different?
+- **Breakout**: [👥 Choosing a data architecture](../day2/architecture-investigation.md)
+- **Report-Back**: Choosing a data architecture
 
-## 🥪🥤 Lunch Break
+## 🥪🥤 Lunch break
 
 ## Session 3
 
 - 
-- **Practice**: [Lab 2.4 - Build the Trusted Output](../labs/24-cloud-output.md)
-- **Discussion**: What Is Better? What Is Fragile?
-- **Practice**: [Lab 2.5 - Create ETL Pipeline](../labs/25-etl-pipeline.md)
+- **Practice**: [Lab 2.4 - Build the trusted output](../labs/24-cloud-output.md)
+- **Discussion**: What is better? What is fragile?
+- **Practice**: [Lab 2.5 - Create ETL pipeline](../labs/25-etl-pipeline.md)
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 4
 
-- **Practice**: [Lab 2.6 - Rerun Pipeline](../labs/26-rerun-pipeline.md)
-- **Practice**: [Lab 2.7 - Schema Drift](../labs/27-schema-drift.md)
-- **Practice**: [Lab 2.8 - Pipeline Failure](../labs/28-pipeline-failure.md)
-- **Discussion**: Cloud Is Not Well-Architected
+- **Practice**: [Lab 2.6 - Rerun pipeline](../labs/26-rerun-pipeline.md)
+- **Practice**: [Lab 2.7 - Schema drift](../labs/27-schema-drift.md)
+- **Practice**: [Lab 2.8 - Pipeline failure](../labs/28-pipeline-failure.md)
+- **Discussion**: Cloud is not well-architected
 
 ## 🎁 Wrap
 

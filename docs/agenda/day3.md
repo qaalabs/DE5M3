@@ -1,39 +1,39 @@
-# Day 3 - Robust & Well-Architectured
+# Day 3 ~ Robust & Well-Architectured
 
 ## Session 1
 
-- **Slides**: 🌅 Welcome to Day 3 of DE5 Module 3
+- **Slides**: 🌅 Welcome to day 3 of module 3
 - **Demo**: [MERMAID](../day3/mermaid-intro.md)
-- **Slides**: Design Review
-- **Slides**: Add Metadata to a CSV File
-- **Slides**: Swagger ~ Read from a Live API
-- **Practice**: [Swagger ~ Read from a Live API](../day3/swagger-lab.md)
+- **Slides**: Design review
+- **Slides**: Add metadata to a CSV file
+- **Slides**: Swagger - Read from a live API
+- **Practice**: [Swagger - Read from a live API](../day3/swagger-lab.md)
 
-## ☕ Morning Break
+## ☕ Morning break
 
 ## Session 2
 
-- **Breakout**: [Where are the Weaknesses?](../day3/fragile.md)
-- **Report-Back**: Our Design Debts
+- **Breakout**: [👥 Where are the weaknesses?](../day3/fragile.md)
+- **Report-Back**: Our design debts
 - **Slides**: Medallion ~ Bronze - Silver - Gold
-- **Practice**: [Map the Pipeline](../day3/medallion-mapping.md)
-- **Discussion**: What Needs to Move?
+- **Practice**: [Map the pipeline](../day3/medallion-mapping.md)
+- **Discussion**: What needs to move?
 
-## 🥪🥤 Lunch Break
+## 🥪🥤 Lunch break
 
 ## Session 3
 
-- [🖥️ Start MS Fabric Playground](../day3/pipeline-diagram.md)
-- **Practice**: [Lab 3.1 - Medallion Architecture](../labs/31-medallion-lab.md)
-- **Discussion**: What Is Actually Better?
+- **Setup**: [🖥️ Start MS Fabric playground](../day3/pipeline-diagram.md)
+- **Practice**: [Lab 3.1 - Medallion architecture](../labs/31-medallion-lab.md)
+- **Discussion**: What is actually better?
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 4
 
-- **Instructions**: Medallion Scenarios
-- **Breakout**: [Medallion Scenarios](../day3/medallion-scenarios.md)
-- **Report-Back**: Medallion Scenarios
+- **Instructions**: Medallion scenarios
+- **Breakout**: [👥 Medallion scenarios](../day3/medallion-scenarios.md)
+- **Report-Back**: Medallion scenarios
 - **Discussion**: Bridge to Day 4
 
 ## 🎁 Wrap
