@@ -39,7 +39,7 @@
 ### Session 1
 
 - `09:30` **Slides**: 🌅 Welcome to Day 2 of DE5 Module 3 (10 mins)
-- `09:40` 🖥️ Start MS Fabric Playground (10 mins)
+- `09:40` **Setup**: 🖥️ Start MS Fabric Playground (10 mins)
 - `09:50` **Slides**: What Is Fabric? (10 mins)
 - `10:00` **Practice**: [Lab 2.1 - Explore Fabric Environment](labs/21-lakehouse.md) (30 mins)
 - `10:30` **Discussion**: What Stays the Same? (10 mins)
@@ -131,5 +131,6 @@
 - `15:10` **Report-Back**: Share Your Explanation (20 mins)
 - `15:30` **Discussion**: [What Made the Difference?](day4/pitch-debrief.md) (10 mins)
 - `15:40` **Slides**: 🎁 Wrap (10 mins)
+- `15:50` **Slides**: 💯 Evaluation (10 mins)
 
 ---

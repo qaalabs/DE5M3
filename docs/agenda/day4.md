@@ -34,5 +34,5 @@
 - **Report-Back**: Share Your Explanation
 - **Discussion**: What Made the Difference?
 - **Slides**: 🎁 Wrap
-- **Activity**: 💯 Evaluation
+- **Slides**: 💯 Evaluation
 
