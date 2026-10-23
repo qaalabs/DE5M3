@@ -1,12 +1,13 @@
-## Welcome to Day 1
+## Welcome to Module 3
 
-**Take messy source data and turn it into something usable**
+### Module progression
 
-- We have raw Sales and Product data from HomeSphere.
-- It is messy and inconsistent.
+- M2: store it
+- M3: process it ~ *this module*
+- M4: plan it
 
-By the end of the day we will have extracted, cleaned, and joined it into a first trusted dataset.
+### Check-in
 
-And use it to answer a simple business question:
-
-- **which product categories generate the most revenue?**
+- ❓ Ask who has used Python or pandas before
+- ❓ Ask who has any experience with ETL tools or MS Fabric
+- Engagement is key ~ *if you have a question, please ask!*
