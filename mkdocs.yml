@@ -1,5 +1,5 @@
 # Site name
-site_name: DE5M3 - Apprenticeship Materials
+site_name: Module 3 - Data Processing, Transformation & ETL
 site_url: https://qaalabs.github.io/DE5M3/
 dev_addr: '0.0.0.0:8000'
 
@@ -10,6 +10,19 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
+    - Day 1: agenda/day1.md
+
+  - "Day 1 ~ ETL Locally":
+    - "🖥️ VM setup": https://qaalabs.github.io/vmsetup/
+    - "Git clone the data files": labs/git-clone.md
+    - "Introducing HomeSphere": day1/homesphere.md
+    - "Part 1 - Inspect sales data": day1/inspect-sales.md
+    - "Part 2 - Inspect product data": day1/inspect-prod.md
+    - "Part 3 - Clean sales data": day1/clean-sales.md
+    - "Flatten and join": day1/flatten-join.md
+    - "ETL pipeline ~ Stretch task": day1/stretch-etl-script.md
+    - "Run the ETL script together": day1/run-etl.md
+    - "👥 ETL product investigation": day1/etl-products.md
 
   - Resources: resources.md
 

@@ -5,8 +5,8 @@
 - **Slides**: 🌅 Welcome to day 1 of module 3
 - **Setup**: [🖥️ VM setup](https://qaalabs.github.io/vmsetup/)
 - **Activity**: [Git clone the data files](../labs/git-clone.md)
-- 
 - **Practice**: Explore Python-101 notebook
+- **Practice**: Explore Pandas-101 notebook
 
 ## ☕ Morning break
 
@@ -18,16 +18,18 @@
 - **Discussion**: What did you find?
 - Cleaning moves overview
 - **Practice**: [Part 3 - Clean sales data](../day1/clean-sales.md)
+- **Discussion**: Mechanical or judgement?
 
 ## 🥪🥤 Lunch break
 
 ## Session 3
 
-- **Discussion**: Mechanical or judgement?
 - **Slides**: Why flatten and join?
 - **Practice**: [Flatten and join](../day1/flatten-join.md)
 - **Practice**: [ETL pipeline ~ Stretch task](../day1/stretch-etl-script.md)
-- **Practice**: Which categories earn most?
+- **Setup**: 🖥️ Open VS Code
+- **Activity**: [Run the ETL script together](../day1/run-etl.md)
+- **Discussion**: Which categories earn most? Notebook vs script
 
 ## ☕ Afternoon break
 
@@ -39,4 +41,5 @@
 - **Discussion**: Reflect and look ahead
 
 ## 🎁 Wrap
+- 
 

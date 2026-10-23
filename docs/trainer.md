@@ -6,7 +6,8 @@
 
 - `09:30` **Slides**: 🌅 Welcome to day 1 of module 3 (10 mins)
 - `10:00` **Activity**: [Git clone the data files](labs/git-clone.md) (10 mins)
-- `10:20` **Practice**: Explore Python-101 notebook (20 mins)
+- `10:10` **Practice**: Explore Python-101 notebook (20 mins)
+- `10:30` **Practice**: Explore Pandas-101 notebook (10 mins)
 
 ### Session 2
 
@@ -15,15 +16,17 @@
 - `11:20` **Practice**: [Part 2 - Inspect product data](day1/inspect-prod.md) (10 mins)
 - `11:30` **Discussion**: [What did you find?](day1/inspect-debrief.md) (10 mins)
 - `11:40` [Cleaning moves overview](day1/clean-intro.md) (10 mins)
-- `11:50` **Practice**: [Part 3 - Clean sales data](day1/clean-sales.md) (30 mins)
+- `11:50` **Practice**: [Part 3 - Clean sales data](day1/clean-sales.md) (20 mins)
+- `12:10` **Discussion**: [Mechanical or judgement?](day1/clean-debrief.md) (10 mins)
 
 ### Session 3
 
-- `13:20` **Discussion**: [Mechanical or judgement?](day1/clean-debrief.md) (10 mins)
-- `13:30` **Slides**: [Why flatten and join?](day1/flatten-intro.md) (10 mins)
-- `13:40` **Practice**: [Flatten and join](day1/flatten-join.md) (30 mins)
-- `14:10` **Practice**: [ETL pipeline ~ Stretch task](day1/stretch-etl-script.md) (10 mins)
-- `14:20` **Practice**: Which categories earn most? (10 mins)
+- `13:20` **Slides**: [Why flatten and join?](day1/flatten-intro.md) (10 mins)
+- `13:30` **Practice**: [Flatten and join](day1/flatten-join.md) (20 mins)
+- `13:50` **Practice**: [ETL pipeline ~ Stretch task](day1/stretch-etl-script.md) (10 mins)
+- `14:00` **Setup**: 🖥️ Open VS Code (10 mins)
+- `14:10` **Activity**: [Run the ETL script together](day1/run-etl.md) (10 mins)
+- `14:20` **Discussion**: Which categories earn most? Notebook vs script (10 mins)
 
 ### Session 4
 
