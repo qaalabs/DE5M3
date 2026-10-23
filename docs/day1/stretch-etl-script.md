@@ -32,10 +32,12 @@ The script has three functions for you to complete:
 
 ## Run the script
 
-Open a terminal, go to the `M3/day1/stretch` folder, and run:
+Open VS Code on the `M3` folder (open a terminal, `cd Desktop\M3`, then `code .`).
+
+Open the terminal in VS Code (`Ctrl+` `` ` ``). It starts in the `M3` folder. Run:
 
 ```
-python etl_todo.py
+python day1\stretch\etl_todo.py
 ```
 
 !!! note "ModuleNotFoundError: No module named 'pandas'"
@@ -47,7 +49,7 @@ python etl_todo.py
 
     You may see `Defaulting to user installation because normal site-packages is not writeable` at the start, and a yellow WARNING at the end ending `which is not on PATH` - both are expected. pandas is still installed.
 
-    Then run `python etl_todo.py` again.
+    Then run `python day1\stretch\etl_todo.py` again.
 
 The script saves `cleaned_sales.csv` and `sales_joined.csv` in the same `stretch` folder.
 

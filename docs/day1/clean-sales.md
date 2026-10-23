@@ -8,7 +8,7 @@ You have identified the problems in the raw Sales data.
 
 !!! tip "Now fix them - one at a time - so the data is trustworthy enough to use."
 
-Open the notebook: **`local_clean.ipynb`** and work through **Part 3**.
+Open the notebook **`M3/HomeSphere/local/local_clean.ipynb`** and work through **Part 3**.
 
 ---
 

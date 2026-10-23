@@ -14,7 +14,7 @@ Your job is to combine them and answer the question:
 
 > **Which product categories generate the most revenue?**
 
-Open the notebook: **`local_join.ipynb`** and work through all parts.
+Open the notebook **`M3/HomeSphere/local/local_join.ipynb`** and work through all parts.
 
 ---
 
@@ -66,3 +66,8 @@ Group by `category`, sum `line_value`, and sort highest to lowest.
 - After the join, are there any rows with a missing `category`? What does that tell you?
 - What would have happened to the revenue totals if you had not removed the duplicate rows during cleaning?
 - What cleaning step was essential before the join could work at all?
+
+---
+
+!!! tip "Finished early?"
+    Try the stretch task: [Turn the Pipeline into a Script](stretch-etl-script.md)
