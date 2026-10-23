@@ -16,7 +16,7 @@ You have run the full ETL pipeline in two notebooks.
 
 ## Getting started
 
-Open **`etl_todo.py`** from the `M3/day1/stretch` folder in the HomeSphere repo in Visual Studio Code.
+Open **`etl_todo.py`** from the `M3/day1/stretch` folder in Visual Studio Code.
 
 The script has three functions for you to complete:
 
@@ -32,28 +32,41 @@ The script has three functions for you to complete:
 
 ## Run the script
 
-Open a terminal, navigate to the `M3/day1/stretch` folder in the HomeSphere repo, and run:
+Open a terminal, go to the `M3/day1/stretch` folder, and run:
 
 ```
 python etl_todo.py
 ```
+
+!!! note "ModuleNotFoundError: No module named 'pandas'"
+    If your VM resets each day, the terminal's Python may not have pandas installed, even though the notebook kernel does. Fix it with:
+
+    ```
+    pip install pandas
+    ```
+
+    You may see `Defaulting to user installation because normal site-packages is not writeable` at the start, and a yellow WARNING at the end ending `which is not on PATH` - both are expected. pandas is still installed.
+
+    Then run `python etl_todo.py` again.
+
+The script saves `cleaned_sales.csv` and `sales_joined.csv` in the same `stretch` folder.
 
 When everything is working you should see output like:
 
 ```
 === HomeSphere ETL ===
 
-Loaded sales: 30 rows, 7 columns
+Loaded sales: 30 rows, 8 columns
   Removed 2 duplicate rows
   ...
-  Clean sales: 24 rows remaining
+  Clean sales: 23 rows remaining
   Saved: cleaned_sales.csv
 
-Loaded products: 8 rows
+Loaded products: 9 rows
   Saved: sales_joined.csv
 
 === Revenue by Category (total £...) ===
-  Smart Home           £  ...
+  ...                  £  ...
   ...
 ```
 

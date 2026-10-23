@@ -45,6 +45,8 @@ python pipeline.py
     pip install pandas
     ```
 
+    You may see `Defaulting to user installation because normal site-packages is not writeable` at the start, and a yellow WARNING at the end ending `which is not on PATH` - both are expected. pandas is still installed.
+
     Then run `python pipeline.py` again.
 
 Watch the output. The pipeline loads the raw file, skips the validation (nothing is active yet), cleans the data, and writes `silver_sales.csv`.

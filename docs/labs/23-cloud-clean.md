@@ -23,7 +23,7 @@ The notebook contains the same nine cleaning steps you built on Day 1 - but this
 |                      | Day 1                         | Day 2 |
 |----------------------|-------------------------------|-------|
 | Where files live     | Local VM filesystem           | OneLake (`/lakehouse/default/Files/data/`) |
-| How you load data    | `pd.read_csv('sales_raw.csv')`| `pd.read_csv('/lakehouse/default/Files/data/sales_raw.csv')` |
+| How you load data    | `pd.read_csv('../data/sales_raw.csv')`| `pd.read_csv('/lakehouse/default/Files/data/sales_raw.csv')` |
 | Where output goes    | `cleaned_sales.csv` on VM     | `cleaned_sales` Delta table in lakehouse |
 | Who can access output| Just you                      | Anyone in the workspace |
 
