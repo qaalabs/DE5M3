@@ -6,7 +6,7 @@
 
 Today you built the HomeSphere pipeline in two notebooks, one cell at a time.
 
-Now we run the whole pipeline as a single script, from the terminal, together.
+Now you run the whole pipeline as a single script, from the terminal.
 
 ---
 
