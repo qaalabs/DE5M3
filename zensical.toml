@@ -19,7 +19,7 @@ nav = [
     {"Part 3 - Clean sales data" = "day1/clean-sales.md"},
     {"Flatten and join" = "day1/flatten-join.md"},
     {"ETL pipeline ~ Stretch task" = "day1/stretch-etl-script.md"},
-    {"Run the ETL script together" = "day1/run-etl.md"},
+    {"Run the ETL script" = "day1/run-etl.md"},
     {"👥 ETL product investigation" = "day1/etl-products.md"},
   ]},
   {"Day 2 ~ ETL in the Cloud" = [

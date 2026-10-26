@@ -24,9 +24,9 @@
 - `13:20` **Slides**: [Why flatten and join?](day1/flatten-intro.md) (10 mins)
 - `13:30` **Practice**: [Flatten and join](day1/flatten-join.md) (20 mins)
 - `13:50` **Practice**: [ETL pipeline ~ Stretch task](day1/stretch-etl-script.md) (10 mins)
-- `14:00` **Setup**: 🖥️ Open VS Code (10 mins)
-- `14:10` **Activity**: [Run the ETL script together](day1/run-etl.md) (10 mins)
-- `14:20` **Discussion**: Which categories earn most? Notebook vs script (10 mins)
+- `14:00` **Discussion**: Which categories earn most? (10 mins)
+- `14:10` **Demo**: VS Code demo: edit and run a script (10 mins)
+- `14:20` **Activity**: [Run the ETL script](day1/run-etl.md) (10 mins)
 
 ### Session 4
 

@@ -27,9 +27,9 @@
 - **Slides**: Why flatten and join?
 - **Practice**: [Flatten and join](../day1/flatten-join.md)
 - **Practice**: [ETL pipeline ~ Stretch task](../day1/stretch-etl-script.md)
-- **Setup**: 🖥️ Open VS Code
-- **Activity**: [Run the ETL script together](../day1/run-etl.md)
-- **Discussion**: Which categories earn most? Notebook vs script
+- **Discussion**: Which categories earn most?
+- **Demo**: VS Code demo: edit and run a script
+- **Activity**: [Run the ETL script](../day1/run-etl.md)
 
 ## ☕ Afternoon break
 
