@@ -53,3 +53,10 @@ Today you are working with two sources:
     - You will have joined these two sources into a single trusted dataset;
     - And used it to answer a simple business question.
 
+---
+
+## Let's start by looking at the HomeSphere file: `sales_raw.csv`
+
+Open File Explorer and navigate to the folder: `M3/HomeSphere/data`
+
+Then open the file: `sales_raw.csv`

