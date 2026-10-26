@@ -178,7 +178,7 @@ You will add four Notebook activities - one for each solution notebook, and one 
 
 ## Step 8: Verify the results
 
-The pipeline has run the same cleaning and output logic as the notebooks you ran manually earlier. You should now have two additional tables in your lakehouse.
+The pipeline has run the supplied solution notebooks to clean the data and build the output. The cleaning solution reads all matching `sales_raw*.csv` files, whereas your earlier exercise notebook read just `sales_raw.csv`. You should now have two additional tables in your lakehouse.
 
 1. In the left navigation bar, return to your **HomeSphere** lakehouse.
 
@@ -209,6 +209,17 @@ The pipeline has run the same cleaning and output logic as the notebooks you ran
 ---
 
 In this exercise, you built a pipeline to orchestrate the HomeSphere ETL process automatically. Rather than running notebooks by hand, a single pipeline run cleaned the data and built the trusted output in sequence.
+
+## Record what you practised
+
+Revisit the KSBs at the top of this lab. In **S4**, identify the action **automate** and the tools used to do it. In **K8**, identify the focus on **deployment approaches**: this lab gives you experience of configuring and running a pipeline in a training environment.
+
+Before moving on, work individually and add two short notes beside your verification results:
+
+- **S4:** "My pipeline now automatically… The dependency that controls this is… This order matters because… I still manually…"
+- **K8:** "To make the pipeline runnable, I configured… I verified it by…"
+
+Use your actual configuration, activity statuses and query results. Make clear that you configured the orchestration using supplied solution notebooks. Check that your dependency and observed activity statuses support your explanation, and mark any gap for feedback. Refer to the verification results you have already recorded; no separate write-up is needed. Retain those results in your personal notes after the Fabric environment is cleared.
 
 !!! info "Keep your workspace"
     Don't delete anything - your workspace, lakehouse, and pipeline are all needed for the next lab.

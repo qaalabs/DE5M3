@@ -226,7 +226,7 @@ A SQL analytics endpoint is automatically created when you define tables in a la
 
 In this exercise, you created a lakehouse and imported data into it. You explored how a lakehouse consists of files and tables stored in OneLake, and how managed tables can be queried using SQL.
 
-Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.
+Before deleting the workspace, complete the [Fabric consolidation](../day2/fabric-consolidation.md) in the next slot and retain a useful query/result in your personal notes. Then return here to delete the workspace you created for this exercise.
 
 1. Navigate to Microsoft Fabric in your browser.
 

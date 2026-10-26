@@ -1,55 +1,29 @@
-# Facilitator Notes - Cloud Is Not Well-Architected
+# S8 Learning Reflection
 
-## The setup
+In Labs 2.6–2.8, you recorded pipeline runs and investigated missing data and an execution failure. Use that work to recognise what you practised.
 
-After the pipeline reruns (Labs 2.7-2.9), land this clearly:
+## Unpack the KSB
 
-> "The cloud version is better than the local version on almost every dimension you compared. But it is not well-architected. It is a pipeline someone runs by hand, with no structure, no separation of concerns, and no guarantee that it will produce the same output twice."
+> **S8:** Identify and troubleshoot issues with data processing pipelines.
 
-This is the pivot that makes Day 3 necessary.
+Identify the two actions: **identify** an issue and **troubleshoot** its cause. What did you do to move from noticing a symptom to explaining it? The scope is a **data processing pipeline**, including its inputs, processing steps and outputs.
 
----
+## Annotate your existing notes
 
-## What to surface
+Work individually. Choose **one issue you already investigated** and add a short annotation beside the relevant row in your run table:
 
-**The raw data problem:**
+> I identified… I traced it by… The result, error message or line of code that supports my explanation is… This practised S8 because…
 
-The raw files are sitting in `Files/data/` alongside the cleaned output. There is no separation between what arrived and what was produced. If something goes wrong, it is hard to tell which version of the data you are looking at.
+Use your actual investigation. If your earlier notes already explain the issue and how you traced it, build on them rather than rewriting them. Include any guidance you used or uncertainty that remains. You do not need to repeat the lab answers or investigate another failure.
 
-**The notebook problem:**
+Keep the table and one useful supporting result, error message or code snippet in your personal notes before deleting the workspace.
 
-One notebook does everything. If the clean step fails halfway through, the Delta table might contain partial results. There is no checkpoint, no rollback, no audit trail.
+## Check your reasoning
 
-**The manual trigger problem:**
+Does your supporting observation explain the cause, or only show a symptom? Check your annotation against the code, error or recorded results. Revise it or mark what you still cannot explain for feedback. This is how your investigation demonstrates understanding of S8.
 
-Someone has to remember to run the notebook. If HomeSphere exports data every Monday morning, someone has to log in and press Run. That is not a pipeline - that is a chore.
+## Carry your learning into Day 3
 
-**The naming problem:**
+Execution success alone did not establish that the output was correct. Your pipeline already connects two ETL notebooks and saves separate cleaned and trusted tables; you have now seen limitations through its actual runs.
 
-`cleaned_sales` and `sales_trusted` are reasonable names, but they are not a convention. A new person joining the project would not know what bronze, silver, and gold mean - because those concepts do not exist yet in this workspace.
-
----
-
-## The question to ask
-
-> "If you handed this workspace to a colleague on Friday afternoon and went on holiday, what would they need to know to run the pipeline on Monday?"
-
-Let the group answer. The answer is usually: quite a lot, and none of it is written down anywhere.
-
-That is what Day 3 fixes.
-
----
-
-## Introduce medallion - briefly
-
-Name it, do not explain it:
-
-> "Tomorrow we give this structure. Bronze is raw - exactly what arrived. Silver is cleaned and trusted. Gold is the output built for a specific question. Three layers, clear boundaries, each one dependent on the last."
-
-One sentence each. Leave them wanting to see it rather than fully understanding it tonight.
-
----
-
-## Close Day 2
-
-> "You built the same pipeline twice. Once locally, once in the cloud. The cloud version is better - but it is still a pipeline without architecture. Tomorrow we fix that."
+Mark one unresolved issue in your existing notes to bring to Day 3's design review. Tomorrow you will use these observations to consider how the pipeline's structure could improve. You do not need to design the solution now.

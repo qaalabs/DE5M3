@@ -50,6 +50,9 @@ whatever Lab 2.7 left behind.
 
 In this exercise, you reran the same pipeline four times without changing it once. The pipeline told the truth about its own execution every time - and that still wasn't enough to tell you whether the output was right.
 
+!!! note "Reflect before cleanup"
+    Keep your workspace until you have completed the [S8 Learning Reflection](../day2/reflection.md) with your trainer and retained your run table and useful supporting details in your personal notes. Then return here to clean up.
+
 1. Navigate to Microsoft Fabric in your browser.
 
 2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
