@@ -51,7 +51,7 @@
 
 - `11:00` **Practice**: [Lab 2.2 - Landing raw data](labs/22-land-data.md) (10 mins)
 - `11:10` **Practice**: [Lab 2.3 - Clean the sales data](labs/23-cloud-clean.md) (20 mins)
-- `11:30` **Consolidation**: S6 Learning Reflection (10 mins)
+- `11:30` **Consolidation**: [S6 Learning Reflection](day2/s6-reflect.md) (10 mins)
 - `11:40` **Breakout**: [👥 Choosing a data architecture](day2/architecture-investigation.md) (20 mins)
 - `12:00` **Report-Back**: [Choosing a data architecture](day2/architecture-notes.md) (20 mins)
 
