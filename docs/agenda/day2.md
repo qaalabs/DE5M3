@@ -14,7 +14,7 @@
 
 - **Practice**: [Lab 2.2 - Landing raw data](../labs/22-land-data.md)
 - **Practice**: [Lab 2.3 - Clean the sales data](../labs/23-cloud-clean.md)
-- **Discussion**: Familiar vs different?
+- **Consolidation**: S6 Learning Reflection
 - **Breakout**: [👥 Choosing a data architecture](../day2/architecture-investigation.md)
 - **Report-Back**: Choosing a data architecture
 

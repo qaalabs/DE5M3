@@ -10,19 +10,18 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
-    - Day 1: agenda/day1.md
+    - Day 2: agenda/day2.md
 
-  - "Day 1 ~ ETL Locally":
-    - "🖥️ VM setup": https://qaalabs.github.io/vmsetup/
-    - "Git clone the data files": labs/git-clone.md
-    - "Introducing HomeSphere": day1/homesphere.md
-    - "Part 1 - Inspect sales data": day1/inspect-sales.md
-    - "Part 2 - Inspect product data": day1/inspect-prod.md
-    - "Part 3 - Clean sales data": day1/clean-sales.md
-    - "Flatten and join": day1/flatten-join.md
-    - "ETL pipeline ~ Stretch task": day1/stretch-etl-script.md
-    - "Run the ETL script": day1/run-etl.md
-    - "👥 ETL product investigation": day1/etl-products.md
+  - "Day 2 ~ ETL in the Cloud":
+    - "Lab 2.1 - Explore Fabric environment": labs/21-lakehouse.md
+    - "Lab 2.2 - Landing raw data": labs/22-land-data.md
+    - "Lab 2.3 - Clean the sales data": labs/23-cloud-clean.md
+    - "👥 Choosing a data architecture": day2/architecture-investigation.md
+    - "Lab 2.4 - Build the trusted output": labs/24-cloud-output.md
+    - "Lab 2.5 - Create ETL pipeline": labs/25-etl-pipeline.md
+    - "Lab 2.6 - Rerun pipeline": labs/26-rerun-pipeline.md
+    - "Lab 2.7 - Schema drift": labs/27-schema-drift.md
+    - "Lab 2.8 - Pipeline failure": labs/28-pipeline-failure.md
 
   - Resources: resources.md
 
@@ -35,7 +34,6 @@ not_in_nav: |
   day1/clean-debrief.md
   day1/flatten-intro.md
   day1/reflection.md
-  day2/cloud-debrief.md
   day2/architecture-notes.md
   day2/output-debrief.md
   day2/reflection.md
