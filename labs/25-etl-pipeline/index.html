@@ -8,6 +8,10 @@
         <link rel="canonical" href="https://qaalabs.github.io/DE5M3/labs/25-etl-pipeline/">
       
       
+        <link rel="prev" href="../24-cloud-output/">
+      
+      
+        <link rel="next" href="../26-rerun-pipeline/">
       
       
         
@@ -18,7 +22,7 @@
     
     
       
-        <title>Lab 2.5 ~ Orchestrate the HomeSphere ETL with a Pipeline - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Lab 2.5 - Create ETL pipeline - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 2.5 ~ Orchestrate the HomeSphere ETL with a Pipeline
+              Lab 2.5 - Create ETL pipeline
             
           </span>
         </div>
@@ -332,14 +336,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day1/" class="md-nav__link">
+      <a href="../../agenda/day2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 1
+    Day 2
   
 
     
@@ -364,18 +368,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -385,7 +391,7 @@
   <span class="md-ellipsis">
     
   
-    Day 1 ~ ETL Locally
+    Day 2 ~ ETL in the Cloud
   
 
     
@@ -396,12 +402,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 1 ~ ETL Locally
+    Day 2 ~ ETL in the Cloud
   
 
           </label>
@@ -414,14 +420,14 @@
   
   
     <li class="md-nav__item">
-      <a href="https://qaalabs.github.io/vmsetup/" class="md-nav__link">
+      <a href="../21-lakehouse/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🖥️ VM setup
+    Lab 2.1 - Explore Fabric environment
   
 
     
@@ -442,14 +448,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../git-clone/" class="md-nav__link">
+      <a href="../22-land-data/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Git clone the data files
+    Lab 2.2 - Landing raw data
   
 
     
@@ -470,14 +476,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/homesphere/" class="md-nav__link">
+      <a href="../23-cloud-clean/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introducing HomeSphere
+    Lab 2.3 - Clean the sales data
   
 
     
@@ -498,14 +504,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/inspect-sales/" class="md-nav__link">
+      <a href="../../day2/architecture-investigation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 1 - Inspect sales data
+    👥 Choosing a data architecture
   
 
     
@@ -526,14 +532,216 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/inspect-prod/" class="md-nav__link">
+      <a href="../24-cloud-output/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 2 - Inspect product data
+    Lab 2.4 - Build the trusted output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.5 - Create ETL pipeline
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.5 - Create ETL pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-1-return-to-your-homesphere-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Return to your HomeSphere workspace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-attach-the-solution-notebooks-to-the-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Attach the solution notebooks to the lakehouse
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-two-tracking-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Create two tracking notebooks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-a-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Create a pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-configure-the-pipeline-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Configure the pipeline activities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-connect-the-four-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Connect the four activities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-run-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Run the pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-verify-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 8: Verify the results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#record-what-you-practised" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Record what you practised
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-rerun-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2.6 - Rerun pipeline
   
 
     
@@ -554,14 +762,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/clean-sales/" class="md-nav__link">
+      <a href="../27-schema-drift/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 3 - Clean sales data
+    Lab 2.7 - Schema drift
   
 
     
@@ -582,98 +790,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/flatten-join/" class="md-nav__link">
+      <a href="../28-pipeline-failure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Flatten and join
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day1/stretch-etl-script/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ETL pipeline ~ Stretch task
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day1/run-etl/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Run the ETL script
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day1/etl-products/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    👥 ETL product investigation
+    Lab 2.8 - Pipeline failure
   
 
     
@@ -962,7 +1086,7 @@
 <p class="admonition-title">Clean Sales Orders, Build Output, and Track Success should show as <strong>Succeeded</strong>. Track Failure should show as <strong>Skipped</strong> - that is expected, since its failure condition was never met.</p>
 </div>
 <h2 id="step-8-verify-the-results">Step 8: Verify the results</h2>
-<p>The pipeline has run the same cleaning and output logic as the notebooks you ran manually earlier. You should now have two additional tables in your lakehouse.</p>
+<p>The pipeline has run the supplied solution notebooks to clean the data and build the output. The cleaning solution reads all matching <code>sales_raw*.csv</code> files, whereas your earlier exercise notebook read just <code>sales_raw.csv</code>. You should now have two additional tables in your lakehouse.</p>
 <ol>
 <li>
 <p>In the left navigation bar, return to your <strong>HomeSphere</strong> lakehouse.</p>
@@ -993,6 +1117,14 @@
 </ol>
 <hr>
 <p>In this exercise, you built a pipeline to orchestrate the HomeSphere ETL process automatically. Rather than running notebooks by hand, a single pipeline run cleaned the data and built the trusted output in sequence.</p>
+<h2 id="record-what-you-practised">Record what you practised</h2>
+<p>Revisit the KSBs at the top of this lab. In <strong>S4</strong>, identify the action <strong>automate</strong> and the tools used to do it. In <strong>K8</strong>, identify the focus on <strong>deployment approaches</strong>: this lab gives you experience of configuring and running a pipeline in a training environment.</p>
+<p>Before moving on, work individually and add two short notes beside your verification results:</p>
+<ul>
+<li><strong>S4:</strong> "My pipeline now automatically… The dependency that controls this is… This order matters because… I still manually…"</li>
+<li><strong>K8:</strong> "To make the pipeline runnable, I configured… I verified it by…"</li>
+</ul>
+<p>Use your actual configuration, activity statuses and query results. Make clear that you configured the orchestration using supplied solution notebooks. Check that your dependency and observed activity statuses support your explanation, and mark any gap for feedback. Refer to the verification results you have already recorded; no separate write-up is needed. Retain those results in your personal notes after the Fabric environment is cleared.</p>
 <div class="admonition info">
 <p class="admonition-title">Keep your workspace</p>
 <p>Don't delete anything - your workspace, lakehouse, and pipeline are all needed for the next lab.</p>

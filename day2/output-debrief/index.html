@@ -18,7 +18,7 @@
     
     
       
-        <title>Facilitator Notes - What Is Better? What Is Fragile? - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Trusted Output Consolidation - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#facilitator-notes-what-is-better-what-is-fragile" class="md-skip">
+        <a href="#trusted-output-consolidation" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Facilitator Notes - What Is Better? What Is Fragile?
+              Trusted Output Consolidation
             
           </span>
         </div>
@@ -332,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day1/" class="md-nav__link">
+      <a href="../../agenda/day2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 1
+    Day 2
   
 
     
@@ -385,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 1 ~ ETL Locally
+    Day 2 ~ ETL in the Cloud
   
 
     
@@ -401,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 1 ~ ETL Locally
+    Day 2 ~ ETL in the Cloud
   
 
           </label>
@@ -414,14 +414,14 @@
   
   
     <li class="md-nav__item">
-      <a href="https://qaalabs.github.io/vmsetup/" class="md-nav__link">
+      <a href="../../labs/21-lakehouse/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🖥️ VM setup
+    Lab 2.1 - Explore Fabric environment
   
 
     
@@ -442,14 +442,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/git-clone/" class="md-nav__link">
+      <a href="../../labs/22-land-data/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Git clone the data files
+    Lab 2.2 - Landing raw data
   
 
     
@@ -470,14 +470,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/homesphere/" class="md-nav__link">
+      <a href="../../labs/23-cloud-clean/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introducing HomeSphere
+    Lab 2.3 - Clean the sales data
   
 
     
@@ -498,14 +498,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/inspect-sales/" class="md-nav__link">
+      <a href="../architecture-investigation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 1 - Inspect sales data
+    👥 Choosing a data architecture
   
 
     
@@ -526,14 +526,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/inspect-prod/" class="md-nav__link">
+      <a href="../../labs/24-cloud-output/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 2 - Inspect product data
+    Lab 2.4 - Build the trusted output
   
 
     
@@ -554,14 +554,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/clean-sales/" class="md-nav__link">
+      <a href="../../labs/25-etl-pipeline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 3 - Clean sales data
+    Lab 2.5 - Create ETL pipeline
   
 
     
@@ -582,14 +582,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/flatten-join/" class="md-nav__link">
+      <a href="../../labs/26-rerun-pipeline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Flatten and join
+    Lab 2.6 - Rerun pipeline
   
 
     
@@ -610,14 +610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/stretch-etl-script/" class="md-nav__link">
+      <a href="../../labs/27-schema-drift/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ETL pipeline ~ Stretch task
+    Lab 2.7 - Schema drift
   
 
     
@@ -638,42 +638,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/run-etl/" class="md-nav__link">
+      <a href="../../labs/28-pipeline-failure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Run the ETL script
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day1/etl-products/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    👥 ETL product investigation
+    Lab 2.8 - Pipeline failure
   
 
     
@@ -738,46 +710,26 @@
 
 
 
-<h1 id="facilitator-notes-what-is-better-what-is-fragile">Facilitator Notes - What Is Better? What Is Fragile?</h1>
-<p><em>Trainer-only. Run after <a href="../../labs/24-cloud-output/">Lab 2.4 - Build the Trusted Output</a>.</em>
-<em>Aim: 20 minutes - this one has more to unpack.</em></p>
-<hr>
-<h2 id="ask-the-group">Ask the group</h2>
-<p><strong>"What can you do with the Delta table that you could not do with the CSV?"</strong></p>
-<p>Things to draw out:</p>
-<ul>
-<li><strong>SQL endpoint</strong> - any analyst in the workspace can query it without touching Python</li>
-<li><strong>Versioning</strong> - Delta tables keep a transaction log; you can time-travel to previous versions</li>
-<li><strong>Shared access</strong> - the output lives in OneLake, not on one person's VM</li>
-<li><strong>Live</strong> - re-run the notebook and the table updates; anyone querying it gets the latest data</li>
-</ul>
-<hr>
-<h2 id="ask-the-group_1">Ask the group</h2>
-<p><strong>"What is still fragile about this pipeline?"</strong></p>
-<p>This is the more important question - it sets up Day 3.</p>
-<p>Things to draw out:</p>
-<ul>
-<li><strong>No structure</strong> - bronze/silver/gold are all mixed together in one lakehouse, one notebook</li>
-<li><strong>No reusability</strong> - if someone else wanted to use just the cleaned Sales data, there is no clean boundary</li>
-<li><strong>Manual trigger</strong> - someone has to run the notebook; nothing is automated</li>
-<li><strong>No schema enforcement</strong> - if <code>sales_raw.csv</code> changes structure, the pipeline silently produces wrong output</li>
-<li><strong>Hard to debug</strong> - one notebook does everything; if something breaks mid-run it is hard to isolate</li>
-</ul>
-<hr>
-<h2 id="key-point-to-make">Key point to make</h2>
+<h1 id="trusted-output-consolidation">Trusted Output Consolidation</h1>
+<p>In <a href="../../labs/24-cloud-output/">Lab 2.4 - Build the Trusted Output</a>, you combined cleaned Sales data with the Product catalogue, calculated revenue and queried the output.</p>
+<h2 id="connect-the-activity-to-the-ksbs">Connect the activity to the KSBs</h2>
 <blockquote>
-<p>"The pipeline works. The output is better than a CSV on a VM. But it is not yet engineered - it is a notebook someone runs by hand. Day 3 is about turning this into something with structure."</p>
+<p><strong>K17:</strong> Approaches to data integration and how combining disparate data sources delivers value to an organisation.</p>
+<p><strong>S9:</strong> Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks.</p>
 </blockquote>
-<p>Introduce the idea of <strong>medallion architecture</strong> here, briefly - bronze (raw), silver (cleaned), gold (trusted output). Do not explain it fully yet. Just name it and say that is Day 3's job.</p>
-<hr>
-<h2 id="if-the-sql-endpoint-question-came-up">If the SQL endpoint question came up</h2>
-<p>Someone may have noticed that running the same revenue query in SQL felt more natural than <code>groupby</code> in Python. This is worth acknowledging:</p>
-<blockquote>
-<p>"SQL is the right tool for aggregation questions. Python is the right tool for complex transformation. Both live in the same environment now - that is the point of Fabric."</p>
-</blockquote>
-<hr>
-<h2 id="bridge-to-the-next-session">Bridge to the next session</h2>
-<p>The next lab builds the ETL pipeline itself - orchestrating today's notebooks so they run in sequence rather than by hand. The fragility conversation feeds directly into that: yes, the cloud version is better, but it is not well-architected yet.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Identify what K17 asks you to understand about <strong>combining sources</strong> and <strong>delivering value</strong>. In S9, identify the actions you practised when you <strong>queried and manipulated data</strong>. Managing database access and implementing automated validation checks are wider parts of S9 that this lab did not ask you to perform.</p>
+<h2 id="write-it-down">Write it down</h2>
+<p>Work individually in your personal learning notes. A few bullets beside an existing query and result are enough:</p>
+<ol>
+<li><strong>Combine and explain:</strong> What data did you join, on which key, and what could HomeSphere learn from the combined data that Sales alone could not tell it? Explain how this relates to K17.</li>
+<li><strong>Query and interpret:</strong> Keep one SQL query and a result from your run. Explain what the result means and how the query produces it. Use this to explain the querying or manipulation part of S9.</li>
+</ol>
+<p>Keep this brief and use your actual work. Say where you used guidance or a solution, and note any uncertainty. Build on earlier notes rather than repeat the cleaning reflection or the full local-versus-cloud comparison.</p>
+<h2 id="check-your-understanding">Check your understanding</h2>
+<p>Check your explanation against the join code, SQL and output. Would grouping Sales by <code>product_id</code> alone answer the category revenue question? Use this to check why the Product catalogue adds value. Revise your existing bullets or mark a gap for feedback; no separate answer is needed.</p>
+<h2 id="what-comes-next">What comes next?</h2>
+<p>You now have two ETL notebooks, a saved <code>cleaned_sales</code> table and a saved <code>sales_trusted</code> table. The cleaned Sales table can be reused; the flattened Products data is not saved as a separate reusable table.</p>
+<p>So far, you have run the notebooks individually. In the next lab, you will connect the supplied solution notebooks in a pipeline so their execution follows the dependencies you configure.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>

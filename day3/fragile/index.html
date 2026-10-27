@@ -18,7 +18,7 @@
     
     
       
-        <title>Where Are the Weaknesses? - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Design Debts: Explain, Challenge, Improve - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#where-are-the-weaknesses" class="md-skip">
+        <a href="#design-debts-explain-challenge-improve" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Where Are the Weaknesses?
+              Design Debts: Explain, Challenge, Improve
             
           </span>
         </div>
@@ -332,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day1/" class="md-nav__link">
+      <a href="../../agenda/day2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 1
+    Day 2
   
 
     
@@ -385,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 1 ~ ETL Locally
+    Day 2 ~ ETL in the Cloud
   
 
     
@@ -401,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 1 ~ ETL Locally
+    Day 2 ~ ETL in the Cloud
   
 
           </label>
@@ -414,14 +414,14 @@
   
   
     <li class="md-nav__item">
-      <a href="https://qaalabs.github.io/vmsetup/" class="md-nav__link">
+      <a href="../../labs/21-lakehouse/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🖥️ VM setup
+    Lab 2.1 - Explore Fabric environment
   
 
     
@@ -442,14 +442,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/git-clone/" class="md-nav__link">
+      <a href="../../labs/22-land-data/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Git clone the data files
+    Lab 2.2 - Landing raw data
   
 
     
@@ -470,14 +470,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/homesphere/" class="md-nav__link">
+      <a href="../../labs/23-cloud-clean/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introducing HomeSphere
+    Lab 2.3 - Clean the sales data
   
 
     
@@ -498,14 +498,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/inspect-sales/" class="md-nav__link">
+      <a href="../../day2/architecture-investigation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 1 - Inspect sales data
+    👥 Choosing a data architecture
   
 
     
@@ -526,14 +526,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/inspect-prod/" class="md-nav__link">
+      <a href="../../labs/24-cloud-output/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 2 - Inspect product data
+    Lab 2.4 - Build the trusted output
   
 
     
@@ -554,14 +554,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/clean-sales/" class="md-nav__link">
+      <a href="../../labs/25-etl-pipeline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 3 - Clean sales data
+    Lab 2.5 - Create ETL pipeline
   
 
     
@@ -582,14 +582,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/flatten-join/" class="md-nav__link">
+      <a href="../../labs/26-rerun-pipeline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Flatten and join
+    Lab 2.6 - Rerun pipeline
   
 
     
@@ -610,14 +610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/stretch-etl-script/" class="md-nav__link">
+      <a href="../../labs/27-schema-drift/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ETL pipeline ~ Stretch task
+    Lab 2.7 - Schema drift
   
 
     
@@ -638,42 +638,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/run-etl/" class="md-nav__link">
+      <a href="../../labs/28-pipeline-failure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Run the ETL script
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day1/etl-products/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    👥 ETL product investigation
+    Lab 2.8 - Pipeline failure
   
 
     
@@ -738,69 +710,37 @@
 
 
 
-<h1 id="where-are-the-weaknesses">Where Are the Weaknesses?</h1>
+<h1 id="design-debts-explain-challenge-improve">Design Debts: Explain, Challenge, Improve</h1>
 <div class="admonition abstract">
 <p class="admonition-title">K13: The implications of financial, strategic and compliance regarding to security, scalability, compliance and cost of local, remote or distributed solutions.</p>
 </div>
-<h2 id="your-task">Your task</h2>
-<p>Look at the Day 2 pipeline you built in Fabric. Not at whether it works - it does.
-Look at whether it is well-designed.</p>
-<p>In your group, work through the questions below. For each one, agree on a specific answer
-and be ready to share it.</p>
-<hr>
-<h2 id="the-day-2-pipeline-what-exists">The Day 2 pipeline - what exists</h2>
-<p>The diagram from this morning:</p>
-<pre class="mermaid"><code>flowchart LR
-    subgraph Files
-        Raw[sales_raw.csv]
-        Products[products_raw.json]
-    end
-
-    subgraph Tables
-        Clean[cleaned_sales]
-        Trusted[sales_trusted]
-    end
-
-    Raw --&gt; Clean
-    Products --&gt; Trusted
-    Clean --&gt; Trusted</code></pre>
-<p>Two notebooks. One runs after the other. Someone presses Run each time.</p>
-<hr>
-<h2 id="questions-to-work-through">Questions to work through</h2>
-<p><strong>On structure:</strong></p>
+<p>A <strong>design debt</strong> is a limitation that creates risk or makes a pipeline harder to operate, maintain or extend.</p>
+<h2 id="start-from-what-you-know">Start from what you know</h2>
+<p>Use the Day 2 S8 annotation and design question you revisited this morning. You have already investigated the issue; use that explanation rather than repeat the diagnosis.</p>
+<p>Your starting point is the <strong>Day 2 Fabric pipeline</strong>: raw files in <code>Files/data</code>, managed cleaned and trusted tables, and two ETL notebooks connected by pipeline dependencies. You initiate the pipeline run manually. The later runs used the supplied solution notebooks and their <code>_solution</code> tables.</p>
+<p>The local API extraction you explored this morning is a separate change. You can use it or the metadata demonstration to inform a proposed improvement, but do not assume either is already part of the Day 2 Fabric build.</p>
+<h2 id="unpack-k13">Unpack K13</h2>
+<p>K13 asks you to understand <strong>implications</strong>, including financial and strategic consequences and considerations of security, scalability, compliance and cost across local, remote or distributed solutions.</p>
+<p>For this activity, use the implications relevant to your issue. A missing batch may affect reported revenue or decisions; it does not by itself establish a security incident or compliance breach. Identify assumptions and questions you would need to check. This activity contributes to K13 without covering every part of it.</p>
+<h2 id="explain-individually">Explain individually</h2>
+<p>Extend your existing notes with one short explanation:</p>
+<blockquote>
+<p>The issue I investigated reveals… My observation supporting this is… For HomeSphere, this could mean… I would improve… This would help because… It would still leave…</p>
+</blockquote>
+<p>Make the consequence plausible and specific to HomeSphere. Include one trade-off, such as extra processing, maintenance or cost, where relevant. If the cause remains uncertain, state what needs checking before recommending a change.</p>
+<h2 id="challenge-the-explanation-together">Challenge the explanation together</h2>
+<p>Take turns explaining your reasoning in your group. Help each other check:</p>
 <ul>
-<li>Where does raw data live? Where does cleaned data live? Are they clearly separated?</li>
-<li>If you came back in a month, could you tell which files are inputs and which are outputs?</li>
-<li>If <code>sales_trusted</code> looked wrong, where would you start investigating?</li>
+<li>Does the observation support the claimed design limitation?</li>
+<li>Does the proposed improvement address it, and is the consequence plausible?</li>
+<li>What remains unresolved, or what trade-off does the improvement introduce?</li>
 </ul>
-<p><strong>On reliability:</strong></p>
-<ul>
-<li>What happens if the first notebook fails halfway through? What is the state of <code>cleaned_sales</code>?</li>
-<li>What would happen if <code>sales_raw.csv</code> arrived with a new column added?</li>
-<li>Is there anything that checks the data looks right before saving it?</li>
-</ul>
-<p><strong>On reuse:</strong></p>
-<ul>
-<li>If another team wanted to use the cleaned Sales data, could they? Would they trust it?</li>
-<li>If a second business question needed a different gold output, where would it read from?</li>
-</ul>
-<p><strong>On maintenance:</strong></p>
-<ul>
-<li>If you handed this workspace to a colleague, what would they need to know to run it?</li>
-<li>How would they know if the pipeline had run successfully?</li>
-</ul>
-<p><strong>On cost and risk:</strong></p>
-<ul>
-<li>On Day 2, a whole batch of valid orders silently vanished and the pipeline still said Succeeded. If this ran unattended, what could that have cost the business - in money, trust, or compliance?</li>
-<li>If HomeSphere operated in a regulated sector, what would need to change here before you'd trust this pipeline with real customer data?</li>
-<li>Who is accountable if a bad number from this pipeline ends up in a board report?</li>
-</ul>
-<hr>
-<h2 id="output">Output</h2>
-<p>Produce a short list of <strong>design debts</strong> - things that work but would cause problems at scale,
-over time, or with another person involved.</p>
-<p>Be specific. "It is not well organised" is not a design debt. "Raw and cleaned data sit in the
-same folder with no naming convention" is.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Challenge the reasoning respectfully. Use your code, recorded results and the pipeline description to resolve disagreements; mark anything you cannot settle for trainer feedback.</p>
+<h2 id="revise-and-retain">Revise and retain</h2>
+<p>Improve your own explanation after the peer review. Keep a few useful bullets in your personal notes, including the relevant K13 implication and any change to your reasoning. No separate worksheet or repeated run table is needed.</p>
+<p>As a group, choose one explanation to contribute to the design review. Another group can test its reasoning; everyone can use that challenge to correct their own notes.</p>
+<h2 id="prepare-for-the-next-activity">Prepare for the next activity</h2>
+<p>When medallion architecture is introduced, test which of your design debts it could address and which need other measures. Clear layers and reusable tables can improve organisation and reuse; naming layers alone would not prevent the silent data losses you observed.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
