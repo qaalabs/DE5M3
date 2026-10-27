@@ -1,78 +1,47 @@
-# Where Are the Weaknesses?
+# Design Debts: Explain, Challenge, Improve
 
 !!! abstract "K13: The implications of financial, strategic and compliance regarding to security, scalability, compliance and cost of local, remote or distributed solutions."
 
-## Your task
+A **design debt** is a limitation that creates risk or makes a pipeline harder to operate, maintain or extend.
 
-Look at the Day 2 pipeline you built in Fabric. Not at whether it works - it does.
-Look at whether it is well-designed.
+## Start from what you know
 
-In your group, work through the questions below. For each one, agree on a specific answer
-and be ready to share it.
+Use the Day 2 S8 annotation and design question you revisited this morning. You have already investigated the issue; use that explanation rather than repeat the diagnosis.
 
----
+Your starting point is the **Day 2 Fabric pipeline**: raw files in `Files/data`, managed cleaned and trusted tables, and two ETL notebooks connected by pipeline dependencies. You initiate the pipeline run manually. The later runs used the supplied solution notebooks and their `_solution` tables.
 
-## The Day 2 pipeline - what exists
+The local API extraction you explored this morning is a separate change. You can use it or the metadata demonstration to inform a proposed improvement, but do not assume either is already part of the Day 2 Fabric build.
 
-The diagram from this morning:
+## Unpack K13
 
-```mermaid
-flowchart LR
-    subgraph Files
-        Raw[sales_raw.csv]
-        Products[products_raw.json]
-    end
+K13 asks you to understand **implications**, including financial and strategic consequences and considerations of security, scalability, compliance and cost across local, remote or distributed solutions.
 
-    subgraph Tables
-        Clean[cleaned_sales]
-        Trusted[sales_trusted]
-    end
+For this activity, use the implications relevant to your issue. A missing batch may affect reported revenue or decisions; it does not by itself establish a security incident or compliance breach. Identify assumptions and questions you would need to check. This activity contributes to K13 without covering every part of it.
 
-    Raw --> Clean
-    Products --> Trusted
-    Clean --> Trusted
-```
+## Explain individually
 
-Two notebooks. One runs after the other. Someone presses Run each time.
+Extend your existing notes with one short explanation:
 
----
+> The issue I investigated reveals… My observation supporting this is… For HomeSphere, this could mean… I would improve… This would help because… It would still leave…
 
-## Questions to work through
+Make the consequence plausible and specific to HomeSphere. Include one trade-off, such as extra processing, maintenance or cost, where relevant. If the cause remains uncertain, state what needs checking before recommending a change.
 
-**On structure:**
+## Challenge the explanation together
 
-- Where does raw data live? Where does cleaned data live? Are they clearly separated?
-- If you came back in a month, could you tell which files are inputs and which are outputs?
-- If `sales_trusted` looked wrong, where would you start investigating?
+Take turns explaining your reasoning in your group. Help each other check:
 
-**On reliability:**
+- Does the observation support the claimed design limitation?
+- Does the proposed improvement address it, and is the consequence plausible?
+- What remains unresolved, or what trade-off does the improvement introduce?
 
-- What happens if the first notebook fails halfway through? What is the state of `cleaned_sales`?
-- What would happen if `sales_raw.csv` arrived with a new column added?
-- Is there anything that checks the data looks right before saving it?
+Challenge the reasoning respectfully. Use your code, recorded results and the pipeline description to resolve disagreements; mark anything you cannot settle for trainer feedback.
 
-**On reuse:**
+## Revise and retain
 
-- If another team wanted to use the cleaned Sales data, could they? Would they trust it?
-- If a second business question needed a different gold output, where would it read from?
+Improve your own explanation after the peer review. Keep a few useful bullets in your personal notes, including the relevant K13 implication and any change to your reasoning. No separate worksheet or repeated run table is needed.
 
-**On maintenance:**
+As a group, choose one explanation to contribute to the design review. Another group can test its reasoning; everyone can use that challenge to correct their own notes.
 
-- If you handed this workspace to a colleague, what would they need to know to run it?
-- How would they know if the pipeline had run successfully?
+## Prepare for the next activity
 
-**On cost and risk:**
-
-- On Day 2, a whole batch of valid orders silently vanished and the pipeline still said Succeeded. If this ran unattended, what could that have cost the business - in money, trust, or compliance?
-- If HomeSphere operated in a regulated sector, what would need to change here before you'd trust this pipeline with real customer data?
-- Who is accountable if a bad number from this pipeline ends up in a board report?
-
----
-
-## Output
-
-Produce a short list of **design debts** - things that work but would cause problems at scale,
-over time, or with another person involved.
-
-Be specific. "It is not well organised" is not a design debt. "Raw and cleaned data sit in the
-same folder with no naming convention" is.
+When medallion architecture is introduced, test which of your design debts it could address and which need other measures. Clear layers and reusable tables can improve organisation and reuse; naming layers alone would not prevent the silent data losses you observed.
