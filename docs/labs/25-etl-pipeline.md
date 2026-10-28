@@ -60,7 +60,7 @@ You will add two small notebooks to the pipeline, purely to record whether a run
     ```python
     import requests
     ctx = dict(notebookutils.runtime.context)
-    ctx["source"] = "de5m3-SUCCESS"
+    ctx["source"] = "de5m3-lab25-SUCCESS"
 
     try:
         requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
@@ -76,7 +76,7 @@ You will add two small notebooks to the pipeline, purely to record whether a run
     - Use the same cell contents, but change the `source` line to:
 
         ```python
-        ctx["source"] = "de5m3-FAILURE"
+        ctx["source"] = "de5m3-lab25-FAILURE"
         ```
 
 

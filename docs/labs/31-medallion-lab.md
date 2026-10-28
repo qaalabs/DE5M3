@@ -176,7 +176,7 @@ Add a new cell and run it:
 # Cell 7 - Mark silver complete
 import requests
 ctx = dict(notebookutils.runtime.context)
-ctx["source"] = "de5m3-silver"
+ctx["source"] = "de5m3-lab31"
 
 try:
     requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
@@ -271,7 +271,7 @@ Add a new cell and run it:
 # Cell 3 - Mark gold complete
 import requests
 ctx = dict(notebookutils.runtime.context)
-ctx["source"] = "de5m3-gold"
+ctx["source"] = "de5m3-lab31-SUCCESS"
 
 try:
     requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)

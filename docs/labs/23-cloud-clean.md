@@ -16,9 +16,9 @@
     !!! success "The lakehouse is attached. The notebook can read from the `Files/data/` folder in OneLake."
 
 
-## Step 2: Complete and run the notebook
+## Steps 2-5: Work through the notebook
 
-The notebook contains the same nine cleaning steps you built on Day 1 - but this time the file paths and output are different.
+Steps 2 to 5 are in the `cloud_clean` notebook. It contains the same nine cleaning fixes you built on Day 1 - but this time the file paths and output are different.
 
 |                      | Day 1                         | Day 2 |
 |----------------------|-------------------------------|-------|
@@ -29,7 +29,12 @@ The notebook contains the same nine cleaning steps you built on Day 1 - but this
 
 1. Work through each cell, completing the exercise sections where indicated.
 
-2. At the end of the notebook, you will save the cleaned data as a Delta table:
+    !!! tip "Want to check your work?"
+        - Open **Jupyter Notebook** on your Virtual Machine
+        - Open `M3/HomeSphere/solution/cloud_clean_solution.ipynb`
+        - Keep it beside Fabric to compare as you go
+
+2. In Step 4 of the notebook, you will save the cleaned data as a Delta table:
 
     ```python
     spark_df = spark.createDataFrame(df)
@@ -39,24 +44,14 @@ The notebook contains the same nine cleaning steps you built on Day 1 - but this
     !!! note
         `spark` is available automatically in every Fabric notebook - you do not need to import it. The `saveAsTable` call writes a managed Delta table to your lakehouse.
 
-3. Add one more code cell at the end, to ping the tracking dashboard once the table is written:
 
-    ```python
-    import requests
-    ctx = dict(notebookutils.runtime.context)
-    ctx["source"] = "de5m3-lab23"
+## Step 6: Run all cells and stop the session
 
-    try:
-        requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
-    except Exception:
-        pass  # a dead endpoint must never fail the notebook run
-    ```
-
-4. Run all cells and confirm the notebook completes without errors.
+1. Run all cells and confirm the notebook completes without errors.
 
     !!! success "The `cleaned_sales` table should now appear in the **Tables** section of your lakehouse."
 
-5. After running the last cell, select the **Run** tab above the ribbon and then select **Stop session**.
+2. After running the last cell, select the **Run** tab above the ribbon and then select **Stop session**.
 
     - This stops the compute resource being used by the notebook.
 

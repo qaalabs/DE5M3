@@ -4,17 +4,15 @@
 
 1. Return to your HomeSphere workspace
 2. Attach the solution notebooks to the lakehouse
-3. Create a pipeline
-4. Configure the pipeline activities
-5. Run the pipeline
-6. Verify the results
-7. Individually record what was automated and how the pipeline was made runnable, using the two closing prompts
+3. Create two tracking notebooks
+4. Create a pipeline
+5. Configure the pipeline activities
+6. Connect the four activities
+7. Run the pipeline
+8. Verify the results
 
-### Closing consolidation
+### Closing notes
 
-- Keep this within the lab's existing verification and conclusion. Unpack S4's "automate" and K8's "deployment approaches" before learners write
-- Ask learners to reference an actual dependency and verification result, explaining why the dependency order matters and distinguishing the manual pipeline trigger from automatic execution of dependent activities
-- Acknowledge the supplied solution notebooks: learners configured their orchestration. The cleaning solution reads all matching sales files, unlike the earlier single-file exercise
-- Clarify that configuring a runnable training pipeline contributes to K8; this lab does not cover the full production deployment lifecycle
-
-- Check a few individual explanations during verification, with learners' agreement; use their dependency settings and run outcomes to give targeted feedback before they revise their notes
+- The S4/K8 prompts are on the learner page - check a few explanations during verification (with agreement) against their actual dependency settings and run outcomes
+- Listen for the difference between the manual pipeline trigger and the dependent activities running automatically
+- K8 here is a runnable training pipeline, not the full production deployment lifecycle
