@@ -15,7 +15,7 @@ Your task: produce the minimum documentation they would need to orientate themse
 
 Not everything - the minimum. The thing that would save them an hour of confusion.
 
-Use the [HomeSphere pipeline diagram](pipeline-solution.md) as your reference throughout this activity.
+Use the [HomeSphere pipeline diagram](pipeline-diagram.md) as your reference throughout this activity.
 
 ---
 

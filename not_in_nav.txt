@@ -2,7 +2,8 @@ day3/scenario-brief-a.md
 day3/scenario-brief-b.md
 day3/scenario-brief-c.md
 day3/scenario-brief-d.md
-day4/pipeline-solution.md
+day4/pipeline-diagram.md
 day4/mvd-example.md
 labs/run-inside-vm.md
 labs/run-locally.md
+day4/checks-solution.md

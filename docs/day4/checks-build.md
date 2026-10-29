@@ -20,127 +20,74 @@ Open the notebook: `day4/checks_practice.ipynb`
 
 *Your trainer will demo the first check live. Watch the pattern, then continue from TODO 2.*
 
+`sales_raw.csv` has 30 rows. The cleaned table has 23. This time you check the raw data **before** it is cleaned.
+
 ---
 
-## Step 2: The check pattern
+## Step 2: Fail loudly
 
 Use explicit logic that is readable and intentional:
 
 ```python
-row_count = len(silver_sales)
-if row_count < 20:
-    raise ValueError(f"Row count too low: {row_count} rows. Pipeline stopped.")
+null_count = df_raw["product_id"].isnull().sum()
+if null_count > 0:
+    raise ValueError(f"{null_count} rows have no product_id. Pipeline stopped.")
 ```
 
-Or collect checks and report together before stopping:
+| TODO | Check |
+|---|---|
+| 1 - Missing product | No nulls in `product_id` |
+| 2 - Duplicate rows | No fully duplicated rows |
+| 3 - Quantity | Every quantity is a number greater than zero |
+| 4 - Price | Every unit price is greater than zero |
 
-```python
-failures = []
-
-if len(silver_sales) < 20:
-    failures.append(f"Row count too low: {len(silver_sales)}")
-
-if silver_sales["product_id"].isnull().sum() > 0:
-    failures.append("Nulls found in product_id")
-
-if failures:
-    for msg in failures:
-        print(f"FAIL: {msg}")
-    raise ValueError("Validation failed - pipeline stopped.")
-```
+Every check should fail - the raw data has problems. Then try **Run All**: the notebook stops at the first one.
 
 ---
 
-## Step 3: The TODOs
+## Step 3: Collect every problem
 
-!!! info "Each TODO follows the same structure:"
-    - Risk.
-    - Check.
-    - What should happen if it fails.
+Instead of raising straight away, add each problem to a list and print them all:
+
+```python
+errors = []
+
+if null_count > 0:
+    errors.append(f"{null_count} rows have no product_id")
+
+# ... the other checks ...
+
+for msg in errors:
+    print(f"ERROR: {msg}")
+```
+
+Every problem, one run.
 
 ---
 
-### TODO 1 - Row count
+## Stretch
 
-**Risk:** Sales file arrives with fewer rows than expected  
-**Check:** `silver_sales` has at least 20 rows  
-**If this fails:** Stop the pipeline
+Each part builds on the last.
 
-```python
-row_count = len(silver_sales)
+### Part 3: Functions
 
-# TODO: check row_count and raise a clear error if it is too low
-```
-
----
-
-### TODO 2 - Null check on a key field
-
-**Risk:** `product_id` has nulls, which will cause silent join failures  
-**Check:** No nulls in `product_id` in `silver_sales`  
-**If this fails:** Stop the pipeline - unmatched rows will understate revenue
+Turn your checks into reusable functions that append to the list, then call them on the raw data:
 
 ```python
-null_count = silver_sales["product_id"].isnull().sum()
-
-# TODO: check null_count and raise a clear error if any are found
+def check_no_nulls(df, column, errors):
+    ...
 ```
 
----
+### Part 4: Clean, then check again
 
-### TODO 3 - Join quality
+Run the cleaning, then call the **same functions** on silver - they should now pass. Add checks that only make sense after cleaning: how many rows were lost, dates that failed to parse, status values.
 
-**Risk:** Some sales rows did not match a product after joining  
-**Check:** No nulls in `category` after the silver-to-gold join  
-**If this fails:** Warn and identify which order IDs are affected
+### Part 5: Stop at the end
 
-```python
-unmatched = gold_revenue[gold_revenue["category"].isnull()]
+Raise one `ValueError` at the end if there are any silver errors.
 
-# TODO: check whether unmatched is empty and respond clearly if not
-```
-
----
-
-### TODO 4 - Value sanity
-
-**Risk:** Negative or zero `quantity` or `line_value` would distort revenue figures  
-**Check:** All values in both columns are greater than zero  
-**If this fails:** Collect the offending rows and stop promotion to gold
-
-```python
-bad_rows = gold_revenue[(gold_revenue["quantity"] <= 0) | (gold_revenue["line_value"] <= 0)]
-
-# TODO: check whether bad_rows is empty and respond clearly if not
-```
-
----
-
-## Stretch task
-
-If you have finished the four TODOs, move your checks into reusable functions:
-
-```python
-def check_not_empty(df, name):
-    if len(df) == 0:
-        raise ValueError(f"{name} is empty")
-
-def check_no_nulls(df, column, name):
-    null_count = df[column].isnull().sum()
-    if null_count > 0:
-        raise ValueError(f"{name}: {null_count} nulls found in {column}")
-```
-
-Then call them:
-
-```python
-check_not_empty(silver_sales, "silver_sales")
-check_no_nulls(silver_sales, "product_id", "silver_sales")
-```
-
-Same thinking, cleaner reuse. You could call these from any notebook in the pipeline.
+A notebook only *fails* when an error is raised. A pipeline's on-failure path only fires when a notebook fails.
 
 ---
 
 !!! note "The question is not *did your checks work?* It is: What should the pipeline do when a check fails?"
-
