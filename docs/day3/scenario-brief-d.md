@@ -1,4 +1,4 @@
-# Group 4: Manufacturing Plant
+# Group D: Manufacturing Plant
 
 !!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
 

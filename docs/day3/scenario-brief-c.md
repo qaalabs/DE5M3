@@ -1,4 +1,4 @@
-# Group 3: Regional Bank
+# Group C: Regional Bank
 
 !!! abstract "K17: Approaches to data integration and how combining disparate data sources delivers value to an organisation."
 
