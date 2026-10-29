@@ -8,10 +8,6 @@
         <link rel="canonical" href="https://qaalabs.github.io/DE5M3/day3/fragile/">
       
       
-        <link rel="prev" href="../swagger-lab/">
-      
-      
-        <link rel="next" href="../medallion-mapping/">
       
       
         
@@ -22,7 +18,7 @@
     
     
       
-        <title>👥 Where are the weaknesses? - Module 3 - Data Processing, Transformation &amp; ETL</title>
+        <title>Design Debts: Explain, Challenge, Improve - Module 3 - Data Processing, Transformation &amp; ETL</title>
       
     
     
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              👥 Where are the weaknesses?
+              Design Debts: Explain, Challenge, Improve
             
           </span>
         </div>
@@ -336,42 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day3/" class="md-nav__link">
+      <a href="../../agenda/day4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Day 3
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../agenda/day3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 3
+    Day 4
   
 
     
@@ -396,20 +364,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -419,7 +385,7 @@
   <span class="md-ellipsis">
     
   
-    Day 3 ~ Robust &amp; Well-Architectured
+    Day 4 ~ Supportable &amp; Explainable
   
 
     
@@ -430,12 +396,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Day 3 ~ Robust &amp; Well-Architectured
+    Day 4 ~ Supportable &amp; Explainable
   
 
           </label>
@@ -448,14 +414,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../mermaid-intro/" class="md-nav__link">
+      <a href="../../day4/silent-fail/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    MERMAID
+    Silent failures
   
 
     
@@ -476,183 +442,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../swagger-lab/" class="md-nav__link">
+      <a href="../../day4/checks-build/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Swagger - Read from a live API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    👥 Where are the weaknesses?
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    👥 Where are the weaknesses?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#start-from-what-you-know" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Start from what you know
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unpack-k13" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Unpack K13
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#explain-individually" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Explain individually
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#challenge-the-explanation-together" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Challenge the explanation together
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#revise-and-retain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Revise and retain
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-for-the-next-activity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prepare for the next activity
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../medallion-mapping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Map the pipeline
+    Add validation checks
   
 
     
@@ -673,14 +470,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline-diagram/" class="md-nav__link">
+      <a href="../../day4/pipeline-local/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🖥️ Start MS Fabric playground
+    Run the pipeline locally
   
 
     
@@ -701,14 +498,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/31-medallion-lab/" class="md-nav__link">
+      <a href="../../day4/mvd-build/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lab 3.1 - Medallion architecture
+    Create a handover artefact
   
 
     
@@ -729,14 +526,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../medallion-scenarios/" class="md-nav__link">
+      <a href="../../day4/deploy-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    👥 Medallion scenarios
+    Deploy a new pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/cloud-compare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👥 Compare cloud ETL platforms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day4/pitch-prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👥 Prepare your explanation
   
 
     
