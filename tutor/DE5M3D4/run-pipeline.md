@@ -1,10 +1,15 @@
 ## Run the Pipeline Locally
 
-Stretch task after Checks Build - script at day4/pipeline.py
+Script version of the checks notebook - day4/pipeline.py runs, learners edit day4/checks.py
 
-- Part 1: run with no checks active - just seeing it run as a script, terminal output not cells
-- Part 2: uncomment a check (Ctrl+/) - pipeline stops, sys.exit(1), no output file
-- Part 3: switch to Option B - warning printed, pipeline continues, output file written
-- Name the connection: same fail/warn decision they just made in the notebook
-- sys.exit(1) - schedulers (cron, Task Scheduler, Fabric pipelines) use this to decide retry/alert
-- Stretch: write failing rows to rejected.csv instead of printing
+Activities:
+
+- Part 1: run it - clean run, 30 rows in, 23 out, nothing complains
+- Part 2: uncomment the notebook checks in get_failures() (Ctrl+/) - pipeline stops before cleaning. Provided so it doesn't depend on finishing the notebook
+- Part 3: echo $LASTEXITCODE shows 1 - same signal as Day 2's Track Failure
+- Part 4: move checks to get_warnings() until it completes
+- Stretch: get_silver_failures() after cleaning; rejected.csv; timestamp
+
+- Part 4 is the point: most bronze problems are already handled by cleaning, so stopping on them means the pipeline never runs. Failures are for what cleaning can't fix (3 rows, missing column)
+- If $LASTEXITCODE shows nothing, they are in cmd not PowerShell - echo %errorlevel%
+- Hints for the stretch extras: day4/solution-snippets.txt in the learner repo

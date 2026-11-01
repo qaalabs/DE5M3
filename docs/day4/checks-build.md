@@ -22,6 +22,8 @@ Open the notebook: `day4/checks_practice.ipynb`
 
 `sales_raw.csv` has 30 rows. The cleaned table has 23. This time you check the raw data **before** it is cleaned.
 
+!!! info "There is no solution notebook for this activity. Go as far as you can - the next activity does not depend on it."
+
 ---
 
 ## Step 2: Fail loudly

@@ -13,6 +13,5 @@
 
 ### Closing notes
 
-- The S4/K8 prompts are on the learner page - check a few explanations during verification (with agreement) against their actual dependency settings and run outcomes
-- Listen for the difference between the manual pipeline trigger and the dependent activities running automatically
+- The S4/K8 prompts are on the learner page
 - K8 here is a runnable training pipeline, not the full production deployment lifecycle
