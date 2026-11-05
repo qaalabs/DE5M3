@@ -3,6 +3,7 @@ printday_cover.tpl
 backup/
 zanyana/
 .vault/
+printday/site/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
