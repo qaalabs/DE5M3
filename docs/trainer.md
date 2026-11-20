@@ -70,7 +70,7 @@
 
 ---
 
-## Day 3 ~ Robust & Well-Architectured
+## Day 3 ~ Robust & Well-Architected
 
 ### Session 1
 

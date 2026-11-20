@@ -33,7 +33,7 @@ nav = [
     {"Lab 2.7 - Schema drift" = "labs/27-schema-drift.md"},
     {"Lab 2.8 - Pipeline failure" = "labs/28-pipeline-failure.md"},
   ]},
-  {"Day 3 ~ Robust & Well-Architectured" = [
+  {"Day 3 ~ Robust & Well-Architected" = [
     {"MERMAID" = "day3/mermaid-intro.md"},
     {"Swagger - Read from a live API" = "day3/swagger-lab.md"},
     {"👥 Where are the weaknesses?" = "day3/fragile.md"},
