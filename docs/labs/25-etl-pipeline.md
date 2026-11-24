@@ -60,6 +60,7 @@ You will add two small notebooks to the pipeline, purely to record whether a run
     ```python
     import requests
     ctx = dict(notebookutils.runtime.context)
+
     ctx["source"] = "de5m3-lab25-SUCCESS"
 
     try:
@@ -68,7 +69,7 @@ You will add two small notebooks to the pipeline, purely to record whether a run
         pass  # a dead endpoint must never fail the notebook run
     ```
 
-    !!!! note "The notebook will save automatically."
+    !!! note "The notebook will save automatically."
 
 6. Repeat steps 2-5 for a second notebook:
 
@@ -105,7 +106,9 @@ You will add four Notebook activities - one for each solution notebook, and one 
     - Select: **Pipeline activity**
     - Choose: **Notebook** (scroll down - it should be under the *Transform* heading)
 
-2. In the activity properties pane below the canvas, set the **Name** to: `Clean Sales Orders`
+2. In the activity properties pane below the canvas:
+
+    - Set the **Name** to: `Clean Sales Orders`
 
 3. Select the **Settings** tab and configure the following:
 
@@ -114,7 +117,9 @@ You will add four Notebook activities - one for each solution notebook, and one 
 
 4. Click the **Activities** tab and add a second **Notebook** activity to the canvas. 
 
-5. In the properties pane, set the **Name** to: `Build Output`
+5. In the properties pane:
+
+    - Set the **Name** to: `Build Output`
 
 6. Select the **Settings** tab and configure the following:
 
@@ -123,7 +128,9 @@ You will add four Notebook activities - one for each solution notebook, and one 
 
 7. Add a third **Notebook** activity to the canvas.
 
-8. In the properties pane, set the **Name** to: `Track Success`
+8. In the properties pane:
+
+    - Set the **Name** to: `Track Success`
 
 9. Select the **Settings** tab and configure the following:
 
@@ -132,7 +139,9 @@ You will add four Notebook activities - one for each solution notebook, and one 
 
 10. Add a fourth **Notebook** activity to the canvas.
 
-11. In the properties pane, set the **Name** to: `Track Failure`
+11. In the properties pane:
+
+    - Set the **Name** to: `Track Failure`
 
 12. Select the **Settings** tab and configure the following:
 

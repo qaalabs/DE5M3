@@ -18,3 +18,19 @@ respond to incidents within data processing pipelines, whilst
 troubleshooting and providing resolutions to stakeholders.
 (K23, S8, S20, B5)
 ```
+
+---
+
+```text
+## K23 (Knowledge)
+How to undertake analysis and root cause investigation.
+
+## S8 (Skill)
+Identify and troubleshoot issues with data processing pipelines.
+
+## S20 (Skill)
+Investigate and respond to incidents, identifying the root cause and resolution with internal and external stakeholders.
+
+## B5 (Behaviour)
+Use initiative and innovation to problem solve and trouble shoot, providing creative solutions.
+```
