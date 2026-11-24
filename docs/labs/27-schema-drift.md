@@ -60,7 +60,7 @@ Note what it actually says.
 Compare this run to Lab 2.6's second batch.
 
 - In Lab 2.6, one row out of five went missing. This time, how many of the four
-  new orders actually made it into `sales_trusted_solution`?
+  new orders actually made it into `sales_trusted`?
 - The renamed column still exists in the raw file - it just isn't the column the
   notebook is looking for. Trace through `cloud_clean_solution` and find the
   exact line where that batch's data gets silently dropped.

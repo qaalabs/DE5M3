@@ -119,11 +119,19 @@ Opening each notebook from within the lakehouse connects it to the HomeSphere da
 
 !!! success "Both notebooks are now connected to the HomeSphere lakehouse and ready for the next lab."
 
----
 
 ## Keep your workspace
 
 In this exercise, you have created the HomeSphere lakehouse, uploaded the source data files, and imported the notebooks.
 
 **Do not delete your workspace** - you will continue working in it in the next lab.
+
+---
+
+## In the next exercise you may want to check your work
+
+### In your VM - Start Jupyter Notebook
+
+- Open Jupyter Notebook on your Virtual Machine
+- Open: `M3/HomeSphere/solution/cloud_clean_solution.ipynb`
 

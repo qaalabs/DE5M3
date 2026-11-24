@@ -17,7 +17,7 @@ Before anything changes, record what your pipeline has already produced.
 2. Switch to the **SQL analytics endpoint** in your lakehouse and run:
 
     ```sql
-    SELECT COUNT(*) AS rows FROM cleaned_sales_solution
+    SELECT COUNT(*) AS rows FROM cleaned_sales
     ```
 
     This is your **cleaned row count**.
@@ -26,7 +26,7 @@ Before anything changes, record what your pipeline has already produced.
 
     ```sql
     SELECT COUNT(*) AS rows, ROUND(SUM(line_value), 2) AS revenue
-    FROM sales_trusted_solution
+    FROM sales_trusted
     ```
 
     This gives you the **output row count** and **revenue**.

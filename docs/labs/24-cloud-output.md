@@ -24,7 +24,7 @@ Steps 2 to 7 are in the `cloud_output` notebook. It reads `cleaned_sales` from t
 
     !!! tip "Want to check your work?"
         - Open **Jupyter Notebook** on your Virtual Machine
-        - Open `M3/HomeSphere/solution/cloud_output_solution.ipynb`
+        - Open `M3/HomeSphere/solution/cloud_output_guided.ipynb`
         - Keep it beside Fabric to compare as you go
 
     !!! note

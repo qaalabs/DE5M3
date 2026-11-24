@@ -11,6 +11,14 @@ In this lab you will create a Microsoft Fabric lakehouse, upload data, and explo
     Follow the [VM login instructions](run-inside-vm.md) first, then come back here.
 
 
+## Overview
+
+```mermaid
+flowchart LR
+    A[Create workspace] --> B[Create lakehouse] --> C[Create data folder] --> D[Upload sales.csv] --> E[Load to table]
+```
+
+
 ## Step 1: Create a workspace
 
 Before working with data in Fabric, you need to create a workspace.
@@ -65,7 +73,7 @@ Fabric provides multiple ways to load data into the lakehouse. One of the simple
     - Name the new subfolder: `data`
     - Click **Create**
 
-2. Locate the `sales.csv` file in the `M3/day1/data` directory on your Virtual Machine.
+2. Locate the `sales.csv` file in the `M3/day2` directory on your Virtual Machine.
 
     - If the file is not there, download it from: https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv
 
@@ -121,6 +129,14 @@ The sales data you uploaded is in a file. Loading it into a table lets you query
 
     !!! info ""
         Files for a delta table are stored in *Parquet* format, and include a subfolder named `_delta_log` in which details of transactions applied to the table are logged.
+
+
+```mermaid
+flowchart LR
+    L[Load to sales table] --> D[(sales table)]
+    D --> E[Query in a notebook]
+    D --> F[Query with SQL endpoint]
+```
 
 
 ## Step 5: Use a notebook to query tables

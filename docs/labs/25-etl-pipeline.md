@@ -187,14 +187,14 @@ The pipeline has run the supplied solution notebooks to clean the data and build
 3. Run the following queries to confirm the pipeline created the expected tables:
 
     ```sql
-    SELECT COUNT(*) AS rows FROM cleaned_sales_solution
+    SELECT COUNT(*) AS rows FROM cleaned_sales
     ```
 
     Then run:
 
     ```sql
     SELECT category, ROUND(SUM(line_value), 2) AS total_revenue
-    FROM sales_trusted_solution
+    FROM sales_trusted
     GROUP BY category
     ORDER BY total_revenue DESC
     ```

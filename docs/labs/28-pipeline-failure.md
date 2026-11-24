@@ -39,7 +39,7 @@ This time, the pipeline actually fails.
 | Fourth batch | sales_raw_batch28.csv | -                | -        | -            | -           | -       | Failed |
 
 There's nothing to compare this time - the pipeline stopped before producing
-anything new. `cleaned_sales_solution` and `sales_trusted_solution` still hold
+anything new. `cleaned_sales` and `sales_trusted` still hold
 whatever Lab 2.7 left behind.
 
 !!! question "Across all four runs: which failure mode worried you the most - the row that silently vanished, the batch that silently vanished, or the pipeline that stopped outright? Why?"
