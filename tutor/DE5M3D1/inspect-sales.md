@@ -7,6 +7,17 @@
 - missing values
 - duplicates
 
+
+#### Instructions for the WebEx chat
+```text
+## Inspect Sales
+https://qaalabs.github.io/DE5M3/day1/inspect-sales/
+
+Sales:|https://qaalabs.github.io/DE5M3/day1/inspect-sales/
+```
+
+---
+
 ### Next is:
 
 - Part 2 ~ Open Products Data

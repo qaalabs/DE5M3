@@ -11,4 +11,10 @@ Open the data/ folder and point out that there are three files ~ sales_raw.csv, 
 
 Do not explain it. Just say "we will come back to what that is and why it matters on Day 3."
 
-The curiosity does the work.
+#### Instructions for the WebEx chat
+```text
+## HomeSphere scenario
+https://qaalabs.github.io/DE5M3/day1/homesphere
+
+HomeSphere:|https://qaalabs.github.io/DE5M3/day1/homesphere
+```

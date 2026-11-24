@@ -5,3 +5,11 @@
 - `etl_solution.py` exists if someone gets stuck; point them there rather than debugging live
 - Discussion questions at the end are worth raising even if a learner doesn't finish the script
 - Don't let this run long - it's a bridge to Revenue next, not the main event
+
+#### Instructions for the WebEx chat
+```text
+## ETL Stretch
+https://qaalabs.github.io/DE5M3/day1/stretch-etl-script
+
+Stretch:|https://qaalabs.github.io/DE5M3/day1/stretch-etl-script
+```
