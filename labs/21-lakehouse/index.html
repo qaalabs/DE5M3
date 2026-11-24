@@ -852,6 +852,8 @@
 <p class="admonition-title">Not logged in to Microsoft Fabric yet?</p>
 <p>Follow the <a href="../run-inside-vm/">VM login instructions</a> first, then come back here.</p>
 </div>
+<pre class="mermaid"><code>flowchart LR
+    A[Create workspace] --&gt; B[Create lakehouse] --&gt; C[Create data folder] --&gt; D[Upload sales.csv] --&gt; E[Load to table]</code></pre>
 <h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
 <p>Before working with data in Fabric, you need to create a workspace.</p>
 <ol>
@@ -987,6 +989,10 @@
 </div>
 </li>
 </ol>
+<pre class="mermaid"><code>flowchart LR
+    L[Load to sales table] --&gt; D[(sales table)]
+    D --&gt; E[Query in a notebook]
+    D --&gt; F[Query with SQL endpoint]</code></pre>
 <h2 id="step-5-use-a-notebook-to-query-tables">Step 5: Use a notebook to query tables</h2>
 <p>Fabric notebooks let you write and run code directly against your lakehouse tables using Apache Spark.</p>
 <ol>
