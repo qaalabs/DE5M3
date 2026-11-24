@@ -836,14 +836,14 @@ twice and check whether <strong>Succeeded</strong> actually means what you think
 </li>
 <li>
 <p>Switch to the <strong>SQL analytics endpoint</strong> in your lakehouse and run:</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cleaned_sales_solution</span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">cleaned_sales</span>
 </code></pre></div>
 <p>This is your <strong>cleaned row count</strong>.</p>
 </li>
 <li>
 <p>Run:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">rows</span><span class="p">,</span><span class="w"> </span><span class="n">ROUND</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">line_value</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">revenue</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">sales_trusted_solution</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_trusted</span>
 </code></pre></div>
 <p>This gives you the <strong>output row count</strong> and <strong>revenue</strong>.</p>
 </li>
