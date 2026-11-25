@@ -746,7 +746,6 @@
 <p>Then open <strong>Terminal</strong> on your VM to get to a command prompt.</p>
 <hr>
 <h2 id="lab-1-start-mongodb">Lab 1: Start MongoDB</h2>
-<h3 id="instructor-led-demo">Instructor Led Demo</h3>
 <p><strong>Start the MongoDB Container</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Start MongoDB 4.4 (compatible with VMs without AVX support)</span>
 docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>mongo:4.4
@@ -781,7 +780,6 @@ docker<span class="w"> </span>ps
 <div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w"> </span><span class="p">]</span>
 </code></pre></div>
 <p>That difference matters. MongoDB imports each element of an array as its own document, so the array gives us <strong>nine documents</strong>, one per product. Import the wrapped version and you get <strong>one</strong> document with all nine products stuffed inside it.</p>
-<h3 id="instructor-led-demo_1">Instructor Led Demo</h3>
 <p><strong>Copy the file into the container</strong></p>
 <p>MongoDB is running inside the container, so the file needs to be in there too.</p>
 <p>In Terminal, go to the folder that contains your <code>M3</code> folder, then run:</p>
@@ -809,7 +807,6 @@ docker<span class="w"> </span>ps
 </div>
 <hr>
 <h2 id="lab-3-explore-the-products">Lab 3: Explore the Products</h2>
-<h3 id="instructor-led-demo_2">Instructor Led Demo</h3>
 <p><strong>Connect to the MongoDB Shell</strong></p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mongodb<span class="w"> </span>mongo
 </code></pre></div>
@@ -895,7 +892,6 @@ docker<span class="w"> </span>ps
 </ul>
 <hr>
 <h2 id="lab-4-flexible-schema">Lab 4: Flexible Schema</h2>
-<h3 id="instructor-led-demo_3">Instructor Led Demo</h3>
 <p>HomeSphere is launching a video doorbell. It has specs none of the other products have - a camera resolution and a battery life.</p>
 <p>In a SQL table we would need to add new columns first, and every other product would get empty values in them. In MongoDB we just insert it:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span>
