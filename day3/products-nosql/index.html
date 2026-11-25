@@ -743,12 +743,13 @@
 <div class="admonition warning">
 <p class="admonition-title">Wait for the Docker Engine to start</p>
 </div>
-<p>Then open <strong>Terminal</strong> on your VM to get to a command prompt.</p>
+<p>Then open <strong>Terminal</strong> on your VM to get to a command prompt, and move into your <code>M3</code> folder:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Desktop<span class="se">\M</span><span class="m">3</span>
+</code></pre></div>
 <hr>
-<h2 id="lab-1-start-mongodb">Lab 1: Start MongoDB</h2>
-<p><strong>Start the MongoDB Container</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Start MongoDB 4.4 (compatible with VMs without AVX support)</span>
-docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>mongo:4.4
+<h2 id="step-1-start-mongodb">Step 1: Start MongoDB</h2>
+<p>Start MongoDB 4.4 (compatible with VMs without AVX support):</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>mongo:4.4
 </code></pre></div>
 <p>What this does:</p>
 <ul>
@@ -762,31 +763,23 @@ docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </sp
 <p class="admonition-title">Although version 5 has been released - v4.4 works on the virtual machines</p>
 </div>
 <p>The first time you run this, Docker downloads the image, so it can take a minute.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Verify it's running</span>
-docker<span class="w"> </span>ps
+<p>Verify it's running:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
 </code></pre></div>
 <p>If MongoDB is running you should see something similar to the following:</p>
 <div class="highlight"><pre><span></span><code><span class="n">CONTAINER</span> <span class="n">ID</span>  <span class="n">IMAGE</span>      <span class="n">COMMAND</span>                 <span class="n">CREATED</span>      <span class="n">STATUS</span>      <span class="n">PORTS</span>                     <span class="n">NAMES</span>
 <span class="n">868de3409690</span>  <span class="n">mongo</span><span class="p">:</span><span class="n">4</span><span class="p">.</span><span class="n">4</span>  <span class="s2">"docker-entrypoint.s…"</span>  <span class="n">20</span> <span class="n">secs</span> <span class="n">ago</span>  <span class="n">Up</span> <span class="n">16</span> <span class="n">secs</span>  <span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">:</span><span class="n">27017</span><span class="p">-&gt;</span><span class="n">27017</span><span class="p">/</span><span class="n">tcp</span>  <span class="n">mongodb</span>
 </code></pre></div>
 <hr>
-<h2 id="lab-2-load-the-products">Lab 2: Load the Products</h2>
-<h3 id="the-file">The file</h3>
-<p>The products file for this lab is <strong><code>M3/day3/data/products_nosql.json</code></strong>.</p>
-<p>It holds the same nine products as <code>products_raw.json</code>, with one difference. <code>products_raw.json</code> wraps the list inside a <code>products</code> key:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div>
-<p><code>products_nosql.json</code> is just the list - a JSON <strong>array</strong> of products:</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w"> </span><span class="p">]</span>
-</code></pre></div>
-<p>That difference matters. MongoDB imports each element of an array as its own document, so the array gives us <strong>nine documents</strong>, one per product. Import the wrapped version and you get <strong>one</strong> document with all nine products stuffed inside it.</p>
-<p><strong>Copy the file into the container</strong></p>
+<h2 id="step-2-copy-the-products-file-into-the-container">Step 2: Copy the Products File into the Container</h2>
+<p>The products file is <strong><code>day3/data/products_nosql.json</code></strong>.</p>
 <p>MongoDB is running inside the container, so the file needs to be in there too.</p>
-<p>In Terminal, go to the folder that contains your <code>M3</code> folder, then run:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>cp<span class="w"> </span>M3/day3/data/products_nosql.json<span class="w"> </span>mongodb:/products_nosql.json
+<p>From your <code>M3</code> folder, run:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>cp<span class="w"> </span>day3/data/products_nosql.json<span class="w"> </span>mongodb:/products_nosql.json
 </code></pre></div>
 <p>This copies the file from your VM into the root of the <code>mongodb</code> container.</p>
-<p><strong>Import the file</strong></p>
+<hr>
+<h2 id="step-3-import-the-products">Step 3: Import the Products</h2>
 <p>MongoDB comes with a tool called <code>mongoimport</code> for loading files. We run it inside the container:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mongodb<span class="w"> </span>mongoimport<span class="w"> </span>--db<span class="w"> </span>homesphere<span class="w"> </span>--collection<span class="w"> </span>products<span class="w"> </span>--jsonArray<span class="w"> </span>--file<span class="w"> </span>/products_nosql.json
 </code></pre></div>
@@ -806,58 +799,62 @@ docker<span class="w"> </span>ps
 <p>We didn't create the database, the collection or any table structure first. MongoDB created them when the data arrived.</p>
 </div>
 <hr>
-<h2 id="lab-3-explore-the-products">Lab 3: Explore the Products</h2>
-<p><strong>Connect to the MongoDB Shell</strong></p>
+<h2 id="step-4-connect-to-the-mongodb-shell">Step 4: Connect to the MongoDB Shell</h2>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mongodb<span class="w"> </span>mongo
 </code></pre></div>
 <p>You should see the MongoDB shell prompt: <code>&gt;</code></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Switch to the homesphere database</span>
-<span class="nx">use</span><span class="w"> </span><span class="nx">homesphere</span>
+<p>See all databases - <code>homesphere</code> was created by the import:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">show</span><span class="w"> </span><span class="nx">dbs</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// See collections in the current database</span>
-<span class="nx">show</span><span class="w"> </span><span class="nx">collections</span>
+<p>Switch to the <code>homesphere</code> database:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">use</span><span class="w"> </span><span class="nx">homesphere</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// Count the products</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">countDocuments</span><span class="p">({})</span>
+<hr>
+<h2 id="step-5-explore-the-products">Step 5: Explore the Products</h2>
+<p>See collections in the current database:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">show</span><span class="w"> </span><span class="nx">collections</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// See every product</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">pretty</span><span class="p">()</span>
+<p>Count the products:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">countDocuments</span><span class="p">({})</span>
+</code></pre></div>
+<p>See every product:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">pretty</span><span class="p">()</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each product has an <code>_id</code> field you didn't put in the file. MongoDB adds a unique <code>_id</code> to every document - it is the document's primary key.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="c1">// See one product</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="w"> </span><span class="s2">"product_id"</span><span class="o">:</span><span class="w"> </span><span class="s2">"P001"</span><span class="w"> </span><span class="p">})</span>
+<p>See one product:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="w"> </span><span class="s2">"product_id"</span><span class="o">:</span><span class="w"> </span><span class="s2">"P001"</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
 <hr>
 <h3 id="hands-on-practice-learners">Hands-On Practice ~ Learners</h3>
 <p><strong>Task 1: Finding Products</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Find all cameras</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"category"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Cameras"</span><span class="w"> </span><span class="p">}).</span><span class="nx">pretty</span><span class="p">()</span>
+<p>Find all cameras:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"category"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Cameras"</span><span class="w"> </span><span class="p">}).</span><span class="nx">pretty</span><span class="p">()</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// Show just the name of each product (1 = include the field, 0 = leave it out)</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p>Show just the name of each product (1 = include the field, 0 = leave it out):</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// Find all sensors - showing only name and category</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"category"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Sensors"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"category"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p>Find all sensors - showing only name and category:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"category"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Sensors"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"category"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
 <p><strong>Task 2: Querying Inside the Nested Specs</strong></p>
 <p>To reach a field inside <code>specs</code>, use <strong>dot notation</strong> - <code>"specs.colour"</code>. This is the query equivalent of the flattened <code>specs.colour</code> column you get in pandas.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Find all black products</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.colour"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Black"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p>Find all black products:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.colour"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Black"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// Find products that connect over Zigbee</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.connectivity"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Zigbee"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p>Find products that connect over Zigbee:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.connectivity"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Zigbee"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// Find products with an RRP over £50</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gt</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p>Find products with an RRP over £50:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gt</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// Find products with an RRP between £15 and £30</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gte</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p>Find products with an RRP between £15 and £30:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gte</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// Cheapest first (1 = ascending, -1 = descending)</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">}).</span><span class="nx">sort</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">})</span>
+<p>Cheapest first (1 = ascending, -1 = descending):</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">}).</span><span class="nx">sort</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
 <p><strong>Task 3: Answer These Questions</strong></p>
 <p>Write your own queries to answer:</p>
@@ -868,14 +865,14 @@ docker<span class="w"> </span>ps
 </ol>
 <details class="tip">
 <summary>Show the queries</summary>
-<div class="highlight"><pre><span></span><code><span class="c1">// 1. How many products have a 2-year warranty?</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">countDocuments</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.warranty_years"</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">})</span>
-
-<span class="c1">// 2. Which is the most expensive product?</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">}).</span><span class="nx">sort</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"> </span><span class="p">}).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span>
-
-<span class="c1">// 3. Which white products connect over Wi-Fi?</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.colour"</span><span class="o">:</span><span class="w"> </span><span class="s2">"White"</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.connectivity"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Wi-Fi"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p><strong>1.</strong> How many products have a 2-year warranty?</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">countDocuments</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.warranty_years"</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<p><strong>2.</strong> Which is the most expensive product?</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">}).</span><span class="nx">sort</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.rrp"</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"> </span><span class="p">}).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>3.</strong> Which white products connect over Wi-Fi?</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.colour"</span><span class="o">:</span><span class="w"> </span><span class="s2">"White"</span><span class="p">,</span><span class="w"> </span><span class="s2">"specs.connectivity"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Wi-Fi"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
 </details>
 <p><strong>Task 4: Count Products per Category</strong></p>
@@ -891,7 +888,7 @@ docker<span class="w"> </span>ps
 <li>Did you need to know the structure of the data before you loaded it?</li>
 </ul>
 <hr>
-<h2 id="lab-4-flexible-schema">Lab 4: Flexible Schema</h2>
+<h2 id="step-6-flexible-schema">Step 6: Flexible Schema</h2>
 <p>HomeSphere is launching a video doorbell. It has specs none of the other products have - a camera resolution and a battery life.</p>
 <p>In a SQL table we would need to add new columns first, and every other product would get empty values in them. In MongoDB we just insert it:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span>
@@ -908,8 +905,8 @@ docker<span class="w"> </span>ps
 <span class="w">  </span><span class="p">}</span>
 <span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// The other cameras are unchanged</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"category"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Cameras"</span><span class="w"> </span><span class="p">}).</span><span class="nx">pretty</span><span class="p">()</span>
+<p>The other cameras are unchanged:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"category"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Cameras"</span><span class="w"> </span><span class="p">}).</span><span class="nx">pretty</span><span class="p">()</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -918,11 +915,11 @@ docker<span class="w"> </span>ps
 <hr>
 <h3 id="hands-on-practice-learners_1">Hands-On Practice ~ Learners</h3>
 <p><strong>Task 1: Query a Field Only Some Products Have</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Find products that have a battery</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.battery_life_months"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$exists</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p>Find products that have a battery:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.battery_life_months"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$exists</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">// What happens when you query a field that most documents don't have?</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.resolution"</span><span class="o">:</span><span class="w"> </span><span class="s2">"1080p"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
+<p>What happens when you query a field that most documents don't have?</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="s2">"specs.resolution"</span><span class="o">:</span><span class="w"> </span><span class="s2">"1080p"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"_id"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div>
 <p><strong>Task 2: Add Your Own Product</strong></p>
 <p>Insert a new HomeSphere product of your own - for example a smart light bulb with a <code>brightness_lumens</code> spec, or a smart lock with a <code>battery_life_months</code> spec.</p>
@@ -988,32 +985,32 @@ docker<span class="w"> </span>ps
 <p>To leave the MongoDB shell, type <code>exit</code>.</p>
 <hr>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<p><strong>Container not starting?</strong>
-</p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>mongodb
-</code></pre></div><p></p>
+<p><strong>Container not starting?</strong></p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>mongodb
+</code></pre></div>
 <p><strong>"The container name "/mongodb" is already in use"?</strong></p>
 <p>You already have a <code>mongodb</code> container on this VM. Start it instead of creating a new one:
 </p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>start<span class="w"> </span>mongodb
 </code></pre></div><p></p>
-<p><strong>Can't connect to mongo shell?</strong>
-</p><div class="highlight"><pre><span></span><code><span class="c1"># Check container is running</span>
-docker<span class="w"> </span>ps
-
-<span class="c1"># Restart if needed</span>
-docker<span class="w"> </span>restart<span class="w"> </span>mongodb
-</code></pre></div><p></p>
+<p><strong>Can't connect to mongo shell?</strong></p>
+<p>Check container is running:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
+</code></pre></div>
+<p>Restart if needed:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>restart<span class="w"> </span>mongodb
+</code></pre></div>
 <p><strong>Import failed, or imported 1 document instead of 9?</strong></p>
 <p>Check you are using <code>products_nosql.json</code> (not <code>products_raw.json</code>) and included <code>--jsonArray</code>. If anything was imported, drop the collection in the MongoDB shell and import again:
 </p><div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">drop</span><span class="p">()</span>
 </code></pre></div><p></p>
-<p><strong>Want to start fresh?</strong>
-</p><div class="highlight"><pre><span></span><code><span class="c1"># Stop and remove container</span>
-docker<span class="w"> </span>stop<span class="w"> </span>mongodb
+<p><strong>Want to start fresh?</strong></p>
+<p>Stop and remove container:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>stop<span class="w"> </span>mongodb
 docker<span class="w"> </span>rm<span class="w"> </span>mongodb
-
-<span class="c1"># Start new container</span>
-docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>mongo:4.4
-</code></pre></div><p></p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+</code></pre></div>
+<p>Start new container:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>mongo:4.4
+</code></pre></div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
