@@ -744,12 +744,12 @@
 <p class="admonition-title">Wait for the Docker Engine to start</p>
 </div>
 <p>Then open <strong>Terminal</strong> on your VM to get to a command prompt, and move into your <code>M3</code> folder:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Desktop<span class="se">\M</span><span class="m">3</span>
+<div class="highlight"><pre><span></span><code>cd Desktop\M3
 </code></pre></div>
 <hr>
 <h2 id="step-1-start-mongodb">Step 1: Start MongoDB</h2>
 <p>Start MongoDB 4.4 (compatible with VMs without AVX support):</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>mongo:4.4
+<div class="highlight"><pre><span></span><code>docker run -d -p 27017:27017 --name mongodb mongo:4.4
 </code></pre></div>
 <p>What this does:</p>
 <ul>
@@ -764,24 +764,24 @@
 </div>
 <p>The first time you run this, Docker downloads the image, so it can take a minute.</p>
 <p>Verify it's running:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
+<div class="highlight"><pre><span></span><code>docker ps
 </code></pre></div>
 <p>If MongoDB is running you should see something similar to the following:</p>
-<div class="highlight"><pre><span></span><code><span class="n">CONTAINER</span> <span class="n">ID</span>  <span class="n">IMAGE</span>      <span class="n">COMMAND</span>                 <span class="n">CREATED</span>      <span class="n">STATUS</span>      <span class="n">PORTS</span>                     <span class="n">NAMES</span>
-<span class="n">868de3409690</span>  <span class="n">mongo</span><span class="p">:</span><span class="n">4</span><span class="p">.</span><span class="n">4</span>  <span class="s2">"docker-entrypoint.s…"</span>  <span class="n">20</span> <span class="n">secs</span> <span class="n">ago</span>  <span class="n">Up</span> <span class="n">16</span> <span class="n">secs</span>  <span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">:</span><span class="n">27017</span><span class="p">-&gt;</span><span class="n">27017</span><span class="p">/</span><span class="n">tcp</span>  <span class="n">mongodb</span>
+<div class="highlight"><pre><span></span><code>CONTAINER ID  IMAGE      COMMAND                 CREATED      STATUS      PORTS                     NAMES
+868de3409690  mongo:4.4  "docker-entrypoint.s…"  20 secs ago  Up 16 secs  0.0.0.0:27017-&gt;27017/tcp  mongodb
 </code></pre></div>
 <hr>
 <h2 id="step-2-copy-the-products-file-into-the-container">Step 2: Copy the Products File into the Container</h2>
 <p>The products file is <strong><code>day3/data/products_nosql.json</code></strong>.</p>
 <p>MongoDB is running inside the container, so the file needs to be in there too.</p>
 <p>From your <code>M3</code> folder, run:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>cp<span class="w"> </span>day3/data/products_nosql.json<span class="w"> </span>mongodb:/products_nosql.json
+<div class="highlight"><pre><span></span><code>docker cp day3/data/products_nosql.json mongodb:/products_nosql.json
 </code></pre></div>
 <p>This copies the file from your VM into the root of the <code>mongodb</code> container.</p>
 <hr>
 <h2 id="step-3-import-the-products">Step 3: Import the Products</h2>
 <p>MongoDB comes with a tool called <code>mongoimport</code> for loading files. We run it inside the container:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mongodb<span class="w"> </span>mongoimport<span class="w"> </span>--db<span class="w"> </span>homesphere<span class="w"> </span>--collection<span class="w"> </span>products<span class="w"> </span>--jsonArray<span class="w"> </span>--file<span class="w"> </span>/products_nosql.json
+<div class="highlight"><pre><span></span><code>docker exec mongodb mongoimport --db homesphere --collection products --jsonArray --file /products_nosql.json
 </code></pre></div>
 <p>What this does:</p>
 <ul>
@@ -800,7 +800,7 @@
 </div>
 <hr>
 <h2 id="step-4-connect-to-the-mongodb-shell">Step 4: Connect to the MongoDB Shell</h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mongodb<span class="w"> </span>mongo
+<div class="highlight"><pre><span></span><code>docker exec -it mongodb mongo
 </code></pre></div>
 <p>You should see the MongoDB shell prompt: <code>&gt;</code></p>
 <p>See all databases - <code>homesphere</code> was created by the import:</p>
@@ -986,18 +986,18 @@
 <hr>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p><strong>Container not starting?</strong></p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>mongodb
+<div class="highlight"><pre><span></span><code>docker logs mongodb
 </code></pre></div>
 <p><strong>"The container name "/mongodb" is already in use"?</strong></p>
 <p>You already have a <code>mongodb</code> container on this VM. Start it instead of creating a new one:
-</p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>start<span class="w"> </span>mongodb
+</p><div class="highlight"><pre><span></span><code>docker start mongodb
 </code></pre></div><p></p>
 <p><strong>Can't connect to mongo shell?</strong></p>
 <p>Check container is running:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
+<div class="highlight"><pre><span></span><code>docker ps
 </code></pre></div>
 <p>Restart if needed:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>restart<span class="w"> </span>mongodb
+<div class="highlight"><pre><span></span><code>docker restart mongodb
 </code></pre></div>
 <p><strong>Import failed, or imported 1 document instead of 9?</strong></p>
 <p>Check you are using <code>products_nosql.json</code> (not <code>products_raw.json</code>) and included <code>--jsonArray</code>. If anything was imported, drop the collection in the MongoDB shell and import again:
@@ -1005,11 +1005,11 @@
 </code></pre></div><p></p>
 <p><strong>Want to start fresh?</strong></p>
 <p>Stop and remove container:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>stop<span class="w"> </span>mongodb
-docker<span class="w"> </span>rm<span class="w"> </span>mongodb
+<div class="highlight"><pre><span></span><code>docker stop mongodb
+docker rm mongodb
 </code></pre></div>
 <p>Start new container:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>mongo:4.4
+<div class="highlight"><pre><span></span><code>docker run -d -p 27017:27017 --name mongodb mongo:4.4
 </code></pre></div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
