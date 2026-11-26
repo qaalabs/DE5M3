@@ -804,7 +804,10 @@
 git checkout origin/main -- day4/checks.py day4/pipeline.py
 </code></pre></div>
 <p>This only updates <code>checks.py</code> and <code>pipeline.py</code>. Your notebooks are not touched.</p>
-<p>Open VS Code in your <code>M3\day4</code> folder. There are two files to work with:</p>
+<p>Open VS Code:</p>
+<div class="highlight"><pre><span></span><code>code .
+</code></pre></div>
+<p>There are two files to work with, both in the <code>day4</code> folder:</p>
 <ul>
 <li><code>pipeline.py</code> - the pipeline: load, validate, clean, output. You do not need to change it.</li>
 <li><code>checks.py</code> - your checks. This is the file you edit.</li>
@@ -813,7 +816,7 @@ git checkout origin/main -- day4/checks.py day4/pipeline.py
 <h2 id="part-1-run-the-script">Part 1 - Run the script</h2>
 <p>Open <code>pipeline.py</code> and read through it. The structure is the same as the notebooks you have used all week. The difference is that it runs top to bottom in one go.</p>
 <p>Open the terminal in VS Code (<code>Ctrl+</code> <code>`</code>) and run it:</p>
-<div class="highlight"><pre><span></span><code>python pipeline.py
+<div class="highlight"><pre><span></span><code>python day4/pipeline.py
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">ModuleNotFoundError: No module named 'pandas'</p>
@@ -821,7 +824,7 @@ git checkout origin/main -- day4/checks.py day4/pipeline.py
 <div class="highlight"><pre><span></span><code>pip install pandas
 </code></pre></div>
 <p>You may see <code>Defaulting to user installation because normal site-packages is not writeable</code> at the start, and a yellow WARNING at the end ending <code>which is not on PATH</code> - both are expected. pandas is still installed.</p>
-<p>Then run <code>python pipeline.py</code> again.</p>
+<p>Then run <code>python day4/pipeline.py</code> again.</p>
 </div>
 <p>Watch the output. The pipeline loads 30 rows, passes validation, cleans the data down to 23 rows and writes <code>silver_sales.csv</code>.</p>
 <p>Seven rows dropped. Nothing complained.</p>
@@ -833,7 +836,7 @@ git checkout origin/main -- day4/checks.py day4/pipeline.py
 <p class="admonition-title">If you wrote your own checks in the notebook, compare them. Different code that catches the same problems is fine.</p>
 </div>
 <p>Run the pipeline again:</p>
-<div class="highlight"><pre><span></span><code>python pipeline.py
+<div class="highlight"><pre><span></span><code>python day4/pipeline.py
 </code></pre></div>
 <p>The pipeline stops before cleaning. No output file is written. The terminal shows every check that failed.</p>
 <hr>
