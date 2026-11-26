@@ -788,7 +788,33 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"All silver checks passed - safe to use"</span><span class="p">)</span>
 </code></pre></div>
-<p>Expected: <code>All silver checks passed - safe to use</code>. In a Fabric pipeline, this raise is what would make the on-failure path run.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Expected: <code>All silver checks passed - safe to use</code>. In a Fabric pipeline, this raise is what would make the on-failure path run.</p>
+<hr>
+<h2 id="stretch-part-6-gold">Stretch Part 6 - Gold</h2>
+<div class="highlight"><pre><span></span><code><span class="n">gold_errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># same functions, now on gold</span>
+<span class="n">check_no_nulls</span><span class="p">(</span><span class="n">gold_revenue</span><span class="p">,</span> <span class="s2">"category"</span><span class="p">,</span> <span class="n">gold_errors</span><span class="p">)</span>
+<span class="n">check_positive</span><span class="p">(</span><span class="n">gold_revenue</span><span class="p">,</span> <span class="s2">"line_value"</span><span class="p">,</span> <span class="n">gold_errors</span><span class="p">)</span>
+
+<span class="c1"># rows added by the join</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">gold_revenue</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">silver_sales</span><span class="p">):</span>
+    <span class="n">gold_errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Join changed the row count: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">silver_sales</span><span class="p">)</span><span class="si">}</span><span class="s2"> silver rows, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gold_revenue</span><span class="p">)</span><span class="si">}</span><span class="s2"> gold rows"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">gold_errors</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"GOLD: </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">gold_errors</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gold_errors</span><span class="p">)</span><span class="si">}</span><span class="s2"> gold checks failed. Pipeline stopped."</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"All gold checks passed - safe to report"</span><span class="p">)</span>
+</code></pre></div>
+<p>Expected: <code>All gold checks passed - safe to report</code> (23 rows in, 23 out, every product matched).</p>
+<p>With a "break it" line uncommented in the setup cell:</p>
+<ul>
+<li>Missing P007 - <code>3 nulls in category</code>. The left join keeps the 3 Smart Plug sales but they belong to no category.</li>
+<li>Product listed twice - <code>Join changed the row count: 23 silver rows, 24 gold rows</code>. The first product's sale is counted twice.</li>
+</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
