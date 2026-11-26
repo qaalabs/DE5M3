@@ -104,4 +104,4 @@ flowchart LR
 
 This is the Day 2 pipeline, as a diagram, in six lines of text - no drawing tool, no click-and-drag.
 
-!!! info "Mermaid also renders natively in GitHub `.md` files and in HedgeDoc - useful later when you are building your own diagrams."
+!!! info "Mermaid also renders natively in GitHub `.md` files and in Visal Studio Code - useful later when you are building your own diagrams."

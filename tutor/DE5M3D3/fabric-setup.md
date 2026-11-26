@@ -10,3 +10,14 @@
 While it builds, put up **day3/pipeline-diagram**
 - the target architecture for Lab 3.1 this afternoon
 
+### Text for WebEx chat
+```text
+## Start MS Fabric Playground
+https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/
+
+## Diagram
+https://qaalabs.github.io/DE5M3/day3/pipeline-diagram/
+
+Diagram:|https://qaalabs.github.io/DE5M3/day3/pipeline-diagram/
+```
+

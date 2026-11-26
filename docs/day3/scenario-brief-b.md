@@ -78,7 +78,7 @@ GOLD Layer (Business Ready)
 
 ## Diagram
 
-Sketch your Bronze -> Silver -> Gold design as a mermaid diagram:
+Sketch your Bronze -> Silver -> Gold design as a diagram:
 
 ```mermaid
 flowchart TD

@@ -315,21 +315,9 @@ except Exception:
 
 ---
 
-## Clean up resources
-
 In this exercise, you restructured the HomeSphere ETL into a medallion architecture with three clearly separated layers: bronze for raw data, silver for cleaned and validated data, and gold for business-ready output.
 
-Once you have finished exploring, you should delete the workspace you created for this exercise.
+!!! info "Keep your workspace"
+    Don't delete anything - your workspace, lakehouse, and notebooks are needed for [Lab 3.2](32-medallion-pipeline.md).
 
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
-
-5. Return to the QA Platform and click **Submit** to destroy the lab environment.
-
-!!! abstract ""
-    ![QA Platform Submit to end lab.](img/playground-submit.png)
+    When you have finished, follow the [clean up steps at the end of Lab 3.3](33-powerbi-report.md#clean-up-resources).

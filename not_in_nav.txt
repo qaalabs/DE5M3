@@ -7,3 +7,6 @@ day4/mvd-example.md
 labs/run-inside-vm.md
 labs/run-locally.md
 day4/checks-solution.md
+labs/32-medallion-pipeline.md
+labs/33-powerbi-report.md
+day3/products-nosql.md
