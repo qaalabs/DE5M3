@@ -90,6 +90,10 @@ Raise one `ValueError` at the end if there are any silver errors.
 
 A notebook only *fails* when an error is raised. A pipeline's on-failure path only fires when a notebook fails.
 
+### Part 6: Gold
+
+Join silver to the product catalogue, then check the join: every sale found its product, every line value is positive, and the join did not add rows. Uncomment a "break it" line to see each check fire.
+
 ---
 
 !!! note "The question is not *did your checks work?* It is: What should the pipeline do when a check fails?"

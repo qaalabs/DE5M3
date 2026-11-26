@@ -174,3 +174,34 @@ print("All silver checks passed - safe to use")
 ```
 
 Expected: `All silver checks passed - safe to use`. In a Fabric pipeline, this raise is what would make the on-failure path run.
+
+---
+
+## Stretch Part 6 - Gold
+
+```python
+gold_errors = []
+
+# same functions, now on gold
+check_no_nulls(gold_revenue, "category", gold_errors)
+check_positive(gold_revenue, "line_value", gold_errors)
+
+# rows added by the join
+if len(gold_revenue) != len(silver_sales):
+    gold_errors.append(f"Join changed the row count: {len(silver_sales)} silver rows, {len(gold_revenue)} gold rows")
+
+for msg in gold_errors:
+    print(f"GOLD: {msg}")
+
+if gold_errors:
+    raise ValueError(f"{len(gold_errors)} gold checks failed. Pipeline stopped.")
+
+print("All gold checks passed - safe to report")
+```
+
+Expected: `All gold checks passed - safe to report` (23 rows in, 23 out, every product matched).
+
+With a "break it" line uncommented in the setup cell:
+
+- Missing P007 - `3 nulls in category`. The left join keeps the 3 Smart Plug sales but they belong to no category.
+- Product listed twice - `Join changed the row count: 23 silver rows, 24 gold rows`. The first product's sale is counted twice.

@@ -12,7 +12,21 @@ A production pipeline runs as a script. No cells. No Run button. You execute it 
 
 ## Getting started
 
-Open VS Code in your `M3\day4` folder. There are two files to work with:
+Open a terminal and go to your `M3` folder:
+
+```
+cd Desktop\M3
+```
+
+If you cloned it somewhere else, `cd` there instead.
+
+Open VS Code:
+
+```
+code .
+```
+
+There are two files to work with, both in the `day4` folder:
 
 - `pipeline.py` - the pipeline: load, validate, clean, output. You do not need to change it.
 - `checks.py` - your checks. This is the file you edit.
@@ -26,7 +40,7 @@ Open `pipeline.py` and read through it. The structure is the same as the noteboo
 Open the terminal in VS Code (`Ctrl+` `` ` ``) and run it:
 
 ```
-python pipeline.py
+python day4/pipeline.py
 ```
 
 !!! note "ModuleNotFoundError: No module named 'pandas'"
@@ -38,7 +52,7 @@ python pipeline.py
 
     You may see `Defaulting to user installation because normal site-packages is not writeable` at the start, and a yellow WARNING at the end ending `which is not on PATH` - both are expected. pandas is still installed.
 
-    Then run `python pipeline.py` again.
+    Then run `python day4/pipeline.py` again.
 
 Watch the output. The pipeline loads 30 rows, passes validation, cleans the data down to 23 rows and writes `silver_sales.csv`.
 
@@ -57,7 +71,7 @@ The checks from this morning's notebook are there, commented out. Select from th
 Run the pipeline again:
 
 ```
-python pipeline.py
+python day4/pipeline.py
 ```
 
 The pipeline stops before cleaning. No output file is written. The terminal shows every check that failed.
