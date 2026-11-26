@@ -799,6 +799,11 @@
 <div class="highlight"><pre><span></span><code>cd Desktop\M3
 </code></pre></div>
 <p>If you cloned it somewhere else, <code>cd</code> there instead.</p>
+<p>Get the latest versions of the two pipeline files:</p>
+<div class="highlight"><pre><span></span><code>git fetch
+git checkout origin/main -- day4/checks.py day4/pipeline.py
+</code></pre></div>
+<p>This only updates <code>checks.py</code> and <code>pipeline.py</code>. Your notebooks are not touched.</p>
 <p>Open VS Code in your <code>M3\day4</code> folder. There are two files to work with:</p>
 <ul>
 <li><code>pipeline.py</code> - the pipeline: load, validate, clean, output. You do not need to change it.</li>
